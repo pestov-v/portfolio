@@ -32,7 +32,7 @@ const Footer = () => {
             <Image
               width={48}
               height={48}
-              src={`img/icons/${id}.svg`}
+              src={`/img/icons/${id}.svg`}
               alt={title}
             />
             {title}
