@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Footer.module.scss";
+import Image from "next/image";
 
 export const links = [
   {
@@ -28,7 +29,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             key={id}
           >
-            <img
+            <Image
               width={48}
               height={48}
               src={`img/icons/${id}.svg`}

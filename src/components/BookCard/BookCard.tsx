@@ -51,7 +51,7 @@ export const BookCard: FC<Props> = ({
           <h2>{title}</h2>
           <p>{description}</p>
           {href && (
-            <a href={href} target="_blank" className="btn">
+            <a href={href} target="_blank" rel="noreferrer" className="btn">
               <span>Go</span>
             </a>
           )}
