@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { AppButton } from "../ui/AppButton/AppButton";
 import style from "./BookCard.module.scss";
 
 interface Props {
