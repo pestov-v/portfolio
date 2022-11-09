@@ -41,14 +41,19 @@ const Header: NextPage = () => {
       />
 
       <div className={style.info}>
-        <h3>Hello, I'm</h3>
+        <h3>Hello, I&apos;m</h3>
         <h1 className={style.name}>Volodymyr</h1>
 
         <p className={style.skills}>
           <span ref={el} />
         </p>
 
-        <a href="/cv.pdf" target="_blank" className={style.download}>
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className={style.download}
+        >
           Download CV
         </a>
       </div>

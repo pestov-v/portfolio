@@ -35,7 +35,7 @@ const ProgressBar: FC<IProps> = (props) => {
     return () => {
       window.removeEventListener("scroll", handler);
     };
-  }, [progressRef.current]);
+  }, [progressRef.current, addWidthImmediately]);
 
   const progressStyle = [style.progress, reverse ? style.reverse : ""].join(
     " "

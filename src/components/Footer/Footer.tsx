@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <section className={style.section} id="contact">
       <div className={style.header}>
-        <h2>Let's work together...</h2>
+        <h2>Let&apos;s work together...</h2>
       </div>
       <div className={style.links}>
         {links.map(({ id, href, title }) => (
