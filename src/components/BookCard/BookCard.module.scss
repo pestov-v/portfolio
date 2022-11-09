@@ -1,0 +1,82 @@
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
+
+.card {
+  position: relative;
+  width: 330px;
+  height: 190px;
+  margin: 20px 0;
+
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 1s;
+  box-shadow: inset 100px 0 50px rgba(255, 255, 255, 0.5), 0 0 5px rgba(255, 255, 255, 0.5);
+
+  @include for-tablet-down {
+    width: 370px;
+    height: 220px;
+  }
+  @include for-mobile-small {
+    width: 300px;
+    height: 170px;
+  }
+
+  &:hover {
+    z-index: 100;
+    box-shadow: inset 20px 0 50px rgba(200, 200, 200, 0.5), 0 0 5px rgba(200, 200, 200, 0.5);
+    transform: perspective(2000px) rotate(-5deg);
+
+    & .imgBox {
+      transform: rotateY(-135deg);
+    }
+  }
+
+  & .imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .details {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 1.2rem 1.2rem 1rem 1.2rem;
+    background-color: $background-card;
+
+    & h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    & a {
+      position: absolute;
+      bottom: 20px;
+      background-color: $background-button;
+      color: $color-white;
+    }
+  }
+}

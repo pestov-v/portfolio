@@ -1,0 +1,54 @@
+@import 'src/styles/colors';
+
+.about {
+    // padding: 2em 0;
+    // height: calc(100vh - 100px);
+    height: 100vh;
+    padding-top: calc(calc(100vh - 900px) / 2);
+}
+
+.info {
+    display: flex;
+    grid-gap: 4rem;
+    padding-top: 4em;
+
+    .infoWrapper {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 3em;
+        padding-top: 3em;
+
+        .title {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .description {
+            color: $color-gray;
+            font-weight: 500;
+        }
+    }
+
+    .additionalInfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5em;
+
+        .item {
+            display: flex;
+            grid-gap: 0.5em;
+            flex: 0.5;
+            font-weight: 500;
+            font-size: 1rem;
+
+            .value {
+                color: $color-gray;
+                white-space: nowrap;
+                
+                &.success {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}

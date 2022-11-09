@@ -1,0 +1,28 @@
+.skills {
+    padding: 2em 0;
+    // height: calc(100vh - 100px);
+    height: 100vh;
+
+    .progressWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        padding-top: 6em;
+
+        &.show {
+            opacity: 1;
+        }
+
+        .progressItem {
+            p {
+                position: relative;
+                min-width: 3em;
+                font-weight: 500;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
