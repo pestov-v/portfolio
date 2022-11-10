@@ -8,8 +8,12 @@ export const links = [
     href: "https://www.facebook.com/nakrytvp",
     title: "Facebook",
   },
-  { id: "github", href: "https://github.com/nakryt", title: "GitHub" },
-  { id: "email", href: "mailto:pestov.v@yahoo.com", title: "Send email" },
+  { id: "github", href: "https://github.com/pestov-v", title: "GitHub" },
+  {
+    id: "email",
+    href: "mailto:pestov.volodymyr@gmail.com",
+    title: "Send email",
+  },
   { id: "phone", href: "tel:+380970097343", title: "Call me" },
 ];
 
@@ -36,7 +40,7 @@ const Footer = () => {
               alt={title}
               className={id === "phone" ? style.debounce : ""}
             />
-            {title}
+            <span className={style.title}>{title}</span>
           </a>
         ))}
       </div>

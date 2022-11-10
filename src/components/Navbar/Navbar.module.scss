@@ -45,10 +45,6 @@
   .main-link {
     color: #fff;
     font-size: 1.6rem;
-
-    @include for-mobile {
-      display: none;
-    }
   }
 }
 

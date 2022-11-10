@@ -1,4 +1,5 @@
 @import 'src/styles/colors';
+@import 'src/styles/breakpoints';
 
 .header {
   $gradient: linear-gradient(
@@ -12,16 +13,32 @@
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  grid-gap: 1em;
   justify-content: center;
-  grid-gap: 3em;
   background: rgb(129,223,118);
   background: $gradient;
   margin-top: -5em;
-    
+  
+  @include respond-above(sm) {
+    grid-gap: 1.5em;
+    flex-direction: row;
+  }
+  @include respond-above(lg) {
+    grid-gap: 3em;
+  }
+  
 
-  .image {
-    border-radius: 50%;
+  .imageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .image {
+      border-radius: 50%;
+      max-width: 90%;
+    }
   }
 
   .info {
@@ -31,15 +48,35 @@
     color: $color-white;
     
     h3 {
-      font-size: 3rem;
+      font-size: 1rem;
       color: $color-white;
+    
+      @include respond-above(xs) {
+        font-size: 2rem;
+      }
+
+      @include respond-above(sm) {
+        font-size: 3rem;
+      }
     }
 
     .name {
         color: transparent;
-        font-size: 7rem;
+        font-size: 2rem;
         -webkit-text-stroke: 3px $color-white;
         text-stroke: 3px $color-white;
+
+        
+      @include respond-above(xs) {
+        font-size: 3.5rem;
+      }
+      
+      @include respond-above(sm) {
+        font-size: 5rem;
+      }
+      @include respond-above(lg) {
+        font-size: 7rem;
+      }
     }
 
     .skills {
@@ -53,12 +90,16 @@
     color: $color-white;
     font-weight: 500;
     padding: 1em 2em;
+    margin-top: 1em;
     border: 2px solid $color-white;
     border-radius: 30px;
-    margin-top: 2em;
     transition: 0.3s ease;
     background-color: transparent;
     cursor: pointer;
+
+    @include respond-above(sm) {
+      margin-top: 2em;
+    }
 
     &:hover {
       color: $secondary;
@@ -67,6 +108,7 @@
   }
 
   .arrow {
+    display: none;
     position: absolute;
     bottom: 2em;
     left: 50%;
@@ -89,7 +131,6 @@
       display: inline-block;
       padding: 8px;    
       transform: rotate(45deg);
-    }
-    
+    }   
   }
 }

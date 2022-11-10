@@ -7,7 +7,7 @@ import { ISectionProps } from "../../interfaces";
 const Projects: NextPage<ISectionProps> = ({ sectionRef }) => {
   return (
     <section className={style.projects} ref={sectionRef}>
-      <TitleSection title="My portfolio" backgroundText="Gallery" />
+      <TitleSection title="portfolio" backgroundText="Gallery" />
       <ProjectList />
     </section>
   );

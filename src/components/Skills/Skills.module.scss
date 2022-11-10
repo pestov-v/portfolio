@@ -1,17 +1,25 @@
+@import 'src/styles/breakpoints';
+
 .skills {
     padding: 5em 0;
-    height: 100vh;
+    min-height: 100vh;
 
     .progressWrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 2em;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1em;
         opacity: 0;
         transition: opacity 1s ease-out;
         padding-top: 4em;
 
         &.show {
             opacity: 1;
+        }
+
+        @include respond-above(sm) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2em;
         }
 
         .progressItem {

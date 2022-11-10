@@ -1,6 +1,5 @@
 import style from "./About.module.scss";
 import type { NextPage } from "next";
-import Image from "next/image";
 import TitleSection from "../ui/TitleSection/TitleSection";
 import { ISectionProps } from "../../interfaces";
 
@@ -15,13 +14,26 @@ const additionalInfo = [
   { title: "Freelance", value: "Available" },
 ];
 
+const imgPath = "img/about/about";
 const About: NextPage<ISectionProps> = ({ sectionRef }) => {
   return (
     <section className={style.about} ref={sectionRef}>
       <TitleSection title="About Me" backgroundText="About" />
 
       <div className={style.info}>
-        <Image width={330} height={402} src="/img/about.jpg" alt="" />
+        <picture className={style.imageWrapper}>
+          <source
+            media="(min-width: 796px)"
+            srcSet={`${imgPath}.webp`}
+            type="image/webp"
+          />
+          <source media="(min-width: 796px)" srcSet={`${imgPath}.jpg`} />
+          <source
+            srcSet={`${imgPath}.jpg 3x, ${imgPath}.jpg 2x, ${imgPath}-small.jpg 1x`}
+          />
+          <source srcSet={`${imgPath}-small.webp`} type="image/webp" />
+          <img src={`${imgPath}-small.jpg`} alt="me" className={style.image} />
+        </picture>
 
         <div className={style.infoWrapper}>
           <h3 className={style.title}>Web Developer & UI/UX Designer</h3>
@@ -45,7 +57,7 @@ const About: NextPage<ISectionProps> = ({ sectionRef }) => {
                 >
                   {value}
                 </span>
-              </h6>
+              </h4>
             ))}
           </div>
         </div>

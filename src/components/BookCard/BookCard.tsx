@@ -9,18 +9,13 @@ interface Props {
   alt: string;
 }
 
-export const BookCard: FC<Props> = ({
-  title,
-  description,
-  image,
-  href,
-  alt,
-}) => {
+const BookCard: FC<Props> = (props) => {
+  const { title, description, image, href, alt } = props;
   return (
     <div className={style.cardWrapper}>
       <div className={style.card}>
         <div className={style.imgBox}>
-          <picture className="project__item_image">
+          <picture>
             <source
               media="(min-width: 1600px)"
               srcSet={`img/${image}/large.webp`}
@@ -43,7 +38,11 @@ export const BookCard: FC<Props> = ({
               srcSet={`img/${image}/large.jpg 3x, img/${image}/medium.jpg 2x, img/${image}/small.jpg 1x`}
             />
             <source srcSet={`img/${image}/small.webp`} type="image/webp" />
-            <img src={`img/${image}/small.jpg`} alt={alt} />
+            <img
+              src={`img/${image}/small.jpg`}
+              alt={alt}
+              className={style.image}
+            />
           </picture>
         </div>
         <div className={style.details}>
@@ -59,3 +58,5 @@ export const BookCard: FC<Props> = ({
     </div>
   );
 };
+
+export default BookCard;

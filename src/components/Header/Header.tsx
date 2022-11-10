@@ -1,9 +1,9 @@
 import { NextPage } from "next";
-import Image from "next/image";
 import style from "./Header.module.scss";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
+const imgPath = "img/profile/profile";
 const Header: NextPage = () => {
   const el = useRef(null);
   // Create reference to store the Typed instance itself
@@ -32,13 +32,23 @@ const Header: NextPage = () => {
 
   return (
     <header className={style.header}>
-      <Image
-        className={style.image}
-        width={400}
-        height={400}
-        src="/img/profile.jpg"
-        alt="my photo"
-      />
+      <picture className={style.imageWrapper}>
+        <source
+          media="(min-width: 796px)"
+          srcSet={`${imgPath}.webp`}
+          type="image/webp"
+        />
+        <source media="(min-width: 796px)" srcSet={`${imgPath}.jpg`} />
+        <source
+          srcSet={`${imgPath}.jpg 3x, ${imgPath}.jpg 2x, ${imgPath}-small.jpg 1x`}
+        />
+        <source srcSet={`${imgPath}-small.webp`} type="image/webp" />
+        <img
+          src={`${imgPath}-small.jpg`}
+          alt="avatar"
+          className={style.image}
+        />
+      </picture>
 
       <div className={style.info}>
         <h3>Hello, I&apos;m</h3>

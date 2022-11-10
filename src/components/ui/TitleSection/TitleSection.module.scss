@@ -1,4 +1,5 @@
 @import 'src/styles/colors';
+@import 'src/styles/breakpoints';
 
 .titleWrapper {
     position: relative;
@@ -8,27 +9,41 @@
     flex: 1;
 
     .backgroudText {
-        font-size: 11rem;
+        font-size: 4rem;
         font-weight: 600;
         text-transform: uppercase;
         color: transparent;
         -webkit-text-stroke: 1px $primary;
         text-stroke: 1px $primary-light;
+        letter-spacing: 0.5rem;
 
-        letter-spacing: 2rem;
+        @include respond-above(sm) {
+            font-size: 11rem;
+            letter-spacing: 2rem;
+        }
     }
 
     .title {
         position: absolute;
-        bottom: 0.6em;
-        font-size: 4.5rem;
-        font-weight: 900;
+        bottom: 0.2em;
+        font-size: 2.5rem;
+        font-weight: 600;
         color: $primary;
         text-transform: uppercase;
-        letter-spacing: 0.5rem;
-        word-spacing: 1rem;
+        letter-spacing: 0.25rem;
+        word-spacing: 0.5rem;
 
         -webkit-text-stroke: 1px #000;
         text-stroke: 1px #000;
+
+        @include respond-above(sm) {
+            bottom: 0.6em;
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: $primary;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            word-spacing: 1rem;
+        }
     }
 }
