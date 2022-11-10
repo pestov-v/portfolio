@@ -1,36 +1,33 @@
 import style from "./Navbar.module.scss";
-import { useEffect, useRef } from "react";
+import type { NextPage } from "next";
+import { RefObject } from "react";
 
 const links = [
-  { id: 1, href: "#welcome", title: "Welcome" },
-  { id: 2, href: "#projects", title: "Projects" },
-  { id: 3, href: "#contacts", title: "Contacts" },
+  { id: 1, href: "#about", title: "about" },
+  { id: 2, href: "#skills", title: "skills" },
+  { id: 3, href: "#projects", title: "projects" },
 ];
 
-const Navbar = () => {
-  const linksRef = useRef<HTMLUListElement>(null);
+interface Refs {
+  [key: string]: RefObject<HTMLElement>;
+}
+interface IProps {
+  refs: Refs;
+}
 
-  useEffect(() => {
-    const handler = () => {
-      if (window?.scrollY > 200) {
-        linksRef?.current?.classList.add(style.visible);
-      } else {
-        linksRef?.current?.classList.remove(style.visible);
-      }
-    };
-
-    window.addEventListener("scroll", handler);
-
-    return () => {
-      window.removeEventListener("scroll", handler);
-    };
-  }, []);
+const Navbar: NextPage<IProps> = ({ refs }) => {
+  const clickHandler = (title: string) => {
+    window.scrollTo({
+      top: refs[title].current?.offsetTop,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <nav className={style.navbar}>
-      <ul ref={linksRef} className={style.links}>
+    <nav className={style.navbar} ref={refs.navbar}>
+      <ul className={style.links}>
         {links.map(({ id, href, title }) => (
-          <li key={id}>
+          <li key={id} onClick={() => clickHandler(title)}>
             <a href={href} className={style.link}>
               {title}
             </a>

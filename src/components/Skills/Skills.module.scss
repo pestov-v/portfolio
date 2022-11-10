@@ -1,6 +1,5 @@
 .skills {
-    padding: 2em 0;
-    // height: calc(100vh - 100px);
+    padding: 5em 0;
     height: 100vh;
 
     .progressWrapper {
@@ -9,7 +8,7 @@
         grid-gap: 2em;
         opacity: 0;
         transition: opacity 1s ease-out;
-        padding-top: 6em;
+        padding-top: 4em;
 
         &.show {
             opacity: 1;

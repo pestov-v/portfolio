@@ -1,6 +1,8 @@
 import style from "./About.module.scss";
+import type { NextPage } from "next";
 import Image from "next/image";
 import TitleSection from "../ui/TitleSection/TitleSection";
+import { ISectionProps } from "../../interfaces";
 
 const additionalInfo = [
   { title: "Name", value: "Volodymyr Pestov" },
@@ -13,9 +15,9 @@ const additionalInfo = [
   { title: "Freelance", value: "Available" },
 ];
 
-const About = () => {
+const About: NextPage<ISectionProps> = ({ sectionRef }) => {
   return (
-    <section className={style.about}>
+    <section className={style.about} ref={sectionRef}>
       <TitleSection title="About Me" backgroundText="About" />
 
       <div className={style.info}>

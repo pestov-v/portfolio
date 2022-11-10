@@ -57,6 +57,8 @@ const Header: NextPage = () => {
           Download CV
         </a>
       </div>
+
+      <i className={style.arrow} />
     </header>
   );
 };

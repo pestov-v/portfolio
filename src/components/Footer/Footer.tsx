@@ -26,7 +26,7 @@ const Footer = () => {
             href={href}
             className={style.details}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             key={id}
           >
             <Image
@@ -34,6 +34,7 @@ const Footer = () => {
               height={48}
               src={`/img/icons/${id}.svg`}
               alt={title}
+              className={id === "phone" ? style.debounce : ""}
             />
             {title}
           </a>

@@ -17,6 +17,7 @@
   grid-gap: 3em;
   background: rgb(129,223,118);
   background: $gradient;
+  margin-top: -5em;
     
 
   .image {
@@ -63,5 +64,32 @@
       color: $secondary;
       border-color: $secondary;
     }
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    animation: action 1s infinite alternate;
+
+      @keyframes action {
+        0% {
+            transform: translateY(0);
+        }
+    
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    &::before {
+      content: '';
+      border: solid $color-white;
+      border-width: 0 5px 5px 0;
+      display: inline-block;
+      padding: 8px;    
+      transform: rotate(45deg);
+    }
+    
   }
 }
