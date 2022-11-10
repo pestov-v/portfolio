@@ -11,7 +11,8 @@ const MainLayout: NextPage<ILayoutProps> = ({ children, className = "" }) => {
     <div className={className}>
       <Head>
         <title>Portfolio</title>
-        <meta name="Pestov Volodymyr's portfolio" content="Portfolio" />
+        <meta name="Pestov Volodymyr" content="Portfolio" />
+        <meta name="description" content="Pestov Volodymyr's portfolio"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

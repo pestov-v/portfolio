@@ -35,7 +35,7 @@ const About: NextPage<ISectionProps> = ({ sectionRef }) => {
 
           <div className={style.additionalInfo}>
             {additionalInfo.map(({ title, value }) => (
-              <h6 key={title} className={style.item}>
+              <h4 key={title} className={style.item}>
                 {title}:{" "}
                 <span
                   className={[
