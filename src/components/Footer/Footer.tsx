@@ -26,7 +26,7 @@ const Footer = () => {
             href={href}
             className={style.details}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             key={id}
           >
             <Image

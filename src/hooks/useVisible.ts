@@ -26,5 +26,5 @@ export const useVisible = (props: IProps) => {
         return () => {
           window.removeEventListener("scroll", callback);
         };
-      }, []);
+      }, [element, offsetY, throttleTime, style]);
 }
