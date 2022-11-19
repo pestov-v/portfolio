@@ -1,14 +1,14 @@
 @import 'src/styles/breakpoints';
 
 .projects {
-  width: 100%;
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 2rem;
-  grid-gap: 1em;
+  padding-bottom: 2em;
+  grid-gap: 2em;
 
-  @include respond-above(sm) {
-    grid-gap: 1em;
-  }
+  // @include respond-above(sm) {
+  //   grid-gap: 1em;
+  // }
 }

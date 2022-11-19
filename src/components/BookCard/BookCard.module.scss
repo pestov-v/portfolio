@@ -24,7 +24,7 @@
   &:hover {
     z-index: 100;
     box-shadow: inset 20px 0 50px rgba(200, 200, 200, 0.5), 0 0 5px rgba(200, 200, 200, 0.5);
-    transform: perspective(2000px) rotate(-5deg);
+    transform: perspective(2000px) rotate(-3deg);
 
     & .imgBox {
       transform: rotateY(-135deg);

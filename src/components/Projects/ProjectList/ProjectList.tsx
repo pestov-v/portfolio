@@ -1,6 +1,6 @@
 import React from "react";
-import { projects } from "../../util/constants";
-import BookCard from "../BookCard/BookCard";
+import { projects } from "../../../util/constants";
+import BookCard from "../../BookCard/BookCard";
 import style from "./ProjectList.module.scss";
 
 export default function ProjectList() {
