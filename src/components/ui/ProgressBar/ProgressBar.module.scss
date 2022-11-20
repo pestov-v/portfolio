@@ -7,7 +7,7 @@
 }
 
 .progress {
-    background: rgba(38, 31, 31, 0.5);
+    background: var(--color-toggle-gray-dark);
     justify-content: flex-start;
     border-radius: 100px;
     align-items: center;
@@ -22,28 +22,27 @@
         border-radius: 100px;
         height: 30px;
         width: 0;
-        transition: width 2s ease-out;
-        // animation: load 3s normal forwards;
+        transition: width 1.5s ease-out;
 
         &.primary {
-            box-shadow: 0 10px 40px -10px $primary;
-            background: $primary;
+            box-shadow: 0 10px 40px -10px var(--primary);
+            background: var(--primary);
         }
         &.danger {
-            box-shadow: 0 10px 40px -10px $danger;
-            background: $danger;
+            box-shadow: 0 10px 40px -10px var(--color-danger);
+            background: var(--color-danger);
         }
         &.warning {
-            box-shadow: 0 10px 40px -10px $warning;
-            background: $warning;
+            box-shadow: 0 10px 40px -10px var(--color-warning);
+            background: var(--color-warning);
         }
         &.success {
-            box-shadow: 0 10px 40px -10px $success;
-            background: $success;
+            box-shadow: 0 10px 40px -10px var(--color-success);
+            background: var(--color-success);
         }
         &.info {
-            box-shadow: 0 10px 40px -10px $info;
-            background: $info;
+            box-shadow: 0 10px 40px -10px var(--color-info);
+            background: var(--color-info);
         }
     }
     
@@ -51,7 +50,7 @@
         transform: rotate(180deg);
     
         .value {
-            box-shadow: 0 -10px 40px -10px $primary;        
+            box-shadow: 0 -10px 40px -10px var(--primary);        
         }
 
     }

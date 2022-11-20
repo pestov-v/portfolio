@@ -1,21 +1,7 @@
 import React from "react";
 import style from "./Footer.module.scss";
 import Image from "next/image";
-
-export const links = [
-  {
-    id: "facebook",
-    href: "https://www.facebook.com/nakrytvp",
-    title: "Facebook",
-  },
-  { id: "github", href: "https://github.com/pestov-v", title: "GitHub" },
-  {
-    id: "email",
-    href: "mailto:pestov.volodymyr@gmail.com",
-    title: "Send email",
-  },
-  { id: "phone", href: "tel:+380970097343", title: "Call me" },
-];
+import { socialLinks } from "../../util/constants";
 
 const Footer = () => {
   return (
@@ -24,7 +10,7 @@ const Footer = () => {
         <h2>Let&apos;s work together...</h2>
       </div>
       <div className={style.links}>
-        {links.map(({ id, href, title }) => (
+        {socialLinks.map(({ id, href, title }) => (
           <a
             id={id}
             href={href}
@@ -38,7 +24,6 @@ const Footer = () => {
               height={48}
               src={`/img/icons/${id}.svg`}
               alt={title}
-              className={id === "phone" ? style.debounce : ""}
             />
             <span className={style.title}>{title}</span>
           </a>

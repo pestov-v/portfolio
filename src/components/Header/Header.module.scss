@@ -44,11 +44,11 @@
     display: flex;
     flex-direction: column;
     grid-gap: 0.5em;
-    color: $color-white;
+    color: var(--color-white);
     
     h3 {
       font-size: 1rem;
-      color: $color-white;
+      color: var(--color-white);
     
       @include respond-above(xs) {
         font-size: 2rem;
@@ -62,15 +62,12 @@
     .name {
       color: transparent;
       font-size: 4rem;
-      -webkit-text-stroke: 3px $color-white;
-      text-stroke: 3px $color-white;
+      -webkit-text-stroke: 3px var(--color-white);
+      text-stroke: 3px var(--color-white);
 
         
       @include respond-above(sm) {
         font-size: 5rem;
-      }
-      @include respond-above(sm) {
-        // font-size: 5rem;
       }
       @include respond-above(lg) {
         font-size: 7rem;
@@ -90,10 +87,10 @@
 
   .download {
     align-self: flex-end;
-    color: $color-white;
+    color: var(--color-white);
     font-weight: 500;
     padding: 1em 2em;
-    border: 2px solid $color-white;
+    border: 2px solid var(--color-white);
     border-radius: 30px;
     transition: 0.3s ease;
     background-color: transparent;
@@ -117,12 +114,9 @@
     }
 
     &:hover {
-      color: $secondary;
-      border-color: $secondary;
+      color: var(--secondary);
+      border-color: var(--secondary);
     }
-    // @media (min-height: 700px) {
-    //   display: inline-flex;
-    // }
   }
 
   .arrow {
@@ -144,7 +138,7 @@
 
     &::before {
       content: '';
-      border: solid $color-white;
+      border: solid var(--color-white);
       border-width: 0 5px 5px 0;
       display: inline-block;
       padding: 8px;    

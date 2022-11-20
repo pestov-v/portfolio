@@ -119,13 +119,27 @@ interface ISkill {
 }
 
 export const SKILLS: ISkill[] = [
-  { title: "html", delay: 1, percent: 92, color: COLORS.primary },
-  { title: "css", delay: 1, percent: 87, color: COLORS.success },
-  { title: "JavaScript", delay: 1.3, percent: 90, color: COLORS.info },
-  { title: "nodejs", delay: 1.3, percent: 73, color: COLORS.warning },
-  { title: "react", delay: 1.5, percent: 89, color: COLORS.success },
-  { title: "react native", delay: 1.5, percent: 65, color: COLORS.primary },
-  { title: "vue", delay: 1.6, percent: 62, color: COLORS.danger },
-  { title: "angular", delay: 1.6, percent: 53, color: COLORS.info },
+  { title: "html", delay: 0.7, percent: 92, color: COLORS.primary },
+  { title: "css", delay: 0.7, percent: 87, color: COLORS.success },
+  { title: "JavaScript", delay: 1.1, percent: 90, color: COLORS.info },
+  { title: "nodejs", delay: 1.1, percent: 71, color: COLORS.warning },
+  { title: "react", delay: 1.3, percent: 88, color: COLORS.success },
+  { title: "react native", delay: 1.3, percent: 63, color: COLORS.primary },
+  { title: "vue", delay: 1.3, percent: 52, color: COLORS.danger },
+  { title: "angular", delay: 1.3, percent: 42, color: COLORS.info },
 ];
 
+export const socialLinks = [
+  {
+    id: "facebook",
+    href: "https://www.facebook.com/nakrytvp",
+    title: "Facebook",
+  },
+  { id: "github", href: "https://github.com/pestov-v", title: "GitHub" },
+  {
+    id: "email",
+    href: "mailto:pestov.volodymyr@gmail.com",
+    title: "Send email",
+  },
+  { id: "phone", href: "tel:+380970097343", title: "Call me" },
+];

@@ -1,8 +1,8 @@
 import { NextPage } from "next";
-import style from "./Projects.module.scss";
 import { ISectionProps } from "../../interfaces";
 import { projects } from "../../util/constants";
 import { BookCard } from "../BookCard/BookCard";
+import style from "./Projects.module.scss";
 
 const Projects: NextPage<ISectionProps> = ({ sectionRef }) => {
   return (

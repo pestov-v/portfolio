@@ -3,7 +3,7 @@
 
   .section {
     padding: 5em 1.5em 6em 1.5em;
-    background-color: $primary;
+    background-color: var(--primary);
 
     h2 {
       padding: 0;
@@ -18,13 +18,18 @@
     align-items: center;
     color: #fff;
     margin-bottom: 4em;
+
+    h2 {
+      text-align: center;
+    }
   }
 
   .links {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex: 1;
+    max-width: min(90%, 80em);
+    margin: 0 auto;
 
     .title {
       display: none;
@@ -58,18 +63,3 @@
     }
   }
 
-  .debounce {
-    position: relative;
-    top: -8px;
-    animation: action 1s infinite alternate;
-
-      @keyframes action {
-        0% {
-            transform: translateY(0);
-        }
-    
-        100% {
-            transform: translateY(15px);
-        }
-    }
-  }

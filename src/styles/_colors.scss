@@ -1,28 +1,78 @@
-$primary: #1db199;
-$primary-light: #49f9db;
-$primary-dark: #178f62;
-$primary-dark-hover: #054a31;
+.app {
+    --primary: #1db199;
+    --primary-light: #49f9db;
+    --primary-dark: #1b986a;
+    --primary-dark-hover: #054a31;
 
-$secondary: #17a2b8;
-$secondary-light: #4fdef4;
+    --secondary: #2e188f;
+    --secondary-light: #4fdef4;
 
-$background-main: #666;
-$background-two: #f9f9f3;
+    --background-main: #666;
+    --background-two: #f9f9f3;
 
-$disabled: #d7d7d7;
-$primary-hover: #343675;
-$primary-active: #666666;
-$secondary-hover: #d24335;
+    --disabled: #d7d7d7;
+    --primary-hover: #343675;
+    --primary-active: #666666;
+    --secondary-hover: #d24335;
 
-$background-card: #dcdcd9;
-$background-button: #a7a7a7;
+    --background-card: #dcdcd9;
+    --background-button: #a7a7a7;
 
-$color-white: #f5f5f5;
-$color-black: #000;
-$color-gray: #555;
-$color-gray-light: #aaa;
+    --color-white: #f5f5f5;
+    --color-black: #000;
+    --color-light: #afaeae;
+    --color-dark: rgb(69, 68, 68);
 
-$danger: #f33232;
-$warning: rgb(240, 240, 76);
-$success: rgb(24, 220, 73);
-$info: rgb(226, 104, 216);
+    --color-toggle-light: #fff;
+    --color-toggle-dark: #000;
+    --color-toggle-gray-dark: #555;
+
+    --color-gray: #555;
+    --color-gray-light: #aaa;
+
+
+    --color-danger: #f33232;
+    --color-warning: rgb(240, 240, 76);
+    --color-success: rgb(24, 220, 73);
+    --color-info: rgb(90, 123, 214);
+
+    --background-navbar: var(--color-white);
+    --shadow-navbar: rgba(0, 0, 0, 0.3);
+    
+    // SHADOWS
+    --card-shadow: rgb(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+    .app {
+        --primary-light: #49f9db;
+        --primary-dark: #178f62;
+        --primary-dark-hover: #054a31;
+    
+        --secondary-light: #4fdef4;
+    
+        --disabled: #d7d7d7;
+        --primary-hover: #343675;
+        --primary-active: #666666;
+        --secondary-hover: #d24335;
+    
+        
+        --color-light: rgb(69, 68, 68);
+        --color-dark: #afaeae;
+
+        --color-toggle-light: #000;
+        --color-toggle-dark: #fff;
+        --color-toggle-gray-dark: #bbb;
+
+        --color-gray: #555;
+        --color-gray-light: #aaa;
+    
+        --card-shadow: rgba(255, 255, 255, 0.3);
+        
+        --background-navbar: #1c2936;
+
+        --shadow-navbar: rgb(200, 200, 200, 0.3);
+
+    }
+  }
+  

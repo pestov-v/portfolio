@@ -1,16 +1,16 @@
-.cardWrapper {
+.card {
   display: flex;
   flex-basis: 25em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  padding: 2em 0;
+  padding: 2.5em 0 2em 0;
 
   transition: box-shadow 0.4s ease;
 
   &:hover {
-    box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px 3px var(--card-shadow);
   }
 
   .image {
@@ -23,10 +23,12 @@
     font-size: 1.5rem;
     text-align: center;
     font-weight: 500;
+    margin-bottom: 0.1em;
   }
 
   .description {
     text-align: center;
     max-width: 90%;
+    color: var(--color-toggle-gray-dark)
   }
 }

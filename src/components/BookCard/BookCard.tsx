@@ -17,12 +17,7 @@ export const BookCard: FC<Props> = ({
   href,
 }) => {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className={style.cardWrapper}
-    >
+    <a href={href} target="_blank" rel="noreferrer" className={style.card}>
       <img src={`img/${image}/small.jpg`} alt={alt} className={style.image} />
 
       <h2 className={style.title}>{title}</h2>

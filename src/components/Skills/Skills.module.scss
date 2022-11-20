@@ -6,6 +6,8 @@
     min-height: 100vh;
 
     .progressWrapper {
+        max-width: 80%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         grid-gap: 1em;
@@ -24,13 +26,20 @@
         }
 
         .progressItem {
-            p {
-                position: relative;
-                min-width: 3em;
+            display: flex;
+            flex-direction: column;
+            grid-gap: 0.3em;
+
+            .progressTitle {
                 font-weight: 500;
                 font-size: 1.5rem;
                 text-transform: uppercase;
+
+                &.flexEnd {
+                    align-self: flex-end;
+                }
             }
+
         }
     }
 }

@@ -4,12 +4,12 @@
     position: fixed;
     right: 2em;
     bottom: 2em;
-    width: 2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
 
     z-index: 11;
     background-color: transparent;
-    border: 2px solid $primary-dark;
+    border: 2px solid var(--primary-dark);
     border-radius: 50px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -21,7 +21,7 @@
 
     &::before {
         content: '';
-        border: solid $primary-dark;
+        border: solid var(--primary-dark);
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;    
@@ -30,11 +30,11 @@
 
     &::after {
         content: '';
-        height: 2.5em;
-        width: 2.5em;
+        height: 3em;
+        width: 3em;
         display: block;
         position: absolute;
-        top: -25%;
+        top: -15%;
         left: 50%;
         transform: translateX(-50%);
         cursor: pointer;

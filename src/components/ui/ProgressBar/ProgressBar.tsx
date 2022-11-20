@@ -13,7 +13,7 @@ interface IProps {
   showPercent?: boolean;
 }
 
-const ProgressBar: FC<IProps> = (props) => {
+export const ProgressBar: FC<IProps> = (props) => {
   const { transitionDelay = 0, percent, color = COLORS.primary } = props;
   const {
     addWidthImmediately = true,
@@ -41,34 +41,22 @@ const ProgressBar: FC<IProps> = (props) => {
     " "
   );
 
-  const bar = showPercent ? (
+  const classes = [style.value, style[COLORS[color]]].join(" ");
+  const barWidth = addWidthImmediately ? percent : 0;
+
+  return (
     <div className={style.proggressWrapper}>
       <div className={progressStyle}>
         <div
-          className={[style.value, style[COLORS[color]]].join(" ")}
+          className={classes}
           ref={progressRef}
           style={{
             transitionDelay: `${transitionDelay}s`,
-            width: addWidthImmediately ? percent : 0,
+            width: barWidth,
           }}
         />
+        {showPercent && <span>{percent}</span>}
       </div>
-      <span>{percent}</span>
-    </div>
-  ) : (
-    <div className={progressStyle}>
-      <div
-        className={[style.value, style[COLORS[color]]].join(" ")}
-        ref={progressRef}
-        style={{
-          transitionDelay: `${transitionDelay}s`,
-          width: addWidthImmediately ? percent : 0,
-        }}
-      />
     </div>
   );
-
-  return bar;
 };
-
-export default ProgressBar;
