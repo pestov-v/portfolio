@@ -1,18 +1,21 @@
 import { NextPage } from "next";
 import style from "./Projects.module.scss";
-import ProjectList from "./ProjectList/ProjectList";
-import TitleSection from "../ui/TitleSection/TitleSection";
 import { ISectionProps } from "../../interfaces";
+import { projects } from "../../util/constants";
+import { BookCard } from "../BookCard/BookCard";
 
 const Projects: NextPage<ISectionProps> = ({ sectionRef }) => {
   return (
     <section className={style.projects} ref={sectionRef}>
-      <TitleSection
-        title="portfolio"
-        backgroundText="Gallery"
-        className={style.title}
-      />
-      <ProjectList />
+      <h2 className={style["section--title"]} data-background-text="Gallery">
+        portfolio
+      </h2>
+
+      <div className={style.projectsWrapper}>
+        {projects.map((item) => (
+          <BookCard key={item.id} {...item} />
+        ))}
+      </div>
     </section>
   );
 };

@@ -1,6 +1,5 @@
 import style from "./About.module.scss";
 import type { NextPage } from "next";
-import TitleSection from "../ui/TitleSection/TitleSection";
 import { ISectionProps } from "../../interfaces";
 
 const additionalInfo = [
@@ -18,8 +17,9 @@ const imgPath = "img/about/about";
 const About: NextPage<ISectionProps> = ({ sectionRef }) => {
   return (
     <section className={style.about} ref={sectionRef}>
-      <TitleSection title="About Me" backgroundText="About" />
-
+      <h2 className={style.title} data-background-text="About">
+        About Me
+      </h2>
       <div className={style.info}>
         <picture className={style.imageWrapper}>
           <source
@@ -36,7 +36,7 @@ const About: NextPage<ISectionProps> = ({ sectionRef }) => {
         </picture>
 
         <div className={style.infoWrapper}>
-          <h3 className={style.title}>Web Developer & UI/UX Designer</h3>
+          <h3 className={style.infoTitle}>Web Developer & UI/UX Designer</h3>
 
           <p className={style.description}>
             Front-end developer with 3+ years of experience designing and

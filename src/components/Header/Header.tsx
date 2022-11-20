@@ -33,16 +33,6 @@ const Header: NextPage = () => {
   return (
     <header className={style.header}>
       <picture className={style.imageWrapper}>
-        <source
-          media="(min-width: 796px)"
-          srcSet={`${imgPath}.webp`}
-          type="image/webp"
-        />
-        <source media="(min-width: 796px)" srcSet={`${imgPath}.jpg`} />
-        <source
-          srcSet={`${imgPath}.jpg 3x, ${imgPath}.jpg 2x, ${imgPath}-small.jpg 1x`}
-        />
-        <source srcSet={`${imgPath}-small.webp`} type="image/webp" />
         <img
           src={`${imgPath}-small.jpg`}
           alt="avatar"
@@ -63,6 +53,7 @@ const Header: NextPage = () => {
           target="_blank"
           rel="noreferrer"
           className={style.download}
+          download
         >
           Download CV
         </a>

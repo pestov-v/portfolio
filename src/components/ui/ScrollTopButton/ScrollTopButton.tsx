@@ -18,11 +18,7 @@ const ScrollTopButton = () => {
       behavior: "smooth",
     });
   };
-  return (
-    <button className={style.back} onClick={clickHandler} ref={ref}>
-      <span className={style.arrow} />
-    </button>
-  );
+  return <button className={style.button} onClick={clickHandler} ref={ref} />;
 };
 
 export default ScrollTopButton;

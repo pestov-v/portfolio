@@ -12,32 +12,31 @@
 
   height: 100vh;
   width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-gap: 1em;
+  grid-gap: 3.2em;
   justify-content: center;
+  
   background: rgb(129,223,118);
   background: $gradient;
   margin-top: -5em;
   
   @include respond-above(sm) {
-    grid-gap: 1.5em;
+    grid-gap: 1.6em;
     flex-direction: row;
   }
   @include respond-above(lg) {
-    grid-gap: 3em;
+    grid-gap: 3.3em;
   }
   
+  .image {
+    border-radius: 50%;
+    max-width: 300px;
 
-  .imageWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    .image {
-      border-radius: 50%;
-      max-width: 90%;
+    @include respond-above(xs) {
+      max-width: auto;
     }
   }
 
@@ -61,18 +60,17 @@
     }
 
     .name {
-        color: transparent;
-        font-size: 2rem;
-        -webkit-text-stroke: 3px $color-white;
-        text-stroke: 3px $color-white;
+      color: transparent;
+      font-size: 4rem;
+      -webkit-text-stroke: 3px $color-white;
+      text-stroke: 3px $color-white;
 
         
-      @include respond-above(xs) {
-        font-size: 3.5rem;
-      }
-      
       @include respond-above(sm) {
         font-size: 5rem;
+      }
+      @include respond-above(sm) {
+        // font-size: 5rem;
       }
       @include respond-above(lg) {
         font-size: 7rem;
@@ -81,34 +79,50 @@
 
     .skills {
         min-height: 1em;
-        font-size: 1rem;
+        min-width: 10em;
+        font-size: 1.6rem;
 
         @include respond-above(sm) {
-          font-size: 2rem;
+          font-size: 2.2rem;
         }
     }
   }
 
   .download {
-    align-self: flex-start;
+    align-self: flex-end;
     color: $color-white;
     font-weight: 500;
     padding: 1em 2em;
-    margin-top: 1em;
     border: 2px solid $color-white;
     border-radius: 30px;
     transition: 0.3s ease;
     background-color: transparent;
     cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 0.5em;
 
     @include respond-above(sm) {
       margin-top: 2em;
+      position: absolute;
+      bottom: 3.2em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include respond-above(lg) {
+      margin-top: 2em;
+      align-self: flex-start;
+      position: static;
+      transform: none;
+      left: auto;
     }
 
     &:hover {
       color: $secondary;
       border-color: $secondary;
     }
+    // @media (min-height: 700px) {
+    //   display: inline-flex;
+    // }
   }
 
   .arrow {
@@ -136,5 +150,8 @@
       padding: 8px;    
       transform: rotate(45deg);
     }   
+    @include respond-above(lg) {
+      display: inline;
+    }
   }
 }

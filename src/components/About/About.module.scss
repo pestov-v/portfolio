@@ -1,23 +1,31 @@
 @import 'src/styles/colors';
 @import 'src/styles/breakpoints';
+@import 'src/styles/common';
 
 .about {
     min-height: 100vh;
-    padding-top: 5em;
+    padding-top: 4em;
+
+    @include respond-above(sm) {
+        padding-top: 6em;
+    }
+
+    .title {
+        @extend .section--title;
+        
+    }
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    grid-gap: 2rem;
+    grid-gap: 1.6rem;
     padding-top: 2em;
 
     @include respond-above(sm) {
-        padding-top: 5em;
-    }
-
-    @include respond-above(sm) {
         flex-direction: row;
+        justify-content: center;
+        padding-top: 4em;
     }
 
     .imageWrapper {
@@ -35,20 +43,24 @@
         flex-direction: column;
         grid-gap: 2em;
         align-items: center;
+        justify-content: center;
 
         @include respond-above(sm) {
-            grid-gap: 3em;
-            padding-top: 3em;
+            grid-gap: 2.3em;
         }
 
-        .title {
+        .infoTitle {
             font-size: 2rem;
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
+            color: $color-black;
 
             @include respond-above(sm) {
                 font-size: 2rem;
-                text-align: left;
+            }
+            
+            @include respond-above(lg) {
+                font-size: 2.2rem;
             }
         }
 

@@ -1,31 +1,43 @@
 @import 'src/styles/colors';
 
-.back {
+.button {
     position: fixed;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    right: 30px;
-    bottom: 30px;
+    right: 2em;
+    bottom: 2em;
+    width: 2em;
+    height: 2em;
+
     z-index: 11;
-    animation: action 1s infinite alternate;
     background-color: transparent;
-    border: 2px solid $secondary;
+    border: 2px solid $primary-dark;
     border-radius: 50px;
-    cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease;
+    animation: action 1s infinite alternate;
 
     &.visible {
         opacity: 1;
     }
 
-    .arrow {
-        border: solid $secondary;
+    &::before {
+        content: '';
+        border: solid $primary-dark;
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;    
         transform: rotate(-135deg);
+    }
+
+    &::after {
+        content: '';
+        height: 2.5em;
+        width: 2.5em;
+        display: block;
+        position: absolute;
+        top: -25%;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
     }
 }
 

@@ -1,4 +1,4 @@
-interface Project {
+export interface IProject {
     id: number;
     title: string;
     description: string;
@@ -6,8 +6,9 @@ interface Project {
     href: string;
     alt: string;
   }
-  
-  export type Projects = Project[];
+
+  export type TProjects = IProject[];
+  export type Projects = IProject[]; // FIXME: delete type
   
   export const projects: Projects = [
     {

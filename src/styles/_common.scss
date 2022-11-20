@@ -1,15 +1,11 @@
+@import 'src/styles/colors';
+@import 'src/styles/breakpoints';
+
 .app {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     min-height: 100vh;
-    // background-color: #141114;
-    // background-image: linear-gradient(335deg, black 23px, transparent 23px),
-    // linear-gradient(155deg, black 23px, transparent 23px),
-    // linear-gradient(335deg, black 23px, transparent 23px),
-    // linear-gradient(155deg, black 23px, transparent 23px);
-    // background-size: 58px 58px;
-    // background-position: 0 2px, 4px 35px, 29px 31px, 34px 6px;
   }
   
   .container {
@@ -71,3 +67,47 @@
     -webkit-animation: 0;
     animation: 0;
   }
+
+  .section--title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-dark;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    @include respond-above(xs) {
+      font-size: 3.5rem;
+    }
+
+    -webkit-text-stroke: 1px $primary-dark-hover;
+    text-stroke: 1px $primary-dark-hover;
+
+    &::before {
+        content: attr(data-background-text);
+        position: absolute;
+        transform: translateY(0.5rem);
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px $primary;
+        text-stroke: 1px $primary-light;
+        z-index: -1;
+        opacity: 0.5;
+
+        @include respond-above(xs) {
+            letter-spacing: 1.33rem;
+            font-size: 4.5rem;
+          }
+        @include respond-above(sm) {
+          font-size: 5.5rem;
+        }
+        // @include respond-above(lg) {
+        //   font-size: 3.5rem;
+        // }
+    }
+}

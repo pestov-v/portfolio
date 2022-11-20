@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import { SKILLS } from "../../util/constants";
 import { isInView } from "../../util/helpers";
 import ProgressBar from "../ui/ProgressBar/ProgressBar";
-import TitleSection from "../ui/TitleSection/TitleSection";
+// import TitleSection from "../ui/TitleSection/TitleSection";
 import style from "./Skills.module.scss";
 import { ISectionProps } from "../../interfaces";
 
@@ -26,7 +26,10 @@ const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
 
   return (
     <section className={style.skills} ref={sectionRef}>
-      <TitleSection title="My skills" backgroundText="Skills" />
+      {/* <TitleSection title="My skills" backgroundText="Skills" /> */}
+      <h2 className={style["section--title"]} data-background-text="Skills">
+        My skills
+      </h2>
 
       <div className={style.progressWrapper} ref={progressWrapperRef}>
         {SKILLS.map(({ title, percent, delay, color }, index) => (
