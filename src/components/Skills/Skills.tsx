@@ -5,9 +5,10 @@ import { SKILLS } from "../../util/constants";
 import { isInView } from "../../util/helpers";
 import { ProgressBar } from "../ui/ProgressBar/ProgressBar";
 import { ISectionProps } from "../../interfaces";
+import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import style from "./Skills.module.scss";
 
-const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
+export const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
   const progressWrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -25,13 +26,7 @@ const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
 
   return (
     <section className={style.skills} ref={sectionRef}>
-      <h2
-        className={style["section--title"]}
-        data-text="Skills"
-        title="My skills"
-      >
-        My skills
-      </h2>
+      <SectionTitle title="My Skills" bgText="Skills" />
 
       <div className={style.progressWrapper} ref={progressWrapperRef}>
         {SKILLS.map(({ title, percent, delay, color }, index) => (
@@ -59,5 +54,3 @@ const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
     </section>
   );
 };
-
-export default Skills;

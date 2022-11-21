@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useVisible } from "../../../hooks/useVisible";
 import style from "./ScrollTopButton.module.scss";
 
-const ScrollTopButton = () => {
+export const ScrollTopButton = () => {
   const ref = useRef<HTMLButtonElement>(null);
 
   useVisible({
@@ -20,5 +20,3 @@ const ScrollTopButton = () => {
   };
   return <button className={style.button} onClick={clickHandler} ref={ref} />;
 };
-
-export default ScrollTopButton;

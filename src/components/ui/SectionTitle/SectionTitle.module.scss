@@ -1,0 +1,56 @@
+@import 'src/styles/colors';
+@import 'src/styles/breakpoints';
+
+.sectionTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+
+    .sectionTitle__bgText {
+        position: absolute;
+        font-size: 3.5rem;
+        color: transparent;
+        -webkit-text-stroke: 3px var(--color-secondary-light);
+        text-stroke: 3px var(--color-secondary-light);
+        opacity: 0.3;
+
+        letter-spacing: 0.6rem;
+
+        @include respond-above(xs) {
+            font-size: 4.5rem;
+            letter-spacing: 1.33rem;
+        }
+        @include respond-above(sm) {
+          font-size: 5.5rem;
+        }
+        @include respond-above(lg) {
+          font-size: 8rem;
+          letter-spacing: 1.66rem;
+        }
+    }
+
+    .sectionTitle__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-secondary);
+        z-index: 1;
+
+        -webkit-text-stroke: 1px var(--color-secondary-dark);
+        text-stroke: 1px var(--color-secondary-dark);
+
+        @include respond-above(xs) {
+            font-size: 3.5rem;
+          }
+          @include respond-above(sm) {
+            font-size: 4.5rem;
+          }
+          @include respond-above(lg) {
+            font-size: 5.5rem;
+          }
+    }
+}

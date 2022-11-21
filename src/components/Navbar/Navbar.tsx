@@ -1,6 +1,7 @@
 import style from "./Navbar.module.scss";
 import type { NextPage } from "next";
-import { RefObject } from "react";
+import { RefObject, useRef } from "react";
+import { useVisible } from "../../hooks/useVisible";
 
 const links = [
   { id: 1, href: "#about", title: "about" },
@@ -15,7 +16,15 @@ interface IProps {
   refs: Refs;
 }
 
-const Navbar: NextPage<IProps> = ({ refs }) => {
+export const Navbar: NextPage<IProps> = ({ refs }) => {
+  const navbar = useRef<HTMLElement>(null);
+  useVisible({
+    element: navbar,
+    style: style.visible,
+    throttleTime: 10,
+    offsetY: 100,
+  });
+
   const clickHandler = (title: string) => {
     window.scrollTo({
       top: refs[title].current?.offsetTop,
@@ -24,7 +33,7 @@ const Navbar: NextPage<IProps> = ({ refs }) => {
   };
 
   return (
-    <nav className={style.navbar} ref={refs.navbar}>
+    <nav className={style.navbar} ref={navbar}>
       <ul className={style.links}>
         {links.map(({ id, href, title }) => (
           <li key={id} onClick={() => clickHandler(title)}>
@@ -37,5 +46,3 @@ const Navbar: NextPage<IProps> = ({ refs }) => {
     </nav>
   );
 };
-
-export default Navbar;

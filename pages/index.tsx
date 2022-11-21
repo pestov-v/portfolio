@@ -1,28 +1,18 @@
 import type { NextPage } from "next";
 import { useRef } from "react";
 
-import MainLayout from "../src/Layouts/MainLayout";
-import Footer from "../src/components/Footer/Footer";
-import Header from "../src/components/Header/Header";
-import Projects from "../src/components/Projects/Projects";
-import About from "../src/components/About/About";
-import Skills from "../src/components/Skills/Skills";
-import Navbar from "../src/components/Navbar/Navbar";
-import ScrollTopButton from "../src/components/ui/ScrollTopButton/ScrollTopButton";
-import { useVisible } from "../src/hooks/useVisible";
+import { MainLayout } from "../src/Layouts/MainLayout";
+import { Footer } from "../src/components/Footer/Footer";
+import { Header } from "../src/components/Header/Header";
+import { Projects } from "../src/components/Projects/Projects";
+import { About } from "../src/components/About/About";
+import { Skills } from "../src/components/Skills/Skills";
+import { Navbar } from "../src/components/Navbar/Navbar";
+import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 
 import style from "../src/styles/Home.module.scss";
-import navbarStyle from "../src/components/Navbar/Navbar.module.scss";
 
 const Home: NextPage = () => {
-  const navbar = useRef<HTMLElement>(null);
-  useVisible({
-    element: navbar,
-    style: navbarStyle.visible,
-    throttleTime: 10,
-    offsetY: 100,
-  });
-
   const refs = {
     about: useRef<HTMLElement>(null),
     skills: useRef<HTMLElement>(null),

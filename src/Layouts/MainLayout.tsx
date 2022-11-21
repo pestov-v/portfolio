@@ -6,7 +6,10 @@ interface ILayoutProps {
   className?: string;
 }
 
-const MainLayout: NextPage<ILayoutProps> = ({ children, className = "" }) => {
+export const MainLayout: NextPage<ILayoutProps> = ({
+  children,
+  className = "",
+}) => {
   return (
     <div className={className}>
       <Head>
@@ -20,5 +23,3 @@ const MainLayout: NextPage<ILayoutProps> = ({ children, className = "" }) => {
     </div>
   );
 };
-
-export default MainLayout;

@@ -3,8 +3,8 @@ import style from "./Header.module.scss";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
-const imgPath = "img/profile/profile";
-const Header: NextPage = () => {
+export const imgPath = "img/profile/profile";
+export const Header: NextPage = () => {
   const el = useRef(null);
   // Create reference to store the Typed instance itself
   const typed = useRef<Typed>(null);
@@ -66,5 +66,3 @@ const Header: NextPage = () => {
     </header>
   );
 };
-
-export default Header;

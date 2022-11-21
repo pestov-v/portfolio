@@ -3,7 +3,7 @@ import style from "./Footer.module.scss";
 import Image from "next/image";
 import { socialLinks } from "../../util/constants";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <section className={style.section} id="contact">
       <div className={style.header}>
@@ -32,5 +32,3 @@ const Footer = () => {
     </section>
   );
 };
-
-export default Footer;

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import style from "./BookCard.module.scss";
+import style from "./ProjectCard.module.scss";
 
 interface Props {
   image: string;
@@ -9,7 +9,7 @@ interface Props {
   alt: string;
 }
 
-export const BookCard: FC<Props> = ({
+export const ProjectCard: FC<Props> = ({
   title,
   image,
   alt,
