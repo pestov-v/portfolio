@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useRef } from "react";
 
-import style from "../src/styles/Home.module.scss";
 import MainLayout from "../src/Layouts/MainLayout";
 import Footer from "../src/components/Footer/Footer";
 import Header from "../src/components/Header/Header";
@@ -11,11 +10,12 @@ import Skills from "../src/components/Skills/Skills";
 import Navbar from "../src/components/Navbar/Navbar";
 import ScrollTopButton from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { useVisible } from "../src/hooks/useVisible";
+
+import style from "../src/styles/Home.module.scss";
 import navbarStyle from "../src/components/Navbar/Navbar.module.scss";
 
 const Home: NextPage = () => {
   const navbar = useRef<HTMLElement>(null);
-
   useVisible({
     element: navbar,
     style: navbarStyle.visible,
@@ -23,24 +23,18 @@ const Home: NextPage = () => {
     offsetY: 100,
   });
 
-  const about = useRef<HTMLElement>(null);
-  const skills = useRef<HTMLElement>(null);
-  const projects = useRef<HTMLElement>(null);
-
   const refs = {
-    navbar,
-    about,
-    skills,
-    projects,
+    about: useRef<HTMLElement>(null),
+    skills: useRef<HTMLElement>(null),
+    projects: useRef<HTMLElement>(null),
   };
 
   return (
     <MainLayout className="app">
       <Navbar refs={refs} />
 
-      <Header />
-
       <main className={style.main}>
+        <Header />
         <About sectionRef={refs.about} />
         <Skills sectionRef={refs.skills} />
         <Projects sectionRef={refs.projects} />

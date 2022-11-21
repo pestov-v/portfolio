@@ -3,29 +3,35 @@
 @import 'src/styles/common';
 
 .about {
-    min-height: 100vh;
-    padding-top: 4em;
+    display: flex;
+    padding: 4em 0;
+    position: relative;
+    background-color: var(--color-white);
 
     @include respond-above(sm) {
-        padding-top: 6em;
+        padding: {
+            top: 6em;
+            bottom: 10em;
+        }
     }
 
-    .title {
-        @extend .section--title;
-        
+    .container {
+        margin: auto;
+        max-width: min(90%, 80em);
     }
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    grid-gap: 1.6rem;
+    grid-gap: 1.6em;
     padding-top: 2em;
 
     @include respond-above(sm) {
         flex-direction: row;
         justify-content: center;
         padding-top: 4em;
+        grid-gap: 3em;
     }
 
     .imageWrapper {
@@ -67,6 +73,7 @@
         .description {
             color: var(--color-dark);
             font-weight: 500;
+            line-height: 1.5;
             text-align: center;
             @include respond-above(sm) {
                 text-align: left;

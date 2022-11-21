@@ -1,27 +1,36 @@
 @import 'src/styles/colors';
 @import 'src/styles/breakpoints';
+@import 'src/styles/common';
 
 .header {
-  $gradient: linear-gradient(
-    133deg, rgba(129, 223, 118, 0.75) 0%,
-    rgba(90, 218, 44, 0.75) 19%,
-    rgba(38,215,166,0.75) 46%,
-    rgba(0,255,184,0.75) 73%,
-    rgba(0,146,255,0.75) 100%
-  );
-
   height: 100vh;
   width: 100%;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-gap: 3.2em;
   justify-content: center;
-  
-  background: rgb(129,223,118);
-  background: $gradient;
+  grid-gap: 3.2em;
   margin-top: -5em;
+
+  &::before {
+    content: '';
+    background-image: url("/img/man.jpeg");
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
   
   @include respond-above(sm) {
     grid-gap: 1.6em;
@@ -36,7 +45,7 @@
     max-width: 300px;
 
     @include respond-above(xs) {
-      max-width: auto;
+      max-width: 500px;
     }
   }
 
@@ -44,16 +53,16 @@
     display: flex;
     flex-direction: column;
     grid-gap: 0.5em;
-    color: var(--color-white);
     
-    h3 {
+    .greteen {
+      position: relative;
+      left: -1.33em;
       font-size: 1rem;
-      color: var(--color-white);
+      color: var(--color-black);
     
       @include respond-above(xs) {
         font-size: 2rem;
       }
-
       @include respond-above(sm) {
         font-size: 3rem;
       }
@@ -62,8 +71,8 @@
     .name {
       color: transparent;
       font-size: 4rem;
-      -webkit-text-stroke: 3px var(--color-white);
-      text-stroke: 3px var(--color-white);
+      -webkit-text-stroke: 4px var(--color-secondary);
+      text-stroke: 4px var(--color-white);
 
         
       @include respond-above(sm) {
@@ -87,10 +96,10 @@
 
   .download {
     align-self: flex-end;
-    color: var(--color-white);
+    color: var(--color-secondary);
     font-weight: 500;
     padding: 1em 2em;
-    border: 2px solid var(--color-white);
+    border: 3px solid var(--color-secondary);
     border-radius: 30px;
     transition: 0.3s ease;
     background-color: transparent;
@@ -114,38 +123,8 @@
     }
 
     &:hover {
-      color: var(--secondary);
-      border-color: var(--secondary);
-    }
-  }
-
-  .arrow {
-    display: none;
-    position: absolute;
-    bottom: 2em;
-    left: 50%;
-    animation: action 1s infinite alternate;
-
-      @keyframes action {
-        0% {
-            transform: translateY(0);
-        }
-    
-        100% {
-            transform: translateY(-15px);
-        }
-    }
-
-    &::before {
-      content: '';
-      border: solid var(--color-white);
-      border-width: 0 5px 5px 0;
-      display: inline-block;
-      padding: 8px;    
-      transform: rotate(45deg);
-    }   
-    @include respond-above(lg) {
-      display: inline;
+      color: var(--color-secondary-light);
+      border-color: var(--color-secondary-light);
     }
   }
 }

@@ -7,14 +7,20 @@ import style from "./Projects.module.scss";
 const Projects: NextPage<ISectionProps> = ({ sectionRef }) => {
   return (
     <section className={style.projects} ref={sectionRef}>
-      <h2 className={style["section--title"]} data-background-text="Gallery">
-        portfolio
-      </h2>
+      <div className={style.container}>
+        <h2
+          className={style["section--title"]}
+          data-text="portfolio"
+          title="portfolio"
+        >
+          Gallery
+        </h2>
 
-      <div className={style.projectsWrapper}>
-        {projects.map((item) => (
-          <BookCard key={item.id} {...item} />
-        ))}
+        <div className={style.projectsWrapper}>
+          {projects.map((item) => (
+            <BookCard key={item.id} {...item} />
+          ))}
+        </div>
       </div>
     </section>
   );

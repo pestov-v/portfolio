@@ -25,7 +25,11 @@ const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
 
   return (
     <section className={style.skills} ref={sectionRef}>
-      <h2 className={style["section--title"]} data-background-text="Skills">
+      <h2
+        className={style["section--title"]}
+        data-text="Skills"
+        title="My skills"
+      >
         My skills
       </h2>
 
@@ -50,6 +54,8 @@ const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
           </div>
         ))}
       </div>
+
+      <i className={style["arrow-next"]} />
     </section>
   );
 };

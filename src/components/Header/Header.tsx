@@ -33,6 +33,9 @@ const Header: NextPage = () => {
   return (
     <header className={style.header}>
       <picture className={style.imageWrapper}>
+        <source srcSet={`/${imgPath}.webp`} type="image/webp" />
+        <source media="(min-width: 796px)" srcSet={`/${imgPath}.jpg`} />
+        <source srcSet={`/${imgPath}-small.webp`} type="image/webp" />
         <img
           src={`${imgPath}-small.jpg`}
           alt="avatar"
@@ -41,7 +44,7 @@ const Header: NextPage = () => {
       </picture>
 
       <div className={style.info}>
-        <h3>Hello, I&apos;m</h3>
+        <h3 className={style.greteen}>Hello, I&apos;m</h3>
         <h1 className={style.name}>Volodymyr</h1>
 
         <p className={style.skills}>
@@ -59,7 +62,7 @@ const Header: NextPage = () => {
         </a>
       </div>
 
-      <i className={style.arrow} />
+      <i className={style["arrow-next"]} />
     </header>
   );
 };
