@@ -15,8 +15,8 @@
         position: absolute;
         font-size: 3.5rem;
         color: transparent;
-        -webkit-text-stroke: 3px var(--color-secondary-light);
-        text-stroke: 3px var(--color-secondary-light);
+        -webkit-text-stroke: 3px var(--color-primary-light);
+        text-stroke: 3px var(--color-primary-light);
         opacity: 0.3;
 
         letter-spacing: 0.6rem;
@@ -37,11 +37,11 @@
     .sectionTitle__title {
         font-size: 2rem;
         font-weight: 700;
-        color: var(--color-secondary);
+        color: var(--color-primary);
         z-index: 1;
 
-        -webkit-text-stroke: 1px var(--color-secondary-dark);
-        text-stroke: 1px var(--color-secondary-dark);
+        -webkit-text-stroke: 1px var(--color-primary-dark);
+        text-stroke: 1px var(--color-primary-dark);
 
         @include respond-above(xs) {
             font-size: 3.5rem;

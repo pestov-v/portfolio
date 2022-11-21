@@ -4,11 +4,11 @@
     flex: 0.5;
     font-weight: 700;
     font-size: 1rem;
+    color: var(--color-dark);
 
     &__value {
         font-weight: 500;
         white-space: nowrap;
-        color: var(--color-dark);
         
         &.success {
             color: var(--color-success);

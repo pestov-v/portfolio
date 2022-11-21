@@ -18,14 +18,13 @@
     --background-card: #dcdcd9;
     --background-button: #a7a7a7;
 
-    --color-primary: #1db199;
-    --color-primary-light: #49f9db;
-    --color-primary-dark: #1b986a;
-
-    // --color-secondary: #2e188f;
-    --color-secondary: #3a22a7;
-    --color-secondary-dark: #180a55;
-    --color-secondary-light: #7254fa;
+    --color-primary: #3a22a7;
+    --color-primary-dark: #180a55;
+    --color-primary-light: #3f5fee;
+    
+    --color-secondary: #1db199;
+    --color-secondary-light: #49f9db;
+    --color-secondary-dark: #1b986a;
 
     --color-white: #f5f5f5;
     --color-black: #000;
@@ -54,34 +53,11 @@
 
 @media (prefers-color-scheme: dark) {
     .app {
-        --primary-light: #49f9db;
-        --primary-dark: #178f62;
-        --primary-dark-hover: #054a31;
-    
-        --secondary-light: #4fdef4;
-    
-        --disabled: #d7d7d7;
-        --primary-hover: #343675;
-        --primary-active: #666666;
-        --secondary-hover: #d24335;
-    
-        
-        --color-light: rgb(69, 68, 68);
-        --color-dark: #afaeae;
-
-        --color-toggle-light: #000;
-        --color-toggle-dark: #fff;
-        --color-toggle-gray-dark: #bbb;
-
-        --color-gray: #555;
-        --color-gray-light: #aaa;
-    
-        --card-shadow: rgba(255, 255, 255, 0.3);
+        --color-primary: var(--color-primary-light);
         
         --background-navbar: #1c2936;
-
         --shadow-navbar: rgb(200, 200, 200, 0.3);
 
+        --color-toggle-gray-dark: #ddd;
     }
   }
-  
