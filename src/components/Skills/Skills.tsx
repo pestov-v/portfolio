@@ -1,35 +1,21 @@
-import { useEffect, useRef } from "react";
-import type { NextPage } from "next";
+import { useRef } from "react";
 
 import { SKILLS } from "../../util/constants";
-import { isInView } from "../../util/helpers";
+import { useShowSkills } from "./useShowSkills";
 import { ProgressBar } from "../ui/ProgressBar/ProgressBar";
-import { ISectionProps } from "../../interfaces";
 import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import style from "./Skills.module.scss";
 
-export const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
-  const progressWrapperRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handler = () => {
-      if (!progressWrapperRef.current || !isInView(progressWrapperRef.current))
-        return;
-      progressWrapperRef.current.classList.add(style.show);
-    };
-
-    window.addEventListener("scroll", handler);
-    return () => {
-      window.removeEventListener("scroll", handler);
-    };
-  }, []);
+export const Skills = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  useShowSkills({ ref, className: style.show });
 
   return (
-    <section className={style.skills} ref={sectionRef}>
+    <section className={style.skills} id="skills">
       <SectionTitle title="My Skills" bgText="Skills" />
 
-      <div className={style.progressWrapper} ref={progressWrapperRef}>
-        {SKILLS.map(({ title, percent, delay, color }, index) => (
+      <div className={style.progressWrapper} ref={ref}>
+        {SKILLS.map(({ title, percent, color }, index) => (
           <div className={style.progressItem} key={title}>
             <p
               className={[
@@ -42,7 +28,7 @@ export const Skills: NextPage<ISectionProps> = ({ sectionRef }) => {
             <ProgressBar
               percent={`${percent}%`}
               addWidthImmediately={false}
-              transitionDelay={delay}
+              transitionDelay={0.2}
               reverse={index % 2 !== 0}
               color={color}
             />

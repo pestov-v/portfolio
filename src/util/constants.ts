@@ -103,6 +103,7 @@ export interface IProject {
 
 export enum COLORS {
   primary = 'primary',
+  secondary = 'secondary',
   success = 'success',
   warning = 'warning',
   danger = 'danger',
@@ -113,20 +114,20 @@ export type TColors = keyof typeof COLORS
   
 interface ISkill {
   title: string;
-  delay: number;
+  delay?: number;
   percent: number;
   color: TColors;
 }
 
 export const SKILLS: ISkill[] = [
-  { title: "html", delay: 0.7, percent: 92, color: COLORS.primary },
-  { title: "css", delay: 0.7, percent: 87, color: COLORS.success },
-  { title: "JavaScript", delay: 1.1, percent: 90, color: COLORS.info },
-  { title: "nodejs", delay: 1.1, percent: 71, color: COLORS.warning },
-  { title: "react", delay: 1.3, percent: 88, color: COLORS.success },
-  { title: "react native", delay: 1.3, percent: 63, color: COLORS.primary },
-  { title: "vue", delay: 1.3, percent: 52, color: COLORS.danger },
-  { title: "angular", delay: 1.3, percent: 42, color: COLORS.info },
+  { title: "html", percent: 92, color: COLORS.secondary },
+  { title: "css", percent: 87, color: COLORS.success },
+  { title: "JavaScript", percent: 90, color: COLORS.primary },
+  { title: "nodejs", percent: 71, color: COLORS.warning },
+  { title: "react", percent: 88, color: COLORS.success },
+  { title: "react native", percent: 63, color: COLORS.secondary },
+  { title: "vue", percent: 52, color: COLORS.danger },
+  { title: "angular", percent: 42, color: COLORS.info },
 ];
 
 export const socialLinks = [

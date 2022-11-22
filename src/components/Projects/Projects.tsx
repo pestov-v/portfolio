@@ -1,13 +1,11 @@
-import { NextPage } from "next";
-import { ISectionProps } from "../../interfaces";
 import { projects } from "../../util/constants";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
 import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import style from "./Projects.module.scss";
 
-export const Projects: NextPage<ISectionProps> = ({ sectionRef }) => {
+export const Projects = () => {
   return (
-    <section className={style.projects} ref={sectionRef}>
+    <section className={style.projects} id="projects">
       <div className={style.container}>
         <SectionTitle title="portfolio" bgText="Gallery" />
 

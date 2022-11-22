@@ -11,7 +11,6 @@
   align-items: center;
   justify-content: center;
   grid-gap: 3.2em;
-  margin-top: -5em;
 
   &::before {
     content: '';
@@ -31,7 +30,9 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-  
+  @include respond-above(xs) {
+    margin-top: -5em;
+  }
   @include respond-above(sm) {
     grid-gap: 1.6em;
   }
@@ -70,14 +71,14 @@
     }
 
     .name {
-      color: transparent;
       font-size: 4rem;
-      -webkit-text-stroke: 4px var(--color-primary);
-      text-stroke: 4px var(--color-white);
-
+      color: var(--color-primary);
         
       @include respond-above(sm) {
+        color: transparent;
         font-size: 5rem;
+        -webkit-text-stroke: 4px var(--color-primary);
+        text-stroke: 4px var(--color-primary);
       }
       @include respond-above(lg) {
         font-size: 7rem;

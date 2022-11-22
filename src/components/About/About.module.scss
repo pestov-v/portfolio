@@ -10,15 +10,11 @@
 
     @include respond-above(sm) {
         padding: {
-            top: 6em;
-            bottom: 10em;
+            top: 8em;
+            bottom: 8em;
         }
     }
 
-    .container {
-        margin: auto;
-        max-width: min(90%, 80em);
-    }
     .info {
         display: flex;
         flex-direction: column;

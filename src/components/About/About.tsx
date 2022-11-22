@@ -1,5 +1,3 @@
-import type { NextPage } from "next";
-import { ISectionProps } from "../../interfaces";
 import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import { AboutImage } from "./AboutImage/AboutImage";
 import { InfoItem } from "./InfoItem/InfoItem";
@@ -16,11 +14,11 @@ const additionalInfo = [
   { title: "Freelance", value: "Available" },
 ];
 
-export const About: NextPage<ISectionProps> = ({ sectionRef }) => {
+export const About = () => {
   return (
-    <section className={style.about} ref={sectionRef}>
+    <section className={style.about} id="about">
       <div className={style.container}>
-        <SectionTitle title="About" bgText="About" />
+        <SectionTitle title="About me" bgText="About" />
 
         <div className={style.info}>
           <AboutImage />
