@@ -1,3 +1,5 @@
+import { addImagePath } from "./helpers";
+
 export interface IProject {
     id: number;
     title: string;
@@ -9,8 +11,8 @@ export interface IProject {
 
   export type TProjects = IProject[];
   export type Projects = IProject[]; // FIXME: delete type
-  
-  export const projects: Projects = [
+
+  export const _projects: Projects = [
     {
       id: 11,
       title: "Forex-broker",
@@ -101,6 +103,8 @@ export interface IProject {
     },
   ];
 
+  export const projects = addImagePath(_projects);
+
 export enum COLORS {
   primary = 'primary',
   secondary = 'secondary',
@@ -138,9 +142,9 @@ export const socialLinks = [
   },
   { id: "github", href: "https://github.com/pestov-v", title: "GitHub" },
   {
-    id: "email",
-    href: "mailto:pestov.volodymyr@gmail.com",
-    title: "Send email",
+    id: "linkedin",
+    href: "http://linkedin.com/in/pestov-volodymyr-405011206/",
+    title: "LinkedIn",
   },
   { id: "phone", href: "tel:+380970097343", title: "Call me" },
 ];
