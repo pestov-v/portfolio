@@ -28,16 +28,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: min(90%, 80em);
+    max-width: min(90%, 30em);
     margin: 0 auto;
-
-    .title {
-      display: none;
-
-      @include respond-above(sm) {
-        display: inline;
-      }
-    }
   }
 
   .details {

@@ -25,7 +25,6 @@ export const Footer = () => {
               src={`/img/icons/${id}.svg`}
               alt={title}
             />
-            <span className={style.title}>{title}</span>
           </a>
         ))}
       </div>
