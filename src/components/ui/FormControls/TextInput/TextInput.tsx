@@ -8,8 +8,7 @@ interface IProps
   textarea?: boolean;
 }
 export const TextInput: FC<IProps> = (props) => {
-  const { errors, label } = props;
-  const { placeholder = "", textarea, name } = props;
+  const { errors, label, textarea, ...rest } = props;
 
   const isErrors = !!errors?.length;
   const errorClass = isErrors ? style.error : "";
@@ -20,17 +19,13 @@ export const TextInput: FC<IProps> = (props) => {
       {textarea ? (
         <textarea
           className={`${style.TextInput__input} ${errorClass}`}
-          placeholder={placeholder}
-          name={name}
-          {...props}
+          {...rest}
         />
       ) : (
         <input
           className={`${style.TextInput__input} ${errorClass}`}
           type={props?.type ?? "text"}
-          placeholder={placeholder}
-          name={name}
-          {...props}
+          {...rest}
         />
       )}
 

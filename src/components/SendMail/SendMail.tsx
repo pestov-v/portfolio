@@ -36,14 +36,15 @@ export const SendMail = () => {
       );
 
       alert("Thank you for your message!");
-      formData.name.setValue("");
-      formData.email.setValue("");
-      formData.text.setValue("");
+      formData.name.reset();
+      formData.email.reset();
+      formData.text.reset();
     } catch (e) {}
   };
 
   const isValidForm =
     formData.name.isValid && formData.email.isValid && formData.text.isValid;
+
   return (
     <section className={style.SendMail} id="mail">
       <div className={style.container}>
@@ -55,12 +56,14 @@ export const SendMail = () => {
 
         <form className={style.SendMail__form} ref={form} onSubmit={onSubmit}>
           <TextInput
-            {...formData.name}
+            {...formData.name.inputProps}
+            errors={formData.name.errors}
             name="user_name"
             placeholder="Name..."
           />
           <TextInput
-            {...formData.email}
+            {...formData.email.inputProps}
+            errors={formData.email.errors}
             name="user_email"
             placeholder="Email..."
           />
