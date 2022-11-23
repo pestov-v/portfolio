@@ -11,7 +11,7 @@
     @include respond-above(sm) {
         padding: {
             top: 8em;
-            bottom: 8em;
+            bottom: 14em;
         }
     }
 
@@ -43,6 +43,7 @@
 
             @include respond-above(sm) {
                 grid-gap: 2.3em;
+                align-items: flex-start;
             }
 
             .infoTitle {
