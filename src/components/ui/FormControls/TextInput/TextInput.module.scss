@@ -9,6 +9,7 @@
         padding: 0.5em 0.8em;
         border: 2px solid var(--color-primary-light);
         border-radius: 5px;
+        margin-bottom: 1.01em;
 
         &:focus,
         &:active {
@@ -16,6 +17,10 @@
         }
         &::placeholder {
             font: inherit;
+        }
+        &.error {
+            border-color: var(--color-danger);
+            margin-bottom: 0;
         }
     }
 
@@ -27,5 +32,7 @@
 
     &__errors {
         color: var(--color-danger);
+        margin-top: 0.1em;
+        font-size: 0.8rem;
     }
 }

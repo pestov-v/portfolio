@@ -21,6 +21,11 @@
         button {
             align-self: flex-end;
             margin-top: 0.5em;
+            &:disabled {
+                cursor: not-allowed;
+                color: var(--color-gray-light);
+                border-color: var(--color-gray-light);
+            }
         }
     }
 }

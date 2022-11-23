@@ -2,17 +2,25 @@ import { FormEvent, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 import { TextInput } from "../ui/FormControls/TextInput/TextInput";
-import { useTextInput } from "../ui/FormControls/TextInput/useTextInput";
 import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
+import { useTextInput } from "../../hooks/useTextInput/useTextInput";
 import style from "./SendMail.module.scss";
 
 export const SendMail = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const formData = {
-    input: useTextInput(),
-    email: useTextInput(),
-    text: useTextInput(),
+    name: useTextInput({
+      isRequired: true,
+      validators: ["name"],
+      filters: ["name"],
+    }),
+    email: useTextInput({
+      isRequired: true,
+      validators: ["email"],
+      filters: ["email"],
+    }),
+    text: useTextInput({ isRequired: true, validateOnChange: true }),
   };
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -28,12 +36,14 @@ export const SendMail = () => {
       );
 
       alert("Thank you for your message!");
-      formData.input.setValue("");
+      formData.name.setValue("");
       formData.email.setValue("");
       formData.text.setValue("");
     } catch (e) {}
   };
 
+  const isValidForm =
+    formData.name.isValid && formData.email.isValid && formData.text.isValid;
   return (
     <section className={style.SendMail} id="mail">
       <div className={style.container}>
@@ -45,7 +55,7 @@ export const SendMail = () => {
 
         <form className={style.SendMail__form} ref={form} onSubmit={onSubmit}>
           <TextInput
-            {...formData.input}
+            {...formData.name}
             name="user_name"
             placeholder="Name..."
           />
@@ -56,12 +66,15 @@ export const SendMail = () => {
           />
 
           <TextInput
-            {...formData.text}
+            {...formData.text.inputProps}
+            errors={formData.text.errors}
             textarea
             name="message"
             placeholder="Your message..."
           />
-          <button className={style.btn}>Send</button>
+          <button className={style.btn} disabled={!isValidForm}>
+            Send
+          </button>
         </form>
       </div>
     </section>

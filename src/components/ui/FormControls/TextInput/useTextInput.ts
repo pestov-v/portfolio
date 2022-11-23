@@ -5,7 +5,7 @@ interface IProps {
     value?: string
 }
 const REQUIRED = 'The field is required!';
-export const useTextInput = (props?: IProps) => {
+export const useTextInputMy = (props?: IProps) => {
 
     const [value, setValue] = useState<string>(props?.value ?? '');
     const [isDirty, setIsDirty] = useState(false);
@@ -16,13 +16,21 @@ export const useTextInput = (props?: IProps) => {
         if (isDirty && !!errors.length) setIsValid(false);
     }, [errors, isDirty]);
 
+    const validate = (value: string) => {
+        const newErrors = errors.filter(err => err !== REQUIRED)
+        
+        if (props?.required && !value.length) {
+            setErrors([...newErrors, REQUIRED]);
+            return;
+        }
+        setErrors(newErrors)
+    }
+
     const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const newValue = e.target.value.trim();
-
-        if (props?.required && !newValue.length) {
-
-            setErrors([...errors, REQUIRED]);
-        }
+        // console.log('onChange', newValue);
+            
+        validate(newValue);
 
         setIsDirty(true);
         setValue(newValue);
