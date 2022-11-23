@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { useRef } from "react";
 
 import { MainLayout } from "../src/Layouts/MainLayout";
 import { Navbar } from "../src/components/Navbar/Navbar";

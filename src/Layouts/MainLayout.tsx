@@ -15,6 +15,10 @@ export const MainLayout: NextPage<ILayoutProps> = ({
       <Head>
         <title>Portfolio</title>
         <meta name="Portfolio" content="Pestov Volodymyr" />
+        <meta
+          name="description"
+          content="WebDeveloper, WebDesiner, FrontEnd, BackEnd"
+        />
         <meta name="description" content="Pestov Volodymyr's portfolio"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
