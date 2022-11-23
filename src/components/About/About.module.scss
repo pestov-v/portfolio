@@ -49,7 +49,7 @@
                 font-size: 2rem;
                 font-weight: 700;
                 text-align: center;
-                color: var(--color-toggle-dark);
+                color: var(--color-dark);
 
                 @include respond-above(sm) {
                     font-size: 2rem;
