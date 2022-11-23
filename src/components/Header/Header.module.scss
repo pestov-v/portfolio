@@ -98,10 +98,10 @@
 
   .download {
     align-self: flex-end;
-    color: var(--color-primary);
+    color: var(--color-primary-light);
     font-weight: 700;
     padding: 1em 2em;
-    border: 3px solid var(--color-primary);
+    border: 3px solid var(--color-primary-light);
     border-radius: 30px;
     transition: 0.3s ease;
     background-color: transparent;
@@ -125,8 +125,8 @@
     }
 
     &:hover {
-      color: var(--color-primary-light);
-      border-color: var(--color-primary-light);
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 }
