@@ -37,6 +37,8 @@
 
     --color-gray: #555;
     --color-gray-light: #aaa;
+    --color-toggle-gray: #555;
+    --color-toggle-gray-light: #aaa;
 
 
     --color-danger: #f33232;
@@ -60,5 +62,8 @@
 
         --color-toggle-gray-dark: #ddd;
         --color-toggle-dark: rgb(144, 136, 136);
+  
+        --color-toggle-gray: rgb(219, 202, 202);
+        --color-toggle-gray-light: rgb(156, 146, 146);
     }
   }
