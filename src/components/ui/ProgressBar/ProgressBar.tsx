@@ -1,6 +1,6 @@
 import { FC, useRef, useEffect } from "react";
-import { COLORS, TColors } from "../../../util/constants";
-import { isInView, throttle } from "../../../util/helpers";
+import { COLORS, TColors } from "util/constants";
+import { isInView, throttle } from "util/helpers";
 import style from "./ProgressBar.module.scss";
 
 interface IProps {

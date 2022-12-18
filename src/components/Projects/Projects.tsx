@@ -1,6 +1,6 @@
-import { projects } from "../../util/constants";
+import { projects } from "util/constants";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
-import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
+import { SectionTitle } from "components/ui/SectionTitle/SectionTitle";
 import style from "./Projects.module.scss";
 
 export const Projects = () => {

@@ -30,6 +30,32 @@ export const useTextInput = (props?: iUseTextInputProps) => {
   const emptyErr = props?.emptyErrText ? props?.emptyErrText : "This field can't be empty";
   const notEqualErr = props?.notEqualErrText ? props?.notEqualErrText : "Doesn't match";
 
+  const checkValidity = (val?: string) => {
+    const newVal = val === undefined ? value : val;
+    const validationErrors = validators?.map(({error}) => error) || [];
+    const customErrors = errors.filter(
+      err => !validationErrors.includes(err) && err !== emptyErr && err !== notEqualErr
+    );
+
+    if (!isRequired && !newVal?.length) {
+      setErrors(customErrors);
+      setIsValid(true);
+      return true;
+    }
+
+    const newErrors = validators
+      ? [...applyValidators(newVal || "", validators), ...customErrors]
+      : [...customErrors];
+
+    if (!newErrors.length && isRequired && !newVal?.length) newErrors.push(emptyErr);
+
+    if (isEqualTo !== null && newVal !== isEqualTo) newErrors.push(notEqualErr);
+
+    setErrors(newErrors);
+    setIsValid(!newErrors?.length);
+    return !newErrors?.length;
+  };
+
   useEffect(() => {
     if (isReset.current) return;
     if (!validateOnChange) {
@@ -39,7 +65,7 @@ export const useTextInput = (props?: iUseTextInputProps) => {
     isDirty && checkValidity();
     props?.onChangeCallback?.();
     props?.onChangeValue?.(value);
-  }, [value]);
+  }, [value, props?.onChangeCallback, props?.onChangeValue, isDirty, checkValidity, isReset.current]);
 
   useEffect(() => {
     isRequired && isDirty && checkValidity();
@@ -47,11 +73,11 @@ export const useTextInput = (props?: iUseTextInputProps) => {
       isDirty &&
       errors.includes(emptyErr) &&
       setErrors(errors.filter(err => err !== emptyErr));
-  }, [isRequired]);
+  }, [isRequired, isDirty, checkValidity]);
 
   useEffect(() => {
     isDirty && checkValidity();
-  }, [isEqualTo]);
+  }, [isEqualTo, isDirty, checkValidity]);
 
   const onFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>) => {
     props?.onFocusCallback?.(e);
@@ -86,32 +112,6 @@ export const useTextInput = (props?: iUseTextInputProps) => {
     setValue(val);
     setValidateOnChange(true);
     checkValidity(val);
-  };
-
-  const checkValidity = (val?: string) => {
-    const newVal = val === undefined ? value : val;
-    const validationErrors = validators?.map(({error}) => error) || [];
-    const customErrors = errors.filter(
-      err => !validationErrors.includes(err) && err !== emptyErr && err !== notEqualErr
-    );
-
-    if (!isRequired && !newVal?.length) {
-      setErrors(customErrors);
-      setIsValid(true);
-      return true;
-    }
-
-    const newErrors = validators
-      ? [...applyValidators(newVal || "", validators), ...customErrors]
-      : [...customErrors];
-
-    if (!newErrors.length && isRequired && !newVal?.length) newErrors.push(emptyErr);
-
-    if (isEqualTo !== null && newVal !== isEqualTo) newErrors.push(notEqualErr);
-
-    setErrors(newErrors);
-    setIsValid(!newErrors?.length);
-    return !newErrors?.length;
   };
 
   const reset = () => {

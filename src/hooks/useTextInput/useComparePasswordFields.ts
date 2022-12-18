@@ -9,9 +9,9 @@ type tUseComparePasswordFields = {
 export const useComparePasswordFields = ({pass, confirmPass}: tUseComparePasswordFields) => {
   useEffect(() => {
     confirmPass.setIsEqualTo(pass.value);
-  }, [pass]);
+  }, [pass, confirmPass]);
 
   useEffect(() => {
     pass.setIsEqualTo(confirmPass.value);
-  }, [confirmPass]);
+  }, [pass, confirmPass]);
 };

@@ -1,7 +1,7 @@
-import { NextPage } from "next";
-import style from "./Header.module.scss";
 import { useEffect, useRef } from "react";
+import { NextPage } from "next";
 import Typed from "typed.js";
+import style from "./Header.module.scss";
 
 export const imgPath = "img/profile/profile";
 export const Header: NextPage = () => {

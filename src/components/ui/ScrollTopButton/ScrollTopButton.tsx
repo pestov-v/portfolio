@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useVisible } from "../../../hooks/useVisible";
+import { useVisible } from "hooks/useVisible";
 import style from "./ScrollTopButton.module.scss";
 
 export const ScrollTopButton = () => {
