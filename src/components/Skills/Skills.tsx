@@ -1,9 +1,9 @@
 import { useRef } from "react";
 
-import { SKILLS } from "../../util/constants";
+import { SKILLS } from "util/constants";
 import { useShowSkills } from "./useShowSkills";
-import { ProgressBar } from "../ui/ProgressBar/ProgressBar";
-import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
+import { ProgressBar } from "components/ui/ProgressBar/ProgressBar";
+import { SectionTitle } from "components/ui/SectionTitle/SectionTitle";
 import style from "./Skills.module.scss";
 
 export const Skills = () => {
@@ -28,7 +28,7 @@ export const Skills = () => {
             <ProgressBar
               percent={`${percent}%`}
               addWidthImmediately={false}
-              transitionDelay={0.2}
+              transitionDelay={0}
               reverse={index % 2 !== 0}
               color={color}
             />

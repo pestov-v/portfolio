@@ -1,55 +1,60 @@
-@import 'src/styles/colors';
-@import 'src/styles/breakpoints';
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
 
 .sectionTitle {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+
+  .sectionTitle__bgText {
+    position: absolute;
+    font-size: 3.5rem;
+    color: transparent;
+    -webkit-text-stroke: 5px var(--color-primary-light);
+    text-stroke: 5px var(--color-primary-light);
+    opacity: 0.3;
+    letter-spacing: 0.6rem;
+
+    @include respond-above(xs) {
+      font-size: 4.5rem;
+      letter-spacing: 1.33rem;
+    }
+    @include respond-above(sm) {
+      font-size: 5.5rem;
+    }
+    @include respond-above(lg) {
+      font-size: 8rem;
+      letter-spacing: 2rem;
+    }
+  }
+
+  .sectionTitle__title {
+    font-size: 2rem;
     font-weight: 700;
+    background: -webkit-linear-gradient(
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
 
-    .sectionTitle__bgText {
-        position: absolute;
-        font-size: 3.5rem;
-        color: transparent;
-        -webkit-text-stroke: 5px var(--color-primary-light);
-        text-stroke: 5px var(--color-primary-light);
-        opacity: 0.3;
-        letter-spacing: 0.6rem;
+    -webkit-text-stroke: 1px var(--color-primary-dark);
+    text-stroke: 1px var(--color-primary-dark);
 
-        @include respond-above(xs) {
-            font-size: 4.5rem;
-            letter-spacing: 1.33rem;
-        }
-        @include respond-above(sm) {
-          font-size: 5.5rem;
-        }
-        @include respond-above(lg) {
-          font-size: 8rem;
-          letter-spacing: 2rem;
-        }
+    @include respond-above(xs) {
+      font-size: 3.5rem;
     }
-
-    .sectionTitle__title {
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--color-primary);
-        z-index: 1;
-
-        -webkit-text-stroke: 1px var(--color-primary-dark);
-        text-stroke: 1px var(--color-primary-dark);
-
-        @include respond-above(xs) {
-            font-size: 3.5rem;
-          }
-          @include respond-above(sm) {
-            font-size: 4.5rem;
-          }
-          @include respond-above(lg) {
-            font-size: 5.5rem;
-          }
+    @include respond-above(sm) {
+      font-size: 4.5rem;
     }
+    @include respond-above(lg) {
+      font-size: 5.5rem;
+    }
+  }
 }

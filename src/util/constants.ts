@@ -17,7 +17,7 @@ export const _projects: Projects = [
     title: "Forex-broker",
     description: "i88 #1 app for active trading & long-term investing. Stocks, ETFs, Forex, Metals, Cryptocurrency.",
     href: "https://i88.io",
-    image: "/i88",
+    image: "i88",
     alt: "Forex-broker",
   },
   {
@@ -25,7 +25,7 @@ export const _projects: Projects = [
     title: "Covid-19 tracker",
     description: "Tracker for covid-19",
     href: "https://nakryt.github.io/covid-19-tracker/",
-    image: "/covid-19-tracker",
+    image: "covid-19-tracker",
     alt: "Covid-19 tracker",
   },
   {
@@ -33,7 +33,7 @@ export const _projects: Projects = [
     title: "Facebook Clone",
     description: "Demo facebook-clone with React and firebase",
     href: "https://facebook-clone-a4fee.web.app/",
-    image: "/facebook",
+    image: "facebook",
     alt: "Facebook App",
   },
   {
@@ -41,7 +41,7 @@ export const _projects: Projects = [
     title: "What's App Clone",
     description: "Demo WhatsApp-clone with React and firebase",
     href: "https://whats-app-clone-7599c.web.app/",
-    image: "/whatsapp",
+    image: "whatsapp",
     alt: "What's App",
   },
   {
@@ -49,7 +49,7 @@ export const _projects: Projects = [
     title: "Simple Blog",
     description: "Simple social blog with React, Express, MongoDB and GraphQL",
     href: "https://blogmerng.herokuapp.com/",
-    image: "/blog-merng",
+    image: "blog-merng",
     alt: "Social blog",
   },
   {
@@ -57,7 +57,7 @@ export const _projects: Projects = [
     title: "Simple Amazona",
     description: "Online market like amazon with React, Express and MongoDB",
     href: "https://simple-amazona.herokuapp.com/",
-    image: "/amazona",
+    image: "amazona",
     alt: "amazona mart",
   },
   {
@@ -65,7 +65,7 @@ export const _projects: Projects = [
     title: "ABZ-test task",
     description: "Test project on React from ABZ-agency",
     href: "https://nakryt.github.io/test/",
-    image: "/abz-test",
+    image: "abz-test",
     alt: "abz-agency test",
   },
   {
@@ -73,7 +73,7 @@ export const _projects: Projects = [
     title: "Todo application",
     description: "React todo application with database on firebase",
     href: "https://todo-998f4.web.app/",
-    image: "/todo-app",
+    image: "todo-app",
     alt: "todo application",
   },
   {
@@ -81,7 +81,7 @@ export const _projects: Projects = [
     title: "Quiz application",
     description: "React quiz application with database on firebase",
     href: "https://quiz-36da1.web.app/quiz/-M-pVyWbXPA2yCL4xf0d",
-    image: "/quiz",
+    image: "quiz",
     alt: "quiz application",
   },
   {
@@ -89,7 +89,7 @@ export const _projects: Projects = [
     title: "Simple bootstrap app",
     description: "Simple site with bootstrap",
     href: "https://simplebootstrapsite.web.app/",
-    image: "/bootstrap-app",
+    image: "bootstrap-app",
     alt: "bootstrap application",
   },
   {
@@ -97,7 +97,7 @@ export const _projects: Projects = [
     title: "Simple menu",
     description: "Simple menu for restaurant",
     href: "https://nakryt.github.io/simple-menu/",
-    image: "/simple-menu",
+    image: "simple-menu",
     alt: "menu application",
   },
 ];

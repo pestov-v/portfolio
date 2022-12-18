@@ -17,7 +17,7 @@ export const throttle = (func: (e: any) => void, timeFrame: number) => {
     return box.top < window.innerHeight && box.bottom >= 0;
   };
 
-  const IMG_PATH = 'img/projects/'
+  const IMG_PATH = '/img/projects/'
   export const getImagePath = (name: string) => `${IMG_PATH}${name}.jpg`
   export const addImagePath = (projects: IProject[]) => {
     return projects.map(item => ({...item, image: getImagePath(item.image)}))
