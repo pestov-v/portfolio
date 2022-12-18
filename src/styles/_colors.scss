@@ -1,50 +1,51 @@
 .app {
-    --color-primary: #3a22a7;
-    --color-primary-dark: #180a55;
-    --color-primary-light: #26bde3;
+    --color-primary: hsl(250, 65%, 40%);
+    --color-primary-dark: hsl(250, 65%, 20%);
+    --color-primary-light: hsl(250, 65%, 70%);
     
-    --color-secondary: #1db199;
-    --color-secondary-light: #49f9db;
-    --color-secondary-dark: #1a7466;
+    --color-secondary: hsl(170, 72%, 40%);
+    --color-secondary-light: hsl(170, 94%, 63%);
+    --color-secondary-dark: hsl(171, 63%, 28%);
 
-    --color-white: rgb(245, 245, 245);
-    --color-black: #000;
-    --color-light: #afaeae;
-    --color-dark: rgb(69, 68, 68);
+    --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 0%);
+    --color-light: hsl(0, 0%, 70%);
+    --color-light-transparent: hsla(0, 0%, 70%, 0.2);
+    --color-dark: hsl(0, 0%, 27%);
 
-    --color-toggle-light: #fff;
-    --color-toggle-dark: rgb(146, 132, 132);
-    --color-toggle-gray-dark: #555;
+    --color-toggle-light: hsl(0, 0%, 100%);
+    --color-toggle-dark: hsl(0, 0%, 50%);
+    --color-toggle-gray-dark: var(--color-dark);
 
-    --color-gray: #555;
-    --color-gray-light: #aaa;
-    --color-toggle-gray: #555;
-    --color-toggle-gray-light: #aaa;
+    --color-gray: hsl(0, 0%, 33%);
+    --color-gray-light: hsl(0, 0%, 67%);
+    --color-toggle-gray: var(--color-gray);
+    --color-toggle-gray-light: var(--color-gray-light);
 
 
-    --color-danger: #f33232;
-    --color-warning: rgb(240, 240, 76);
-    --color-success: rgb(24, 220, 73);
-    --color-info: rgb(90, 123, 214);
+    --color-danger: hsl(0, 85%, 60%);
+    --color-warning: hsl(60, 85%, 60%);
+    --color-success: hsl(135, 85%, 50%);
+    --color-info: hsl(225, 85%, 60%);
 
-    --background-navbar: rgb(245, 245, 245, 0.96);
-    --shadow-navbar: rgba(0, 0, 0, 0.3);
+    --background-navbar: hsla(0, 0%, 90%, 0.9);
+    --shadow-navbar: hsla(0, 0%, 0%, 0.3);
     
     // SHADOWS
-    --card-shadow: rgb(0, 0, 0, 0.3);
+    --card-shadow: hsla(0, 0%, 0%, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
     .app {
-        --color-primary: var(--color-primary-light);
+        // --color-primary: var(--color-primary-light);
         
-        --background-navbar: rgb(28, 41, 54, 0.96);
-        --shadow-navbar: rgb(200, 200, 200, 0.3);
+        --background-navbar: hsla(210, 30%, 20%, 0.9);
+        --shadow-navbar: hsla(0, 0%, 78%, 0.3);
 
-        --color-toggle-gray-dark: #ddd;
-        --color-toggle-dark: rgb(144, 136, 136);
+        --color-toggle-gray-dark: hsl(0, 0%, 87%);
+        --color-toggle-dark: hsl(0, 3%, 55%);
   
-        --color-toggle-gray: rgb(219, 202, 202);
-        --color-toggle-gray-light: rgb(156, 146, 146);
+        --color-toggle-gray: hsl(0, 19%, 83%);
+        --color-toggle-gray-light: hsl(0, 5%, 59%);
     }
   }

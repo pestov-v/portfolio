@@ -3,8 +3,8 @@
 
 .skills {
     position: relative;
-    padding-top: 8em;
     min-height: 100vh;
+    padding: 3em 0;
 
     @extend .paralax;
     &::before {

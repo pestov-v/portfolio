@@ -4,13 +4,12 @@
     position: fixed;
     right: 2em;
     bottom: 2em;
-    width: 2.5em;
-    height: 2.5em;
+    width: 4em;
+    height: 4em;
 
     z-index: 11;
     background-color: transparent;
-    border: 2px solid var(--color-primary-light);
-    border-radius: 50px;
+    border: none;
     opacity: 0;
     transition: opacity 0.3s ease;
     animation: action 1s infinite alternate;
@@ -21,23 +20,28 @@
 
     &::before {
         content: '';
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4em;
+        width: 4em;
+        display: block;
+        background-color: var(--color-light-transparent);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 3px solid var(--color-primary-light);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &::after {
+        content: '';
         border: solid var(--color-primary-light);
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;    
         transform: rotate(-135deg);
-    }
-
-    &::after {
-        content: '';
-        height: 3em;
-        width: 3em;
-        display: block;
-        position: absolute;
-        top: -15%;
-        left: 50%;
-        transform: translateX(-50%);
-        cursor: pointer;
     }
 }
 

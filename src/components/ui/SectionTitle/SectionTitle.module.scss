@@ -15,10 +15,9 @@
         position: absolute;
         font-size: 3.5rem;
         color: transparent;
-        -webkit-text-stroke: 3px var(--color-primary-light);
-        text-stroke: 3px var(--color-primary-light);
+        -webkit-text-stroke: 5px var(--color-primary-light);
+        text-stroke: 5px var(--color-primary-light);
         opacity: 0.3;
-
         letter-spacing: 0.6rem;
 
         @include respond-above(xs) {
