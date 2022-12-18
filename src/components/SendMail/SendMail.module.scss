@@ -1,31 +1,35 @@
-@import 'src/styles/common';
+@import "src/styles/common";
+@import "src/styles/breakpoints";
 
 .SendMail {
-    padding: {
-        top: 8em;
-        bottom: 6em;
-    }
-    background-color: var(--color-white);
+  padding: {
+    top: 3em;
+    bottom: 6em;
+  }
+  @include respond-above(sm) {
+    padding-top: 8em;
+  }
+  background-color: var(--color-white);
 
-    &__title {
-        margin-bottom: 4em;
-    }
+  &__title {
+    margin-bottom: 4em;
+  }
 
-    &__form {
-        max-width: 500px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        grid-gap: 1.33em;
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.33em;
 
-        button {
-            align-self: flex-end;
-            margin-top: 0.5em;
-            &:disabled {
-                cursor: not-allowed;
-                color: var(--color-gray-light);
-                border-color: var(--color-gray-light);
-            }
-        }
+    button {
+      align-self: flex-end;
+      margin-top: 0.5em;
+      &:disabled {
+        cursor: not-allowed;
+        color: var(--color-gray-light);
+        border-color: var(--color-gray-light);
+      }
     }
+  }
 }

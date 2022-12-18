@@ -1,50 +1,52 @@
-@import 'src/styles/breakpoints';
-@import 'src/styles/common';
+@import "src/styles/breakpoints";
+@import "src/styles/common";
 
 .skills {
-    position: relative;
-    min-height: 100vh;
-    padding: 3em 0;
+  position: relative;
+  min-height: 100vh;
+  padding: 3em 0;
 
-    @extend .paralax;
-    &::before {
-        background-image: url("/img/develop.jpeg");
+  @extend .paralax;
+  &::before {
+    background-image: url("/img/develop.jpeg");
+  }
+  @include respond-above(sm) {
+    padding-top: 8em;
+  }
+
+  .progressWrapper {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1em;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    padding-top: 4em;
+
+    &.show {
+      opacity: 1;
     }
 
-    .progressWrapper {
-        @extend .container;
-        display: flex;
-        flex-direction: column;
-        grid-gap: 1em;
-        opacity: 0;
-        transition: opacity 1s ease-out;
-        padding-top: 4em;
-
-        &.show {
-            opacity: 1;
-        }
-
-        @include respond-above(sm) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 2em;
-        }
-
-        .progressItem {
-            display: flex;
-            flex-direction: column;
-            grid-gap: 0.3em;
-
-            .progressTitle {
-                font-weight: 500;
-                font-size: 1.5rem;
-                text-transform: uppercase;
-
-                &.flexEnd {
-                    align-self: flex-end;
-                }
-            }
-
-        }
+    @include respond-above(sm) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2em;
     }
+
+    .progressItem {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 0.3em;
+
+      .progressTitle {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+        &.flexEnd {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
 }

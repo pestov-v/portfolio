@@ -1,8 +1,16 @@
+@import "src/styles/common";
+@import "src/styles/breakpoints";
+
 .projects {
-  padding-top: 4em;
+  padding-top: 3em;
   background-color: var(--color-white);
 
+  @include respond-above(sm) {
+    padding-top: 8em;
+  }
+
   .projectsWrapper {
+    @extend .container;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
