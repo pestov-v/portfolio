@@ -15,7 +15,7 @@ export const _projects: Projects = [
   {
     id: 12,
     title: "Online market",
-    description: "Simple online market",
+    description: "Simple online market on Next.js whith MongoDB",
     href: "https://market-pestov-v.vercel.app/",
     image: "market",
     alt: "Online market",
