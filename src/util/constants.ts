@@ -13,6 +13,14 @@ export type Projects = IProject[]; // FIXME: delete type
 
 export const _projects: Projects = [
   {
+    id: 12,
+    title: "Online market",
+    description: "Simple online market",
+    href: "https://market-pestov-v.vercel.app/",
+    image: "market",
+    alt: "Online market",
+  },
+  {
     id: 11,
     title: "Forex-broker",
     description: "i88 #1 app for active trading & long-term investing. Stocks, ETFs, Forex, Metals, Cryptocurrency.",
