@@ -5,6 +5,7 @@
   position: relative;
   min-height: 100vh;
   padding: 3em 0;
+  scroll-snap-align: center;
 
   @extend .paralax;
   &::before {

@@ -1,10 +1,10 @@
-import { FormEvent, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { FormEvent, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-import { TextInput } from "../ui/FormControls/TextInput/TextInput";
-import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
-import { useTextInput } from "../../hooks/useTextInput/useTextInput";
-import style from "./SendMail.module.scss";
+import { TextInput } from '../ui/FormControls/TextInput/TextInput';
+import { SectionTitle } from '../ui/SectionTitle/SectionTitle';
+import { useTextInput } from '../../hooks/useTextInput/useTextInput';
+import style from './SendMail.module.scss';
 
 export const SendMail = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -12,13 +12,13 @@ export const SendMail = () => {
   const formData = {
     name: useTextInput({
       isRequired: true,
-      validators: ["name"],
-      filters: ["name"],
+      validators: ['name'],
+      filters: ['name'],
     }),
     email: useTextInput({
       isRequired: true,
-      validators: ["email"],
-      filters: ["email"],
+      validators: ['email'],
+      filters: ['email'],
     }),
     text: useTextInput({ isRequired: true, validateOnChange: true }),
   };
@@ -29,13 +29,13 @@ export const SendMail = () => {
     if (!form.current) return;
     try {
       await emailjs.sendForm(
-        "service_f6tyqgq",
-        "template_5lm9rln",
+        'service_f6tyqgq',
+        'template_5lm9rln',
         form.current,
-        "_t-9w7H78xR5SS4K6"
+        '_t-9w7H78xR5SS4K6'
       );
 
-      alert("Thank you for your message!");
+      alert('Thank you for your message!');
       formData.name.reset();
       formData.email.reset();
       formData.text.reset();
@@ -46,11 +46,11 @@ export const SendMail = () => {
     formData.name.isValid && formData.email.isValid && formData.text.isValid;
 
   return (
-    <section className={style.SendMail} id="mail">
+    <section className={style.SendMail} id='mail'>
       <div className={style.container}>
         <SectionTitle
-          title="Send me a letter"
-          bgText="Mail me"
+          title='Send me a letter'
+          bgText='Mail me'
           className={style.SendMail__title}
         />
 
@@ -58,22 +58,22 @@ export const SendMail = () => {
           <TextInput
             {...formData.name.inputProps}
             errors={formData.name.errors}
-            name="user_name"
-            placeholder="Name..."
+            name='user_name'
+            placeholder='Name...'
           />
           <TextInput
             {...formData.email.inputProps}
             errors={formData.email.errors}
-            name="user_email"
-            placeholder="Email..."
+            name='user_email'
+            placeholder='Email...'
           />
 
           <TextInput
             {...formData.text.inputProps}
             errors={formData.text.errors}
             textarea
-            name="message"
-            placeholder="Your message..."
+            name='message'
+            placeholder='Your message...'
           />
           <button className={style.btn} disabled={!isValidForm}>
             Send
