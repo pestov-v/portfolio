@@ -14,6 +14,15 @@ export type Projects = IProject[]; // FIXME: delete type
 export const _projects: Projects = [
   {
     id: 13,
+    title: 'Forex-broker',
+    description:
+      'i88 #1 app for active trading & long-term investing. Stocks, ETFs, Forex, Metals, Cryptocurrency.',
+    href: 'https://i88.io',
+    image: 'i88',
+    alt: 'Forex-broker',
+  },
+  {
+    id: 12,
     title: 'Amazona',
     description: 'Online market on Next.js with MongoDB',
     href: 'https://amazona-pestov-v.vercel.app/',
@@ -21,21 +30,12 @@ export const _projects: Projects = [
     alt: 'Online market',
   },
   {
-    id: 12,
+    id: 11,
     title: 'Online market',
     description: 'Simple online market on Next.js with MongoDB',
     href: 'https://market-pestov-v.vercel.app/',
     image: 'market',
     alt: 'Online market',
-  },
-  {
-    id: 11,
-    title: 'Forex-broker',
-    description:
-      'i88 #1 app for active trading & long-term investing. Stocks, ETFs, Forex, Metals, Cryptocurrency.',
-    href: 'https://i88.io',
-    image: 'i88',
-    alt: 'Forex-broker',
   },
   {
     id: 10,
