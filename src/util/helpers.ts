@@ -22,7 +22,3 @@ export const getImagePath = (name: string) => `${IMG_PATH}${name}.jpg`;
 export const addImagePath = (projects: IProject[]) => {
   return projects.map((item) => ({ ...item, image: getImagePath(item.image) }));
 };
-
-export const uid = function () {
-  return Date.now().toString(36) + Math.random().toString(36).substr(2);
-};

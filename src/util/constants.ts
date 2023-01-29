@@ -7,6 +7,7 @@ export interface IProject {
   image: string;
   href: string;
   alt: string;
+  additionalInfo?: string;
 }
 export type TProjects = IProject[];
 export type Projects = IProject[]; // FIXME: delete type
@@ -15,26 +16,26 @@ export const _projects: Projects = [
   {
     id: 13,
     title: 'Forex-broker',
-    description:
-      'i88 #1 app for active trading & long-term investing. Stocks, ETFs, Forex, Metals, Cryptocurrency.',
+    description: 'App for active trading & long-term investing.',
     href: 'https://i88.io',
     image: 'i88',
     alt: 'Forex-broker',
+    additionalInfo: 'Login: pestov.v@yahoo.com; Password: 12345678',
   },
   {
     id: 12,
-    title: 'Amazona',
-    description: 'Online market on Next.js with MongoDB',
-    href: 'https://amazona-pestov-v.vercel.app/',
-    image: 'amazona-2',
-    alt: 'Online market',
-  },
-  {
-    id: 11,
     title: 'Online market',
     description: 'Simple online market on Next.js with MongoDB',
     href: 'https://market-pestov-v.vercel.app/',
     image: 'market',
+    alt: 'Online market',
+  },
+  {
+    id: 11,
+    title: 'Amazona',
+    description: 'Online market on Next.js with MongoDB',
+    href: 'https://amazona-pestov-v.vercel.app/',
+    image: 'amazona-2',
     alt: 'Online market',
   },
   {

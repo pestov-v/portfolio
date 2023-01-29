@@ -1,56 +1,60 @@
 @import 'src/styles/colors';
 
 .button {
-    position: fixed;
-    right: 2em;
-    bottom: 2em;
-    width: 4em;
+  --width: 3px;
+
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  width: 4em;
+  height: 4em;
+
+  z-index: 11;
+  background-color: transparent;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: action 1s infinite alternate;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 4em;
+    width: 4em;
+    display: block;
+    background-color: var(--color-light-transparent);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: var(--width) solid var(--color-primary-light);
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-    z-index: 11;
-    background-color: transparent;
-    border: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    animation: action 1s infinite alternate;
-
-    &.visible {
-        opacity: 1;
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 4em;
-        width: 4em;
-        display: block;
-        background-color: var(--color-light-transparent);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        border: 3px solid var(--color-primary-light);
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    &::after {
-        content: '';
-        border: solid var(--color-primary-light);
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;    
-        transform: rotate(-135deg);
-    }
+  &::after {
+    content: '';
+    position: relative;
+    top: calc(var(--width) * 2 + 1px);
+    border: solid var(--color-primary-light);
+    border-width: 0 var(--width) var(--width) 0;
+    display: inline-block;
+    padding: calc(var(--width) * 2);
+    transform: rotate(-135deg);
+  }
 }
 
 @keyframes action {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    100% {
-        transform: translateY(-15px);
-    }
+  100% {
+    transform: translateY(-1em);
+  }
 }
