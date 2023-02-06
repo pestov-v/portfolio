@@ -1,6 +1,6 @@
-import { useRef } from "react";
-import { useVisible } from "hooks/useVisible";
-import style from "./ScrollTopButton.module.scss";
+import { useRef } from 'react';
+import { useVisible } from 'hooks/useVisible';
+import style from './ScrollTopButton.module.scss';
 
 export const ScrollTopButton = () => {
   const ref = useRef<HTMLButtonElement>(null);
@@ -15,8 +15,15 @@ export const ScrollTopButton = () => {
   const clickHandler = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
-  return <button className={style.button} onClick={clickHandler} ref={ref} />;
+  return (
+    <button
+      className={style.button}
+      onClick={clickHandler}
+      ref={ref}
+      title='scroll to the top'
+    />
+  );
 };
