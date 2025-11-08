@@ -88,20 +88,24 @@
     }
 
     .skills {
-      min-height: 1em;
+      min-height: 2em;
       min-width: 10em;
       font-size: 1.6rem;
+      margin-bottom: 1em;
+      display: flex;
+      align-items: center;
 
       @include respond-above(sm) {
         font-size: 2.2rem;
+        min-height: 2.5em;
       }
     }
   }
 
   .download {
-    align-self: flex-end;
+    align-self: center;
     padding: 1em 2em;
-    margin-top: 0.5em;
+    margin-top: 1.5em;
     font-weight: 700;
     color: var(--color-primary-toggle);
     text-transform: uppercase;
@@ -110,6 +114,8 @@
     border-radius: 30px;
     transition: 0.3s ease;
     cursor: pointer;
+    white-space: nowrap;
+    z-index: 10;
 
     @include respond-above(sm) {
       position: absolute;
@@ -117,6 +123,7 @@
       bottom: 3.2em;
       left: 50%;
       transform: translateX(-50%);
+      align-self: auto;
     }
     @include respond-above(lg) {
       margin-top: 2em;

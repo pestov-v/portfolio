@@ -1,13 +1,7 @@
 import style from "./Navbar.module.scss";
 import { RefObject, useRef } from "react";
 import { useVisible } from "../../hooks/useVisible";
-
-const links = [
-  { id: 1, href: "#about", title: "about" },
-  { id: 2, href: "#skills", title: "skills" },
-  { id: 3, href: "#projects", title: "projects" },
-  { id: 4, href: "#mail", title: "mail me" },
-];
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface Refs {
   [key: string]: RefObject<HTMLElement>;
@@ -16,7 +10,16 @@ interface IProps {
   refs: Refs;
 }
 export const Navbar = () => {
+  const { t } = useLanguage();
   const navbar = useRef<HTMLElement>(null);
+  
+  const links = [
+    { id: 1, href: "#about", title: t.about },
+    { id: 2, href: "#skills", title: t.skills },
+    { id: 3, href: "#projects", title: t.projects },
+    { id: 4, href: "#mail", title: t.contact },
+  ];
+  
   useVisible({
     element: navbar,
     style: style.visible,

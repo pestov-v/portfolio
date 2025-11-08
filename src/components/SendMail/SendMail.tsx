@@ -4,9 +4,11 @@ import emailjs from '@emailjs/browser';
 import { TextInput } from '../ui/FormControls/TextInput/TextInput';
 import { SectionTitle } from '../ui/SectionTitle/SectionTitle';
 import { useTextInput } from '../../hooks/useTextInput/useTextInput';
+import { useLanguage } from '../../contexts/LanguageContext';
 import style from './SendMail.module.scss';
 
 export const SendMail = () => {
+  const { t } = useLanguage();
   const form = useRef<HTMLFormElement>(null);
 
   const formData = {
@@ -35,7 +37,7 @@ export const SendMail = () => {
         '_t-9w7H78xR5SS4K6'
       );
 
-      alert('Thank you for your message!');
+      alert(t.thankYouMessage);
       formData.name.reset();
       formData.email.reset();
       formData.text.reset();
@@ -49,8 +51,8 @@ export const SendMail = () => {
     <section className={style.SendMail} id='mail'>
       <div className={style.container}>
         <SectionTitle
-          title='Send me a letter'
-          bgText='Mail me'
+          title={t.sendMeLetter}
+          bgText={t.mailMe}
           className={style.SendMail__title}
         />
 
@@ -59,13 +61,13 @@ export const SendMail = () => {
             {...formData.name.inputProps}
             errors={formData.name.errors}
             name='user_name'
-            placeholder='Name...'
+            placeholder={t.namePlaceholder}
           />
           <TextInput
             {...formData.email.inputProps}
             errors={formData.email.errors}
             name='user_email'
-            placeholder='Email...'
+            placeholder={t.emailPlaceholder}
           />
 
           <TextInput
@@ -73,10 +75,10 @@ export const SendMail = () => {
             errors={formData.text.errors}
             textarea
             name='message'
-            placeholder='Your message...'
+            placeholder={t.messagePlaceholder}
           />
           <button className={style.btn} disabled={!isValidForm}>
-            Send
+            {t.sendButton}
           </button>
         </form>
       </div>

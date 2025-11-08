@@ -11,9 +11,21 @@
 
   .projectsWrapper {
     @extend .container;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
+    padding-top: 2em;
+    justify-items: center;
+    
+    @include respond-above(sm) {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5em;
+    }
+    
+    @include respond-above(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
   }
 }

@@ -1,0 +1,227 @@
+// Scroll Animations Styles
+
+// Base animation classes
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  &.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Smooth reveal animations
+.smooth-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+  
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Fade in from different directions
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+  
+  &.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+  
+  &.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  
+  &.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.8s ease-out;
+  
+  &.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Scale animations
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  &.animate-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Rotate animations
+.rotate-in {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.9);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  &.animate-in {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+// Stagger animations (for multiple elements)
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+// Parallax background
+.parallax-bg {
+  will-change: transform;
+}
+
+// Floating elements
+.floating-element {
+  will-change: transform;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+// Pulse effect
+.pulse-on-scroll {
+  &.animate-in {
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--color-primary-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0);
+  }
+}
+
+// Typewriter effect
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid var(--color-primary);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-primary); }
+}
+
+// Slide in animations with bounce
+.slide-in-bounce {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  &.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Morphing shapes
+.morph-shape {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  &.animate-in {
+    border-radius: 50% 20% 80% 40%;
+    transform: rotate(360deg);
+  }
+}
+
+// Glitch effect
+.glitch-effect {
+  &.animate-in {
+    animation: glitch 0.3s linear infinite;
+  }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+// Progress bar animation
+.progress-bar {
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width 2s ease-out;
+  
+  &.animate-in {
+    width: 100%;
+  }
+}
+
+// Text reveal animation
+.text-reveal {
+  overflow: hidden;
+  
+  span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  &.animate-in span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

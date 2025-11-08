@@ -1,41 +1,55 @@
+import { useLanguage } from "../../contexts/LanguageContext";
 import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import style from "./About.module.scss";
 import { AboutImage } from "./AboutImage/AboutImage";
 import { InfoItem } from "./InfoItem/InfoItem";
 
-const additionalInfo = [
-  { title: "Name", value: "Volodymyr Pestov" },
-  { title: "Birthday", value: "15 September 1987" },
-  { title: "Degree", value: "Master" },
-  { title: "Experience", value: "5+ years" },
-  { title: "Phone", value: "+38 (097) 00 97 343" },
-  { title: "Email", value: "pestov.volodymyr@gmail.com" },
-  { title: "Address", value: "Nesebar, Bulgaria" },
-  { title: "Freelance", value: "Available" },
-];
-
 export const About = () => {
+  const { t } = useLanguage();
+
+  const additionalInfo = [
+    { title: t.personalInfo.name, value: "Volodymyr Pestov" },
+    { title: t.personalInfo.birthday, value: "15 September 1987" },
+    { title: t.personalInfo.degree, value: t.master },
+    { title: t.personalInfo.experience, value: t.fiveYearsPlus },
+    { title: t.personalInfo.phone, value: "+38 (097) 00 97 343" },
+    { title: t.personalInfo.email, value: "pestov.volodymyr@gmail.com" },
+    { title: t.personalInfo.address, value: "Nesebar, Bulgaria" },
+    { title: t.personalInfo.freelance, value: t.available },
+  ];
+
   return (
     <section className={style.about} id="about">
       <div className={style.container}>
-        <SectionTitle title="About me" bgText="About" />
+        <SectionTitle title={t.aboutMe} bgText={t.aboutBgText} />
 
         <div className={style.info}>
-          <AboutImage />
+          <div className="animate-on-scroll fade-in-left">
+            <AboutImage />
+          </div>
 
           <div className={style.infoWrapper}>
-            <h3 className={style.infoTitle}>Web Developer & UI/UX Designer</h3>
+            <div className="animate-on-scroll fade-in-right stagger-1">
+              <h3 className={style.infoTitle}>{t.jobTitle}</h3>
+            </div>
 
-            <p className={style.description}>
-              Front-end developer with 5+ years of experience designing and
-              building responsive web design and mobile apps. Proficient with
-              CSS and JS Frameworks, with extensive knowledge of UX and user
-              psychology.
-            </p>
+            <div className="animate-on-scroll fade-in-up stagger-2">
+              <p className={style.description}>{t.description}</p>
+            </div>
 
-            <div className={style.additionalInfo}>
-              {additionalInfo.map(({ title, value }) => (
-                <InfoItem key={title} title={title} value={value} />
+            <div
+              className={`${style.additionalInfo} animate-on-scroll fade-in-up stagger-3`}
+            >
+              {additionalInfo.map(({ title, value }, index) => (
+                <div
+                  key={title}
+                  className={`animate-on-scroll scale-in stagger-${Math.min(
+                    index + 1,
+                    5
+                  )}`}
+                >
+                  <InfoItem title={title} value={value} />
+                </div>
               ))}
             </div>
           </div>

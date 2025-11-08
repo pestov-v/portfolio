@@ -1,20 +1,30 @@
-import { useEffect, useRef } from "react";
 import { NextPage } from "next";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Header.module.scss";
 
 export const imgPath = "img/profile/profile";
 export const Header: NextPage = () => {
+  const { t, language } = useLanguage();
   const el = useRef(null);
   // Create reference to store the Typed instance itself
   const typed = useRef<Typed>(null);
 
   useEffect(() => {
+    const skillsEn =
+      "Front End Developer, Back End Developer, Web Designer, Web Developer, Apps Developer";
+    const skillsUk =
+      "Front End Розробник, Back End Розробник, Web Дизайнер, Web Розробник, Розробник Додатків";
+    const skillsBg =
+      "Front End Разработчик, Back End Разработчик, Web Дизайнер, Web Разработчик, Разработчик на Приложения";
+
+    let skills = skillsEn;
+    if (language === "uk") skills = skillsUk;
+    else if (language === "bg") skills = skillsBg;
+
     const options = {
-      strings:
-        "Front End Developer, Back End Developer, Web Designer, Web Developer, Apps Developer".split(
-          ", "
-        ),
+      strings: skills.split(", "),
       typeSpeed: 100,
       backSpeed: 20,
       smartBackspace: false,
@@ -28,38 +38,48 @@ export const Header: NextPage = () => {
     return () => {
       typed?.current?.destroy();
     };
-  }, []);
+  }, [language]);
 
   return (
     <header className={style.header}>
-      <picture className={style.imageWrapper}>
-        <source srcSet={`/${imgPath}.webp`} type="image/webp" />
-        <source media="(min-width: 796px)" srcSet={`/${imgPath}.jpg`} />
-        <source srcSet={`/${imgPath}-small.webp`} type="image/webp" />
-        <img
-          src={`${imgPath}-small.jpg`}
-          alt="avatar"
-          className={style.image}
-        />
-      </picture>
+      <div className="animate-on-scroll scale-in floating-element">
+        <picture className={style.imageWrapper}>
+          <source srcSet={`/${imgPath}.webp`} type="image/webp" />
+          <source media="(min-width: 796px)" srcSet={`/${imgPath}.jpg`} />
+          <source srcSet={`/${imgPath}-small.webp`} type="image/webp" />
+          <img
+            src={`${imgPath}-small.jpg`}
+            alt="avatar"
+            className={style.image}
+          />
+        </picture>
+      </div>
 
       <div className={style.info}>
-        <h3 className={style.greteen}>Hello, I&apos;m</h3>
-        <h1 className={style.name}>Volodymyr</h1>
+        <div className="animate-on-scroll fade-in-down">
+          <h3 className={style.greteen}>{t.greeting}</h3>
+        </div>
+        <div className="animate-on-scroll fade-in-up stagger-1">
+          <h1 className={style.name}>{t.name}</h1>
+        </div>
 
-        <p className={style.skills}>
-          <span ref={el} />
-        </p>
+        <div className="animate-on-scroll fade-in-up stagger-2">
+          <p className={style.skills}>
+            <span ref={el} />
+          </p>
+        </div>
 
-        <a
-          href="/cv.pdf"
-          target="_blank"
-          rel="noreferrer"
-          className={style.download}
-          download
-        >
-          Download CV
-        </a>
+        <div className="animate-on-scroll fade-in-up stagger-3">
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className={style.download}
+            download
+          >
+            {t.downloadCV}
+          </a>
+        </div>
       </div>
 
       <i className={style["arrow-next"]} />

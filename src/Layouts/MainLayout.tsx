@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface ILayoutProps {
   children?: React.ReactNode;
@@ -10,16 +11,17 @@ export const MainLayout: NextPage<ILayoutProps> = ({
   children,
   className = "",
 }) => {
+  const { t } = useLanguage();
+  
   return (
     <div className={className}>
       <Head>
-        <title>Portfolio</title>
+        <title>{t.portfolioTitle}</title>
         <meta name="Portfolio" content="Pestov Volodymyr" />
         <meta
           name="description"
-          content="WebDeveloper, WebDesiner, FrontEnd, BackEnd"
+          content={t.portfolioDescription}
         />
-        <meta name="description" content="Pestov Volodymyr's portfolio"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

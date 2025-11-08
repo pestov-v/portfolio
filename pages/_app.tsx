@@ -1,8 +1,13 @@
-import "../src/styles/globals.scss";
 import type { AppProps } from "next/app";
+import { LanguageProvider } from "../src/contexts/LanguageContext";
+import "../src/styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <LanguageProvider>
+      <Component {...pageProps} />
+    </LanguageProvider>
+  );
 }
 
 export default MyApp;
