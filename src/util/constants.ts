@@ -40,7 +40,7 @@ export const _projects: Projects = [
     title: "Suitcase - E-commerce Platform",
     description:
       "Modern e-commerce platform with advanced product management, checkout process, and admin panel.",
-    href: "#",
+    href: "https://pestov-v.github.io/suitcase-images/",
     image: "suitcase",
     alt: "Suitcase E-commerce Platform",
     additionalInfo:
