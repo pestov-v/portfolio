@@ -7,11 +7,20 @@
     color: var(--color-dark);
 
     &__value {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
         font-weight: 500;
         white-space: nowrap;
         
         &.success {
             color: var(--color-success);
         }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
     }
 }

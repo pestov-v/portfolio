@@ -24,6 +24,9 @@ export interface Translation {
     email: string;
     address: string;
     freelance: string;
+    telegram: string;
+    viber: string;
+    whatsapp: string;
   };
 
   // Personal values
@@ -89,6 +92,9 @@ export const translations: Record<"en" | "uk" | "bg", Translation> = {
       email: "Email",
       address: "Address",
       freelance: "Freelance",
+      telegram: "Telegram",
+      viber: "Viber",
+      whatsapp: "WhatsApp",
     },
 
     // Personal values
@@ -154,6 +160,9 @@ export const translations: Record<"en" | "uk" | "bg", Translation> = {
       email: "Електронна пошта",
       address: "Адреса",
       freelance: "Фріланс",
+      telegram: "Telegram",
+      viber: "Viber",
+      whatsapp: "WhatsApp",
     },
 
     // Personal values
@@ -219,6 +228,9 @@ export const translations: Record<"en" | "uk" | "bg", Translation> = {
       email: "Електронна поща",
       address: "Адрес",
       freelance: "Фрийланс",
+      telegram: "Telegram",
+      viber: "Viber",
+      whatsapp: "WhatsApp",
     },
 
     // Personal values

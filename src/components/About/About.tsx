@@ -12,10 +12,25 @@ export const About = () => {
     { title: t.personalInfo.birthday, value: "15 September 1987" },
     { title: t.personalInfo.degree, value: t.master },
     { title: t.personalInfo.experience, value: t.fiveYearsPlus },
-    { title: t.personalInfo.phone, value: "+38 (097) 00 97 343" },
-    { title: t.personalInfo.email, value: "pestov.volodymyr@gmail.com" },
+    {
+      title: t.personalInfo.phone,
+      value: "+38 (097) 00 97 343",
+      icon: "phone",
+    },
+    {
+      title: t.personalInfo.email,
+      value: "pestov.volodymyr@gmail.com",
+      icon: "email",
+    },
     { title: t.personalInfo.address, value: "Nesebar, Bulgaria" },
     { title: t.personalInfo.freelance, value: t.available },
+    { title: t.personalInfo.telegram, value: "@pestov_v", icon: "telegram" },
+    { title: t.personalInfo.viber, value: "+380970097343", icon: "viber" },
+    {
+      title: t.personalInfo.whatsapp,
+      value: "+380970097343",
+      icon: "whatsapp",
+    },
   ];
 
   return (
@@ -40,7 +55,7 @@ export const About = () => {
             <div
               className={`${style.additionalInfo} animate-on-scroll fade-in-up stagger-3`}
             >
-              {additionalInfo.map(({ title, value }, index) => (
+              {additionalInfo.map(({ title, value, icon }, index) => (
                 <div
                   key={title}
                   className={`animate-on-scroll scale-in stagger-${Math.min(
@@ -48,7 +63,7 @@ export const About = () => {
                     5
                   )}`}
                 >
-                  <InfoItem title={title} value={value} />
+                  <InfoItem title={title} value={value} icon={icon} />
                 </div>
               ))}
             </div>

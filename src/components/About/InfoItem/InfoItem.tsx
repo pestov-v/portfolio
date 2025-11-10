@@ -1,21 +1,61 @@
 import { NextPage } from "next";
+import Image from "next/image";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import style from "./InfoItem.module.scss";
 
 interface IProps {
   title: string;
   value: string;
+  icon?: string;
+  href?: string;
 }
 export const InfoItem: NextPage<IProps> = (props) => {
-  const { title, value } = props;
+  const { title, value, icon, href } = props;
   const { t } = useLanguage();
+
+  const getHref = () => {
+    if (href) return href;
+    if (title === t.personalInfo.email) return `mailto:${value}`;
+    if (title === t.personalInfo.phone)
+      return `tel:${value.replace(/\s/g, "")}`;
+    if (title === t.personalInfo.telegram)
+      return `https://t.me/${value.replace("@", "")}`;
+    if (title === t.personalInfo.viber)
+      return `viber://chat?number=${value.replace(/\s/g, "").replace("+", "")}`;
+    if (title === t.personalInfo.whatsapp)
+      return `https://wa.me/${value.replace(/\s/g, "").replace("+", "")}`;
+    return undefined;
+  };
+
+  const linkHref = getHref();
+  const content = (
+    <>
+      {icon && (
+        <span className={style.InfoItem__icon}>
+          <Image
+            width={20}
+            height={20}
+            src={`/img/icons/${icon}.svg`}
+            alt={title}
+          />
+        </span>
+      )}
+      {value}
+    </>
+  );
 
   return (
     <h4 key={title} className={style.InfoItem}>
       {title}:{" "}
-      {title === t.personalInfo.email ? (
-        <a href={`mailto:${value}`} className={style.InfoItem__value}>
-          {value}
+      {linkHref ? (
+        <a
+          href={linkHref}
+          className={style.InfoItem__value}
+          {...(linkHref.startsWith("http")
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+        >
+          {content}
         </a>
       ) : (
         <span
@@ -24,7 +64,7 @@ export const InfoItem: NextPage<IProps> = (props) => {
             value === t.available ? style.success : "",
           ].join(" ")}
         >
-          {value}
+          {content}
         </span>
       )}
     </h4>
