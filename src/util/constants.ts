@@ -14,7 +14,7 @@ export type Projects = IProject[]; // FIXME: delete type
 
 export const _projects: Projects = [
   {
-    id: 16,
+    id: 17,
     title: "CFWeb - Corporate Finance Web Application",
     description:
       "Comprehensive corporate finance management system with user roles, product management, and regulatory compliance features.",
@@ -25,7 +25,7 @@ export const _projects: Projects = [
       "Enterprise-level financial management platform with advanced user management and compliance tools",
   },
   {
-    id: 15,
+    id: 16,
     title: "OschadPay - Payment Processing System",
     description:
       "Advanced payment processing and terminal management system for financial institutions.",
@@ -34,6 +34,17 @@ export const _projects: Projects = [
     alt: "OschadPay Payment System",
     additionalInfo:
       "Complete payment solution with transaction monitoring, terminal management, and financial reporting",
+  },
+  {
+    id: 15,
+    title: "Onboarding - Questionnaire Management System",
+    description:
+      "Comprehensive questionnaire and form management system with templates, categories, and field configuration.",
+    href: "https://pestov-v.github.io/onboarding/",
+    image: "onboarding",
+    alt: "Onboarding Questionnaire Management System",
+    additionalInfo:
+      "Enterprise-level form builder with template management, category organization, and advanced field customization",
   },
   {
     id: 14,
