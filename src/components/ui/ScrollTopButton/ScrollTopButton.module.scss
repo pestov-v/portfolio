@@ -1,4 +1,4 @@
-@import 'src/styles/colors';
+@import "src/styles/colors";
 
 .button {
   --width: 3px;
@@ -21,7 +21,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
@@ -32,16 +32,16 @@
     background-color: var(--color-light-transparent);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: var(--width) solid var(--color-primary-light);
+    border: var(--width) solid var(--color-primary);
     border-radius: 50%;
     cursor: pointer;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: relative;
     top: calc(var(--width) * 2 + 1px);
-    border: solid var(--color-primary-light);
+    border: solid var(--color-primary);
     border-width: 0 var(--width) var(--width) 0;
     display: inline-block;
     padding: calc(var(--width) * 2);
