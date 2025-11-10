@@ -8,9 +8,10 @@ interface IProps {
   value: string;
   icon?: string;
   href?: string;
+  hideTitle?: boolean;
 }
 export const InfoItem: NextPage<IProps> = (props) => {
-  const { title, value, icon, href } = props;
+  const { title, value, icon, href, hideTitle } = props;
   const { t } = useLanguage();
 
   const getHref = () => {
@@ -46,7 +47,7 @@ export const InfoItem: NextPage<IProps> = (props) => {
 
   return (
     <h4 key={title} className={style.InfoItem}>
-      {title}:{" "}
+      {!hideTitle && <>{title}: </>}
       {linkHref ? (
         <a
           href={linkHref}

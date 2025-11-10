@@ -27,6 +27,9 @@ export interface Translation {
     telegram: string;
     viber: string;
     whatsapp: string;
+    facebook: string;
+    github: string;
+    linkedin: string;
   };
 
   // Personal values
@@ -95,6 +98,9 @@ export const translations: Record<"en" | "uk" | "bg", Translation> = {
       telegram: "Telegram",
       viber: "Viber",
       whatsapp: "WhatsApp",
+      facebook: "Facebook",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
 
     // Personal values
@@ -163,6 +169,9 @@ export const translations: Record<"en" | "uk" | "bg", Translation> = {
       telegram: "Telegram",
       viber: "Viber",
       whatsapp: "WhatsApp",
+      facebook: "Facebook",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
 
     // Personal values
@@ -231,6 +240,9 @@ export const translations: Record<"en" | "uk" | "bg", Translation> = {
       telegram: "Telegram",
       viber: "Viber",
       whatsapp: "WhatsApp",
+      facebook: "Facebook",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
 
     // Personal values

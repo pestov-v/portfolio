@@ -1,4 +1,5 @@
 import { useLanguage } from "../../contexts/LanguageContext";
+import { socialLinks } from "../../util/constants";
 import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import style from "./About.module.scss";
 import { AboutImage } from "./AboutImage/AboutImage";
@@ -31,6 +32,27 @@ export const About = () => {
       value: "+380970097343",
       icon: "whatsapp",
     },
+    {
+      title: t.personalInfo.facebook,
+      value: "Facebook",
+      icon: "facebook",
+      href: socialLinks.find((link) => link.id === "facebook")?.href,
+      hideTitle: true,
+    },
+    {
+      title: t.personalInfo.github,
+      value: "GitHub",
+      icon: "github",
+      href: socialLinks.find((link) => link.id === "github")?.href,
+      hideTitle: true,
+    },
+    {
+      title: t.personalInfo.linkedin,
+      value: "LinkedIn",
+      icon: "linkedin",
+      href: socialLinks.find((link) => link.id === "linkedin")?.href,
+      hideTitle: true,
+    },
   ];
 
   return (
@@ -55,17 +77,25 @@ export const About = () => {
             <div
               className={`${style.additionalInfo} animate-on-scroll fade-in-up stagger-3`}
             >
-              {additionalInfo.map(({ title, value, icon }, index) => (
-                <div
-                  key={title}
-                  className={`animate-on-scroll scale-in stagger-${Math.min(
-                    index + 1,
-                    5
-                  )}`}
-                >
-                  <InfoItem title={title} value={value} icon={icon} />
-                </div>
-              ))}
+              {additionalInfo.map(
+                ({ title, value, icon, href, hideTitle }, index) => (
+                  <div
+                    key={title}
+                    className={`animate-on-scroll scale-in stagger-${Math.min(
+                      index + 1,
+                      5
+                    )}`}
+                  >
+                    <InfoItem
+                      title={title}
+                      value={value}
+                      icon={icon}
+                      href={href}
+                      hideTitle={hideTitle}
+                    />
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>
