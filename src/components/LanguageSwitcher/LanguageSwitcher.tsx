@@ -14,6 +14,9 @@ const languages: LanguageOption[] = [
   { code: 'en', name: 'English', flag: '/img/flags/en.svg' },
   { code: 'uk', name: 'Українська', flag: '/img/flags/uk.svg' },
   { code: 'bg', name: 'Български', flag: '/img/flags/bg.svg' },
+  { code: 'pl', name: 'Polski', flag: '/img/flags/pl.svg' },
+  { code: 'it', name: 'Italiano', flag: '/img/flags/it.svg' },
+  { code: 'fr', name: 'Français', flag: '/img/flags/fr.svg' },
 ];
 
 export const LanguageSwitcher: React.FC = () => {

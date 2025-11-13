@@ -67,7 +67,7 @@ export interface Translation {
   language: string;
 }
 
-export const translations: Record<"en" | "uk" | "bg", Translation> = {
+export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Translation> = {
   en: {
     // Header
     greeting: "Hello, I'm",
@@ -279,6 +279,219 @@ export const translations: Record<"en" | "uk" | "bg", Translation> = {
 
     // Language switcher
     language: "Език",
+  },
+
+  pl: {
+    // Header
+    greeting: "Cześć, jestem",
+    name: "Volodymyr",
+    downloadCV: "Pobierz CV",
+
+    // Navigation
+    about: "o mnie",
+    skills: "umiejętności",
+    projects: "projekty",
+    contact: "napisz do mnie",
+
+    // About section
+    aboutMe: "O mnie",
+    aboutBgText: "O mnie",
+    jobTitle: "Web Developer & UI/UX Designer",
+    description:
+      "Front-end developer z ponad 5-letnim doświadczeniem w projektowaniu i tworzeniu responsywnych stron internetowych oraz aplikacji mobilnych. Biegły w frameworkach CSS i JS, z rozległą wiedzą z zakresu UX i psychologii użytkownika.",
+    personalInfo: {
+      name: "Imię",
+      birthday: "Data urodzenia",
+      degree: "Wykształcenie",
+      experience: "Doświadczenie",
+      phone: "Telefon",
+      email: "Email",
+      address: "Adres",
+      freelance: "Freelance",
+      telegram: "Telegram",
+      viber: "Viber",
+      whatsapp: "WhatsApp",
+      facebook: "Facebook",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+
+    // Personal values
+    available: "Dostępny",
+    master: "Magister",
+    fiveYearsPlus: "5+ lat",
+
+    // Skills section
+    mySkills: "Moje umiejętności",
+    skillsBgText: "Umiejętności",
+
+    // Projects section
+    portfolio: "portfolio",
+    portfolioBgText: "Galeria",
+
+    // Contact section
+    contactMe: "Skontaktuj się ze mną",
+    contactBgText: "Kontakt",
+    sendMeLetter: "Napisz do mnie",
+    mailMe: "Napisz",
+    namePlaceholder: "Imię...",
+    emailPlaceholder: "Email...",
+    messagePlaceholder: "Twoja wiadomość...",
+    sendButton: "Wyślij",
+    thankYouMessage: "Dziękuję za wiadomość!",
+
+    // Footer
+    letsWorkTogether: "Pracujmy razem...",
+
+    // Meta tags
+    portfolioTitle: "Portfolio - Volodymyr Pestov",
+    portfolioDescription:
+      "WebDeveloper, WebDesigner, FrontEnd, BackEnd - portfolio Volodymyra Pestova",
+
+    // Language switcher
+    language: "Język",
+  },
+
+  it: {
+    // Header
+    greeting: "Ciao, sono",
+    name: "Volodymyr",
+    downloadCV: "Scarica CV",
+
+    // Navigation
+    about: "su di me",
+    skills: "competenze",
+    projects: "progetti",
+    contact: "scrivimi",
+
+    // About section
+    aboutMe: "Su di me",
+    aboutBgText: "Su di me",
+    jobTitle: "Web Developer & UI/UX Designer",
+    description:
+      "Sviluppatore Front-end con oltre 5 anni di esperienza nella progettazione e creazione di design web responsive e app mobili. Competente nei framework CSS e JS, con una vasta conoscenza di UX e psicologia dell'utente.",
+    personalInfo: {
+      name: "Nome",
+      birthday: "Data di nascita",
+      degree: "Titolo di studio",
+      experience: "Esperienza",
+      phone: "Telefono",
+      email: "Email",
+      address: "Indirizzo",
+      freelance: "Freelance",
+      telegram: "Telegram",
+      viber: "Viber",
+      whatsapp: "WhatsApp",
+      facebook: "Facebook",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+
+    // Personal values
+    available: "Disponibile",
+    master: "Laurea Magistrale",
+    fiveYearsPlus: "5+ anni",
+
+    // Skills section
+    mySkills: "Le mie competenze",
+    skillsBgText: "Competenze",
+
+    // Projects section
+    portfolio: "portfolio",
+    portfolioBgText: "Galleria",
+
+    // Contact section
+    contactMe: "Contattami",
+    contactBgText: "Contatto",
+    sendMeLetter: "Scrivimi una lettera",
+    mailMe: "Scrivimi",
+    namePlaceholder: "Nome...",
+    emailPlaceholder: "Email...",
+    messagePlaceholder: "Il tuo messaggio...",
+    sendButton: "Invia",
+    thankYouMessage: "Grazie per il tuo messaggio!",
+
+    // Footer
+    letsWorkTogether: "Lavoriamo insieme...",
+
+    // Meta tags
+    portfolioTitle: "Portfolio - Volodymyr Pestov",
+    portfolioDescription:
+      "WebDeveloper, WebDesigner, FrontEnd, BackEnd - portfolio di Volodymyr Pestov",
+
+    // Language switcher
+    language: "Lingua",
+  },
+
+  fr: {
+    // Header
+    greeting: "Bonjour, je suis",
+    name: "Volodymyr",
+    downloadCV: "Télécharger CV",
+
+    // Navigation
+    about: "à propos",
+    skills: "compétences",
+    projects: "projets",
+    contact: "écrivez-moi",
+
+    // About section
+    aboutMe: "À propos de moi",
+    aboutBgText: "À propos",
+    jobTitle: "Développeur Web & Designer UI/UX",
+    description:
+      "Développeur Front-end avec plus de 5 ans d'expérience dans la conception et la création de design web responsive et d'applications mobiles. Maîtrise des frameworks CSS et JS, avec une vaste connaissance de l'UX et de la psychologie utilisateur.",
+    personalInfo: {
+      name: "Nom",
+      birthday: "Date de naissance",
+      degree: "Diplôme",
+      experience: "Expérience",
+      phone: "Téléphone",
+      email: "Email",
+      address: "Adresse",
+      freelance: "Freelance",
+      telegram: "Telegram",
+      viber: "Viber",
+      whatsapp: "WhatsApp",
+      facebook: "Facebook",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+
+    // Personal values
+    available: "Disponible",
+    master: "Master",
+    fiveYearsPlus: "5+ ans",
+
+    // Skills section
+    mySkills: "Mes compétences",
+    skillsBgText: "Compétences",
+
+    // Projects section
+    portfolio: "portfolio",
+    portfolioBgText: "Galerie",
+
+    // Contact section
+    contactMe: "Contactez-moi",
+    contactBgText: "Contact",
+    sendMeLetter: "Envoyez-moi une lettre",
+    mailMe: "Écrivez-moi",
+    namePlaceholder: "Nom...",
+    emailPlaceholder: "Email...",
+    messagePlaceholder: "Votre message...",
+    sendButton: "Envoyer",
+    thankYouMessage: "Merci pour votre message!",
+
+    // Footer
+    letsWorkTogether: "Travaillons ensemble...",
+
+    // Meta tags
+    portfolioTitle: "Portfolio - Volodymyr Pestov",
+    portfolioDescription:
+      "WebDeveloper, WebDesigner, FrontEnd, BackEnd - portfolio de Volodymyr Pestov",
+
+    // Language switcher
+    language: "Langue",
   },
 };
 
