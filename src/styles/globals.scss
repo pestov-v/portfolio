@@ -11,11 +11,22 @@
   scroll-behavior: smooth;
 }
 
-html,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: var(--background-body, hsl(0, 0%, 100%));
+  color: var(--text-primary, hsl(0, 0%, 27%));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: Roboto, sans-serif;
+  background-color: transparent;
+  color: var(--text-primary, hsl(0, 0%, 27%));
+  transition: color 0.3s ease;
 }
 
 a {
@@ -23,8 +34,12 @@ a {
   text-decoration: none;
 }
 
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  html {
+  html:not([data-theme]) {
     color-scheme: dark;
   }
 }

@@ -1,6 +1,6 @@
-@import 'src/styles/colors';
-@import 'src/styles/breakpoints';
-@import 'src/styles/common';
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
+@import "src/styles/common";
 
 .header {
   min-height: 100vh;
@@ -12,14 +12,14 @@
   grid-gap: 3.2em;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     display: block;
-    background-image: url('/img/man.jpeg');
+    background-image: url("/img/man.jpeg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,6 +55,7 @@
     .greteen {
       position: relative;
       font-size: 1.5rem;
+      color: var(--color-black);
 
       @include respond-above(xs) {
         font-size: 2rem;
@@ -94,6 +95,7 @@
       margin-bottom: 1em;
       display: flex;
       align-items: center;
+      color: var(--color-black);
 
       @include respond-above(sm) {
         font-size: 2.2rem;
@@ -107,24 +109,16 @@
     padding: 1em 2em;
     margin-top: 1.5em;
     font-weight: 700;
-    color: var(--color-primary-toggle);
+    color: var(--color-primary);
     text-transform: uppercase;
     background-color: transparent;
-    border: 4px solid var(--color-primary-toggle);
+    border: 4px solid var(--color-primary);
     border-radius: 30px;
     transition: 0.3s ease;
     cursor: pointer;
     white-space: nowrap;
     z-index: 10;
 
-    @include respond-above(sm) {
-      position: absolute;
-      margin-top: 2em;
-      bottom: 3.2em;
-      left: 50%;
-      transform: translateX(-50%);
-      align-self: auto;
-    }
     @include respond-above(lg) {
       margin-top: 2em;
       align-self: flex-start;

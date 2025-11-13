@@ -1,5 +1,5 @@
 import style from "./Navbar.module.scss";
-import { RefObject, useRef } from "react";
+import { RefObject, useRef, useState, useEffect } from "react";
 import { useVisible } from "../../hooks/useVisible";
 import { useLanguage } from "../../contexts/LanguageContext";
 
@@ -12,6 +12,7 @@ interface IProps {
 export const Navbar = () => {
   const { t } = useLanguage();
   const navbar = useRef<HTMLElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const links = [
     { id: 1, href: "#about", title: t.about },
@@ -27,17 +28,52 @@ export const Navbar = () => {
     offsetY: 100,
   });
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   return (
-    <nav className={style.navbar} ref={navbar}>
-      <ul className={style.links}>
-        {links.map(({ id, href, title }) => (
-          <li key={id}>
-            <a href={href} className={style.link}>
-              {title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav className={style.navbar} ref={navbar}>
+        <button
+          className={style.burgerButton}
+          onClick={toggleMenu}
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+        </button>
+
+        <ul className={`${style.links} ${isMenuOpen ? style.menuOpen : ""}`}>
+          {links.map(({ id, href, title }) => (
+            <li key={id}>
+              <a href={href} className={style.link} onClick={handleLinkClick}>
+                {title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      {isMenuOpen && <div className={style.overlay} onClick={handleLinkClick} />}
+    </>
   );
 };

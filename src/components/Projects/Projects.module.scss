@@ -3,7 +3,7 @@
 
 .projects {
   padding-top: 3em;
-  background-color: var(--color-white);
+  background-color: var(--background-section, var(--color-white));
 
   @include respond-above(sm) {
     padding-top: 8em;

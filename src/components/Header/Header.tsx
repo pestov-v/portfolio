@@ -13,7 +13,7 @@ export const Header: NextPage = () => {
 
   useEffect(() => {
     const skillsEn =
-      "Front End Developer, Back End Developer, Web Designer, Web Developer, Apps Developer";
+      "Front End Developer, Back End Developer, Web Designer, Web Developer, Applications Developer";
     const skillsUk =
       "Front End Розробник, Back End Розробник, Web Дизайнер, Web Розробник, Розробник Додатків";
     const skillsBg =

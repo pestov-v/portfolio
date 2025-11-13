@@ -1,3 +1,4 @@
+// Light theme (default)
 .app {
   --color-primary: hsl(250, 65%, 40%);
   --color-primary-toggle: var(--color-primary);
@@ -32,12 +33,39 @@
   --background-navbar: hsla(0, 0%, 90%, 0.8);
   --shadow-navbar: hsla(0, 0%, 0%, 0.3);
 
+  --background-body: hsl(0, 0%, 100%);
+  --background-section: hsl(0, 0%, 98%);
+  --text-primary: hsl(0, 0%, 27%);
+  --text-secondary: hsl(0, 0%, 50%);
+
   // SHADOWS
   --card-shadow: hsla(0, 0%, 0%, 0.3);
 }
 
+// Dark theme
+[data-theme="dark"] .app {
+  --color-primary-toggle: var(--color-primary-light);
+
+  --background-navbar: hsla(210, 30%, 20%, 0.8);
+  --shadow-navbar: hsla(0, 0%, 78%, 0.3);
+
+  --color-toggle-gray-dark: hsl(0, 0%, 87%);
+  --color-toggle-dark: hsl(0, 3%, 55%);
+
+  --color-toggle-gray: hsl(0, 19%, 83%);
+  --color-toggle-gray-light: hsl(0, 5%, 59%);
+
+  --background-body: hsl(220, 15%, 15%);
+  --background-section: hsl(220, 15%, 18%);
+  --text-primary: hsl(0, 0%, 90%);
+  --text-secondary: hsl(0, 0%, 70%);
+  --color-dark: hsl(0, 0%, 87%);
+  --color-light: hsl(0, 0%, 50%);
+}
+
+// Fallback for system preference (when no theme is set)
 @media (prefers-color-scheme: dark) {
-  .app {
+  html:not([data-theme]) .app {
     --color-primary-toggle: var(--color-primary-light);
 
     --background-navbar: hsla(210, 30%, 20%, 0.8);
@@ -48,5 +76,12 @@
 
     --color-toggle-gray: hsl(0, 19%, 83%);
     --color-toggle-gray-light: hsl(0, 5%, 59%);
+
+    --background-body: hsl(220, 15%, 15%);
+    --background-section: hsl(220, 15%, 18%);
+    --text-primary: hsl(0, 0%, 90%);
+    --text-secondary: hsl(0, 0%, 70%);
+    --color-dark: hsl(0, 0%, 87%);
+    --color-light: hsl(0, 0%, 50%);
   }
 }

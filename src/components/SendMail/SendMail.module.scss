@@ -9,7 +9,7 @@
   @include respond-above(sm) {
     padding-top: 8em;
   }
-  background-color: var(--color-white);
+  background-color: var(--background-section, var(--color-white));
 
   &__title {
     margin-bottom: 4em;

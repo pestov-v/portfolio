@@ -10,6 +10,7 @@ import { SendMail } from "../src/components/SendMail/SendMail";
 import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { Footer } from "../src/components/Footer/Footer";
 import { LanguageSwitcher } from "../src/components/LanguageSwitcher/LanguageSwitcher";
+import { ThemeSwitcher } from "../src/components/ThemeSwitcher/ThemeSwitcher";
 import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
 
 import style from "../src/styles/Home.module.scss";
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
 
   return (
     <MainLayout className="app">
+      <ThemeSwitcher />
       <LanguageSwitcher />
       <Navbar />
 

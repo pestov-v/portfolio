@@ -6,6 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
 
   text-transform: uppercase;
   letter-spacing: 0.1rem;

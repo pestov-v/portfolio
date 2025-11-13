@@ -7,7 +7,7 @@
   min-height: 100vh;
   padding: 4em 0;
   position: relative;
-  background-color: var(--color-white);
+  background-color: var(--background-section, var(--color-white));
   scroll-snap-align: center;
 
   @include respond-above(sm) {

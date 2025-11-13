@@ -32,7 +32,7 @@ export const InfoItem: NextPage<IProps> = (props) => {
   const content = (
     <>
       {icon && (
-        <span className={style.InfoItem__icon}>
+        <span className={style.InfoItem__icon} data-icon={icon}>
           <Image
             width={20}
             height={20}
