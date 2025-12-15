@@ -193,6 +193,8 @@ export const SKILLS: ISkill[] = [
   { title: "react native", percent: 63, color: COLORS.secondary },
   { title: "nextjs", percent: 85, color: COLORS.primary },
   { title: "nestjs", percent: 78, color: COLORS.info },
+  { title: "java", percent: 54, color: COLORS.success },
+  { title: "angular", percent: 48, color: COLORS.danger },
 ];
 
 export const socialLinks = [
