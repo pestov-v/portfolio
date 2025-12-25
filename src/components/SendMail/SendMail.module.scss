@@ -25,11 +25,36 @@
     button {
       align-self: flex-end;
       margin-top: 0.5em;
+      min-width: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       &:disabled {
         cursor: not-allowed;
         color: var(--color-gray-light);
         border-color: var(--color-gray-light);
       }
     }
+  }
+
+  .loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-gray-light);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

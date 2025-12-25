@@ -1,54 +1,67 @@
-import { FormEvent, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
-import { TextInput } from '../ui/FormControls/TextInput/TextInput';
-import { SectionTitle } from '../ui/SectionTitle/SectionTitle';
-import { useTextInput } from '../../hooks/useTextInput/useTextInput';
-import { useLanguage } from '../../contexts/LanguageContext';
-import style from './SendMail.module.scss';
+import { useLanguage } from "../../contexts/LanguageContext";
+import { useTextInput } from "../../hooks/useTextInput/useTextInput";
+import { TextInput } from "../ui/FormControls/TextInput/TextInput";
+import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
+import style from "./SendMail.module.scss";
 
 export const SendMail = () => {
   const { t } = useLanguage();
   const form = useRef<HTMLFormElement>(null);
 
+  useEffect(() => {
+    emailjs.init("_t-9w7H78xR5SS4K6");
+  }, []);
+
   const formData = {
     name: useTextInput({
       isRequired: true,
-      validators: ['name'],
-      filters: ['name'],
+      validators: ["name"],
+      filters: ["name"],
     }),
     email: useTextInput({
       isRequired: true,
-      validators: ['email'],
-      filters: ['email'],
+      validators: ["email"],
+      filters: ["email"],
     }),
     text: useTextInput({ isRequired: true, validateOnChange: true }),
   };
 
+  const [isSending, setIsSending] = useState(false);
+
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!form.current) return;
+    if (!form.current || isSending) return;
+
+    setIsSending(true);
     try {
       await emailjs.sendForm(
-        'service_f6tyqgq',
-        'template_5lm9rln',
+        "service_f6tyqgq",
+        "template_5lm9rln",
         form.current,
-        '_t-9w7H78xR5SS4K6'
+        "_t-9w7H78xR5SS4K6"
       );
 
       alert(t.thankYouMessage);
       formData.name.reset();
       formData.email.reset();
       formData.text.reset();
-    } catch (e) {}
+    } catch (error: any) {
+      console.error("EmailJS Error:", error);
+      alert(error?.text || "Failed to send message. Please try again later.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const isValidForm =
     formData.name.isValid && formData.email.isValid && formData.text.isValid;
 
   return (
-    <section className={style.SendMail} id='mail'>
+    <section className={style.SendMail} id="mail">
       <div className={style.container}>
         <SectionTitle
           title={t.sendMeLetter}
@@ -60,13 +73,13 @@ export const SendMail = () => {
           <TextInput
             {...formData.name.inputProps}
             errors={formData.name.errors}
-            name='user_name'
+            name="user_name"
             placeholder={t.namePlaceholder}
           />
           <TextInput
             {...formData.email.inputProps}
             errors={formData.email.errors}
-            name='user_email'
+            name="user_email"
             placeholder={t.emailPlaceholder}
           />
 
@@ -74,11 +87,11 @@ export const SendMail = () => {
             {...formData.text.inputProps}
             errors={formData.text.errors}
             textarea
-            name='message'
+            name="message"
             placeholder={t.messagePlaceholder}
           />
-          <button className={style.btn} disabled={!isValidForm}>
-            {t.sendButton}
+          <button className={style.btn} disabled={!isValidForm || isSending}>
+            {isSending ? <div className={style.loader} /> : t.sendButton}
           </button>
         </form>
       </div>
