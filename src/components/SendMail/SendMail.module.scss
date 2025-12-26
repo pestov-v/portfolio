@@ -10,6 +10,7 @@
     padding-top: 8em;
   }
   background-color: var(--background-section, var(--color-white));
+  // scroll-snap-align: start;
 
   &__title {
     margin-bottom: 4em;

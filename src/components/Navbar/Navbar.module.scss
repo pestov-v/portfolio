@@ -1,8 +1,8 @@
-@import 'src/styles/colors';
-@import 'src/styles/breakpoints';
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

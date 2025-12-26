@@ -5,7 +5,7 @@
   position: relative;
   min-height: 100vh;
   padding: 3em 0;
-  scroll-snap-align: center;
+  // scroll-snap-align: start;
 
   @extend .paralax;
   &::before {
@@ -22,7 +22,7 @@
     grid-gap: 1em;
     opacity: 0;
     transition: opacity 1s ease-out;
-    padding-top: 4em;
+    padding-top: 2em;
 
     &.show {
       opacity: 1;
@@ -32,6 +32,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 2em;
+    }
+
+    @include respond-above(xlg) {
+      padding-top: 4em;
     }
 
     .progressItem {
