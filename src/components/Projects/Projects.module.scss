@@ -4,6 +4,7 @@
 .projects {
   padding-top: 3em;
   background-color: var(--background-section, var(--color-white));
+  scroll-snap-align: start;
 
   @include respond-above(sm) {
     padding-top: 8em;
@@ -12,16 +13,16 @@
   .projectsWrapper {
     @extend .container;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2em;
     padding-top: 2em;
     justify-items: center;
-    
+
     @include respond-above(sm) {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 2.5em;
     }
-    
+
     @include respond-above(lg) {
       grid-template-columns: repeat(3, 1fr);
       max-width: 1200px;

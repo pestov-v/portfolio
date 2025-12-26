@@ -1,3 +1,5 @@
+@import "src/styles/common";
+
 .card {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,10 @@
   background: var(--color-white);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  margin: 1em;
+
+  @include respond-above(sm) {
+    margin: 1em;
+  }
 
   &:hover,
   &:focus {
