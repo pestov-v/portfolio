@@ -67,7 +67,10 @@ export interface Translation {
   language: string;
 }
 
-export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Translation> = {
+export const translations: Record<
+  "en" | "uk" | "bg" | "pl" | "it" | "fr",
+  Translation
+> = {
   en: {
     // Header
     greeting: "Hello, I'm",
@@ -82,7 +85,7 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // About section
     aboutMe: "About me",
-    aboutBgText: "About",
+    aboutBgText: "Aboutme",
     jobTitle: "Web Developer & UI/UX Designer",
     description:
       "Front-end developer with 5+ years of experience designing and building responsive web design and mobile apps. Proficient with CSS and JS Frameworks, with extensive knowledge of UX and user psychology.",
@@ -114,7 +117,7 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // Projects section
     portfolio: "portfolio",
-    portfolioBgText: "Gallery",
+    portfolioBgText: "portfolio",
 
     // Contact section
     contactMe: "Contact Me",
@@ -153,7 +156,7 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // About section
     aboutMe: "Про мене",
-    aboutBgText: "Про мене",
+    aboutBgText: "Aboutme",
     jobTitle: "Web-розробник і UI/UX дизайнер",
     description:
       "Front-end розробник з 5+ роками досвіду проектування та створення адаптивного web-дизайну та мобільних додатків. Володію CSS та JS фреймворками, маю глибокі знання UX та психології користувачів.",
@@ -181,17 +184,17 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // Skills section
     mySkills: "Мої навички",
-    skillsBgText: "Навички",
+    skillsBgText: "Skills",
 
     // Projects section
     portfolio: "портфоліо",
-    portfolioBgText: "Галерея",
+    portfolioBgText: "portfolio",
 
     // Contact section
     contactMe: "Зв'язатися зі мною",
     contactBgText: "Контакти",
     sendMeLetter: "Напишіть мені",
-    mailMe: "Написати",
+    mailMe: "Mail me",
     namePlaceholder: "Ім'я...",
     emailPlaceholder: "Електронна пошта...",
     messagePlaceholder: "Ваше повідомлення...",
@@ -224,7 +227,7 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // About section
     aboutMe: "За мен",
-    aboutBgText: "За мен",
+    aboutBgText: "Aboutme",
     jobTitle: "Web разработчик и UI/UX дизайнер",
     description:
       "Front-end разработчик с 5+ години опит в проектирането и създаването на адаптивен web дизайн и мобилни приложения. Владея CSS и JS фреймуърци, имам задълбочени познания по UX и психология на потребителите.",
@@ -252,17 +255,17 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // Skills section
     mySkills: "Моите умения",
-    skillsBgText: "Умения",
+    skillsBgText: "Skills",
 
     // Projects section
     portfolio: "портфолио",
-    portfolioBgText: "Галерия",
+    portfolioBgText: "portfolio",
 
     // Contact section
     contactMe: "Свържи се с мен",
     contactBgText: "Контакти",
     sendMeLetter: "Пиши ми",
-    mailMe: "Пиши",
+    mailMe: "Mail me",
     namePlaceholder: "Име...",
     emailPlaceholder: "Електронна поща...",
     messagePlaceholder: "Твоето съобщение...",
@@ -295,7 +298,7 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // About section
     aboutMe: "O mnie",
-    aboutBgText: "O mnie",
+    aboutBgText: "Aboutme",
     jobTitle: "Web Developer & UI/UX Designer",
     description:
       "Front-end developer z ponad 5-letnim doświadczeniem w projektowaniu i tworzeniu responsywnych stron internetowych oraz aplikacji mobilnych. Biegły w frameworkach CSS i JS, z rozległą wiedzą z zakresu UX i psychologii użytkownika.",
@@ -323,17 +326,17 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // Skills section
     mySkills: "Moje umiejętności",
-    skillsBgText: "Umiejętności",
+    skillsBgText: "Skills",
 
     // Projects section
     portfolio: "portfolio",
-    portfolioBgText: "Galeria",
+    portfolioBgText: "portfolio",
 
     // Contact section
     contactMe: "Skontaktuj się ze mną",
     contactBgText: "Kontakt",
     sendMeLetter: "Napisz do mnie",
-    mailMe: "Napisz",
+    mailMe: "Mail me",
     namePlaceholder: "Imię...",
     emailPlaceholder: "Email...",
     messagePlaceholder: "Twoja wiadomość...",
@@ -366,7 +369,7 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // About section
     aboutMe: "Su di me",
-    aboutBgText: "Su di me",
+    aboutBgText: "Aboutme",
     jobTitle: "Web Developer & UI/UX Designer",
     description:
       "Sviluppatore Front-end con oltre 5 anni di esperienza nella progettazione e creazione di design web responsive e app mobili. Competente nei framework CSS e JS, con una vasta conoscenza di UX e psicologia dell'utente.",
@@ -394,17 +397,17 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // Skills section
     mySkills: "Le mie competenze",
-    skillsBgText: "Competenze",
+    skillsBgText: "Skills",
 
     // Projects section
     portfolio: "portfolio",
-    portfolioBgText: "Galleria",
+    portfolioBgText: "portfolio",
 
     // Contact section
     contactMe: "Contattami",
     contactBgText: "Contatto",
     sendMeLetter: "Scrivimi una lettera",
-    mailMe: "Scrivimi",
+    mailMe: "Mail me",
     namePlaceholder: "Nome...",
     emailPlaceholder: "Email...",
     messagePlaceholder: "Il tuo messaggio...",
@@ -437,7 +440,7 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // About section
     aboutMe: "À propos de moi",
-    aboutBgText: "À propos",
+    aboutBgText: "Aboutme",
     jobTitle: "Développeur Web & Designer UI/UX",
     description:
       "Développeur Front-end avec plus de 5 ans d'expérience dans la conception et la création de design web responsive et d'applications mobiles. Maîtrise des frameworks CSS et JS, avec une vaste connaissance de l'UX et de la psychologie utilisateur.",
@@ -465,17 +468,17 @@ export const translations: Record<"en" | "uk" | "bg" | "pl" | "it" | "fr", Trans
 
     // Skills section
     mySkills: "Mes compétences",
-    skillsBgText: "Compétences",
+    skillsBgText: "Skills",
 
     // Projects section
     portfolio: "portfolio",
-    portfolioBgText: "Galerie",
+    portfolioBgText: "portfolio",
 
     // Contact section
     contactMe: "Contactez-moi",
     contactBgText: "Contact",
     sendMeLetter: "Envoyez-moi une lettre",
-    mailMe: "Écrivez-moi",
+    mailMe: "Mail me",
     namePlaceholder: "Nom...",
     emailPlaceholder: "Email...",
     messagePlaceholder: "Votre message...",
