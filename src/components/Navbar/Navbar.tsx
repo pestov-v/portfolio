@@ -1,7 +1,6 @@
-import style from "./Navbar.module.scss";
-import { RefObject, useRef, useState, useEffect } from "react";
-import { useVisible } from "../../hooks/useVisible";
+import { RefObject, useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
+import style from "./Navbar.module.scss";
 
 interface Refs {
   [key: string]: RefObject<HTMLElement>;
@@ -13,20 +12,13 @@ export const Navbar = () => {
   const { t } = useLanguage();
   const navbar = useRef<HTMLElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const links = [
     { id: 1, href: "#about", title: t.about },
     { id: 2, href: "#skills", title: t.skills },
     { id: 3, href: "#projects", title: t.projects },
     { id: 4, href: "#mail", title: t.contact },
   ];
-  
-  useVisible({
-    element: navbar,
-    style: style.visible,
-    throttleTime: 10,
-    offsetY: 100,
-  });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -58,9 +50,15 @@ export const Navbar = () => {
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
         >
-          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
-          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
-          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+          <span
+            className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`}
+          />
+          <span
+            className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`}
+          />
+          <span
+            className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`}
+          />
         </button>
 
         <ul className={`${style.links} ${isMenuOpen ? style.menuOpen : ""}`}>
@@ -73,7 +71,9 @@ export const Navbar = () => {
           ))}
         </ul>
       </nav>
-      {isMenuOpen && <div className={style.overlay} onClick={handleLinkClick} />}
+      {isMenuOpen && (
+        <div className={style.overlay} onClick={handleLinkClick} />
+      )}
     </>
   );
 };
