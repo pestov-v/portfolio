@@ -1,3 +1,5 @@
 .main {
-  // scroll-snap-type: y proximity;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
