@@ -12,16 +12,14 @@ export const MainLayout: NextPage<ILayoutProps> = ({
   className = "",
 }) => {
   const { t } = useLanguage();
-  
+
   return (
     <div className={className}>
       <Head>
         <title>{t.portfolioTitle}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="Portfolio" content="Pestov Volodymyr" />
-        <meta
-          name="description"
-          content={t.portfolioDescription}
-        />
+        <meta name="description" content={t.portfolioDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

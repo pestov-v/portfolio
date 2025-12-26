@@ -1,16 +1,16 @@
 import type { NextPage } from "next";
 
 import { MainLayout } from "../src/Layouts/MainLayout";
-import { Navbar } from "../src/components/Navbar/Navbar";
-import { Header } from "../src/components/Header/Header";
-import { Projects } from "../src/components/Projects/Projects";
 import { About } from "../src/components/About/About";
-import { Skills } from "../src/components/Skills/Skills";
-import { SendMail } from "../src/components/SendMail/SendMail";
-import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { Footer } from "../src/components/Footer/Footer";
+import { Header } from "../src/components/Header/Header";
 import { LanguageSwitcher } from "../src/components/LanguageSwitcher/LanguageSwitcher";
+import { Navbar } from "../src/components/Navbar/Navbar";
+import { Projects } from "../src/components/Projects/Projects";
+import { SendMail } from "../src/components/SendMail/SendMail";
+import { Skills } from "../src/components/Skills/Skills";
 import { ThemeSwitcher } from "../src/components/ThemeSwitcher/ThemeSwitcher";
+import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
 
 import style from "../src/styles/Home.module.scss";
@@ -22,10 +22,9 @@ const Home: NextPage = () => {
     <MainLayout className="app">
       <ThemeSwitcher />
       <LanguageSwitcher />
-      <Navbar />
-
       <main className={style.main}>
         <Header />
+        <Navbar />
         <div className="animate-on-scroll fade-in-up">
           <About />
         </div>

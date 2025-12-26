@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import 'reset';
-@import 'breakpoints';
-@import 'colors';
-@import 'common';
-@import 'scroll-animations';
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Montserrat:wght@700;800;900&family=Space+Grotesk:wght@700&family=Bebas+Neue&family=Bricolage+Grotesque:wght@800&family=Playfair+Display:ital,wght@0,900;1,900&family=Unbounded:wght@500&family=Cormorant+Garamond:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@800&display=swap");
+@import "reset";
+@import "breakpoints";
+@import "colors";
+@import "common";
+@import "scroll-animations";
 
 * {
   box-sizing: border-box;
@@ -14,19 +14,32 @@
 html {
   padding: 0;
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Outfit", sans-serif;
   background-color: var(--background-body, hsl(0, 0%, 100%));
   color: var(--text-primary, hsl(0, 0%, 27%));
   transition: background-color 0.3s ease, color 0.3s ease;
+  // overflow-x: hidden;
+  // scroll-snap-type: y mandatory;
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Outfit", sans-serif;
   background-color: transparent;
   color: var(--text-primary, hsl(0, 0%, 27%));
   transition: color 0.3s ease;
+  // overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
 }
 
 a {
@@ -43,4 +56,3 @@ a {
     color-scheme: dark;
   }
 }
-

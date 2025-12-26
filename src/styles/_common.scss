@@ -1,61 +1,67 @@
-@import 'src/styles/colors';
-@import 'src/styles/breakpoints';
+@import "src/styles/colors";
+@import "src/styles/breakpoints";
 
 .app {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    min-height: 100vh;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  margin: auto;
+  max-width: min(90%, 80em);
+}
+
+.btn {
+  position: relative;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.22s ease, border 0.22s ease;
+
+  &:hover {
+    color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
   }
-  
-  .container {
-    margin: auto;
-    max-width: min(90%, 80em);
-  }
-  
-  .btn {
-    position: relative;
-    padding: 0.8em 1.2em;
-    font-size: 1em;
-    font-weight: 700;
-    color: var(--color-primary);
-    background-color: transparent;
-    border: 2px solid var(--color-primary);
-    border-radius: 8px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: color 0.22s ease, border 0.22s ease;
-  
-    &:hover {
-      color: var(--color-primary-light);
-      border-color: var(--color-primary-light);
-    }
-  }
-  
-  .typed-cursor{
-    opacity: 1;
-    animation: typedjsBlink 0.7s infinite;
-    -webkit-animation: typedjsBlink 0.7s infinite;
-    animation: typedjsBlink 0.7s infinite;
-  }
-  @keyframes typedjsBlink{
-    50% { opacity: 0.0; }
-  }
-  @-webkit-keyframes typedjsBlink{
-    0% { opacity: 1; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1; }
-  }
-  .typed-fade-out{
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink {
+  50% {
     opacity: 0;
-    transition: opacity .25s;
-    -webkit-animation: 0;
-    animation: 0;
   }
+}
+@-webkit-keyframes typedjsBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typed-fade-out {
+  opacity: 0;
+  transition: opacity 0.25s;
+  -webkit-animation: 0;
+  animation: 0;
+}
 
 .paralax {
   &::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -79,25 +85,22 @@
   opacity: 0.65;
   animation: action 1s infinite alternate;
 
-    @keyframes action {
-      0% {
-          transform: translateY(0);
-      }
-  
-      100% {
-          transform: translateY(-15px);
-      }
+  @keyframes action {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-15px);
+    }
   }
 
   &::before {
-    content: '';
+    content: "";
     border: solid var(--color-primary);
     border-width: 0 5px 5px 0;
     display: inline-block;
-    padding: 8px;    
+    padding: 8px;
     transform: rotate(45deg);
-  }   
-  @include respond-above(lg) {
-    display: inline;
   }
 }
