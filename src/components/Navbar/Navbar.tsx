@@ -1,5 +1,6 @@
 import { RefObject, useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { useVisible } from "../../hooks/useVisible";
 import style from "./Navbar.module.scss";
 
 interface Refs {
@@ -19,6 +20,13 @@ export const Navbar = () => {
     { id: 3, href: "#projects", title: t.projects },
     { id: 4, href: "#mail", title: t.contact },
   ];
+
+  useVisible({
+    element: navbar,
+    style: style.visible,
+    throttleTime: 10,
+    offsetY: 100,
+  });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

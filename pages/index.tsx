@@ -22,19 +22,19 @@ const Home: NextPage = () => {
     <MainLayout className="app">
       <ThemeSwitcher />
       <LanguageSwitcher />
+      <Navbar />
       <main className={style.main}>
         <Header />
-        <Navbar />
         <div className="animate-on-scroll fade-in-up">
           <About />
         </div>
-        <div className="animate-on-scroll fade-in-left stagger-1">
+        <div className="animate-on-scroll fade-in-left">
           <Skills />
         </div>
-        <div className="animate-on-scroll fade-in-right stagger-2">
+        <div className="animate-on-scroll fade-in-right">
           <Projects />
         </div>
-        <div className="animate-on-scroll scale-in stagger-3">
+        <div className="animate-on-scroll scale-in">
           <SendMail />
         </div>
       </main>

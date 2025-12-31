@@ -48,12 +48,12 @@ export const _projects: Projects = [
   },
   {
     id: 14,
-    title: "Suitcase - E-commerce Platform",
+    title: "Aurinia - E-commerce Platform",
     description:
       "Modern e-commerce platform with advanced product management, checkout process, and admin panel.",
-    href: "https://pestov-v.github.io/suitcase-images/",
-    image: "suitcase",
-    alt: "Suitcase E-commerce Platform",
+    href: "https://aurinia.com.ua",
+    image: "aurinia",
+    alt: "Aurinia E-commerce Platform",
     additionalInfo:
       "Full-featured online store with material management and comprehensive order processing",
   },

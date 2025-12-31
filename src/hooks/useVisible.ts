@@ -13,7 +13,6 @@ export const useVisible = (props: IProps) => {
   useEffect(() => {
     const handler = () => {
       if (window?.scrollY > offsetY) {
-        console.log("Adding visible class", style);
         element?.current?.classList.add(style);
       } else {
         element?.current?.classList.remove(style);

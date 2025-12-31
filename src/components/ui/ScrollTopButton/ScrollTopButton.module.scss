@@ -1,13 +1,14 @@
 @import "src/styles/colors";
+@import "src/styles/common";
 
 .button {
   --width: 3px;
 
   position: fixed;
-  right: 2em;
-  bottom: 2em;
-  width: 4em;
-  height: 4em;
+  right: 1em;
+  bottom: 1em;
+  width: 3em;
+  height: 3em;
 
   z-index: 11;
   background-color: transparent;
@@ -15,6 +16,13 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   animation: action 1s infinite alternate;
+
+  @include respond-above(sm) {
+    right: 2em;
+    bottom: 2em;
+    width: 4em;
+    height: 4em;
+  }
 
   &.visible {
     opacity: 1;
@@ -26,8 +34,8 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 4em;
-    width: 4em;
+    height: 3em;
+    width: 3em;
     display: block;
     background-color: var(--color-light-transparent);
     -webkit-backdrop-filter: blur(10px);
@@ -35,6 +43,11 @@
     border: var(--width) solid var(--color-primary-toggle);
     border-radius: 50%;
     cursor: pointer;
+
+    @include respond-above(sm) {
+      height: 4em;
+      width: 4em;
+    }
   }
 
   &::after {

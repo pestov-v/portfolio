@@ -3,14 +3,10 @@
 
 .SendMail {
   padding: {
-    top: 3em;
-    bottom: 6em;
-  }
-  @include respond-above(sm) {
-    padding-top: 8em;
+    top: 6em;
+    bottom: 3em;
   }
   background-color: var(--background-section, var(--color-white));
-  // scroll-snap-align: start;
 
   &__title {
     margin-bottom: 4em;

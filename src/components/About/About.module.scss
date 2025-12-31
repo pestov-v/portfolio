@@ -5,15 +5,14 @@
 .about {
   display: flex;
   min-height: 100vh;
-  padding: 4em 0;
+  padding: 6em 0 4em 0;
   position: relative;
   background-color: var(--background-section, var(--color-white));
   // scroll-snap-align: start;
 
-  @include respond-above(sm) {
+  @include respond-above(xlg) {
     padding: {
-      top: 8em;
-      bottom: 14em;
+      top: 0;
     }
   }
 

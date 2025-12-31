@@ -4,15 +4,14 @@
 .skills {
   position: relative;
   min-height: 100vh;
-  padding: 3em 0;
-  // scroll-snap-align: start;
+  padding: 6em 0 4em 0;
 
   @extend .paralax;
   &::before {
     background-image: url("/img/develop.jpeg");
   }
-  @include respond-above(sm) {
-    padding-top: 8em;
+  @include respond-above(xlg) {
+    padding-top: 10em;
   }
 
   .progressWrapper {
