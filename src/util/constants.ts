@@ -74,14 +74,14 @@ export const _projects: Projects = [
   //   image: "market",
   //   alt: "Online market",
   // },
-  // {
-  //   id: 11,
-  //   title: "Amazona",
-  //   description: "Online market on Next.js with MongoDB",
-  //   href: "https://amazona-pestov-v.vercel.app/",
-  //   image: "amazona-2",
-  //   alt: "Online market",
-  // },
+  {
+    id: 11,
+    title: "Youtube Clone",
+    description: "Mini youtube clone with search, video list, and video player",
+    href: "https://clone-a72b1.web.app/",
+    image: "youtube",
+    alt: "Youtube Clone",
+  },
   {
     id: 10,
     title: "Covid-19 tracker",
