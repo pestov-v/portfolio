@@ -154,14 +154,14 @@ export const _projects: Projects = [
     image: "bootstrap-app",
     alt: "bootstrap application",
   },
-  {
-    id: 1,
-    title: "Simple menu",
-    description: "Simple menu for restaurant",
-    href: "https://nakryt.github.io/simple-menu/",
-    image: "simple-menu",
-    alt: "menu application",
-  },
+  // {
+  //   id: 1,
+  //   title: "Simple menu",
+  //   description: "Simple menu for restaurant",
+  //   href: "https://nakryt.github.io/simple-menu/",
+  //   image: "simple-menu",
+  //   alt: "menu application",
+  // },
 ];
 
 export const projects = addImagePath(_projects);
