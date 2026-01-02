@@ -10,12 +10,13 @@
   }
 
   .projectsWrapper {
-    @extend .container;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2em;
     padding-top: 2em;
     justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 
     @include respond-above(sm) {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -24,8 +25,6 @@
 
     @include respond-above(lg) {
       grid-template-columns: repeat(3, 1fr);
-      max-width: 1200px;
-      margin: 0 auto;
     }
   }
 }

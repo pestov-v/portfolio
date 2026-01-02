@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         <div className="animate-on-scroll fade-in-left">
           <Skills />
         </div>
-        <div className="animate-on-scroll fade-in-right">
+        <div className="animate-on-scroll fade-in-up">
           <Projects />
         </div>
         <div className="animate-on-scroll scale-in">

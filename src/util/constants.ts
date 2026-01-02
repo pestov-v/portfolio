@@ -125,7 +125,8 @@ export const _projects: Projects = [
   {
     id: 5,
     title: "ABZ-test task",
-    description: "Test project on React from ABZ-agency",
+    description:
+      "Delivered pixel-perfect layouts with a strong focus on performance optimization",
     href: "https://nakryt.github.io/test/",
     image: "abz-test",
     alt: "abz-agency test",
