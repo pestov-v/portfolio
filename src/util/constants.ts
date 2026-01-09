@@ -123,6 +123,14 @@ export const _projects: Projects = [
   //   alt: "amazona mart",
   // },
   {
+    id: 6,
+    title: "Matrix table",
+    description: "Simple generated matrix table with React",
+    href: "https://pestov-v.github.io/matrix-table/",
+    image: "matrix-table",
+    alt: "Matrix table",
+  },
+  {
     id: 5,
     title: "ABZ-test task",
     description:
@@ -147,14 +155,14 @@ export const _projects: Projects = [
   //   image: "quiz",
   //   alt: "quiz application",
   // },
-  {
-    id: 2,
-    title: "Simple bootstrap app",
-    description: "Simple site with bootstrap",
-    href: "https://simplebootstrapsite.web.app/",
-    image: "bootstrap-app",
-    alt: "bootstrap application",
-  },
+  // {
+  //   id: 2,
+  //   title: "Simple bootstrap app",
+  //   description: "Simple site with bootstrap",
+  //   href: "https://simplebootstrapsite.web.app/",
+  //   image: "bootstrap-app",
+  //   alt: "bootstrap application",
+  // },
   // {
   //   id: 1,
   //   title: "Simple menu",
