@@ -14,6 +14,17 @@ export type Projects = IProject[]; // FIXME: delete type
 
 export const _projects: Projects = [
   {
+    id: 18,
+    title: "Aurinia - E-commerce Platform",
+    description:
+      "Modern e-commerce platform with advanced product management, checkout process, and admin panel.",
+    href: "https://aurinia.com.ua",
+    image: "aurinia",
+    alt: "Aurinia E-commerce Platform",
+    additionalInfo:
+      "Full-featured online store with material management and comprehensive order processing",
+  },
+  {
     id: 17,
     title: "CFWeb - Corporate Finance Web Application",
     description:
@@ -45,17 +56,6 @@ export const _projects: Projects = [
     alt: "Onboarding Questionnaire Management System",
     additionalInfo:
       "Enterprise-level form builder with template management, category organization, and advanced field customization",
-  },
-  {
-    id: 14,
-    title: "Aurinia - E-commerce Platform",
-    description:
-      "Modern e-commerce platform with advanced product management, checkout process, and admin panel.",
-    href: "https://aurinia.com.ua",
-    image: "aurinia",
-    alt: "Aurinia E-commerce Platform",
-    additionalInfo:
-      "Full-featured online store with material management and comprehensive order processing",
   },
   // {
   //   id: 13,
