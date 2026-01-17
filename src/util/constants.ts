@@ -10,9 +10,8 @@ export interface IProject {
   additionalInfo?: string;
 }
 export type TProjects = IProject[];
-export type Projects = IProject[]; // FIXME: delete type
 
-export const _projects: Projects = [
+export const _projects: TProjects = [
   {
     id: 18,
     title: "Aurinia - E-commerce Platform",
@@ -57,6 +56,17 @@ export const _projects: Projects = [
     additionalInfo:
       "Enterprise-level form builder with template management, category organization, and advanced field customization",
   },
+  {
+    id: 14,
+    title: "Deal crm system",
+    description:
+      "Fullstack Deal/Clients crm system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM, Docker",
+    href: "https://deals-front-production.up.railway.app",
+    image: "deals",
+    alt: "Deal crm system",
+    additionalInfo:
+      "Fullstack deal crm system. NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM, Docker",
+  },
   // {
   //   id: 13,
   //   title: "Forex-broker",
@@ -74,6 +84,14 @@ export const _projects: Projects = [
   //   image: "market",
   //   alt: "Online market",
   // },
+  {
+    id: 12,
+    title: "Matrix table",
+    description: "Simple generated matrix table with React",
+    href: "https://pestov-v.github.io/matrix-table/",
+    image: "matrix-table",
+    alt: "Matrix table",
+  },
   {
     id: 11,
     title: "Youtube Clone",
@@ -122,14 +140,7 @@ export const _projects: Projects = [
   //   image: "amazona",
   //   alt: "amazona mart",
   // },
-  {
-    id: 6,
-    title: "Matrix table",
-    description: "Simple generated matrix table with React",
-    href: "https://pestov-v.github.io/matrix-table/",
-    image: "matrix-table",
-    alt: "Matrix table",
-  },
+
   {
     id: 5,
     title: "ABZ-test task",
@@ -155,22 +166,22 @@ export const _projects: Projects = [
   //   image: "quiz",
   //   alt: "quiz application",
   // },
-  // {
-  //   id: 2,
-  //   title: "Simple bootstrap app",
-  //   description: "Simple site with bootstrap",
-  //   href: "https://simplebootstrapsite.web.app/",
-  //   image: "bootstrap-app",
-  //   alt: "bootstrap application",
-  // },
-  // {
-  //   id: 1,
-  //   title: "Simple menu",
-  //   description: "Simple menu for restaurant",
-  //   href: "https://nakryt.github.io/simple-menu/",
-  //   image: "simple-menu",
-  //   alt: "menu application",
-  // },
+  {
+    id: 2,
+    title: "Simple bootstrap app",
+    description: "Simple site with bootstrap",
+    href: "https://simplebootstrapsite.web.app/",
+    image: "bootstrap-app",
+    alt: "bootstrap application",
+  },
+  {
+    id: 1,
+    title: "Simple menu",
+    description: "Simple menu for restaurant",
+    href: "https://nakryt.github.io/simple-menu/",
+    image: "simple-menu",
+    alt: "menu application",
+  },
 ];
 
 export const projects = addImagePath(_projects);
