@@ -33,7 +33,7 @@
       .sidebar {
         background: #2c3e50;
         color: white;
-        padding: 40px 30px;
+        padding: 2rem 1rem;
       }
 
       .main-content {
@@ -77,7 +77,11 @@
       .contact-item a {
         color: #ecf0f1;
         text-decoration: none;
-        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .contact-item .email {
+        letter-spacing: -0.5px;
       }
 
       .section-title {
@@ -316,7 +320,7 @@
 
     <div class="container">
       <div class="sidebar">
-        <img src="./pestov.webp" width="220" alt="Volodymyr Pestov" />
+        <img src="./pestov.webp" width="250" alt="Volodymyr Pestov" />
         <div class="header">
           <h1>Volodymyr<br />Pestov</h1>
           <h2>Senior Front-End Developer</h2>
@@ -330,7 +334,7 @@
           </div>
           <div class="contact-item">
             <strong>Email:</strong>
-            <a href="mailto:pestov.volodymyr@gmail.com"
+            <a class="email" href="mailto:pestov.volodymyr@gmail.com"
               >pestov.volodymyr@gmail.com</a
             >
           </div>
@@ -355,7 +359,7 @@
         </div>
 
         <div>
-          <h3 class="section-title">TECHNICAL SKILLS</h3>
+          <h3 class="section-title">CORE SKILLS</h3>
           <div class="skills-grid">
             <div class="skill-item">
               <div class="skill-category">Frontend Core</div>
@@ -364,10 +368,8 @@
               </div>
             </div>
             <div class="skill-item">
-              <div class="skill-category">Frameworks &amp; Libraries</div>
-              <div class="skill-list">
-                React.js, Next.js, React Native, Angular, Vue.js
-              </div>
+              <div class="skill-category">Frameworks</div>
+              <div class="skill-list">React.js, Next.js, React Native</div>
             </div>
             <div class="skill-item">
               <div class="skill-category">UI Libraries</div>
@@ -380,20 +382,26 @@
               <div class="skill-list">Redux, MobX, Zustand</div>
             </div>
             <div class="skill-item">
+              <div class="skill-category">Real-Time</div>
+              <div class="skill-list">WebSocket, REST API, GraphQL</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-category">Tools</div>
+              <div class="skill-list">Git, Jest, Webpack, Vite</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">FAMILIAR WITH</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
               <div class="skill-category">Backend</div>
-              <div class="skill-list">Node.js, Express, NestJS, GraphQL</div>
+              <div class="skill-list">Node.js, Express, NestJS</div>
             </div>
             <div class="skill-item">
-              <div class="skill-category">Database</div>
-              <div class="skill-list">SQL, NoSQL, MongoDB, PostgreSQL</div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-category">Tools &amp; Practices</div>
-              <div class="skill-list">Git, GitHub, Unit Testing, REST API</div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-category">Other Languages</div>
-              <div class="skill-list">Python, Java, C#</div>
+              <div class="skill-category">Databases</div>
+              <div class="skill-list">PostgreSQL, MongoDB</div>
             </div>
           </div>
         </div>
@@ -427,42 +435,39 @@
         <div>
           <h3 class="section-title">EDUCATION</h3>
           <div class="education-item">
-            <div class="education-period">2006 - 2009</div>
+            <div class="education-period">2004 - 2009</div>
             <div class="education-institution">
               Yuriy Fedkovych Chernivtsi National University
             </div>
-            <div class="education-degree">Mathematician-Programmer</div>
-          </div>
-          <div class="education-item">
-            <div class="education-period">2004 - 2006</div>
-            <div class="education-institution">
-              Kamianets-Podilskyi National Ivan Ohienko University
+            <div class="education-degree">
+              Bachelor's in Applied Mathematics
             </div>
-            <div class="education-degree">Mathematician-Programmer</div>
           </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">CERTIFICATIONS</h3>
           <div class="education-item">
-            <div class="education-period">2019 - Present</div>
+            <div class="education-period">2019 - 2024</div>
             <div class="education-institution">freeCodeCamp.org</div>
-            <div class="education-degree">Continuous Learning</div>
+            <div class="education-degree">
+              Responsive Web Design, JavaScript Algorithms, Front End Libraries
+            </div>
           </div>
         </div>
       </div>
 
       <div class="main-content">
-        <h3 class="section-title">PROFILE</h3>
+        <h3 class="section-title">SUMMARY</h3>
         <p class="profile-text">
-          Senior Front-End Developer with 6+ years of expertise building
-          high-performance fintech and enterprise web applications. Specialized
-          in architecting scalable React/TypeScript solutions for real-time
-          trading platforms, banking systems, and complex administrative
-          dashboards. Proven track record of delivering end-to-end projects from
-          architecture design to production deployment, including a complete
-          dynamic forms system that eliminated developer dependency for business
-          users. Expert in WebSocket implementations for low-latency data
-          streaming, performance optimization, and building reusable component
-          architectures. Strong technical leadership with experience in
-          mentoring developers, conducting code reviews, and establishing
-          frontend best practices across teams.
+          <strong>Senior Front-End Developer</strong> with 6+ years building
+          high-performance fintech platforms processing 10K+ daily transactions.
+          I architect scalable React/TypeScript solutions that deliver
+          measurable business impact — from a no-code form system that reduced
+          product launch time from weeks to hours, to real-time trading
+          interfaces with &lt;50ms latency. Proven technical leader with
+          mentoring experience and a track record of scaling applications 3x
+          while maintaining code quality.
         </p>
 
         <h3 class="section-title">PROFESSIONAL EXPERIENCE</h3>
@@ -470,223 +475,135 @@
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-title">Ukrpay</div>
-            <div class="period">01.2023 - Present</div>
+            <div class="period">Jan 2023 - Present</div>
           </div>
-          <div class="position">Senior Front-End Developer</div>
+          <div class="position">
+            Senior Front-End Developer → Tech Lead (Frontend)
+          </div>
 
           <div class="project-title">OshchadPAY Online Merchant Dashboard</div>
-          <div class="tech-stack">
-            Tech Stack: React, TypeScript, Redux, Material UI, REST API
-          </div>
+          <div class="tech-stack">React, TypeScript, Redux, Material UI</div>
           <ul class="achievements">
             <li>
-              Architected and developed a comprehensive merchant management
-              platform handling real-time transaction monitoring for 500+ active
-              merchants
+              Architected merchant management platform for 500+ merchants
+              processing 10K+ daily transactions
             </li>
             <li>
-              Implemented advanced filtering, sorting, and pagination systems to
-              efficiently handle large datasets (10K+ transactions daily)
+              Created reusable component library, reducing feature development
+              time by 40%
             </li>
             <li>
-              Built modular terminal and cashier management system with
-              role-based access control (RBAC)
-            </li>
-            <li>
-              Created reusable component library reducing development time for
-              new features by 40%
-            </li>
-            <li>
-              Optimized bundle size and implemented code-splitting, improving
-              initial load time by 35%
+              Optimized bundle with code-splitting, improving initial load by
+              35%
             </li>
           </ul>
           <div class="key-achievement">
-            Key Achievement: Designed dashboard architecture that scaled
-            seamlessly as merchant base grew 3x during tenure
+            Impact: Dashboard scaled 3x with zero architecture rewrites
           </div>
 
           <div class="project-title">
-            Credit Factory Administrative Platform
+            Dynamic Forms System (Full Project Ownership)
           </div>
           <div class="tech-stack">
-            Tech Stack: React, TypeScript, Zustand, REST API, Express
+            React, TypeScript, Custom Form Engine, JSON Schema
           </div>
           <ul class="achievements">
             <li>
-              Developed full-stack administrative system for loan application
-              management with complex workflow orchestration
+              Built no-code form builder with 30+ field types, conditional
+              logic, and validation rules
             </li>
             <li>
-              Implemented dynamic reporting module with customizable filters and
-              export functionality (Excel/PDF)
+              Designed JSON schema system with version control and real-time
+              preview
             </li>
             <li>
-              Built integration layer for multiple external systems (credit
-              bureaus, payment gateways) with error handling and retry
-              mechanisms
-            </li>
-            <li>
-              Designed role-permission management system supporting granular
-              access control
+              Optimized rendering for 100+ field forms using React
+              virtualization
             </li>
           </ul>
           <div class="key-achievement">
-            Key Achievement: Reduced manual data entry by 60% through automated
-            reference data synchronization
+            Impact: Eliminated developer dependency, reducing product launch
+            from weeks to hours
           </div>
 
-          <div class="project-title">Dynamic Forms System for Banking</div>
-          <div class="tech-stack">
-            Tech Stack: React, TypeScript, Custom Form Engine, JSON Schema
-          </div>
+          <div class="project-title">Credit Factory Platform</div>
+          <div class="tech-stack">React, TypeScript, Zustand, Express</div>
           <ul class="achievements">
             <li>
-              <strong>Full-cycle project ownership:</strong> Led architecture
-              design, implementation, and production deployment
+              Developed loan management system with workflow orchestration
             </li>
             <li>
-              Engineered a no-code form builder enabling business users to
-              create complex multi-step questionnaires with conditional logic,
-              validation rules, and dynamic field dependencies
-            </li>
-            <li>
-              Designed JSON-based form schema system with real-time preview and
-              version control
-            </li>
-            <li>
-              Implemented drag-and-drop interface with 30+ field types (text,
-              select, file upload, signature, etc.)
-            </li>
-            <li>
-              Built form analytics dashboard tracking completion rates and
-              drop-off points
-            </li>
-            <li>
-              Optimized rendering performance for forms with 100+ fields using
-              React virtualization
+              Built reporting module with Excel/PDF export and granular RBAC
             </li>
           </ul>
           <div class="key-achievement">
-            Key Achievement: Eliminated 100% of developer involvement in form
-            creation, reducing time-to-market for new products from weeks to
-            hours
+            Impact: Reduced manual data entry by 60% via automated
+            synchronization
           </div>
         </div>
 
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-title">Atlana</div>
-            <div class="period">03.2022 - 10.2022</div>
+            <div class="period">Mar 2022 - Oct 2022</div>
           </div>
           <div class="position">Front-End Developer</div>
 
           <div class="project-title">Real Estate Listing Platform</div>
-          <div class="tech-stack">
-            Tech Stack: React, TypeScript, Next.js, Tailwind CSS, REST API
-          </div>
+          <div class="tech-stack">React, TypeScript, Next.js, Tailwind CSS</div>
           <ul class="achievements">
             <li>
-              Developed property search platform with advanced filtering
-              (location, price range, amenities, square footage)
+              Developed property search with Mapbox integration and advanced
+              filtering
             </li>
-            <li>
-              Implemented map-based property browsing using Mapbox with
-              clustering for high-density areas
-            </li>
-            <li>
-              Built responsive image galleries with lazy loading and optimized
-              image delivery (WebP format)
-            </li>
-            <li>
-              Created SEO-optimized listing pages using Next.js SSG/ISR for
-              improved search rankings
-            </li>
-            <li>
-              Implemented favorite listings and comparison features with local
-              storage persistence
-            </li>
-            <li>
-              Optimized performance achieving 95+ Lighthouse scores across all
-              metrics
-            </li>
+            <li>Created SEO-optimized pages using Next.js SSG/ISR</li>
+            <li>Built lazy-loading image galleries with WebP optimization</li>
+            <li>Achieved 95+ Lighthouse scores across all metrics</li>
           </ul>
           <div class="key-achievement">
-            Key Achievement: Reduced page load time by 50% through image
-            optimization and code-splitting strategies
+            Impact: Reduced page load time by 50%
           </div>
         </div>
 
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-title">Impltech</div>
-            <div class="period">03.2021 - 02.2022</div>
+            <div class="period">Mar 2021 - Feb 2022</div>
           </div>
           <div class="position">Front-End Developer</div>
 
-          <div class="project-title">
-            Real-Time Stock Brokerage Trading Interface
-          </div>
-          <div class="tech-stack">
-            Tech Stack: React, TypeScript, WebSocket, Redux, Custom Charting
-            Library
-          </div>
+          <div class="project-title">Real-Time Stock Trading Interface</div>
+          <div class="tech-stack">React, TypeScript, WebSocket, Redux</div>
           <ul class="achievements">
             <li>
-              Built high-frequency trading interface streaming live market data
-              for 50+ stock symbols simultaneously
+              Built trading interface streaming 50+ symbols with &lt;50ms UI
+              latency
             </li>
             <li>
-              Implemented WebSocket connection with automatic reconnection logic
-              and data buffering during network interruptions
+              Implemented WebSocket with auto-reconnection and data buffering
             </li>
+            <li>Created real-time order book with optimized React rendering</li>
             <li>
-              Developed low-latency bid/ask price calculation engine updating UI
-              in &lt;100ms
-            </li>
-            <li>
-              Created real-time order book visualization with optimized
-              re-rendering strategy (React.memo, useMemo)
-            </li>
-            <li>
-              Built advanced charting system with technical indicators (RSI,
-              MACD, Moving Averages)
-            </li>
-            <li>
-              Implemented order placement system with instant visual feedback
-              and error handling
-            </li>
-            <li>
-              <strong>Mentoring:</strong> Conducted code reviews and mentored 2
-              junior developers on WebSocket best practices and React
-              performance optimization
+              <strong>Mentored</strong> 2 junior developers on WebSocket and
+              performance patterns
             </li>
           </ul>
           <div class="key-achievement">
-            Key Achievement: Achieved &lt;50ms UI update latency during peak
-            trading hours handling 1000+ price updates per second
+            Impact: Handled 1000+ price updates/second during peak trading
           </div>
         </div>
 
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-title">Freelance</div>
-            <div class="period">09.2020 - 03.2021</div>
+            <div class="period">Sep 2020 - Mar 2021</div>
           </div>
           <div class="position">Front-End Developer</div>
           <ul class="achievements">
             <li>
-              Delivered 5+ client projects ranging from landing pages to complex
-              web applications
+              Delivered 5+ React projects from landing pages to full web apps
             </li>
-            <li>
-              Specialized in React-based solutions with focus on responsive
-              design and performance
-            </li>
-            <li>
-              Established reusable project templates and development workflows
-              reducing project kickoff time by 30%
-            </li>
+            <li>Created reusable templates, reducing project kickoff by 30%</li>
           </ul>
         </div>
 
