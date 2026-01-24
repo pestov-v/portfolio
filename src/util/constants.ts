@@ -60,12 +60,23 @@ export const _projects: TProjects = [
     id: 14,
     title: "Deal crm system",
     description:
-      "Fullstack Deal/Clients crm system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM, Docker",
+      "Fullstack Deal/Clients crm system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
     href: "https://deals-front-production.up.railway.app",
     image: "deals",
     alt: "Deal crm system",
     additionalInfo:
-      "Fullstack deal crm system. NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM, Docker",
+      "Fullstack deal crm system. NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+  },
+  {
+    id: 13,
+    title: "CandidatesHub - Candidates crm system",
+    description:
+      "Fullstack Candidates crm system with React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+    href: "https://candidates-front-production.up.railway.app",
+    image: "candidates",
+    alt: "Candidates crm system",
+    additionalInfo:
+      "Fullstack candidates crm system. React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
   },
   // {
   //   id: 13,
