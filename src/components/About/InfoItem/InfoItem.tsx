@@ -46,7 +46,7 @@ export const InfoItem: NextPage<IProps> = (props) => {
   );
 
   return (
-    <h4 key={title} className={style.InfoItem}>
+    <h4 className={style.InfoItem}>
       {!hideTitle && <>{title}: </>}
       {linkHref ? (
         <a

@@ -9,30 +9,56 @@ export const About = () => {
   const { t } = useLanguage();
 
   const additionalInfo = [
-    { title: t.personalInfo.name, value: "Volodymyr Pestov" },
-    { title: t.personalInfo.birthday, value: "15 September 1987" },
-    { title: t.personalInfo.degree, value: t.master },
-    { title: t.personalInfo.experience, value: t.fiveYearsPlus },
+    { id: "name", title: t.personalInfo.name, value: "Volodymyr Pestov" },
     {
+      id: "birthday",
+      title: t.personalInfo.birthday,
+      value: "15 September 1987",
+    },
+    { id: "degree", title: t.personalInfo.degree, value: t.master },
+    {
+      id: "experience",
+      title: t.personalInfo.experience,
+      value: t.fiveYearsPlus,
+    },
+    {
+      id: "phone",
       title: t.personalInfo.phone,
       value: "+38 (097) 00 97 343",
       icon: "phone",
     },
     {
+      id: "email",
       title: t.personalInfo.email,
       value: "pestov.volodymyr@gmail.com",
       icon: "email",
     },
-    { title: t.personalInfo.address, value: "Nesebar, Bulgaria" },
-    { title: t.personalInfo.freelance, value: t.available },
-    { title: t.personalInfo.telegram, value: "@pestov_v", icon: "telegram" },
-    { title: t.personalInfo.viber, value: "+380970097343", icon: "viber" },
     {
+      id: "address",
+      title: t.personalInfo.address,
+      value: "Nesebar, Bulgaria",
+    },
+    { id: "freelance", title: t.personalInfo.freelance, value: t.available },
+    {
+      id: "telegram",
+      title: t.personalInfo.telegram,
+      value: "@pestov_v",
+      icon: "telegram",
+    },
+    {
+      id: "viber",
+      title: t.personalInfo.viber,
+      value: "+380970097343",
+      icon: "viber",
+    },
+    {
+      id: "whatsapp",
       title: t.personalInfo.whatsapp,
       value: "+380970097343",
       icon: "whatsapp",
     },
     {
+      id: "facebook",
       title: t.personalInfo.facebook,
       value: "Facebook",
       icon: "facebook",
@@ -40,6 +66,7 @@ export const About = () => {
       hideTitle: true,
     },
     {
+      id: "github",
       title: t.personalInfo.github,
       value: "GitHub",
       icon: "github",
@@ -47,6 +74,7 @@ export const About = () => {
       hideTitle: true,
     },
     {
+      id: "linkedin",
       title: t.personalInfo.linkedin,
       value: "LinkedIn",
       icon: "linkedin",
@@ -78,12 +106,12 @@ export const About = () => {
               className={`${style.additionalInfo} animate-on-scroll fade-in-up stagger-3`}
             >
               {additionalInfo.map(
-                ({ title, value, icon, href, hideTitle }, index) => (
+                ({ id, title, value, icon, href, hideTitle }, index) => (
                   <div
-                    key={title}
+                    key={id}
                     className={`animate-on-scroll scale-in stagger-${Math.min(
                       index + 1,
-                      5
+                      5,
                     )}`}
                   >
                     <InfoItem
@@ -94,7 +122,7 @@ export const About = () => {
                       hideTitle={hideTitle}
                     />
                   </div>
-                )
+                ),
               )}
             </div>
           </div>
