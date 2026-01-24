@@ -58,6 +58,17 @@ export const _projects: TProjects = [
   },
   {
     id: 14,
+    title: "Hostel management system",
+    description:
+      "Fullstack hostel management system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+    href: "https://hostel-front-production.up.railway.app",
+    image: "hostel",
+    alt: "Hostel management system",
+    additionalInfo:
+      "Fullstack hostel management system. NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+  },
+  {
+    id: 13,
     title: "Deal crm system",
     description:
       "Fullstack Deal/Clients crm system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
@@ -68,7 +79,7 @@ export const _projects: TProjects = [
       "Fullstack deal crm system. NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
   },
   {
-    id: 13,
+    id: 12,
     title: "CandidatesHub - Candidates crm system",
     description:
       "Fullstack Candidates crm system with React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
