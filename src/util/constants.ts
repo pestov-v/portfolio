@@ -61,7 +61,7 @@ export const _projects: TProjects = [
     title: "Hostel management system",
     description:
       "Fullstack hostel management system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
-    href: "https://hostel-front-production.up.railway.app",
+    href: "https://aurinia-hostel.online",
     image: "hostel",
     alt: "Hostel management system",
     additionalInfo:
