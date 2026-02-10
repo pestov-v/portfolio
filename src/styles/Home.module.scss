@@ -2,4 +2,9 @@
   overflow-x: hidden;
   width: 100%;
   position: relative;
+
+  // Ensure proper scrolling on mobile
+  @media (max-width: 1023px) {
+    min-height: 100%;
+  }
 }

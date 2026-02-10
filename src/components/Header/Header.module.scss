@@ -3,8 +3,18 @@
 @import "src/styles/common";
 
 .header {
-  height: 100vh;
-  height: 100dvh; // Use dynamic viewport height for mobile
+  // On mobile: use fixed 100vh to prevent jump when address bar hides/shows
+  @media (max-width: 1023px) {
+    height: 100vh;
+    min-height: -webkit-fill-available; // iOS Safari fix
+  }
+
+  // On desktop: use dvh for better behavior
+  @media (min-width: 1024px) {
+    height: 100vh;
+    height: 100dvh;
+  }
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,7 +23,7 @@
 
   grid-gap: 2em;
   padding-top: 0;
-  overflow-y: hidden;
+  overflow: hidden; // Changed from overflow-y to overflow
 
   @include respond-above(lg) {
     grid-gap: 3.2em;
@@ -34,6 +44,16 @@
     background-size: cover;
     opacity: 0.4;
     z-index: -1;
+
+    // Optimize for smooth scrolling
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    // On mobile: use background-attachment: scroll to prevent jank
+    @media (max-width: 1023px) {
+      background-attachment: scroll;
+    }
   }
   @include respond-above(xs) {
     padding-top: 0;
@@ -189,6 +209,11 @@
       align-items: center;
       color: var(--color-black);
       font-weight: 500;
+
+      // Optimize Typed.js container for GPU
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
 
       @include respond-above(sm) {
         font-size: 2.2rem;

@@ -1,95 +1,160 @@
 // Scroll Animations Styles
 
+// IMPORTANT: Disable all scroll animations on mobile to prevent scroll jank
+// Only enable on desktop (≥1024px)
+
 // Base animation classes
 .animate-on-scroll {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  
-  &.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+  // On mobile: no animation, just show content
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  // On desktop: enable smooth animations
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &.animate-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 
 // Smooth reveal animations
 .smooth-reveal {
-  opacity: 0;
-  transform: translateY(30px) scale(0.95);
-  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
-  
-  &.revealed {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0) scale(0.95);
+    transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1),
+                transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &.revealed {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
   }
 }
 
 // Fade in from different directions
 .fade-in-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.8s ease-out;
-  
-  &.animate-in {
-    opacity: 1;
-    transform: translateX(0);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    &.animate-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 
 .fade-in-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.8s ease-out;
-  
-  &.animate-in {
-    opacity: 1;
-    transform: translateX(0);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    &.animate-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 
 .fade-in-up {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-  
-  &.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    &.animate-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 
 .fade-in-down {
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: all 0.8s ease-out;
-  
-  &.animate-in {
-    opacity: 1;
-    transform: translateY(0);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    &.animate-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 
 // Scale animations
 .scale-in {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  
-  &.animate-in {
-    opacity: 1;
-    transform: scale(1);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: scale3d(0.8, 0.8, 1);
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &.animate-in {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
   }
 }
 
 // Rotate animations
 .rotate-in {
-  opacity: 0;
-  transform: rotate(-10deg) scale(0.9);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  
-  &.animate-in {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: rotate(-10deg) scale3d(0.9, 0.9, 1);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &.animate-in {
+      opacity: 1;
+      transform: rotate(0deg) scale3d(1, 1, 1);
+    }
   }
 }
 
@@ -100,23 +165,28 @@
 .stagger-4 { transition-delay: 0.4s; }
 .stagger-5 { transition-delay: 0.5s; }
 
-// Parallax background
+// Parallax background - will-change applied only during scroll
 .parallax-bg {
-  will-change: transform;
+  // will-change removed to prevent unnecessary GPU memory usage
+  // It will be applied dynamically via JS when needed
 }
 
-// Floating elements
+// Floating elements - optimized for mobile
 .floating-element {
-  will-change: transform;
   animation: float 6s ease-in-out infinite;
+
+  // Disable on mobile to reduce jank
+  @media (max-width: 1023px) {
+    animation: none;
+  }
 }
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translate3d(0, -10px, 0);
   }
 }
 
@@ -161,13 +231,21 @@
 
 // Slide in animations with bounce
 .slide-in-bounce {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  
-  &.animate-in {
-    opacity: 1;
-    transform: translateX(0);
+  @media (max-width: 1023px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (min-width: 1024px) {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+    transition: opacity 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    &.animate-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
 
@@ -181,20 +259,25 @@
   }
 }
 
-// Glitch effect
+// Glitch effect - optimized for GPU
 .glitch-effect {
   &.animate-in {
     animation: glitch 0.3s linear infinite;
+
+    // Disable on mobile to reduce jank
+    @media (max-width: 1023px) {
+      animation: none;
+    }
   }
 }
 
 @keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
-  100% { transform: translate(0); }
+  0% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(-2px, 2px, 0); }
+  40% { transform: translate3d(-2px, -2px, 0); }
+  60% { transform: translate3d(2px, 2px, 0); }
+  80% { transform: translate3d(2px, -2px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 
 // Progress bar animation
@@ -212,16 +295,27 @@
 // Text reveal animation
 .text-reveal {
   overflow: hidden;
-  
-  span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @media (max-width: 1023px) {
+    span {
+      display: inline-block;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
-  
-  &.animate-in span {
-    opacity: 1;
-    transform: translateY(0);
+
+  @media (min-width: 1024px) {
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+      transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &.animate-in span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }

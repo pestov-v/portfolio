@@ -18,8 +18,17 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(0.9375em);
   box-shadow: 0 0.25em 1.25em rgba(0, 0, 0, 0.3);
+
+  // Optimize for smooth scrolling on mobile
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  // Backdrop filter only on desktop to reduce jank
+  @media (min-width: 1024px) {
+    backdrop-filter: blur(0.9375em);
+  }
 
   &:hover {
     background: rgba(0, 0, 0, 0.6);

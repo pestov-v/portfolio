@@ -31,6 +31,9 @@ export const ProgressBar: FC<IProps> = (props) => {
       progressRef.current.style.width = percent;
     }, 100);
 
+    // Check visibility on mount (important for mobile when section is already visible)
+    handler();
+
     window.addEventListener("scroll", handler);
     return () => {
       window.removeEventListener("scroll", handler);

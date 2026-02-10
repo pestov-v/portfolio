@@ -15,7 +15,16 @@
   border: none;
   opacity: 0;
   transition: opacity 0.3s ease;
-  animation: action 1s infinite alternate;
+
+  // Optimize for smooth scrolling on mobile
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  // Disable animation on mobile to prevent scroll jank
+  @media (min-width: 1024px) {
+    animation: action 1s infinite alternate;
+  }
 
   @include respond-above(sm) {
     right: 2em;
@@ -38,11 +47,15 @@
     width: 3em;
     display: block;
     background-color: var(--color-light-transparent);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     border: var(--width) solid var(--color-primary-toggle);
     border-radius: 50%;
     cursor: pointer;
+
+    // Backdrop filter only on desktop to reduce jank
+    @media (min-width: 1024px) {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
 
     @include respond-above(sm) {
       height: 4em;

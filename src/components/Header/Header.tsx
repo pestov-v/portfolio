@@ -42,7 +42,7 @@ export const Header: NextPage = () => {
 
   return (
     <header className={style.header}>
-      <div className="animate-on-scroll scale-in floating-element">
+      <div className="animate-on-scroll scale-in">
         <picture className={style.imageWrapper}>
           <source srcSet={`/${imgPath}.webp`} type="image/webp" />
           <source media="(min-width: 796px)" srcSet={`/${imgPath}.jpg`} />

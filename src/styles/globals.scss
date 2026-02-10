@@ -8,7 +8,13 @@
 * {
   box-sizing: border-box;
   font: inherit;
-  scroll-behavior: smooth;
+}
+
+// Smooth scroll only on desktop to avoid conflicts with mobile momentum scrolling
+@media (min-width: 1024px) {
+  * {
+    scroll-behavior: smooth;
+  }
 }
 
 html {
@@ -17,9 +23,21 @@ html {
   font-family: "Outfit", sans-serif;
   background-color: var(--background-body, hsl(0, 0%, 100%));
   color: var(--text-primary, hsl(0, 0%, 27%));
-  transition: background-color 0.3s ease, color 0.3s ease;
-  // overflow-x: hidden;
-  // scroll-snap-type: y mandatory;
+
+  // Mobile: remove all transitions and enforce strict scroll behavior
+  @media (max-width: 1023px) {
+    transition: none !important;
+    height: 100%;
+    overflow: hidden;
+
+    // Fix for iOS Safari viewport height jumping
+    position: fixed;
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 }
 
 body {
@@ -28,8 +46,38 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: transparent;
   color: var(--text-primary, hsl(0, 0%, 27%));
-  transition: color 0.3s ease;
-  // overflow-x: hidden;
+
+  // Mobile: strict scroll container to prevent bounce
+  @media (max-width: 1023px) {
+    transition: none !important;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  @media (min-width: 1024px) {
+    transition: color 0.3s ease;
+  }
+}
+
+// Disable ALL transitions during scroll on mobile
+@media (max-width: 1023px) {
+  body.is-scrolling * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  // Ensure fixed elements don't cause reflow during scroll
+  [style*="position: fixed"],
+  [style*="position:fixed"],
+  .navbar,
+  .themeSwitcher,
+  .languageSwitcher {
+    will-change: auto !important;
+  }
 }
 
 h1,

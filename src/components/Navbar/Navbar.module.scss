@@ -12,7 +12,6 @@
   justify-content: center;
   align-items: center;
 
-  backdrop-filter: blur(0.7em);
   background-color: var(--background-navbar);
   z-index: 100; // Higher than switchers (1000)
   border-bottom: 1px solid var(--color-toggle-dark);
@@ -20,6 +19,21 @@
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease,
     background-color 0.3s ease;
+
+  // Optimize for smooth scrolling on mobile
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  // Backdrop filter only on desktop to reduce mobile jank
+  @media (min-width: 1024px) {
+    backdrop-filter: blur(0.7em);
+  }
+
+  // More solid background on mobile
+  @media (max-width: 1023px) {
+    background-color: var(--background-navbar-solid, var(--background-navbar));
+  }
 
   &.visible {
     opacity: 1;
@@ -126,17 +140,23 @@
       justify-content: flex-start;
       align-items: flex-start;
       padding: 2em 0;
-      background-color: var(--background-navbar);
-      backdrop-filter: blur(0.7em);
+      background-color: var(--background-navbar-solid, var(--background-navbar));
       border-right: 1px solid var(--color-toggle-dark);
-      transform: translateX(-100%);
+      transform: translate3d(-100%, 0, 0);
       transition: transform 0.3s ease;
       z-index: 100;
       overflow-y: auto;
       gap: 0;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+
+      // Backdrop filter only on desktop
+      @media (min-width: 1024px) {
+        backdrop-filter: blur(0.7em);
+      }
 
       &.menuOpen {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
       }
     }
 

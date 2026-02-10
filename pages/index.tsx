@@ -12,11 +12,13 @@ import { Skills } from "../src/components/Skills/Skills";
 import { ThemeSwitcher } from "../src/components/ThemeSwitcher/ThemeSwitcher";
 import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
+import { usePreventScrollJank } from "../src/hooks/usePreventScrollJank";
 
 import style from "../src/styles/Home.module.scss";
 
 const Home: NextPage = () => {
   useScrollAnimations();
+  usePreventScrollJank();
 
   return (
     <MainLayout className="app">

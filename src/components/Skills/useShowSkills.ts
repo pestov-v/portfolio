@@ -15,6 +15,9 @@ useEffect(() => {
       ref.current.classList.add(className);
     };
 
+    // Check visibility on mount (important for mobile)
+    handler();
+
     window.addEventListener("scroll", handler);
     return () => {
       window.removeEventListener("scroll", handler);
