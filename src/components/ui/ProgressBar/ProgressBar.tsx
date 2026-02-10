@@ -1,4 +1,4 @@
-import { FC, useRef, useEffect } from "react";
+import { FC, useEffect, useRef } from "react";
 import { COLORS, TColors } from "util/constants";
 import { isInView, throttle } from "util/helpers";
 import style from "./ProgressBar.module.scss";
@@ -31,9 +31,6 @@ export const ProgressBar: FC<IProps> = (props) => {
       progressRef.current.style.width = percent;
     }, 100);
 
-    // Check visibility on mount (important for mobile when section is already visible)
-    handler();
-
     window.addEventListener("scroll", handler);
     return () => {
       window.removeEventListener("scroll", handler);
@@ -41,7 +38,7 @@ export const ProgressBar: FC<IProps> = (props) => {
   }, [addWidthImmediately, percent]);
 
   const progressStyle = [style.progress, reverse ? style.reverse : ""].join(
-    " "
+    " ",
   );
 
   const classes = [style.value, style[COLORS[color]]].join(" ");
