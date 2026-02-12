@@ -40,6 +40,19 @@
 
   // SHADOWS
   --card-shadow: hsla(0, 0%, 0%, 0.3);
+
+  // Demo page
+  --primary-color: var(--color-primary);
+  --primary-color-dark: var(--color-primary-dark);
+  --primary-color-rgb: 102, 51, 204;
+  --secondary-color: var(--color-secondary);
+  --success-color: var(--color-success);
+  --danger-color: var(--color-danger);
+  --warning-color: var(--color-warning);
+  --info-color: var(--color-info);
+  --bg-primary: var(--background-body);
+  --bg-secondary: var(--background-section);
+  --border-color: hsla(0, 0%, 50%, 0.2);
 }
 
 // Dark theme
@@ -61,6 +74,11 @@
   --text-secondary: hsl(0, 0%, 70%);
   --color-dark: hsl(0, 0%, 87%);
   --color-light: hsl(0, 0%, 50%);
+
+  // Demo page dark theme
+  --bg-primary: var(--background-body);
+  --bg-secondary: var(--background-section);
+  --border-color: hsla(0, 0%, 80%, 0.15);
 }
 
 // Fallback for system preference (when no theme is set)
@@ -83,5 +101,10 @@
     --text-secondary: hsl(0, 0%, 70%);
     --color-dark: hsl(0, 0%, 87%);
     --color-light: hsl(0, 0%, 50%);
+
+    // Demo page dark theme
+    --bg-primary: var(--background-body);
+    --bg-secondary: var(--background-section);
+    --border-color: hsla(0, 0%, 80%, 0.15);
   }
 }

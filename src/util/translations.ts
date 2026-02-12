@@ -65,6 +65,30 @@ export interface Translation {
 
   // Language switcher
   language: string;
+
+  // Demo page
+  demo: {
+    title: string;
+    subtitle: string;
+    connected: string;
+    disconnected: string;
+    reconnecting: string;
+    backToPortfolio: string;
+    loadingChart: string;
+    range: string;
+    marketData: string;
+    searchPlaceholder: string;
+    all: string;
+    gainers: string;
+    losers: string;
+    symbol: string;
+    price: string;
+    change24h: string;
+    volume: string;
+    marketCap: string;
+    noResults: string;
+    tryLiveDemo: string;
+  };
 }
 
 export const translations: Record<
@@ -140,6 +164,30 @@ export const translations: Record<
 
     // Language switcher
     language: "Language",
+
+    // Demo page
+    demo: {
+      title: "Live Demo: Real-Time Crypto Dashboard",
+      subtitle: "WebSocket · SVG Charts · Data Visualization",
+      connected: "Connected",
+      disconnected: "Disconnected",
+      reconnecting: "Reconnecting...",
+      backToPortfolio: "Back to Portfolio",
+      loadingChart: "Loading chart data...",
+      range: "Range",
+      marketData: "Market Data",
+      searchPlaceholder: "Search symbol...",
+      all: "All",
+      gainers: "Gainers",
+      losers: "Losers",
+      symbol: "Symbol",
+      price: "Price",
+      change24h: "24h Change",
+      volume: "Volume",
+      marketCap: "Market Cap",
+      noResults: "No results found",
+      tryLiveDemo: "Try Live Demo",
+    },
   },
 
   uk: {
@@ -211,6 +259,30 @@ export const translations: Record<
 
     // Language switcher
     language: "Мова",
+
+    // Demo page
+    demo: {
+      title: "Жива демка: Криpto дашборд в реальному часі",
+      subtitle: "WebSocket · SVG графіки · Візуалізація даних",
+      connected: "Підключено",
+      disconnected: "Відключено",
+      reconnecting: "Підключення...",
+      backToPortfolio: "Назад до портфоліо",
+      loadingChart: "Завантаження графіка...",
+      range: "Діапазон",
+      marketData: "Ринкові дані",
+      searchPlaceholder: "Пошук символу...",
+      all: "Всі",
+      gainers: "Зростання",
+      losers: "Падіння",
+      symbol: "Символ",
+      price: "Ціна",
+      change24h: "Зміна 24г",
+      volume: "Обсяг",
+      marketCap: "Ринкова капіталізація",
+      noResults: "Результатів не знайдено",
+      tryLiveDemo: "Спробувати живу демку",
+    },
   },
 
   bg: {
@@ -282,6 +354,30 @@ export const translations: Record<
 
     // Language switcher
     language: "Език",
+
+    // Demo page
+    demo: {
+      title: "Жива демонстрация: Крипто табло в реално време",
+      subtitle: "WebSocket · SVG графики · Визуализация на данни",
+      connected: "Свързан",
+      disconnected: "Изключен",
+      reconnecting: "Свързване...",
+      backToPortfolio: "Обратно към портфолиото",
+      loadingChart: "Зареждане на графиката...",
+      range: "Диапазон",
+      marketData: "Пазарни данни",
+      searchPlaceholder: "Търсене на символ...",
+      all: "Всички",
+      gainers: "Печеливши",
+      losers: "Губещи",
+      symbol: "Символ",
+      price: "Цена",
+      change24h: "Промяна 24ч",
+      volume: "Обем",
+      marketCap: "Пазарна капитализация",
+      noResults: "Няма намерени резултати",
+      tryLiveDemo: "Изпробвайте живата демонстрация",
+    },
   },
 
   pl: {
@@ -353,6 +449,30 @@ export const translations: Record<
 
     // Language switcher
     language: "Język",
+
+    // Demo page
+    demo: {
+      title: "Demo na żywo: Tablica kryptowalut w czasie rzeczywistym",
+      subtitle: "WebSocket · Wykresy SVG · Wizualizacja danych",
+      connected: "Połączony",
+      disconnected: "Rozłączony",
+      reconnecting: "Łączenie...",
+      backToPortfolio: "Powrót do portfolio",
+      loadingChart: "Ładowanie wykresu...",
+      range: "Zakres",
+      marketData: "Dane rynkowe",
+      searchPlaceholder: "Szukaj symbolu...",
+      all: "Wszystkie",
+      gainers: "Wzrosty",
+      losers: "Spadki",
+      symbol: "Symbol",
+      price: "Cena",
+      change24h: "Zmiana 24h",
+      volume: "Wolumen",
+      marketCap: "Kapitalizacja rynkowa",
+      noResults: "Nie znaleziono wyników",
+      tryLiveDemo: "Wypróbuj demo na żywo",
+    },
   },
 
   it: {
@@ -424,6 +544,30 @@ export const translations: Record<
 
     // Language switcher
     language: "Lingua",
+
+    // Demo page
+    demo: {
+      title: "Demo dal vivo: Dashboard cripto in tempo reale",
+      subtitle: "WebSocket · Grafici SVG · Visualizzazione dati",
+      connected: "Connesso",
+      disconnected: "Disconnesso",
+      reconnecting: "Connessione...",
+      backToPortfolio: "Torna al portfolio",
+      loadingChart: "Caricamento grafico...",
+      range: "Intervallo",
+      marketData: "Dati di mercato",
+      searchPlaceholder: "Cerca simbolo...",
+      all: "Tutti",
+      gainers: "In crescita",
+      losers: "In calo",
+      symbol: "Simbolo",
+      price: "Prezzo",
+      change24h: "Variazione 24h",
+      volume: "Volume",
+      marketCap: "Capitalizzazione",
+      noResults: "Nessun risultato trovato",
+      tryLiveDemo: "Prova la demo dal vivo",
+    },
   },
 
   fr: {
@@ -495,6 +639,30 @@ export const translations: Record<
 
     // Language switcher
     language: "Langue",
+
+    // Demo page
+    demo: {
+      title: "Démo en direct : Tableau de bord crypto en temps réel",
+      subtitle: "WebSocket · Graphiques SVG · Visualisation de données",
+      connected: "Connecté",
+      disconnected: "Déconnecté",
+      reconnecting: "Reconnexion...",
+      backToPortfolio: "Retour au portfolio",
+      loadingChart: "Chargement du graphique...",
+      range: "Plage",
+      marketData: "Données de marché",
+      searchPlaceholder: "Rechercher un symbole...",
+      all: "Tous",
+      gainers: "Hausse",
+      losers: "Baisse",
+      symbol: "Symbole",
+      price: "Prix",
+      change24h: "Variation 24h",
+      volume: "Volume",
+      marketCap: "Capitalisation",
+      noResults: "Aucun résultat trouvé",
+      tryLiveDemo: "Essayer la démo en direct",
+    },
   },
 };
 

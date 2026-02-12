@@ -1,0 +1,215 @@
+.tableContainer {
+  background: var(--background-section, #f8f8f8);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tableHeader {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--text-primary, #333);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.625rem 1rem;
+  background: var(--background-body, #fff);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 0.5rem;
+  color: var(--text-primary, #333);
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary, hsl(250, 65%, 40%));
+    box-shadow: 0 0 0 3px rgba(102, 51, 204, 0.1);
+  }
+
+  &::placeholder {
+    color: var(--text-secondary, #888);
+  }
+}
+
+.filterButtons {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--background-body, #fff);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 0.375rem;
+  color: var(--text-secondary, #888);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--text-primary, #333);
+    background: var(--background-section, #f8f8f8);
+  }
+
+  &.active {
+    background: var(--color-primary, hsl(250, 65%, 40%));
+    color: white;
+  }
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+
+  thead {
+    background: var(--bg-primary);
+
+    tr {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+      color: var(--text-secondary);
+      white-space: nowrap;
+
+      &.sortable {
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: var(--text-primary);
+          background: var(--bg-secondary);
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.2s ease;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: var(--bg-primary);
+      }
+    }
+
+    td {
+      padding: 1rem;
+      color: var(--text-primary);
+    }
+  }
+}
+
+.sortIcon {
+  margin-left: 0.5rem;
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+.symbolCell {
+  font-weight: 600;
+}
+
+.symbolText {
+  color: var(--text-primary);
+}
+
+.pairText {
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.priceCell {
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.positive {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.negative {
+  color: var(--danger-color);
+  font-weight: 600;
+}
+
+.emptyState {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    padding: 1rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .filterButtons {
+    width: 100%;
+  }
+
+  .filterButton {
+    flex: 1;
+  }
+
+  .table {
+    font-size: 0.75rem;
+
+    thead th,
+    tbody td {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+
+  .symbolText,
+  .pairText {
+    display: block;
+  }
+}

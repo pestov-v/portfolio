@@ -107,7 +107,7 @@ export const _projects: TProjects = [
   //   alt: "Online market",
   // },
   {
-    id: 12,
+    id: 13,
     title: "Matrix table",
     description: "Simple generated matrix table with React",
     href: "https://pestov-v.github.io/matrix-table/",

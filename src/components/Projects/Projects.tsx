@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SectionTitle } from "components/ui/SectionTitle/SectionTitle";
 import { projects } from "util/constants";
 import { useLanguage } from "../../contexts/LanguageContext";
@@ -24,6 +25,19 @@ export const Projects = () => {
               <ProjectCard {...item} />
             </div>
           ))}
+        </div>
+
+        <div className={`${style.demoBanner} animate-on-scroll fade-in-up`}>
+          <div className={style.demoContent}>
+            <div className={style.demoIcon}>⚡</div>
+            <div className={style.demoText}>
+              <h3>{t.demo.tryLiveDemo}</h3>
+              <p>{t.demo.subtitle}</p>
+            </div>
+            <Link href="/demo" className={style.demoButton}>
+              {t.demo.tryLiveDemo} →
+            </Link>
+          </div>
         </div>
       </div>
     </section>
