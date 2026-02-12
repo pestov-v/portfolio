@@ -71,7 +71,7 @@ export const Header: NextPage = () => {
 
         <div className="animate-on-scroll fade-in-up stagger-3">
           <a
-            href="/Volodymyr_Pestov_CV.pdf"
+            href="/Volodymyr_Pestov.pdf"
             target="_blank"
             rel="noreferrer"
             className={style.download}
