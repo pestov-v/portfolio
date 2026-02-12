@@ -1,13 +1,36 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 import { IProject } from 'util/constants';
+import { useLanguage } from '../../../contexts/LanguageContext';
 import style from './ProjectCard.module.scss';
 
-export const ProjectCard: FC<IProject> = (props) => {
-  const { title, image, alt, href } = props;
-  const { description, additionalInfo } = props;
+interface ProjectCardProps extends IProject {
+  onClick?: () => void;
+}
+
+export const ProjectCard: FC<ProjectCardProps> = (props) => {
+  const { translationKey, image, alt, onClick } = props;
+  const { t } = useLanguage();
+
+  // Get translated content from projectsData
+  const projectData = (t.projectsData as any)[translationKey];
+  const title = projectData?.title || props.title;
+  const description = projectData?.description || props.description;
+  const additionalInfo = projectData?.additionalInfo || props.additionalInfo;
+
   return (
-    <a href={href} target='_blank' rel='noreferrer' className={style.card}>
+    <div
+      className={style.card}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick?.();
+        }
+      }}
+    >
       <Image
         src={image}
         alt={alt}
@@ -21,6 +44,6 @@ export const ProjectCard: FC<IProject> = (props) => {
       {additionalInfo && (
         <p className={style.additionalInfo}>{additionalInfo}</p>
       )}
-    </a>
+    </div>
   );
 };

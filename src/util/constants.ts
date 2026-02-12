@@ -1,19 +1,30 @@
 import { addImagePath } from "./helpers";
 
+export interface ICaseStudy {
+  challenge: string;
+  solution: string;
+  result: string;
+  technologies?: string[];
+  screenshot?: string;
+}
+
 export interface IProject {
   id: number;
+  translationKey: string; // Translation key for projectsData
   title: string;
   description: string;
   image: string;
   href: string;
   alt: string;
   additionalInfo?: string;
+  caseStudy?: ICaseStudy;
 }
 export type TProjects = IProject[];
 
 export const _projects: TProjects = [
   {
     id: 18,
+    translationKey: "aurinia",
     title: "Aurinia - E-commerce Platform",
     description:
       "Modern e-commerce platform with advanced product management, checkout process, and admin panel.",
@@ -25,7 +36,8 @@ export const _projects: TProjects = [
   },
   {
     id: 17,
-    title: "CFWeb - Corporate Finance Web Application",
+    translationKey: "cfweb",
+    title: "Credit Factory - Corporate Finance Web Application",
     description:
       "Comprehensive corporate finance management system with user roles, product management, and regulatory compliance features.",
     href: "https://pestov-v.github.io/cfweb/",
@@ -36,17 +48,28 @@ export const _projects: TProjects = [
   },
   {
     id: 16,
+    translationKey: "oschadpay",
     title: "OschadPay - Payment Processing System",
     description:
-      "Advanced payment processing and terminal management system for financial institutions.",
+      "Enterprise-grade payment processing platform for financial institutions. Enables end-to-end transaction lifecycle management, POS terminal provisioning, merchant and product control, and automated tax reporting.",
     href: "https://pestov-v.github.io/OschadPay/",
     image: "oschadpay",
     alt: "OschadPay Payment System",
     additionalInfo:
-      "Complete payment solution with transaction monitoring, terminal management, and financial reporting",
+      "Transaction creation & monitoring · Tax-ready report generation · Merchant & product registry · Terminal provisioning & management · Financial analytics dashboard",
+    caseStudy: {
+      challenge:
+        "The bank operated dozens of payment terminals with no unified dashboard. Transaction creation was manual, merchant onboarding took days, product catalogues lived in spreadsheets, and generating tax-compliant reports required hours of data stitching across multiple systems.",
+      solution:
+        "Built a centralised web platform that covers the full payment operations workflow: create and track transactions in real time, register and manage merchants with their product catalogues, provision and monitor POS terminals remotely, and generate structured reports ready for tax authority submission — all from a single interface with role-based access control.",
+      result:
+        "Terminal onboarding time reduced from days to minutes. Tax report preparation automated — from hours of manual work to one-click generation. Full visibility into transactions, merchants, and terminal health through a real-time dashboard.",
+      technologies: ["React", "TypeScript", "Redux", "Ant Design", "REST API", "Node.js"],
+    },
   },
   {
     id: 15,
+    translationKey: "onboarding",
     title: "Onboarding - Questionnaire Management System",
     description:
       "Comprehensive questionnaire and form management system with templates, categories, and field configuration.",
@@ -55,39 +78,51 @@ export const _projects: TProjects = [
     alt: "Onboarding Questionnaire Management System",
     additionalInfo:
       "Enterprise-level form builder with template management, category organization, and advanced field customization",
+    caseStudy: {
+      challenge:
+        "The process of launching new payment products took weeks, as each new form required a full development, testing, and frontend deployment cycle.",
+      solution:
+        "Developed a custom No-Code system based on JSON Schema and React. Implemented a visual constructor with 30+ field types, complex conditional logic, and on-the-fly validation. Applied React virtualization for large forms (100+ fields) to maintain high performance.",
+      result:
+        "Complete elimination of developer dependency when creating forms. Time-to-Market reduced from several weeks to several hours.",
+      technologies: ["React", "TypeScript", "JSON Schema", "React Hook Form", "React Window"],
+    },
   },
   {
     id: 14,
+    translationKey: "hostel",
     title: "Hostel management system",
     description:
-      "Fullstack hostel management system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Complete hostel management solution with room booking, guest registration, and administrative dashboard for accommodation facilities.",
     href: "https://aurinia-hostel.online",
     image: "hostel",
     alt: "Hostel management system",
     additionalInfo:
-      "Fullstack hostel management system. NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Full-stack booking system with real-time availability, guest management, and reservation tracking · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
   },
   {
     id: 13,
+    translationKey: "deals",
     title: "Deal crm system",
     description:
-      "Fullstack Deal/Clients crm system with NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Customer relationship management platform for tracking deals, managing client interactions, and monitoring sales pipeline progress.",
     href: "https://deals-front-production.up.railway.app",
     image: "deals",
     alt: "Deal crm system",
     additionalInfo:
-      "Fullstack deal crm system. NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Sales pipeline management with deal tracking, client database, and analytics dashboard · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
   },
   {
     id: 12,
+    translationKey: "candidates",
     title: "CandidatesHub - Candidates crm system",
     description:
-      "Fullstack Candidates crm system with React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Recruitment management system for tracking job candidates, managing interview processes, and organizing hiring workflows.",
     href: "https://candidates-front-production.up.railway.app",
     image: "candidates",
     alt: "Candidates crm system",
     additionalInfo:
-      "Fullstack candidates crm system. React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
   },
   // {
   //   id: 13,
@@ -108,14 +143,16 @@ export const _projects: TProjects = [
   // },
   {
     id: 13,
+    translationKey: "matrix",
     title: "Matrix table",
-    description: "Simple generated matrix table with React",
+    description: "Simple generated matrix table with React featuring statistical data display and calculation",
     href: "https://pestov-v.github.io/matrix-table/",
     image: "matrix-table",
     alt: "Matrix table",
   },
   {
     id: 11,
+    translationKey: "youtube",
     title: "Youtube Clone",
     description: "Mini youtube clone with search, video list, and video player",
     href: "https://clone-a72b1.web.app/",
@@ -124,6 +161,7 @@ export const _projects: TProjects = [
   },
   {
     id: 10,
+    translationKey: "covid",
     title: "Covid-19 tracker",
     description: "Tracker for covid-19",
     href: "https://nakryt.github.io/covid-19-tracker/",
@@ -132,6 +170,7 @@ export const _projects: TProjects = [
   },
   {
     id: 9,
+    translationKey: "facebook",
     title: "Facebook Clone",
     description: "Demo facebook-clone with React and firebase",
     href: "https://facebook-clone-a4fee.web.app/",
@@ -165,6 +204,7 @@ export const _projects: TProjects = [
 
   {
     id: 5,
+    translationKey: "abz",
     title: "ABZ-test task",
     description:
       "Delivered pixel-perfect layouts with a strong focus on performance optimization",
@@ -190,6 +230,7 @@ export const _projects: TProjects = [
   // },
   {
     id: 2,
+    translationKey: "bootstrap",
     title: "Simple bootstrap app",
     description: "Simple site with bootstrap",
     href: "https://simplebootstrapsite.web.app/",
@@ -198,6 +239,7 @@ export const _projects: TProjects = [
   },
   {
     id: 1,
+    translationKey: "menu",
     title: "Simple menu",
     description: "Simple menu for restaurant",
     href: "https://nakryt.github.io/simple-menu/",

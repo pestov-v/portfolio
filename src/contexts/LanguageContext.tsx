@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, useContext, useState } from "react";
+import React, { createContext, ReactNode, useContext, useState, useEffect } from "react";
 import { Language, Translation, translations } from "../util/translations";
 
 interface LanguageContextType {
@@ -15,10 +15,29 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 
+const LANGUAGE_STORAGE_KEY = "preferred-language";
+
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children,
 }) => {
   const [language, setLanguage] = useState<Language>("en");
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  // Load language from localStorage on mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language;
+    if (savedLanguage && translations[savedLanguage]) {
+      setLanguage(savedLanguage);
+    }
+    setIsInitialized(true);
+  }, []);
+
+  // Save language to localStorage when it changes
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    }
+  }, [language, isInitialized]);
 
   const value = {
     language,

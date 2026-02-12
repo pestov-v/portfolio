@@ -1,12 +1,26 @@
-import Link from "next/link";
 import { SectionTitle } from "components/ui/SectionTitle/SectionTitle";
-import { projects } from "util/constants";
+import Link from "next/link";
+import { useState } from "react";
+import { IProject, projects } from "util/constants";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
+import { ProjectModal } from "./ProjectModal/ProjectModal";
 import style from "./Projects.module.scss";
 
 export const Projects = () => {
   const { t } = useLanguage();
+  const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: IProject) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
 
   return (
     <section className={style.projects} id="projects">
@@ -19,13 +33,19 @@ export const Projects = () => {
               key={item.id}
               className={`animate-on-scroll scale-in stagger-${Math.min(
                 (index % 3) + 1,
-                5
+                5,
               )}`}
             >
-              <ProjectCard {...item} />
+              <ProjectCard {...item} onClick={() => handleProjectClick(item)} />
             </div>
           ))}
         </div>
+
+        <ProjectModal
+          project={selectedProject}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        />
 
         <div className={`${style.demoBanner} animate-on-scroll fade-in-up`}>
           <div className={style.demoContent}>
