@@ -1,11 +1,17 @@
 import { addImagePath } from "./helpers";
 
+export interface IDiagram {
+  chart: string;
+  caption: string;
+}
+
 export interface ICaseStudy {
   challenge: string;
   solution: string;
   result: string;
   technologies?: string[];
   screenshot?: string;
+  diagrams?: IDiagram[];
 }
 
 export interface IProject {
@@ -64,7 +70,14 @@ export const _projects: TProjects = [
         "Built a centralised web platform that covers the full payment operations workflow: create and track transactions in real time, register and manage merchants with their product catalogues, provision and monitor POS terminals remotely, and generate structured reports ready for tax authority submission — all from a single interface with role-based access control.",
       result:
         "Terminal onboarding time reduced from days to minutes. Tax report preparation automated — from hours of manual work to one-click generation. Full visibility into transactions, merchants, and terminal health through a real-time dashboard.",
-      technologies: ["React", "TypeScript", "Redux", "Ant Design", "REST API", "Node.js"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Ant Design",
+        "REST API",
+        "Node.js",
+      ],
     },
   },
   {
@@ -85,7 +98,39 @@ export const _projects: TProjects = [
         "Developed a custom No-Code system based on JSON Schema and React. Implemented a visual constructor with 30+ field types, complex conditional logic, and on-the-fly validation. Applied React virtualization for large forms (100+ fields) to maintain high performance.",
       result:
         "Complete elimination of developer dependency when creating forms. Time-to-Market reduced from several weeks to several hours.",
-      technologies: ["React", "TypeScript", "JSON Schema", "React Hook Form", "React Window"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "JSON Schema",
+        "React Hook Form",
+        "React Window",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[JSON Schema Definition] -->|Input| B(Form Engine Core)
+
+    subgraph "Internal Processing"
+    B --> C{Parser & Logic}
+    C --> D[Field Registry]
+    C --> E[Dependency Graph]
+    E -->|Conditional Logic| D
+    end
+
+    D --> F[React Virtualized List]
+
+    subgraph "UI Layer"
+    F --> G[Field Component A]
+    F --> H[Field Component B]
+    F --> I[Field Component N...]
+    end
+
+    G & H & I --> J[Validation Engine]
+    J -->|Valid Data| K[Final Submission JSON]`,
+          caption:
+            "Architecture diagram showing how JSON Schema is transformed into a functional interface. This approach enabled zero developer dependency for form creation, reducing Time-to-Market from weeks to hours.",
+        },
+      ],
     },
   },
   {
@@ -131,7 +176,6 @@ export const _projects: TProjects = [
   //   href: "https://i88.io",
   //   image: "i88",
   //   alt: "Forex-broker",
-  //   additionalInfo: "Login: pestov.v@yahoo.com; Password: 12345678",
   // },
   // {
   //   id: 12,
@@ -145,7 +189,8 @@ export const _projects: TProjects = [
     id: 13,
     translationKey: "matrix",
     title: "Matrix table",
-    description: "Simple generated matrix table with React featuring statistical data display and calculation",
+    description:
+      "Simple generated matrix table with React featuring statistical data display and calculation",
     href: "https://pestov-v.github.io/matrix-table/",
     image: "matrix-table",
     alt: "Matrix table",

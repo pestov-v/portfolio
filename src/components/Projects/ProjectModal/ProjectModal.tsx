@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { IProject } from '../../../util/constants';
 import { Modal } from '../../ui/Modal/Modal';
+import { MermaidDiagram } from '../../ui/MermaidDiagram/MermaidDiagram';
 import { useLanguage } from '../../../contexts/LanguageContext';
 import styles from './ProjectModal.module.scss';
 
@@ -69,6 +70,19 @@ export const ProjectModal: FC<ProjectModalProps> = ({ project, isOpen, onClose }
                     </span>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {project.caseStudy!.diagrams && project.caseStudy!.diagrams.length > 0 && (
+              <div className={styles.diagramsSection}>
+                <h4 className={styles.subsectionTitle}>📊 Architecture & System Design</h4>
+                {project.caseStudy!.diagrams.map((diagram, index) => (
+                  <MermaidDiagram
+                    key={index}
+                    chart={diagram.chart}
+                    caption={diagram.caption}
+                  />
+                ))}
               </div>
             )}
           </div>
