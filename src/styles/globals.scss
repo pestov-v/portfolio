@@ -36,7 +36,9 @@ html {
   }
 
   @media (min-width: 1024px) {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 }
 
@@ -103,4 +105,8 @@ a {
   html:not([data-theme]) {
     color-scheme: dark;
   }
+}
+
+.pr-4 {
+  padding-right: 0.5em;
 }

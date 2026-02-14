@@ -5,7 +5,7 @@ import style from "./InfoItem.module.scss";
 
 interface IProps {
   title: string;
-  value: string;
+  value: string | React.ReactNode;
   icon?: string;
   href?: string;
   hideTitle?: boolean;
@@ -16,6 +16,8 @@ export const InfoItem: NextPage<IProps> = (props) => {
 
   const getHref = () => {
     if (href) return href;
+    // Only process href if value is a string
+    if (typeof value !== 'string') return undefined;
     if (title === t.personalInfo.email) return `mailto:${value}`;
     if (title === t.personalInfo.phone)
       return `tel:${value.replace(/\s/g, "")}`;
@@ -62,7 +64,7 @@ export const InfoItem: NextPage<IProps> = (props) => {
         <span
           className={[
             style.InfoItem__value,
-            value === t.available ? style.success : "",
+            typeof value === 'string' && value === t.available ? style.success : "",
           ].join(" ")}
         >
           {content}
