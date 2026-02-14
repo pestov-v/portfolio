@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volodymyr Pestov - Senior Full-Stack Developer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f0f2f5;
+        padding: 40px 0;
+      }
+
+      .container {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: white;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar {
+        background: #2c3e50;
+        color: white;
+        padding: 2rem 1rem;
+      }
+
+      .main-content {
+        padding: 1rem 2rem;
+      }
+
+      .header {
+        margin-bottom: 30px;
+      }
+
+      .header h1 {
+        font-size: 32px;
+        margin-bottom: 5px;
+        color: #ecf0f1;
+      }
+
+      .header h2 {
+        font-size: 16px;
+        font-weight: 400;
+        color: #3498db;
+        margin-bottom: 20px;
+      }
+
+      .contact-section {
+        margin-bottom: 30px;
+      }
+
+      .contact-item {
+        margin-bottom: 12px;
+        font-size: 13px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .contact-item strong {
+        min-width: 70px;
+        color: #3498db;
+      }
+
+      .contact-item a {
+        color: #ecf0f1;
+        text-decoration: none;
+        word-break: break-word;
+      }
+
+      .contact-item .email {
+        letter-spacing: -0.5px;
+      }
+
+      .section-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #3498db;
+        color: #ecf0f1;
+      }
+
+      .main-content .section-title {
+        color: #2c3e50;
+        margin-top: 30px;
+      }
+
+      .main-content .section-title:first-child {
+        margin-top: 0;
+      }
+
+      .skills-grid {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 25px;
+      }
+
+      .skill-item {
+        font-size: 13px;
+        padding: 6px 0;
+      }
+
+      .skill-category {
+        color: #3498db;
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+
+      .skill-list {
+        color: #ecf0f1;
+        font-size: 12px;
+      }
+
+      .languages-grid {
+        display: grid;
+        gap: 8px;
+      }
+
+      .language-item {
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .language-level {
+        color: #3498db;
+        font-size: 11px;
+      }
+
+      .education-item {
+        margin-bottom: 15px;
+        font-size: 13px;
+      }
+
+      .education-period {
+        color: #3498db;
+        font-size: 12px;
+        margin-bottom: 3px;
+      }
+
+      .education-institution {
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .education-degree {
+        font-size: 12px;
+        color: #bdc3c7;
+      }
+
+      .profile-text {
+        font-size: 14px;
+        text-align: justify;
+      }
+
+      .experience-item {
+        margin-bottom: 25px;
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 8px;
+      }
+
+      .company-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .period {
+        font-size: 13px;
+        color: #7f8c8d;
+      }
+
+      .position {
+        font-size: 14px;
+        color: #3498db;
+        margin-bottom: 12px;
+      }
+
+      .project-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #34495e;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
+      .tech-stack {
+        font-size: 12px;
+        color: #7f8c8d;
+        font-style: italic;
+        margin-bottom: 8px;
+      }
+
+      .achievements {
+        list-style: none;
+        margin-left: 0;
+      }
+
+      .achievements li {
+        font-size: 13px;
+        margin-bottom: 6px;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.6;
+      }
+
+      .achievements li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #3498db;
+        font-weight: bold;
+      }
+
+      .key-achievement {
+        background: #ecf0f1;
+        padding: 8px 12px;
+        border-left: 3px solid #3498db;
+        margin-top: 8px;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .competencies-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 15px;
+      }
+
+      .competency-category h4 {
+        font-size: 14px;
+        color: #2c3e50;
+        margin-bottom: 8px;
+      }
+
+      .competency-category ul {
+        list-style: none;
+      }
+
+      .competency-category li {
+        font-size: 12px;
+        margin-bottom: 4px;
+        padding-left: 15px;
+        position: relative;
+      }
+
+      .competency-category li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #3498db;
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          background: white;
+        }
+        .container {
+          width: 210mm;
+          min-height: 297mm;
+          box-shadow: none;
+          margin: 0;
+        }
+      }
+
+      .download-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+      }
+
+      .download-btn:hover {
+        background: #2980b9;
+      }
+
+      @media print {
+        .download-btn {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button class="download-btn" onclick="window.print()">Download PDF</button> -->
+
+    <div class="container">
+      <div class="sidebar">
+        <img src="./pestov.webp" width="250" alt="Volodymyr Pestov" />
+        <div class="header">
+          <h1>Volodymyr<br />Pestov</h1>
+          <h2>Senior Front-End Developer</h2>
+        </div>
+
+        <div class="contact-section">
+          <h3 class="section-title">CONTACT</h3>
+          <div class="contact-item">
+            <strong>Phone:</strong>
+            <span>+380 970 097 343</span>
+          </div>
+          <div class="contact-item">
+            <strong>Email:</strong>
+            <a class="email" href="mailto:pestov.volodymyr@gmail.com"
+              >pestov.volodymyr@gmail.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <strong>Location:</strong>
+            <span>Kosharitsa, Bulgaria</span>
+          </div>
+          <div class="contact-item">
+            <strong>LinkedIn:</strong>
+            <a href="http://linkedin.com/in/pestov-volodymyr405011206/"
+              >pestov-volodymyr</a
+            >
+          </div>
+          <div class="contact-item">
+            <strong>GitHub:</strong>
+            <a href="http://github.com/pestov-v">github.com/pestov-v</a>
+          </div>
+          <div class="contact-item">
+            <strong>Website:</strong>
+            <a href="http://www.pestov.pro/">www.pestov.pro</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">CORE SKILLS</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-category">Frontend Core</div>
+              <div class="skill-list">
+                HTML5, CSS3, Sass, JavaScript, TypeScript
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-category">Frameworks</div>
+              <div class="skill-list">React.js, Next.js, React Native</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-category">UI Libraries</div>
+              <div class="skill-list">
+                Tailwind CSS, Material UI, Styled Components
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-category">State Management</div>
+              <div class="skill-list">Redux, MobX, Zustand</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-category">Real-Time</div>
+              <div class="skill-list">WebSocket, REST API, GraphQL</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-category">Tools</div>
+              <div class="skill-list">Git, Jest, Webpack, Vite</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">FAMILIAR WITH</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-category">Backend</div>
+              <div class="skill-list">Node.js, Express, NestJS</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-category">Databases</div>
+              <div class="skill-list">PostgreSQL, MongoDB</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">LANGUAGES</h3>
+          <div class="languages-grid">
+            <div class="language-item">
+              <span>Ukrainian</span>
+              <span class="language-level">Native</span>
+            </div>
+            <div class="language-item">
+              <span>Russian</span>
+              <span class="language-level">Native</span>
+            </div>
+            <div class="language-item">
+              <span>English</span>
+              <span class="language-level">Professional</span>
+            </div>
+            <div class="language-item">
+              <span>Polish</span>
+              <span class="language-level">Intermediate</span>
+            </div>
+            <div class="language-item">
+              <span>French</span>
+              <span class="language-level">Basic</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">EDUCATION</h3>
+          <div class="education-item">
+            <div class="education-period">2004 - 2009</div>
+            <div class="education-institution">
+              Yuriy Fedkovych Chernivtsi National University
+            </div>
+            <div class="education-degree">
+              Bachelor's in Applied Mathematics
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="section-title">CERTIFICATIONS</h3>
+          <div class="education-item">
+            <div class="education-period">2019 - 2024</div>
+            <div class="education-institution">freeCodeCamp.org</div>
+            <div class="education-degree">
+              Responsive Web Design, JavaScript Algorithms, Front End Libraries
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <h3 class="section-title">SUMMARY</h3>
+        <p class="profile-text">
+          <strong>Senior Front-End Developer</strong> with 6+ years building
+          high-performance fintech platforms processing 10K+ daily transactions.
+          I architect scalable React/TypeScript solutions that deliver
+          measurable business impact — from a no-code form system that reduced
+          product launch time from weeks to hours, to real-time trading
+          interfaces with &lt;50ms latency. Proven technical leader with
+          mentoring experience and a track record of scaling applications 3x
+          while maintaining code quality.
+        </p>
+
+        <h3 class="section-title">PROFESSIONAL EXPERIENCE</h3>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-title">Ukrpay</div>
+            <div class="period">Jan 2023 - Present</div>
+          </div>
+          <div class="position">
+            Senior Front-End Developer → Tech Lead (Frontend)
+          </div>
+
+          <div class="project-title">OshchadPAY Online Merchant Dashboard</div>
+          <div class="tech-stack">React, TypeScript, Redux, Material UI</div>
+          <ul class="achievements">
+            <li>
+              Architected merchant management platform for 500+ merchants
+              processing 10K+ daily transactions
+            </li>
+            <li>
+              Created reusable component library, reducing feature development
+              time by 40%
+            </li>
+            <li>
+              Optimized bundle with code-splitting, improving initial load by
+              35%
+            </li>
+          </ul>
+          <div class="key-achievement">
+            Impact: Dashboard scaled 3x with zero architecture rewrites
+          </div>
+
+          <div class="project-title">
+            Dynamic Forms System (Full Project Ownership)
+          </div>
+          <div class="tech-stack">
+            React, TypeScript, Custom Form Engine, JSON Schema
+          </div>
+          <ul class="achievements">
+            <li>
+              Built no-code form builder with 30+ field types, conditional
+              logic, and validation rules
+            </li>
+            <li>
+              Designed JSON schema system with version control and real-time
+              preview
+            </li>
+            <li>
+              Optimized rendering for 100+ field forms using React
+              virtualization
+            </li>
+          </ul>
+          <div class="key-achievement">
+            Impact: Eliminated developer dependency, reducing product launch
+            from weeks to hours
+          </div>
+
+          <div class="project-title">Credit Factory Platform</div>
+          <div class="tech-stack">React, TypeScript, Zustand, Express</div>
+          <ul class="achievements">
+            <li>
+              Developed loan management system with workflow orchestration
+            </li>
+            <li>
+              Built reporting module with Excel/PDF export and granular RBAC
+            </li>
+          </ul>
+          <div class="key-achievement">
+            Impact: Reduced manual data entry by 60% via automated
+            synchronization
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-title">Atlana</div>
+            <div class="period">Mar 2022 - Oct 2022</div>
+          </div>
+          <div class="position">Front-End Developer</div>
+
+          <div class="project-title">Real Estate Listing Platform</div>
+          <div class="tech-stack">React, TypeScript, Next.js, Tailwind CSS</div>
+          <ul class="achievements">
+            <li>
+              Developed property search with Mapbox integration and advanced
+              filtering
+            </li>
+            <li>Created SEO-optimized pages using Next.js SSG/ISR</li>
+            <li>Built lazy-loading image galleries with WebP optimization</li>
+            <li>Achieved 95+ Lighthouse scores across all metrics</li>
+          </ul>
+          <div class="key-achievement">
+            Impact: Reduced page load time by 50%
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-title">Impltech</div>
+            <div class="period">Mar 2021 - Feb 2022</div>
+          </div>
+          <div class="position">Front-End Developer</div>
+
+          <div class="project-title">Real-Time Stock Trading Interface</div>
+          <div class="tech-stack">React, TypeScript, WebSocket, Redux</div>
+          <ul class="achievements">
+            <li>
+              Built trading interface streaming 50+ symbols with &lt;50ms UI
+              latency
+            </li>
+            <li>
+              Implemented WebSocket with auto-reconnection and data buffering
+            </li>
+            <li>Created real-time order book with optimized React rendering</li>
+            <li>
+              <strong>Mentored</strong> 2 junior developers on WebSocket and
+              performance patterns
+            </li>
+          </ul>
+          <div class="key-achievement">
+            Impact: Handled 1000+ price updates/second during peak trading
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-title">Freelance</div>
+            <div class="period">Sep 2020 - Mar 2021</div>
+          </div>
+          <div class="position">Front-End Developer</div>
+          <ul class="achievements">
+            <li>
+              Delivered 5+ React projects from landing pages to full web apps
+            </li>
+            <li>Created reusable templates, reducing project kickoff by 30%</li>
+          </ul>
+        </div>
+
+        <h3 class="section-title">KEY COMPETENCIES</h3>
+        <div class="competencies-grid">
+          <div class="competency-category">
+            <h4>Architecture &amp; Design</h4>
+            <ul>
+              <li>Micro-frontend architecture</li>
+              <li>Component-driven development</li>
+              <li>State management patterns</li>
+              <li>RESTful and GraphQL API design</li>
+            </ul>
+          </div>
+          <div class="competency-category">
+            <h4>Performance Optimization</h4>
+            <ul>
+              <li>Code splitting and lazy loading</li>
+              <li>React rendering optimization</li>
+              <li>Bundle size reduction</li>
+              <li>WebSocket real-time optimization</li>
+            </ul>
+          </div>
+          <div class="competency-category">
+            <h4>Leadership &amp; Collaboration</h4>
+            <ul>
+              <li>Technical decision-making</li>
+              <li>Code review and quality assurance</li>
+              <li>Mentoring developers</li>
+              <li>Cross-functional collaboration</li>
+            </ul>
+          </div>
+          <div class="competency-category">
+            <h4>Development Practices</h4>
+            <ul>
+              <li>Test-driven development</li>
+              <li>CI/CD implementation</li>
+              <li>Agile methodologies</li>
+              <li>Documentation standards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

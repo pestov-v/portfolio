@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^0.0.15",
+    "@ai-sdk/google": "^3.0.29",
+    "@ai-sdk/openai": "^0.0.24",
+    "@ai-sdk/react": "^3.0.88",
     "@emailjs/browser": "^3.9.1",
+    "ai": "^6.0.86",
     "mermaid": "^11.12.2",
     "next": "13.0.2",
     "react": "18.2.0",

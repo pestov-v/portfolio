@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,14 +21,32 @@
     "downlevelIteration": true,
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@interfaces/*": ["interfaces/*"],
-      "@hooks/*": ["hooks/*"],
-      "@contexts/*": ["contexts/*"],
-      "@Layouts/*": ["Layouts/*"],
-      "@styles/*": ["styles/*"]
+      "@components/*": [
+        "components/*"
+      ],
+      "@interfaces/*": [
+        "interfaces/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@contexts/*": [
+        "contexts/*"
+      ],
+      "@Layouts/*": [
+        "Layouts/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -10,9 +10,9 @@ import { Projects } from "../src/components/Projects/Projects";
 import { SendMail } from "../src/components/SendMail/SendMail";
 import { Skills } from "../src/components/Skills/Skills";
 import { ThemeSwitcher } from "../src/components/ThemeSwitcher/ThemeSwitcher";
-import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
-import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
+// import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { usePreventScrollJank } from "../src/hooks/usePreventScrollJank";
+import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
 
 import style from "../src/styles/Home.module.scss";
 
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <Footer />
       </div>
 
-      <ScrollTopButton />
+      {/* <ScrollTopButton /> */}
     </MainLayout>
   );
 };
