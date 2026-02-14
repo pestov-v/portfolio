@@ -14,7 +14,11 @@ export const SectionTitle: NextPage<IProps> = (props) => {
   return (
     <div className={[style.sectionTitle, className].join(" ")}>
       {!!bgText && <p className={style.sectionTitle__bgText}>{bgText}</p>}
-      <h2 className={style.sectionTitle__title} title={`${title} section`}>
+      <h2
+        className={style.sectionTitle__title}
+        title={`${title} section`}
+        style={{ fontFamily: '"Unbounded", sans-serif' }}
+      >
         <GradientText
           colors={["#5227FF", "#5e9bd0"]}
           animationSpeed={3}
