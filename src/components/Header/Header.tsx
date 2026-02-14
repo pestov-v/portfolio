@@ -61,10 +61,13 @@ export const Header: NextPage = () => {
           <h3 className={style.greteen}>{t.greeting}</h3>
         </div>
         <div className="animate-on-scroll fade-in-up stagger-1">
-          <h1 className={style.name} style={{ background: 'none', WebkitTextFillColor: 'unset' }}>
+          <h1
+            className={style.name}
+            style={{ background: "none", WebkitTextFillColor: "unset" }}
+          >
             <GradientText
-              colors={["#5227FF", "#7b3b79", "#7765b4"]}
-              animationSpeed={8}
+              colors={["#5227FF", "#5e9bd0"]}
+              animationSpeed={3}
               showBorder={false}
             >
               {t.name}
