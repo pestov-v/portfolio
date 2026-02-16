@@ -23,14 +23,10 @@ html {
   background-color: var(--background-body, hsl(0, 0%, 100%));
   color: var(--text-primary, hsl(0, 0%, 27%));
 
-  // Mobile: remove all transitions and enforce strict scroll behavior
+  // Mobile: remove all transitions to improve performance
   @media (max-width: 1023px) {
     transition: none !important;
     height: 100%;
-    overflow: hidden;
-
-    // Fix for iOS Safari viewport height jumping
-    position: fixed;
     width: 100%;
   }
 
