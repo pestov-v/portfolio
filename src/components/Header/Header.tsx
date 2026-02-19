@@ -83,7 +83,7 @@ export const Header: NextPage = () => {
           <source srcSet={`/${imgPath}-small.webp`} type="image/webp" />
           <img
             src={`${imgPath}-small.jpg`}
-            alt="avatar"
+            alt="Volodymyr Pestov — profile photo"
             className={style.image}
           />
         </picture>
@@ -91,7 +91,7 @@ export const Header: NextPage = () => {
 
       <div className={style.info}>
         <div>
-          <h3 className={style.greteen}>{t.greeting}</h3>
+          <p className={style.greteen}>{t.greeting}</p>
         </div>
         <div className="animate-on-scroll fade-in-up stagger-1">
           <h1
@@ -105,7 +105,7 @@ export const Header: NextPage = () => {
 
         <div className="animate-on-scroll fade-in-up stagger-2">
           <p className={style.skills}>
-            <span ref={el} />
+            <span ref={el} aria-live="polite" aria-atomic="true" />
           </p>
         </div>
 
@@ -115,6 +115,7 @@ export const Header: NextPage = () => {
             target="_blank"
             rel="noreferrer"
             className={style.download}
+            aria-label={`${t.downloadCV} (PDF, opens in new tab)`}
             download
           >
             {t.downloadCV}
@@ -122,7 +123,7 @@ export const Header: NextPage = () => {
         </div>
       </div>
 
-      <i className={style["arrow-next"]} />
+      <i className={style["arrow-next"]} aria-hidden="true" />
     </header>
   );
 };

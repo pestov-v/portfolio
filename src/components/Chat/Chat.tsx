@@ -124,16 +124,22 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={styles.chatOverlay} onClick={onClose}>
+    <div className={styles.chatOverlay} onClick={onClose} aria-hidden="true">
       <div
         className={styles.chatContainer}
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="AI Assistant chat"
+        aria-hidden="false"
       >
         <div className={styles.chatHeader}>
           <div className={styles.headerContent}>
-            <h3>💬 AI Assistant</h3>
+            <h3><span aria-hidden="true">💬</span> AI Assistant</h3>
             <div className={styles.modelSelector}>
+              <label htmlFor="model-select" className="sr-only">Select AI model</label>
               <select
+                id="model-select"
                 value={selectedModel}
                 onChange={(e) => setSelectedModel(e.target.value)}
                 className={styles.modelSelect}
@@ -146,12 +152,12 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
               </select>
             </div>
           </div>
-          <button onClick={onClose} className={styles.closeButton}>
-            ✕
+          <button onClick={onClose} className={styles.closeButton} aria-label="Close chat">
+            <span aria-hidden="true">✕</span>
           </button>
         </div>
 
-        <div className={styles.messagesContainer}>
+        <div className={styles.messagesContainer} aria-live="polite" aria-label="Chat messages">
           {messages.length === 0 && (
             <div className={styles.emptyState}>
               <p>👋 Hello! I&apos;m an AI assistant.</p>
@@ -173,7 +179,8 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
             >
               <div className={styles.messageContent}>
                 <div className={styles.messageRole}>
-                  {message.role === "user" ? "👤 You" : "🤖 AI"}
+                  <span aria-hidden="true">{message.role === "user" ? "👤" : "🤖"}</span>
+                  {message.role === "user" ? " You" : " AI"}
                 </div>
                 <div className={styles.messageText}>{message.content}</div>
               </div>
@@ -183,8 +190,8 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
           {isLoading && (
             <div className={`${styles.message} ${styles.assistantMessage}`}>
               <div className={styles.messageContent}>
-                <div className={styles.messageRole}>🤖 AI</div>
-                <div className={styles.typing}>
+                <div className={styles.messageRole}><span aria-hidden="true">🤖</span> AI</div>
+                <div className={styles.typing} aria-label="AI is typing">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -196,8 +203,8 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
           {error && (
             <div className={`${styles.message} ${styles.assistantMessage}`}>
               <div className={styles.messageContent}>
-                <div className={styles.messageRole}>🤖 AI</div>
-                <div className={styles.messageText} style={{ color: "red" }}>
+                <div className={styles.messageRole}><span aria-hidden="true">🤖</span> AI</div>
+                <div className={styles.messageText} style={{ color: "red" }} role="alert">
                   Error: {error}
                 </div>
               </div>
@@ -208,7 +215,9 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
         </div>
 
         <form onSubmit={handleSubmit} className={styles.inputForm}>
+          <label htmlFor="chat-input" className="sr-only">Type your message</label>
           <input
+            id="chat-input"
             ref={inputRef}
             value={input}
             onChange={handleInputChange}
@@ -220,8 +229,9 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
             type="submit"
             className={styles.sendButton}
             disabled={isLoading || !input.trim()}
+            aria-label={isLoading ? "Sending message…" : "Send message"}
           >
-            {isLoading ? "⏳" : "📤"}
+            <span aria-hidden="true">{isLoading ? "⏳" : "📤"}</span>
           </button>
         </form>
       </div>

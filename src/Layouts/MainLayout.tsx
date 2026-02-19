@@ -19,7 +19,7 @@ export const MainLayout: NextPage<ILayoutProps> = ({
         <title>{t.portfolioTitle}</title>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
         <meta name="Portfolio" content="Pestov Volodymyr" />
         <meta name="description" content={t.portfolioDescription} />

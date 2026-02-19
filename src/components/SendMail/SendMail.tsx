@@ -69,17 +69,19 @@ export const SendMail = () => {
           className={style.SendMail__title}
         />
 
-        <form className={style.SendMail__form} ref={form} onSubmit={onSubmit}>
+        <form className={style.SendMail__form} ref={form} onSubmit={onSubmit} aria-busy={isSending}>
           <TextInput
             {...formData.name.inputProps}
             errors={formData.name.errors}
             name="user_name"
+            label={t.namePlaceholder}
             placeholder={t.namePlaceholder}
           />
           <TextInput
             {...formData.email.inputProps}
             errors={formData.email.errors}
             name="user_email"
+            label={t.emailPlaceholder}
             placeholder={t.emailPlaceholder}
           />
 
@@ -88,10 +90,16 @@ export const SendMail = () => {
             errors={formData.text.errors}
             textarea
             name="message"
+            label={t.messagePlaceholder}
             placeholder={t.messagePlaceholder}
           />
-          <button className={style.btn} disabled={!isValidForm || isSending}>
-            {isSending ? <div className={style.loader} /> : t.sendButton}
+          <button
+            className={style.btn}
+            type="submit"
+            disabled={!isValidForm || isSending}
+            aria-label={isSending ? "Sending…" : t.sendButton}
+          >
+            {isSending ? <div className={style.loader} aria-hidden="true" /> : t.sendButton}
           </button>
         </form>
       </div>

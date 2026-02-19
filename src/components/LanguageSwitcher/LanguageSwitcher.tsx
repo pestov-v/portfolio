@@ -55,7 +55,9 @@ export const LanguageSwitcher: React.FC = () => {
         className={style.currentLanguage}
         onClick={toggleDropdown}
         type="button"
-        aria-label="Select language"
+        aria-label={`Select language, current: ${currentLanguage.name}`}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
       >
         <Image
           src={currentLanguage.flag}
@@ -71,6 +73,8 @@ export const LanguageSwitcher: React.FC = () => {
           height="8"
           viewBox="0 0 12 8"
           fill="none"
+          aria-hidden="true"
+          focusable="false"
         >
           <path
             d="M1 1.5L6 6.5L11 1.5"
@@ -83,13 +87,15 @@ export const LanguageSwitcher: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className={style.dropdown}>
+        <div className={style.dropdown} role="listbox" aria-label="Select language">
           {languages.map((lang) => (
             <button
               key={lang.code}
               className={`${style.dropdownItem} ${language === lang.code ? style.active : ''}`}
               onClick={() => handleLanguageChange(lang.code)}
               type="button"
+              role="option"
+              aria-selected={language === lang.code}
             >
               <Image
                 src={lang.flag}

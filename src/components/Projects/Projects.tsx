@@ -57,7 +57,7 @@ export const Projects = () => {
   };
 
   return (
-    <section className={style.projects} id="projects">
+    <section className={style.projects} id="projects" aria-labelledby="portfolio-title">
       <div className={style.container}>
         <SectionTitle title={t.portfolio} bgText={t.portfolioBgText} />
 
@@ -86,7 +86,9 @@ export const Projects = () => {
                 className={`${style.cardWrapper} ${isActive ? style.cardWrapperActive : ""}`}
                 onClick={() => !isActive && handleCardClick(item)}
                 role="button"
-                tabIndex={0}
+                tabIndex={isActive ? -1 : 0}
+                aria-label={isActive ? undefined : `Open ${title} project details`}
+                aria-expanded={isActive}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
@@ -128,7 +130,7 @@ export const Projects = () => {
 
                           <div className={style.section}>
                             <h4 className={style.subsectionTitle}>
-                              🎯 {t.projectModal.challenge}
+                              <span aria-hidden="true">🎯</span> {t.projectModal.challenge}
                             </h4>
                             <p className={style.text}>
                               {caseStudyData?.challenge ||
@@ -138,7 +140,7 @@ export const Projects = () => {
 
                           <div className={style.section}>
                             <h4 className={style.subsectionTitle}>
-                              💡 {t.projectModal.solution}
+                              <span aria-hidden="true">💡</span> {t.projectModal.solution}
                             </h4>
                             <p className={style.text}>
                               {caseStudyData?.solution ||
@@ -148,7 +150,7 @@ export const Projects = () => {
 
                           <div className={style.section}>
                             <h4 className={style.subsectionTitle}>
-                              ✨ {t.projectModal.result}
+                              <span aria-hidden="true">✨</span> {t.projectModal.result}
                             </h4>
                             <p className={style.text}>
                               {caseStudyData?.result || item.caseStudy!.result}
@@ -158,7 +160,7 @@ export const Projects = () => {
                           {item.caseStudy!.technologies && (
                             <div className={style.section}>
                               <h4 className={style.subsectionTitle}>
-                                🛠 {t.projectModal.technologies}
+                                <span aria-hidden="true">🛠</span> {t.projectModal.technologies}
                               </h4>
                               <div className={style.technologies}>
                                 {item.caseStudy!.technologies.map((tech) => (
@@ -174,7 +176,7 @@ export const Projects = () => {
                             item.caseStudy!.diagrams.length > 0 && (
                               <div className={style.diagramsSection}>
                                 <h4 className={style.subsectionTitle}>
-                                  📊 Architecture & System Design
+                                  <span aria-hidden="true">📊</span> Architecture &amp; System Design
                                 </h4>
                                 {item.caseStudy!.diagrams.map((diagram, i) => (
                                   <MermaidDiagram
@@ -201,13 +203,15 @@ export const Projects = () => {
                           rel="noopener noreferrer"
                           className={style.visitButton}
                         >
-                          {t.projectModal.visitProject} →
+                          {t.projectModal.visitProject}
+                          <span aria-hidden="true"> →</span>
                         </a>
                         <button
                           className={style.closeButton}
                           onClick={() => handleCardClick(item)}
+                          aria-label={`Close ${title} project details`}
                         >
-                          ✕
+                          <span aria-hidden="true">✕</span>
                         </button>
                       </div>
                     </div>
@@ -221,13 +225,14 @@ export const Projects = () => {
 
         <div className={`${style.demoBanner} animate-on-scroll fade-in-up`}>
           <div className={style.demoContent}>
-            <div className={style.demoIcon}>⚡</div>
+            <div className={style.demoIcon} aria-hidden="true">⚡</div>
             <div className={style.demoText}>
               <h3>{t.demo.tryLiveDemo}</h3>
               <p>{t.demo.subtitle}</p>
             </div>
             <Link href="/demo" className={style.demoButton}>
-              {t.demo.tryLiveDemo} →
+              {t.demo.tryLiveDemo}
+              <span aria-hidden="true"> →</span>
             </Link>
           </div>
         </div>

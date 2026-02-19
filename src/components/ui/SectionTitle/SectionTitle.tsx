@@ -13,10 +13,10 @@ export const SectionTitle: NextPage<IProps> = (props) => {
 
   return (
     <div className={[style.sectionTitle, className].join(" ")}>
-      {!!bgText && <p className={style.sectionTitle__bgText}>{bgText}</p>}
+      {!!bgText && <p className={style.sectionTitle__bgText} aria-hidden="true">{bgText}</p>}
       <h2
+        id={`${title.toLowerCase().replace(/\s+/g, "-")}-title`}
         className={style.sectionTitle__title}
-        title={`${title} section`}
         style={{ fontFamily: '"Unbounded", sans-serif' }}
       >
         <GradientText

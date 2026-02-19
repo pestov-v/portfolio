@@ -47,16 +47,18 @@ export const InfoItem: NextPage<IProps> = (props) => {
     </>
   );
 
+  const isExternal = !!linkHref?.startsWith("http");
+
   return (
-    <h4 className={style.InfoItem}>
-      {!hideTitle && <>{title}: </>}
+    <div className={style.InfoItem}>
+      {!hideTitle && <span className={style.InfoItem__label}>{title}: </span>}
       {linkHref ? (
         <a
           href={linkHref}
           className={`${style.InfoItem__value} scrambled`}
-          {...(linkHref.startsWith("http")
-            ? { target: "_blank", rel: "noopener noreferrer" }
-            : {})}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          aria-label={isExternal ? `${title} (opens in new tab)` : undefined}
         >
           {content}
         </a>
@@ -73,6 +75,6 @@ export const InfoItem: NextPage<IProps> = (props) => {
           {content}
         </span>
       )}
-    </h4>
+    </div>
   );
 };

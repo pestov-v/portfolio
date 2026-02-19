@@ -12,25 +12,33 @@ export const TextInput: FC<IProps> = (props) => {
 
   const isErrors = !!errors?.length;
   const errorClass = isErrors ? style.error : "";
+  const errorId = rest.name ? `${rest.name}-error` : undefined;
+
   return (
     <label className={style.TextInput}>
-      {label && <p className={style.TextInput__label}>{label}</p>}
+      {label && <span className={style.TextInput__label}>{label}</span>}
 
       {textarea ? (
         <textarea
           className={`${style.TextInput__input} ${errorClass}`}
+          aria-invalid={isErrors || undefined}
+          aria-describedby={isErrors && errorId ? errorId : undefined}
           {...rest}
         />
       ) : (
         <input
           className={`${style.TextInput__input} ${errorClass}`}
           type={props?.type ?? "text"}
+          aria-invalid={isErrors || undefined}
+          aria-describedby={isErrors && errorId ? errorId : undefined}
           {...rest}
         />
       )}
 
       {isErrors && (
-        <p className={style.TextInput__errors}>{errors.join(" ")}</p>
+        <span id={errorId} className={style.TextInput__errors} role="alert">
+          {errors.join(" ")}
+        </span>
       )}
     </label>
   );

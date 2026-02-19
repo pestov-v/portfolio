@@ -11,10 +11,11 @@ interface IProps {
   reverse?: boolean;
   color: TColors;
   showPercent?: boolean;
+  label?: string;
 }
 
 export const ProgressBar: FC<IProps> = (props) => {
-  const { transitionDelay = 0, percent, color = COLORS.primary } = props;
+  const { transitionDelay = 0, percent, color = COLORS.primary, label } = props;
   const {
     addWidthImmediately = true,
     reverse = false,
@@ -44,9 +45,18 @@ export const ProgressBar: FC<IProps> = (props) => {
   const classes = [style.value, style[COLORS[color]]].join(" ");
   const barWidth = addWidthImmediately ? percent : 0;
 
+  const numericValue = parseFloat(percent);
+
   return (
     <div className={style.proggressWrapper}>
-      <div className={progressStyle}>
+      <div
+        className={progressStyle}
+        role="progressbar"
+        aria-valuenow={numericValue}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label={label ? `${label}: ${percent}` : percent}
+      >
         <div
           className={classes}
           ref={progressRef}
@@ -55,7 +65,7 @@ export const ProgressBar: FC<IProps> = (props) => {
             width: barWidth,
           }}
         />
-        {showPercent && <span>{percent}</span>}
+        {showPercent && <span aria-hidden="true">{percent}</span>}
       </div>
     </div>
   );

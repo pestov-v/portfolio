@@ -148,7 +148,7 @@ export const About = () => {
   }, [t]);
 
   return (
-    <section className={style.about} id="about" ref={sectionRef}>
+    <section className={style.about} id="about" ref={sectionRef} aria-labelledby="about-title">
       <div className={style.container}>
         <SectionTitle title={t.aboutMe} bgText={t.aboutBgText} />
 
@@ -192,7 +192,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <i className={style["arrow-next"]} />
+      <i className={style["arrow-next"]} aria-hidden="true" />
     </section>
   );
 };

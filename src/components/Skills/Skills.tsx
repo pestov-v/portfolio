@@ -43,12 +43,13 @@ export const Skills = () => {
               transitionDelay={0}
               reverse={index % 2 !== 0}
               color={color}
+              label={title}
             />
           </div>
         ))}
       </div>
 
-      <i className={style["arrow-next"]} />
+      <i className={style["arrow-next"]} aria-hidden="true" />
     </section>
   );
 };

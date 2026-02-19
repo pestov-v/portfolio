@@ -8,29 +8,32 @@ export const Footer = () => {
   const { t } = useLanguage();
   
   return (
-    <section className={style.section} id="contact">
+    <footer className={style.section} id="contact">
       <div className={style.header}>
-        <h2>{t.letsWorkTogether}</h2>
+        <h2 id="footer-heading">{t.letsWorkTogether}</h2>
       </div>
-      <div className={style.links}>
-        {socialLinks.map(({ id, href, title }) => (
-          <a
-            id={id}
-            href={href}
-            className={style.details}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={id}
-          >
-            <Image
-              width={48}
-              height={48}
-              src={`/img/icons/${id}.svg`}
-              alt={title}
-            />
-          </a>
-        ))}
-      </div>
-    </section>
+      <nav aria-labelledby="footer-heading">
+        <ul className={style.links} role="list">
+          {socialLinks.map(({ id, href, title }) => (
+            <li key={id}>
+              <a
+                href={href}
+                className={style.details}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${title} (opens in new tab)`}
+              >
+                <Image
+                  width={48}
+                  height={48}
+                  src={`/img/icons/${id}.svg`}
+                  alt=""
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </footer>
   );
 };

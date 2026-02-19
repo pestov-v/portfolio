@@ -46,10 +46,16 @@ export const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
           onClose();
         }
       }}
+      role="presentation"
     >
-      <div className={styles.modal}>
-        <button className={styles.closeButton} onClick={onClose} aria-label="Close modal">
-          ✕
+      <div
+        className={styles.modal}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Project details"
+      >
+        <button className={styles.closeButton} onClick={onClose} aria-label="Close dialog">
+          <span aria-hidden="true">✕</span>
         </button>
         {children}
       </div>

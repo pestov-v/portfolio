@@ -16,7 +16,7 @@ export const AboutImage = () => {
       <source srcSet={`${IMG_PATH}-small.webp`} type="image/webp" />
       <img
         src={`${IMG_PATH}-small.jpg`}
-        alt="me"
+        alt="Volodymyr Pestov — web developer"
         className={style.AboutImage}
       />
     </picture>

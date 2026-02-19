@@ -1,18 +1,30 @@
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 
 import { MainLayout } from "../src/Layouts/MainLayout";
-import { About } from "../src/components/About/About";
-import { Footer } from "../src/components/Footer/Footer";
 import { Header } from "../src/components/Header/Header";
 import { LanguageSwitcher } from "../src/components/LanguageSwitcher/LanguageSwitcher";
 import { Navbar } from "../src/components/Navbar/Navbar";
-import { Projects } from "../src/components/Projects/Projects";
-import { SendMail } from "../src/components/SendMail/SendMail";
-import { Skills } from "../src/components/Skills/Skills";
 import { ThemeSwitcher } from "../src/components/ThemeSwitcher/ThemeSwitcher";
 // import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { usePreventScrollJank } from "../src/hooks/usePreventScrollJank";
 import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
+
+const About = dynamic(() =>
+  import("../src/components/About/About").then((m) => m.About)
+);
+const Skills = dynamic(() =>
+  import("../src/components/Skills/Skills").then((m) => m.Skills)
+);
+const Projects = dynamic(() =>
+  import("../src/components/Projects/Projects").then((m) => m.Projects)
+);
+const SendMail = dynamic(() =>
+  import("../src/components/SendMail/SendMail").then((m) => m.SendMail)
+);
+const Footer = dynamic(() =>
+  import("../src/components/Footer/Footer").then((m) => m.Footer)
+);
 
 import style from "../src/styles/Home.module.scss";
 
@@ -22,10 +34,13 @@ const Home: NextPage = () => {
 
   return (
     <MainLayout className="app">
+      <a href="#main-content" className={style.skipLink}>
+        Skip to main content
+      </a>
       <ThemeSwitcher />
       <LanguageSwitcher />
       <Navbar />
-      <main className={style.main}>
+      <main id="main-content" className={style.main}>
         <Header />
         <div className="animate-on-scroll fade-in-up">
           <About />

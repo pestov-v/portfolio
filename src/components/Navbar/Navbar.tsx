@@ -50,13 +50,14 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className={style.navbar} ref={navbar}>
+      <nav className={style.navbar} ref={navbar} aria-label="Main navigation">
         <button
           className={style.burgerButton}
           onClick={toggleMenu}
           type="button"
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
+          aria-controls="nav-links"
         >
           <span
             className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`}
@@ -69,7 +70,7 @@ export const Navbar = () => {
           />
         </button>
 
-        <ul className={`${style.links} ${isMenuOpen ? style.menuOpen : ""}`}>
+        <ul id="nav-links" className={`${style.links} ${isMenuOpen ? style.menuOpen : ""}`} role="list">
           {links.map(({ id, href, title }) => (
             <li key={id}>
               <a href={href} className={style.link} onClick={handleLinkClick}>
@@ -80,7 +81,7 @@ export const Navbar = () => {
         </ul>
       </nav>
       {isMenuOpen && (
-        <div className={style.overlay} onClick={handleLinkClick} />
+        <div className={style.overlay} onClick={handleLinkClick} aria-hidden="true" />
       )}
     </>
   );
