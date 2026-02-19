@@ -1,5 +1,5 @@
-@import "colors";
-@import "breakpoints";
+@use "colors";
+@use "breakpoints";
 
 .app {
   min-height: 100vh;
@@ -22,7 +22,9 @@
   border-radius: 8px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 0.22s ease, border 0.22s ease;
+  transition:
+    color 0.22s ease,
+    border 0.22s ease;
 
   &:hover {
     color: var(--color-primary-light);

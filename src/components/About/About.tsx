@@ -99,7 +99,10 @@ export const About = () => {
 
     // Store original text before clearing
     const originalTexts = items.map((el) => el.textContent?.trim() ?? "");
+
+    // Pin width to prevent layout shift during scramble (uppercase chars are wider)
     items.forEach((el) => {
+      el.style.minWidth = `${el.getBoundingClientRect().width}px`;
       el.style.opacity = "0";
       el.textContent = "";
     });
@@ -138,17 +141,23 @@ export const About = () => {
     return () => {
       st.kill();
       timeline.kill();
-      // Restore original text on cleanup
+      // Restore original text and release pinned width on cleanup
       items.forEach((el, i) => {
         el.textContent = originalTexts[i];
         el.style.opacity = "";
+        el.style.minWidth = "";
       });
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [t]);
 
   return (
-    <section className={style.about} id="about" ref={sectionRef} aria-labelledby="about-title">
+    <section
+      className={style.about}
+      id="about"
+      ref={sectionRef}
+      aria-labelledby="about-title"
+    >
       <div className={style.container}>
         <SectionTitle title={t.aboutMe} bgText={t.aboutBgText} />
 

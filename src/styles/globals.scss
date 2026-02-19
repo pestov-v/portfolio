@@ -1,8 +1,8 @@
-@import "reset";
-@import "breakpoints";
-@import "colors";
-@import "common";
-@import "scroll-animations";
+@use "reset";
+@use "breakpoints";
+@use "colors";
+@use "common";
+@use "scroll-animations";
 
 * {
   box-sizing: border-box;
@@ -110,11 +110,11 @@ a {
 
 // Apply dark theme CSS vars to .app (scoped) AND to html-level elements (portals)
 [data-theme="dark"] .app {
-  @include dark-theme-vars;
+  @include colors.dark-theme-vars;
 }
 
 [data-theme="dark"] {
-  @include dark-theme-vars;
+  @include colors.dark-theme-vars;
 }
 
 @media (prefers-color-scheme: dark) {
