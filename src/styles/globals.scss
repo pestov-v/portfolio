@@ -108,6 +108,15 @@ a {
   color-scheme: dark;
 }
 
+// Apply dark theme CSS vars to .app (scoped) AND to html-level elements (portals)
+[data-theme="dark"] .app {
+  @include dark-theme-vars;
+}
+
+[data-theme="dark"] {
+  @include dark-theme-vars;
+}
+
 @media (prefers-color-scheme: dark) {
   html:not([data-theme]) {
     color-scheme: dark;

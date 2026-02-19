@@ -17,7 +17,9 @@
   border-bottom: 1px solid var(--color-toggle-dark);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease,
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
     background-color 0.3s ease;
 
   // Optimize for smooth scrolling on mobile
@@ -140,7 +142,10 @@
       justify-content: flex-start;
       align-items: flex-start;
       padding: 2em 0;
-      background-color: var(--background-navbar-solid, var(--background-navbar));
+      background-color: var(
+        --background-navbar-solid,
+        var(--background-navbar)
+      );
       border-right: 1px solid var(--color-toggle-dark);
       transform: translate3d(-100%, 0, 0);
       transition: transform 0.3s ease;
@@ -178,7 +183,7 @@
         color: var(--color-black);
       }
 
-      [data-theme="dark"] & {
+      :global([data-theme="dark"]) & {
         &:hover {
           color: var(--color-white);
         }

@@ -36,7 +36,7 @@
   }
 }
 
-[data-theme="dark"] .InfoItem__icon[data-icon="github"] {
+:global([data-theme="dark"]) .InfoItem__icon[data-icon="github"] {
   img {
     filter: brightness(0) saturate(100%) invert(1);
   }
