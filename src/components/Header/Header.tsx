@@ -1,4 +1,6 @@
 import gsap from "gsap";
+import { CustomBounce } from "gsap/CustomBounce";
+import { CustomEase } from "gsap/CustomEase";
 import { SplitText } from "gsap/SplitText";
 import { NextPage } from "next";
 import { useEffect, useRef } from "react";
@@ -6,7 +8,7 @@ import Typed from "typed.js";
 import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Header.module.scss";
 
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(CustomEase, CustomBounce, SplitText);
 
 export const imgPath = "img/profile/profile";
 export const Header: NextPage = () => {
@@ -15,6 +17,7 @@ export const Header: NextPage = () => {
   // Create reference to store the Typed instance itself
   const typed = useRef<Typed>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const greetingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const skillsEn =
@@ -72,6 +75,64 @@ export const Header: NextPage = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!greetingRef.current) return;
+
+    CustomBounce.create("myBounce", {
+      strength: 0.6,
+      squash: 1.5,
+      squashID: "myBounce-squash",
+    });
+
+    const split = SplitText.create(greetingRef.current, { type: "chars" });
+    const splitTxt = split.chars;
+
+    const tl = gsap
+      .timeline({
+        defaults: {
+          duration: 1.5,
+          stagger: { amount: 0.1, ease: "sine.in" },
+        },
+      })
+      .from(
+        splitTxt,
+        {
+          duration: 0.6,
+          opacity: 0,
+          ease: "power1.inOut",
+        },
+        0
+      )
+      .from(
+        splitTxt,
+        {
+          y: -350,
+          ease: "myBounce",
+        },
+        0
+      )
+      .to(
+        splitTxt,
+        {
+          scaleX: 1.8,
+          scaleY: 0.7,
+          rotate: () => 15 - 30 * Math.random(),
+          ease: "myBounce-squash",
+          transformOrigin: "50% 100%",
+        },
+        0
+      );
+
+    const handleClick = () => tl.play(0);
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("click", handleClick);
+      tl.kill();
+      split.revert();
+    };
+  }, []);
+
   return (
     <header className={style.header}>
       <div className="animate-on-scroll scale-in">
@@ -89,7 +150,7 @@ export const Header: NextPage = () => {
 
       <div className={style.info}>
         <div className="animate-on-scroll fade-in-down">
-          <h3 className={style.greteen}>{t.greeting}</h3>
+          <h3 className={style.greteen} ref={greetingRef}>{t.greeting}</h3>
         </div>
         <div className="animate-on-scroll fade-in-up stagger-1">
           <h1
@@ -97,15 +158,7 @@ export const Header: NextPage = () => {
             style={{ background: "none", WebkitTextFillColor: "unset" }}
             ref={textRef}
           >
-            {/* <GradientText
-              colors={["#5227FF", "#5e9bd0"]}
-              animationSpeed={3}
-              showBorder={false}
-            ref={textRef}
-
-            > */}
             <span style={{ paddingRight: "0.5em" }}>{t.name}</span>
-            {/* </GradientText> */}
           </h1>
         </div>
 
