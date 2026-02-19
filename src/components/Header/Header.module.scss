@@ -82,21 +82,18 @@
 
     .greteen {
       position: relative;
-      font-size: 1rem;
       color: var(--color-black);
-      text-transform: uppercase;
       opacity: 0.8;
       font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 2rem;
+      font-size: 2.8rem;
       font-weight: 600;
 
       @include respond-above(xs) {
-        font-size: 1.6rem;
+        font-size: 2rem;
       }
       @include respond-above(sm) {
-        font-size: 2rem;
+        font-size: 2.8rem;
       }
       @include respond-above(lg) {
         left: -0.2em;
