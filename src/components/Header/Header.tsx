@@ -81,7 +81,6 @@ export const Header: NextPage = () => {
         width={400}
         height={400}
         priority
-        fetchPriority="high"
       />
 
       <div className={style.info}>
