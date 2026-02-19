@@ -3,6 +3,7 @@ import { CustomBounce } from "gsap/CustomBounce";
 import { CustomEase } from "gsap/CustomEase";
 import { SplitText } from "gsap/SplitText";
 import { NextPage } from "next";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { useLanguage } from "../../contexts/LanguageContext";
@@ -59,9 +60,6 @@ export const Header: NextPage = () => {
       yPercent: () => (Math.random() > 0.5 ? 100 : -100),
       rotation: () => Math.random() * 60 - 30,
       ease: "back.out",
-      autoAlpha: 0,
-      repeat: 2,
-      yoyo: true,
       stagger: {
         amount: 0.5,
         from: "random",
@@ -76,18 +74,15 @@ export const Header: NextPage = () => {
 
   return (
     <header className={style.header}>
-      <div className="animate-on-scroll scale-in">
-        <picture className={style.imageWrapper}>
-          <source srcSet={`/${imgPath}.webp`} type="image/webp" />
-          <source media="(min-width: 796px)" srcSet={`/${imgPath}.jpg`} />
-          <source srcSet={`/${imgPath}-small.webp`} type="image/webp" />
-          <img
-            src={`${imgPath}-small.jpg`}
-            alt="Volodymyr Pestov — profile photo"
-            className={style.image}
-          />
-        </picture>
-      </div>
+      <Image
+        src={`/${imgPath}.jpg`}
+        alt="Volodymyr Pestov — profile photo"
+        className={style.image}
+        width={400}
+        height={400}
+        priority
+        fetchPriority="high"
+      />
 
       <div className={style.info}>
         <div>
