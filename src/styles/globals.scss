@@ -105,3 +105,22 @@ a {
 .pr-4 {
   padding-right: 0.5em;
 }
+
+// GSAP SplitText animation block
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text {
+  color: #dfdcff;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding: 5%;
+  width: 100%;
+  text-align: center;
+  perspective: 500px;
+}

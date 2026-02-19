@@ -18,16 +18,17 @@ interface GradientTextProps {
   yoyo?: boolean;
 }
 
-export default function GradientText({
-  children,
-  className = "",
-  colors = ["#5227FF", "#FF9FFC", "#B19EEF"],
-  animationSpeed = 8,
-  showBorder = false,
-  direction = "horizontal",
-  pauseOnHover = false,
-  yoyo = true,
-}: GradientTextProps) {
+export default function GradientText(props: GradientTextProps) {
+  const {
+    children,
+    className = "",
+    colors = ["#5227FF", "#FF9FFC", "#B19EEF"],
+    animationSpeed = 8,
+    showBorder = false,
+    direction = "horizontal",
+    pauseOnHover = false,
+    yoyo = true,
+  } = props;
   const [isPaused, setIsPaused] = useState(false);
   const progress = useMotionValue(0);
   const elapsedRef = useRef(0);

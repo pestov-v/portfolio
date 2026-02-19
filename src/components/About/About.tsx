@@ -1,3 +1,7 @@
+import gsap from "gsap";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { socialLinks } from "../../util/constants";
 import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
@@ -5,8 +9,11 @@ import style from "./About.module.scss";
 import { AboutImage } from "./AboutImage/AboutImage";
 import { InfoItem } from "./InfoItem/InfoItem";
 
+gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
+
 export const About = () => {
   const { t } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
 
   const additionalInfo = [
     { id: "name", title: t.personalInfo.name, value: "Volodymyr Pestov" },
@@ -83,8 +90,65 @@ export const About = () => {
     },
   ];
 
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const items = gsap.utils.toArray<HTMLElement>(".scrambled", section);
+    if (!items.length) return;
+
+    // Store original text before clearing
+    const originalTexts = items.map((el) => el.textContent?.trim() ?? "");
+    items.forEach((el) => {
+      el.style.opacity = "0";
+      el.textContent = "";
+    });
+
+    const timeline = gsap.timeline({ id: "ScrambleText", paused: true });
+
+    items.forEach((element, index) => {
+      const text = originalTexts[index];
+      const tl = gsap
+        .timeline()
+        .to(element, { duration: 0.01, opacity: 1 })
+        .to(
+          element,
+          {
+            duration: 1,
+            ease: "none",
+            scrambleText: {
+              text,
+              chars: "upperCase",
+              speed: 0.2,
+              revealDelay: 0.05,
+            },
+          },
+          "<",
+        );
+      timeline.add(tl, index * 0.15);
+    });
+
+    const st = ScrollTrigger.create({
+      trigger: section,
+      start: "top 75%",
+      once: true,
+      onEnter: () => timeline.play(),
+    });
+
+    return () => {
+      st.kill();
+      timeline.kill();
+      // Restore original text on cleanup
+      items.forEach((el, i) => {
+        el.textContent = originalTexts[i];
+        el.style.opacity = "";
+      });
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [t]);
+
   return (
-    <section className={style.about} id="about">
+    <section className={style.about} id="about" ref={sectionRef}>
       <div className={style.container}>
         <SectionTitle title={t.aboutMe} bgText={t.aboutBgText} />
 

@@ -1,9 +1,12 @@
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
 import { NextPage } from "next";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { useLanguage } from "../../contexts/LanguageContext";
-import GradientText from "../ui/GradientText";
 import style from "./Header.module.scss";
+
+gsap.registerPlugin(SplitText);
 
 export const imgPath = "img/profile/profile";
 export const Header: NextPage = () => {
@@ -11,6 +14,7 @@ export const Header: NextPage = () => {
   const el = useRef(null);
   // Create reference to store the Typed instance itself
   const typed = useRef<Typed>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const skillsEn =
@@ -41,6 +45,33 @@ export const Header: NextPage = () => {
     };
   }, [language]);
 
+  useEffect(() => {
+    if (!textRef.current) return;
+
+    const split = SplitText.create(textRef.current, {
+      type: "chars,words,lines",
+      mask: "lines",
+    });
+
+    const tween = gsap.from(split.chars, {
+      yPercent: () => (Math.random() > 0.5 ? 100 : -100),
+      rotation: () => Math.random() * 60 - 30,
+      ease: "back.out",
+      autoAlpha: 0,
+      repeat: 2,
+      yoyo: true,
+      stagger: {
+        amount: 0.5,
+        from: "random",
+      },
+    });
+
+    return () => {
+      tween.kill();
+      split.revert();
+    };
+  }, []);
+
   return (
     <header className={style.header}>
       <div className="animate-on-scroll scale-in">
@@ -64,14 +95,17 @@ export const Header: NextPage = () => {
           <h1
             className={style.name}
             style={{ background: "none", WebkitTextFillColor: "unset" }}
+            ref={textRef}
           >
-            <GradientText
+            {/* <GradientText
               colors={["#5227FF", "#5e9bd0"]}
               animationSpeed={3}
               showBorder={false}
-            >
-              {t.name}
-            </GradientText>
+            ref={textRef}
+
+            > */}
+            <span style={{ paddingRight: "0.5em" }}>{t.name}</span>
+            {/* </GradientText> */}
           </h1>
         </div>
 

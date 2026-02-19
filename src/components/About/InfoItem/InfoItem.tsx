@@ -17,7 +17,7 @@ export const InfoItem: NextPage<IProps> = (props) => {
   const getHref = () => {
     if (href) return href;
     // Only process href if value is a string
-    if (typeof value !== 'string') return undefined;
+    if (typeof value !== "string") return undefined;
     if (title === t.personalInfo.email) return `mailto:${value}`;
     if (title === t.personalInfo.phone)
       return `tel:${value.replace(/\s/g, "")}`;
@@ -53,7 +53,7 @@ export const InfoItem: NextPage<IProps> = (props) => {
       {linkHref ? (
         <a
           href={linkHref}
-          className={style.InfoItem__value}
+          className={`${style.InfoItem__value} scrambled`}
           {...(linkHref.startsWith("http")
             ? { target: "_blank", rel: "noopener noreferrer" }
             : {})}
@@ -64,7 +64,10 @@ export const InfoItem: NextPage<IProps> = (props) => {
         <span
           className={[
             style.InfoItem__value,
-            typeof value === 'string' && value === t.available ? style.success : "",
+            "scrambled",
+            typeof value === "string" && value === t.available
+              ? style.success
+              : "",
           ].join(" ")}
         >
           {content}
