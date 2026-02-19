@@ -51,26 +51,38 @@ export const Header: NextPage = () => {
   useEffect(() => {
     if (!textRef.current) return;
 
-    const split = SplitText.create(textRef.current, {
-      type: "chars,words,lines",
-      mask: "lines",
-    });
+    let tween: gsap.core.Tween;
+    let split: SplitText;
 
-    const tween = gsap.from(split.chars, {
-      yPercent: () => (Math.random() > 0.5 ? 100 : -100),
-      rotation: () => Math.random() * 60 - 30,
-      ease: "back.out",
-      stagger: {
-        amount: 0.5,
-        from: "random",
-      },
+    const raf = requestAnimationFrame(() => {
+      if (!textRef.current) return;
+
+      split = SplitText.create(textRef.current, {
+        type: "chars,words,lines",
+        mask: "lines",
+      });
+
+      if (split.chars.length > 0) {
+        (split.chars[0] as HTMLElement).style.marginRight = "-0.04em";
+      }
+
+      tween = gsap.from(split.chars, {
+        yPercent: () => (Math.random() > 0.5 ? 100 : -100),
+        rotation: () => Math.random() * 60 - 30,
+        ease: "back.out",
+        stagger: {
+          amount: 0.5,
+          from: "random",
+        },
+      });
     });
 
     return () => {
-      tween.kill();
-      split.revert();
+      cancelAnimationFrame(raf);
+      tween?.kill();
+      split?.revert();
     };
-  }, []);
+  }, [language]);
 
   return (
     <header className={style.header}>
