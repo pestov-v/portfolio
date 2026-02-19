@@ -55,8 +55,8 @@
   --border-color: hsla(0, 0%, 50%, 0.2);
 }
 
-// Dark theme
-[data-theme="dark"] .app {
+// Dark theme — applied to both .app and portals outside it
+@mixin dark-theme-vars {
   --color-primary-toggle: var(--color-primary-light);
 
   --background-navbar: hsla(210, 30%, 20%, 0.8);
@@ -81,30 +81,22 @@
   --border-color: hsla(0, 0%, 80%, 0.15);
 }
 
+// Apply to .app (scoped components) AND to html (portals, body-level elements)
+[data-theme="dark"] .app {
+  @include dark-theme-vars;
+}
+
+[data-theme="dark"] {
+  @include dark-theme-vars;
+}
+
 // Fallback for system preference (when no theme is set)
 @media (prefers-color-scheme: dark) {
   html:not([data-theme]) .app {
-    --color-primary-toggle: var(--color-primary-light);
+    @include dark-theme-vars;
+  }
 
-    --background-navbar: hsla(210, 30%, 20%, 0.8);
-    --shadow-navbar: hsla(0, 0%, 78%, 0.3);
-
-    --color-toggle-gray-dark: hsl(0, 0%, 87%);
-    --color-toggle-dark: hsl(0, 3%, 55%);
-
-    --color-toggle-gray: hsl(0, 19%, 83%);
-    --color-toggle-gray-light: hsl(0, 5%, 59%);
-
-    --background-body: hsl(220, 15%, 15%);
-    --background-section: hsl(220, 15%, 18%);
-    --text-primary: hsl(0, 0%, 90%);
-    --text-secondary: hsl(0, 0%, 70%);
-    --color-dark: hsl(0, 0%, 87%);
-    --color-light: hsl(0, 0%, 50%);
-
-    // Demo page dark theme
-    --bg-primary: var(--background-body);
-    --bg-secondary: var(--background-section);
-    --border-color: hsla(0, 0%, 80%, 0.15);
+  html:not([data-theme]) {
+    @include dark-theme-vars;
   }
 }
