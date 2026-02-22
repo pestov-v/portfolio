@@ -177,6 +177,8 @@ export const _projects: TProjects = [
     href: "https://web-studio-smoky.vercel.app",
     image: "web-studio",
     alt: "Web-studio",
+    additionalInfo:
+      "Landing page for a digital agency with a modern UI/UX and smooth animations · NextJS, TypeScript, TailwindCSS",
   },
   // {
   //   id: 12,
