@@ -169,14 +169,15 @@ export const _projects: TProjects = [
     additionalInfo:
       "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
   },
-  // {
-  //   id: 13,
-  //   title: "Forex-broker",
-  //   description: "App for active trading & long-term investing.",
-  //   href: "https://i88.io",
-  //   image: "i88",
-  //   alt: "Forex-broker",
-  // },
+  {
+    id: 10,
+    translationKey: "webstudio",
+    title: "Web-studio",
+    description: "Web-studio for creating websites.",
+    href: "https://web-studio-smoky.vercel.app",
+    image: "web-studio",
+    alt: "Web-studio",
+  },
   // {
   //   id: 12,
   //   title: "Online market",
@@ -186,7 +187,7 @@ export const _projects: TProjects = [
   //   alt: "Online market",
   // },
   {
-    id: 7,
+    id: 9,
     translationKey: "matrix",
     title: "Matrix table",
     description:
@@ -196,16 +197,27 @@ export const _projects: TProjects = [
     alt: "Matrix table",
   },
   {
-    id: 11,
+    id: 8,
     translationKey: "youtube",
     title: "Youtube Clone",
     description: "Mini youtube clone with search, video list, and video player",
     href: "https://clone-a72b1.web.app/",
     image: "youtube",
     alt: "Youtube Clone",
+    additionalInfo:
+      "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
+    caseStudy: {
+      challenge:
+        "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
+      solution:
+        "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
+      result:
+        "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
+      technologies: ["React", "Material UI", "YouTube API", "Firebase"],
+    },
   },
   {
-    id: 10,
+    id: 7,
     translationKey: "covid",
     title: "Covid-19 tracker",
     description: "Tracker for covid-19",
@@ -214,7 +226,7 @@ export const _projects: TProjects = [
     alt: "Covid-19 tracker",
   },
   {
-    id: 9,
+    id: 6,
     translationKey: "facebook",
     title: "Facebook Clone",
     description: "Demo facebook-clone with React and firebase",

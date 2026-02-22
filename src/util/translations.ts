@@ -88,6 +88,11 @@ export interface Translation {
       solution: string;
       result: string;
     };
+    youtube: {
+      challenge: string;
+      solution: string;
+      result: string;
+    };
   };
 
   // Projects data
@@ -130,30 +135,42 @@ export interface Translation {
     matrix: {
       title: string;
       description: string;
+      additionalInfo: string;
+    };
+    webstudio: {
+      title: string;
+      description: string;
+      additionalInfo: string;
     };
     youtube: {
       title: string;
       description: string;
+      additionalInfo: string;
     };
     covid: {
       title: string;
       description: string;
+      additionalInfo: string;
     };
     facebook: {
       title: string;
       description: string;
+      additionalInfo: string;
     };
     abz: {
       title: string;
       description: string;
+      additionalInfo: string;
     };
     bootstrap: {
       title: string;
       description: string;
+      additionalInfo: string;
     };
     menu: {
       title: string;
       description: string;
+      additionalInfo: string;
     };
   };
 
@@ -284,6 +301,14 @@ export const translations: Record<
         result:
           "Complete elimination of developer dependency when creating forms. Time-to-Market reduced from several weeks to several hours.",
       },
+      youtube: {
+        challenge:
+          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
+        solution:
+          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
+        result:
+          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
+      },
     },
 
     // Projects data
@@ -339,32 +364,54 @@ export const translations: Record<
       },
       matrix: {
         title: "Matrix table",
-        description: "Simple generated matrix table with React featuring statistical data display and calculation",
+        description:
+          "Simple generated matrix table with React featuring statistical data display and calculation",
+        additionalInfo:
+          "Interactive grid with dynamic data calculation and visualization · React, CSS Modules",
+      },
+      webstudio: {
+        title: "Web-studio",
+        description: "Web-studio for creating websites.",
+        additionalInfo:
+          "Landing page for a digital agency with modern UI/UX and smooth animations · HTML, CSS, JavaScript",
       },
       youtube: {
         title: "Youtube Clone",
-        description: "Mini youtube clone with search, video list, and video player",
+        description:
+          "Mini youtube clone with search, video list, and video player",
+        additionalInfo:
+          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
       },
       covid: {
         title: "Covid-19 tracker",
         description: "Tracker for covid-19",
+        additionalInfo:
+          "Real-time statistics dashboard for tracking COVID-19 cases globally · React, Chart.js, Disease.sh API",
       },
       facebook: {
         title: "Facebook Clone",
         description: "Demo facebook-clone with React and firebase",
+        additionalInfo:
+          "Social media platform clone with authentication and real-time database · React, Firebase, Material UI",
       },
       abz: {
         title: "ABZ-test task",
         description:
           "Delivered pixel-perfect layouts with a strong focus on performance optimization",
+        additionalInfo:
+          "High-performance agency landing page with pixel-perfect design · HTML, SCSS, JavaScript",
       },
       bootstrap: {
         title: "Simple bootstrap app",
         description: "Simple site with bootstrap",
+        additionalInfo:
+          "Responsive web application built with Bootstrap 5 framework · HTML, Bootstrap, jQuery",
       },
       menu: {
         title: "Simple menu",
         description: "Simple menu for restaurant",
+        additionalInfo:
+          "Interactive digital menu for restaurants and cafes · React, CSS",
       },
     },
 
@@ -491,6 +538,14 @@ export const translations: Record<
         result:
           "Повна ліквідація залежності від розробників при створенні форм. Час виходу продукту на ринок (Time-to-Market) скоротився з кількох тижнів до кількох годин.",
       },
+      youtube: {
+        challenge:
+          "Створення функціонального інтерфейсу для потокового відео, який ефективно взаємодіє з YouTube Data API, забезпечуючи плавний досвід користувача на всіх пристроях.",
+        solution:
+          "Розроблено додаток на React з інтеграцією YouTube v3 API. Реалізовано систему глобального пошуку, фільтрацію за категоріями та кастомну сторінку відеоплеєра з рекомендованим контентом.",
+        result:
+          "Повністю функціональна та адаптивна відеоплатформа, що забезпечує користувацький досвід, аналогічний оригінальному інтерфейсу YouTube, з високою швидкістю пошуку та продуктивністю.",
+      },
     },
 
     // Projects data
@@ -528,50 +583,72 @@ export const translations: Record<
         description:
           "Повноцінне рішення для управління хостелом з бронюванням кімнат, реєстрацією гостей та адміністративним дашбордом для об'єктів розміщення.",
         additionalInfo:
-          "Fullstack система бронювання з доступністю в реальному часі, управлінням гостями та відстеженням резервацій · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Full-stack система бронювання з доступністю в реальному часі, управлінням гостями та відстеженням резервацій · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       deals: {
         title: "CRM система для угод",
         description:
           "Платформа управління відносинами з клієнтами для відстеження угод, керування взаємодією з клієнтами та моніторингу прогресу воронки продажів.",
         additionalInfo:
-          "Управління воронкою продажів з відстеженням угод, базою даних клієнтів та аналітичним дашбордом · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Sales pipeline management with deal tracking, client database, and analytics dashboard · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       candidates: {
         title: "CandidatesHub - CRM система кандидатів",
         description:
           "Система управління рекрутингом для відстеження кандидатів на роботу, управління процесами співбесід та організації робочих процесів найму.",
         additionalInfo:
-          "Система відстеження заявників з профілями кандидатів, плануванням співбесід та аналітикою рекрутингу · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       matrix: {
         title: "Матрична таблиця",
-        description: "Проста згенерована матрична таблиця з React з можливістю відображення та прораховування статистичних даних",
+        description:
+          "Проста згенерована матрична таблиця з React з можливістю відображення та прораховування статистичних даних",
+        additionalInfo:
+          "Інтерактивна сітка з динамічним розрахунком та візуалізацією даних · React, CSS Modules",
+      },
+      webstudio: {
+        title: "Веб-студія",
+        description: "Веб-студія для створення веб-сайтів.",
+        additionalInfo:
+          "Лендінг для діджитал-агентства з сучасним UI/UX та плавними анімаціями · HTML, CSS, JavaScript",
       },
       youtube: {
         title: "Клон YouTube",
-        description: "Міні-клон YouTube з пошуком, списком відео та відеоплеєром",
+        description:
+          "Міні-клон YouTube з пошуком, списком відео та відеоплеєром",
+        additionalInfo:
+          "Відеоплатформа на базі React з інтеграцією YouTube Data API v3, пошуком у реальному часі та адаптивним плеєром · React, Material UI, YouTube API, Firebase",
       },
       covid: {
         title: "Трекер Covid-19",
         description: "Трекер для відстеження covid-19",
+        additionalInfo:
+          "Дашборд статистики в реальному часі для відстеження випадків COVID-19 у світі · React, Chart.js, Disease.sh API",
       },
       facebook: {
         title: "Клон Facebook",
         description: "Демо клон facebook з React та firebase",
+        additionalInfo:
+          "Клон соціальної мережі з автентифікацією та базою даних у реальному часі · React, Firebase, Material UI",
       },
       abz: {
         title: "Тестове завдання ABZ",
         description:
           "Pixel-perfect верстка з сильним фокусом на оптимізацію продуктивності",
+        additionalInfo:
+          "Високопродуктивний лендінг агентства з піксель-перфект дизайном · HTML, SCSS, JavaScript",
       },
       bootstrap: {
         title: "Простий додаток на bootstrap",
         description: "Простий сайт з bootstrap",
+        additionalInfo:
+          "Адаптивний веб-додаток, побудований на фреймворку Bootstrap 5 · HTML, Bootstrap, jQuery",
       },
       menu: {
         title: "Просте меню",
         description: "Просте меню для ресторану",
+        additionalInfo:
+          "Інтерактивне цифрове меню для ресторанів та кафе · React, CSS",
       },
     },
 
@@ -698,6 +775,14 @@ export const translations: Record<
         result:
           "Пълно премахване на зависимостта от разработчици при създаване на форми. Времето за пускане на продукт на пазара е намалено от няколко седмици на няколко часа.",
       },
+      youtube: {
+        challenge:
+          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
+        solution:
+          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
+        result:
+          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
+      },
     },
 
     // Projects data
@@ -742,43 +827,65 @@ export const translations: Record<
         description:
           "Платформа за управление на взаимоотношенията с клиенти за проследяване на сделки, управление на взаимодействия с клиенти и наблюдение на напредъка на продажбената фуния.",
         additionalInfo:
-          "Управление на продажбена фуния с проследяване на сделки, база данни с клиенти и аналитично табло · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Sales pipeline management with deal tracking, client database, and analytics dashboard · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       candidates: {
         title: "CandidatesHub - CRM система за кандидати",
         description:
           "Система за управление на набиране на персонал за проследяване на кандидати за работа, управление на процеси на интервюта и организиране на работни потоци за наемане.",
         additionalInfo:
-          "Система за проследяване на кандидати с профили на кандидати, планиране на интервюта и аналитика за набиране · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       matrix: {
         title: "Матрична таблица",
-        description: "Проста генерирана матрична таблица с React с възможност за показване и изчисляване на статистически данни",
+        description:
+          "Проста генерирана матрична таблица с React с възможност за показване и изчисляване на статистически данни",
+        additionalInfo:
+          "Интерактивна мрежа с динамично изчисляване и визуализация на данни · React, CSS Modules",
+      },
+      webstudio: {
+        title: "Уеб студио",
+        description: "Уеб студио за създаване на уебсайтове.",
+        additionalInfo:
+          "Лендинг страница за дигитална агенция с модерен UI/UX и плавни анимации · HTML, CSS, JavaScript",
       },
       youtube: {
         title: "Клонинг на YouTube",
-        description: "Мини клонинг на YouTube с търсене, списък с видеа и видео плейър",
+        description:
+          "Мини клонинг на YouTube с търсене, списък с видеа и видео плейър",
+        additionalInfo:
+          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
       },
       covid: {
         title: "Тракер за Covid-19",
         description: "Тракер за covid-19",
+        additionalInfo:
+          "Табло със статистика в реално време за проследяване на случаите на COVID-19 в световен мащаб · React, Chart.js, Disease.sh API",
       },
       facebook: {
         title: "Клонинг на Facebook",
         description: "Демо клонинг на facebook с React и firebase",
+        additionalInfo:
+          "Клонинг на социална медийна платформа с автентификация и база данни в реално време · React, Firebase, Material UI",
       },
       abz: {
         title: "Тестова задача ABZ",
         description:
           "Доставени pixel-perfect оформления със силен фокус върху оптимизация на производителността",
+        additionalInfo:
+          "Високопроизводителна лендинг страница на агенция с пиксел-перфектен дизайн · HTML, SCSS, JavaScript",
       },
       bootstrap: {
         title: "Просто приложение с bootstrap",
         description: "Прост сайт с bootstrap",
+        additionalInfo:
+          "Адаптивно уеб приложение, изградено с рамката Bootstrap 5 · HTML, Bootstrap, jQuery",
       },
       menu: {
         title: "Просто меню",
         description: "Просто меню за ресторант",
+        additionalInfo:
+          "Интерактивно цифрово меню за ресторанти и кафенета · React, CSS",
       },
     },
 
@@ -905,6 +1012,14 @@ export const translations: Record<
         result:
           "Całkowite wyeliminowanie zależności od programistów przy tworzeniu formularzy. Czas wprowadzenia produktu na rynek skrócony z kilku tygodni do kilku godzin.",
       },
+      youtube: {
+        challenge:
+          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
+        solution:
+          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
+        result:
+          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
+      },
     },
 
     // Projects data
@@ -949,43 +1064,65 @@ export const translations: Record<
         description:
           "Platforma zarządzania relacjami z klientami do śledzenia transakcji, zarządzania interakcjami z klientami i monitorowania postępów w lejku sprzedaży.",
         additionalInfo:
-          "Zarządzanie lejkiem sprzedaży ze śledzeniem transakcji, bazą danych klientów i dashboardem analitycznym · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Sales pipeline management with deal tracking, client database, and analytics dashboard · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       candidates: {
         title: "CandidatesHub - System CRM kandydatów",
         description:
           "System zarządzania rekrutacją do śledzenia kandydatów do pracy, zarządzania procesami rozmów kwalifikacyjnych i organizowania przepływów pracy rekrutacyjnej.",
         additionalInfo:
-          "System śledzenia kandydatów z profilami kandydatów, planowaniem rozmów kwalifikacyjnych i analityką rekrutacyjną · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       matrix: {
         title: "Tabela macierzowa",
-        description: "Prosta wygenerowana tabela macierzowa z React z możliwością wyświetlania i obliczania danych statystycznych",
+        description:
+          "Prosta wygenerowana tabela macierzowa z React z możliwością wyświetlania i obliczania danych statystycznych",
+        additionalInfo:
+          "Interaktywna siatka z dynamicznym obliczaniem i wizualizacją danych · React, CSS Modules",
+      },
+      webstudio: {
+        title: "Studio internetowe",
+        description: "Studio internetowe do tworzenia stron internetowych.",
+        additionalInfo:
+          "Strona docelowa dla agencji cyfrowej z nowoczesnym interfejsem UI/UX i płynnymi animacjami · HTML, CSS, JavaScript",
       },
       youtube: {
         title: "Klon YouTube",
-        description: "Mini klon YouTube z wyszukiwaniem, listą wideo i odtwarzaczem wideo",
+        description:
+          "Mini klon YouTube z wyszukiwaniem, listą wideo i odtwarzaczem wideo",
+        additionalInfo:
+          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
       },
       covid: {
         title: "Tracker Covid-19",
         description: "Tracker dla covid-19",
+        additionalInfo:
+          "Panel statystyk w czasie rzeczywistym do śledzenia przypadków COVID-19 na całym świecie · React, Chart.js, Disease.sh API",
       },
       facebook: {
         title: "Klon Facebook",
         description: "Demo klon facebook z React i firebase",
+        additionalInfo:
+          "Klon platformy mediów społecznościowych z uwierzytelnianiem i bazą danych w czasie rzeczywistym · React, Firebase, Material UI",
       },
       abz: {
         title: "Zadanie testowe ABZ",
         description:
           "Dostarczone układy pixel-perfect z silnym naciskiem na optymalizację wydajności",
+        additionalInfo:
+          "Wysokowydajna strona docelowa agencji o perfekcyjnym wyglądzie · HTML, SCSS, JavaScript",
       },
       bootstrap: {
         title: "Prosta aplikacja bootstrap",
         description: "Prosta strona z bootstrap",
+        additionalInfo:
+          "Responsywna aplikacja internetowa zbudowana z wykorzystaniem frameworka Bootstrap 5 · HTML, Bootstrap, jQuery",
       },
       menu: {
         title: "Proste menu",
         description: "Proste menu dla restauracji",
+        additionalInfo:
+          "Interaktywne cyfrowe menu dla restauracji i kawiarni · React, CSS",
       },
     },
 
@@ -1112,6 +1249,14 @@ export const translations: Record<
         result:
           "Completa eliminazione della dipendenza dagli sviluppatori nella creazione di moduli. Time-to-Market ridotto da diverse settimane a poche ore.",
       },
+      youtube: {
+        challenge:
+          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
+        solution:
+          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
+        result:
+          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
+      },
     },
 
     // Projects data
@@ -1149,50 +1294,72 @@ export const translations: Record<
         description:
           "Soluzione completa per la gestione di ostelli con prenotazione camere, registrazione ospiti e dashboard amministrativa per strutture ricettive.",
         additionalInfo:
-          "Sistema di prenotazione fullstack con disponibilità in tempo reale, gestione ospiti e tracciamento prenotazioni · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Fullstack sistema di prenotazione con disponibilità in tempo reale, gestione ospiti e tracciamento prenotazioni · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       deals: {
         title: "Sistema CRM per trattative",
         description:
           "Piattaforma di gestione delle relazioni con i clienti per il tracciamento delle trattative, la gestione delle interazioni con i clienti e il monitoraggio del progresso della pipeline di vendita.",
         additionalInfo:
-          "Gestione pipeline di vendita con tracciamento trattative, database clienti e dashboard analitico · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Sales pipeline management with deal tracking, client database, and analytics dashboard · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       candidates: {
         title: "CandidatesHub - Sistema CRM candidati",
         description:
           "Sistema di gestione del reclutamento per il tracciamento dei candidati di lavoro, la gestione dei processi di colloquio e l'organizzazione dei flussi di lavoro di assunzione.",
         additionalInfo:
-          "Sistema di tracciamento candidati con profili candidati, pianificazione colloqui e analisi reclutamento · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       matrix: {
         title: "Tabella a matrice",
-        description: "Semplice tabella a matrice generata con React con visualizzazione e calcolo di dati statistici",
+        description:
+          "Semplice tabella a matrice generata con React con visualizzazione e calcolo di dati statistici",
+        additionalInfo:
+          "Griglia interattiva con calcolo dinamico e visualizzazione dei dati · React, CSS Modules",
+      },
+      webstudio: {
+        title: "Web-studio",
+        description: "Studio web per la creazione di siti web.",
+        additionalInfo:
+          "Landing page per un'agenzia digitale con UI/UX moderna e animazioni fluide · HTML, CSS, JavaScript",
       },
       youtube: {
         title: "Clone YouTube",
-        description: "Mini clone YouTube con ricerca, lista video e lettore video",
+        description:
+          "Mini clone YouTube con ricerca, lista video e lettore video",
+        additionalInfo:
+          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
       },
       covid: {
         title: "Tracker Covid-19",
         description: "Tracker per covid-19",
+        additionalInfo:
+          "Dashboard delle statistiche in tempo reale per il monitoraggio dei casi di COVID-19 a livello globale · React, Chart.js, Disease.sh API",
       },
       facebook: {
         title: "Clone Facebook",
         description: "Demo clone di facebook con React e firebase",
+        additionalInfo:
+          "Clone di una piattaforma di social media con autenticazione e database in tempo reale · React, Firebase, Material UI",
       },
       abz: {
         title: "Compito test ABZ",
         description:
           "Layout pixel-perfect con forte focus sull'ottimizzazione delle prestazioni",
+        additionalInfo:
+          "Landing page di un'agenzia ad alte prestazioni con design pixel-perfect · HTML, SCSS, JavaScript",
       },
       bootstrap: {
         title: "App bootstrap semplice",
         description: "Sito semplice con bootstrap",
+        additionalInfo:
+          "Applicazione web responsive costruita con il framework Bootstrap 5 · HTML, Bootstrap, jQuery",
       },
       menu: {
         title: "Menu semplice",
         description: "Menu semplice per ristorante",
+        additionalInfo:
+          "Menu digitale interattivo per ristoranti e caffè · React, CSS",
       },
     },
 
@@ -1319,6 +1486,14 @@ export const translations: Record<
         result:
           "Élimination complète de la dépendance aux développeurs lors de la création de formulaires. Time-to-Market réduit de plusieurs semaines à quelques heures.",
       },
+      youtube: {
+        challenge:
+          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
+        solution:
+          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
+        result:
+          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
+      },
     },
 
     // Projects data
@@ -1356,50 +1531,72 @@ export const translations: Record<
         description:
           "Solution complète de gestion d'auberge avec réservation de chambres, enregistrement des clients et tableau de bord administratif pour les établissements d'hébergement.",
         additionalInfo:
-          "Système de réservation fullstack avec disponibilité en temps réel, gestion des clients et suivi des réservations · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Fullstack système de réservation avec disponibilité en temps réel, gestion des clients et suivi des réservations · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       deals: {
         title: "Système CRM pour les affaires",
         description:
           "Plateforme de gestion des relations clients pour suivre les affaires, gérer les interactions avec les clients et surveiller la progression du pipeline de ventes.",
         additionalInfo:
-          "Gestion du pipeline de ventes avec suivi des affaires, base de données clients et tableau de bord analytique · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Sales pipeline management with deal tracking, client database, and analytics dashboard · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       candidates: {
         title: "CandidatesHub - Système CRM de candidats",
         description:
           "Système de gestion du recrutement pour suivre les candidats à l'emploi, gérer les processus d'entretien et organiser les flux de travail d'embauche.",
         additionalInfo:
-          "Système de suivi des candidats avec profils de candidats, planification d'entretiens et analyses de recrutement · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+          "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
       matrix: {
         title: "Tableau matriciel",
-        description: "Simple tableau matriciel généré avec React avec affichage et calcul de données statistiques",
+        description:
+          "Simple tableau matriciel généré avec React avec affichage et calcul de données statistiques",
+        additionalInfo:
+          "Grille interactive avec calcul dynamique et visualisation des données · React, CSS Modules",
+      },
+      webstudio: {
+        title: "Studio Web",
+        description: "Studio Web pour la création de sites Web.",
+        additionalInfo:
+          "Page d'accueil pour une agence numérique avec une interface UI/UX moderne et des animations fluides · HTML, CSS, JavaScript",
       },
       youtube: {
         title: "Clone YouTube",
-        description: "Mini clone YouTube avec recherche, liste de vidéos et lecteur vidéo",
+        description:
+          "Mini clone YouTube avec recherche, liste de vidéos et lecteur vidéo",
+        additionalInfo:
+          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
       },
       covid: {
         title: "Tracker Covid-19",
         description: "Tracker pour covid-19",
+        additionalInfo:
+          "Tableau de bord des statistiques en temps réel pour le suivi des cas de COVID-19 dans le monde · React, Chart.js, Disease.sh API",
       },
       facebook: {
         title: "Clone Facebook",
         description: "Démo clone de facebook avec React et firebase",
+        additionalInfo:
+          "Clone de plateforme de médias sociaux avec authentification et base de données en temps réel · React, Firebase, Material UI",
       },
       abz: {
         title: "Tâche de test ABZ",
         description:
           "Mise en page pixel-perfect avec un fort accent sur l'optimisation des performances",
+        additionalInfo:
+          "Page d'accueil d'agence haute performance avec un design pixel-perfect · HTML, SCSS, JavaScript",
       },
       bootstrap: {
         title: "Application bootstrap simple",
         description: "Site simple avec bootstrap",
+        additionalInfo:
+          "Application web responsive construite avec le framework Bootstrap 5 · HTML, Bootstrap, jQuery",
       },
       menu: {
         title: "Menu simple",
         description: "Menu simple pour restaurant",
+        additionalInfo:
+          "Menu numérique interactif pour les restaurants et les cafés · React, CSS",
       },
     },
 
