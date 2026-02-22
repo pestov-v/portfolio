@@ -40,7 +40,7 @@ $card-gap: 2em;
   // ─── Card wrapper ────────────────────────────────────────────────
   .cardWrapper {
     width: 100%;
-    height: $card-h;       // uniform height for all non-active cards
+    height: $card-h; // uniform height for all non-active cards
     cursor: pointer;
     outline: none;
 
@@ -165,7 +165,7 @@ $card-gap: 2em;
 
   .additionalInfo {
     font-size: 0.78rem;
-    color: var(--color-primary);
+    color: var(--text-primary);
     font-weight: 500;
     padding-top: 0.75em;
     border-top: 1px solid var(--border-color);
@@ -310,14 +310,18 @@ $card-gap: 2em;
     max-width: 1200px;
     margin: 3em auto 0;
     padding: 2.5em;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
     border-radius: 1.5em;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -50%;
       right: -10%;
@@ -402,6 +406,11 @@ $card-gap: 2em;
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
