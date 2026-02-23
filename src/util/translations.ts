@@ -7,6 +7,7 @@ export interface Translation {
   // Navigation
   about: string;
   skills: string;
+  experience: string;
   projects: string;
   contact: string;
 
@@ -40,6 +41,10 @@ export interface Translation {
   // Skills section
   mySkills: string;
   skillsBgText: string;
+
+  // Experience section
+  myExperience: string;
+  experienceBgText: string;
 
   // Projects section
   portfolio: string;
@@ -88,11 +93,6 @@ export interface Translation {
       solution: string;
       result: string;
     };
-    youtube: {
-      challenge: string;
-      solution: string;
-      result: string;
-    };
   };
 
   // Projects data
@@ -132,45 +132,34 @@ export interface Translation {
       description: string;
       additionalInfo: string;
     };
-    matrix: {
-      title: string;
-      description: string;
-      additionalInfo: string;
-    };
     webstudio: {
       title: string;
       description: string;
       additionalInfo: string;
     };
-    youtube: {
+    novus: {
       title: string;
       description: string;
       additionalInfo: string;
     };
-    covid: {
-      title: string;
-      description: string;
-      additionalInfo: string;
+  };
+
+  // Experience data
+  experienceData: {
+    ukrpay: {
+      position: string;
+      companyDescription: string;
+      achievements: string[];
     };
-    facebook: {
-      title: string;
-      description: string;
-      additionalInfo: string;
+    atlana: {
+      position: string;
+      companyDescription: string;
+      achievements: string[];
     };
-    abz: {
-      title: string;
-      description: string;
-      additionalInfo: string;
-    };
-    bootstrap: {
-      title: string;
-      description: string;
-      additionalInfo: string;
-    };
-    menu: {
-      title: string;
-      description: string;
-      additionalInfo: string;
+    impltech: {
+      position: string;
+      companyDescription: string;
+      achievements: string[];
     };
   };
 
@@ -212,15 +201,16 @@ export const translations: Record<
     // Navigation
     about: "about",
     skills: "skills",
+    experience: "experience",
     projects: "projects",
     contact: "mail me",
 
     // About section
     aboutMe: "About me",
     aboutBgText: "Aboutme",
-    jobTitle: "Web Developer & UI/UX Designer",
+    jobTitle: "Senior Full-Stack Developer",
     description:
-      "Front-end developer with 5+ years of experience designing and building responsive web design and mobile apps. Proficient with CSS and JS Frameworks, with extensive knowledge of UX and user psychology.",
+      "Senior Full-Stack Developer with 7+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript architectures, leading development teams, and mentoring engineers. Proven track record of delivering enterprise solutions that drive business outcomes.",
     personalInfo: {
       name: "Name",
       birthday: "Birthday",
@@ -241,11 +231,15 @@ export const translations: Record<
     // Personal values
     available: "Available",
     master: "Master",
-    fiveYearsPlus: "5+ years",
+    fiveYearsPlus: "7+ years",
 
     // Skills section
     mySkills: "My Skills",
     skillsBgText: "Skills",
+
+    // Experience section
+    myExperience: "Work Experience",
+    experienceBgText: "Experience",
 
     // Projects section
     portfolio: "portfolio",
@@ -266,9 +260,9 @@ export const translations: Record<
     letsWorkTogether: "Let's work together...",
 
     // Meta tags
-    portfolioTitle: "Portfolio - Volodymyr Pestov",
+    portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "WebDeveloper, WebDesigner, FrontEnd, BackEnd - Volodymyr Pestov's portfolio",
+      "Senior Full-Stack Developer with 7+ years of experience in fintech, React, TypeScript — portfolio of Volodymyr Pestov",
 
     // Language switcher
     language: "Language",
@@ -300,14 +294,6 @@ export const translations: Record<
           "Developed a custom No-Code system based on JSON Schema and React. Implemented a visual constructor with 30+ field types, complex conditional logic, and on-the-fly validation. Applied React virtualization for large forms (100+ fields) to maintain high performance.",
         result:
           "Complete elimination of developer dependency when creating forms. Time-to-Market reduced from several weeks to several hours.",
-      },
-      youtube: {
-        challenge:
-          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
-        solution:
-          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
-        result:
-          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
       },
     },
 
@@ -362,57 +348,52 @@ export const translations: Record<
         additionalInfo:
           "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
-      matrix: {
-        title: "Matrix table",
-        description:
-          "Simple generated matrix table with React featuring statistical data display and calculation",
-        additionalInfo:
-          "Interactive grid with dynamic data calculation and visualization · React, CSS Modules",
-      },
       webstudio: {
         title: "Web-studio",
         description: "Web-studio for creating websites.",
         additionalInfo:
           "Landing page for a digital agency with modern UI/UX and smooth animations · HTML, CSS, JavaScript",
       },
-      youtube: {
-        title: "Youtube Clone",
+      novus: {
+        title: "Novus - Web Development Agency",
         description:
-          "Mini youtube clone with search, video list, and video player",
+          "Modern web development agency website with sleek design, smooth animations, and responsive layout.",
         additionalInfo:
-          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
+          "Creative agency landing page with modern animations and premium design · NextJS, TypeScript, TailwindCSS",
       },
-      covid: {
-        title: "Covid-19 tracker",
-        description: "Tracker for covid-19",
-        additionalInfo:
-          "Real-time statistics dashboard for tracking COVID-19 cases globally · React, Chart.js, Disease.sh API",
+    },
+
+    // Experience data
+    experienceData: {
+      ukrpay: {
+        position: "Senior Front-End Developer",
+        companyDescription: "Leading fintech company specializing in payment solutions.",
+        achievements: [
+          "Architected merchant management platform serving 500+ merchants and processing 10,000+ daily transactions with zero downtime during 3x user growth.",
+          "Designed and implemented a reusable component library with 40+ components, cutting feature development time by 40%.",
+          "Optimized application bundle with code-splitting and lazy loading, improving initial page load by 35%.",
+          "Platform scaled 3x with zero architecture rewrites."
+        ]
       },
-      facebook: {
-        title: "Facebook Clone",
-        description: "Demo facebook-clone with React and firebase",
-        additionalInfo:
-          "Social media platform clone with authentication and real-time database · React, Firebase, Material UI",
+      atlana: {
+        position: "Front-End Developer",
+        companyDescription: "Real estate technology company focused on enhancing property search experiences.",
+        achievements: [
+          "Developed interactive property search with Mapbox integration, geolocation filtering, and advanced faceted search.",
+          "Created SEO-optimized listing pages using Next.js SSG, driving organic traffic growth.",
+          "Achieved 95+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO.",
+          "Reduced page load time by 50%."
+        ]
       },
-      abz: {
-        title: "ABZ-test task",
-        description:
-          "Delivered pixel-perfect layouts with a strong focus on performance optimization",
-        additionalInfo:
-          "High-performance agency landing page with pixel-perfect design · HTML, SCSS, JavaScript",
-      },
-      bootstrap: {
-        title: "Simple bootstrap app",
-        description: "Simple site with bootstrap",
-        additionalInfo:
-          "Responsive web application built with Bootstrap 5 framework · HTML, Bootstrap, jQuery",
-      },
-      menu: {
-        title: "Simple menu",
-        description: "Simple menu for restaurant",
-        additionalInfo:
-          "Interactive digital menu for restaurants and cafes · React, CSS",
-      },
+      impltech: {
+        position: "Front-End Developer",
+        companyDescription: "A tech company developing innovative solutions for real-time trading.",
+        achievements: [
+          "Built a live trading interface streaming 50+ stock symbols simultaneously with <50ms UI update latency.",
+          "Mentored 2 junior developers on WebSocket patterns and React performance optimization.",
+          "Sustained 1,000+ price updates/second during peak trading hours with consistent sub-50ms rendering."
+        ]
+      }
     },
 
     // Demo page
@@ -449,15 +430,16 @@ export const translations: Record<
     // Navigation
     about: "про мене",
     skills: "навички",
+    experience: "досвід",
     projects: "проекти",
     contact: "написати",
 
     // About section
     aboutMe: "Про мене",
     aboutBgText: "Aboutme",
-    jobTitle: "Web-розробник і UI/UX дизайнер",
+    jobTitle: "Senior Full-Stack Розробник",
     description:
-      "Front-end розробник з 5+ роками досвіду проектування та створення адаптивного web-дизайну та мобільних додатків. Володію CSS та JS фреймворками, маю глибокі знання UX та психології користувачів.",
+      "Senior Full-Stack розробник з 7+ роками досвіду створення високопродуктивних фінтех-платформ. Експертиза в масштабованих архітектурах React/TypeScript, керівництві командами розробки та менторстві інженерів. Підтверджений досвід створення корпоративних рішень, що впливають на бізнес-результати.",
     personalInfo: {
       name: "Ім'я",
       birthday: "День народження",
@@ -478,11 +460,15 @@ export const translations: Record<
     // Personal values
     available: "Доступний",
     master: "Магістр",
-    fiveYearsPlus: "5+ років",
+    fiveYearsPlus: "7+ років",
 
     // Skills section
     mySkills: "Мої навички",
     skillsBgText: "Skills",
+
+    // Experience section
+    myExperience: "Досвід роботи",
+    experienceBgText: "Досвід",
 
     // Projects section
     portfolio: "портфоліо",
@@ -503,9 +489,9 @@ export const translations: Record<
     letsWorkTogether: "Давайте працювати разом...",
 
     // Meta tags
-    portfolioTitle: "Портфоліо - Володимир Пестов",
+    portfolioTitle: "Володимир Пестов — Senior Full-Stack Розробник",
     portfolioDescription:
-      "Web-розробник, Web-дизайнер, FrontEnd, BackEnd - портфоліо Володимира Пестова",
+      "Senior Full-Stack розробник з 7+ роками досвіду у фінтех, React, TypeScript — портфоліо Володимира Пестова",
 
     // Language switcher
     language: "Мова",
@@ -537,14 +523,6 @@ export const translations: Record<
           "Розробив власну No-Code систему на базі JSON Schema та React. Впровадив візуальний конструктор з 30+ типами полів, складною умовною логікою та валідацією на льоту. Для роботи з великими формами (100+ полів) застосував віртуалізацію React для підтримки високої продуктивності.",
         result:
           "Повна ліквідація залежності від розробників при створенні форм. Час виходу продукту на ринок (Time-to-Market) скоротився з кількох тижнів до кількох годин.",
-      },
-      youtube: {
-        challenge:
-          "Створення функціонального інтерфейсу для потокового відео, який ефективно взаємодіє з YouTube Data API, забезпечуючи плавний досвід користувача на всіх пристроях.",
-        solution:
-          "Розроблено додаток на React з інтеграцією YouTube v3 API. Реалізовано систему глобального пошуку, фільтрацію за категоріями та кастомну сторінку відеоплеєра з рекомендованим контентом.",
-        result:
-          "Повністю функціональна та адаптивна відеоплатформа, що забезпечує користувацький досвід, аналогічний оригінальному інтерфейсу YouTube, з високою швидкістю пошуку та продуктивністю.",
       },
     },
 
@@ -599,57 +577,52 @@ export const translations: Record<
         additionalInfo:
           "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
-      matrix: {
-        title: "Матрична таблиця",
-        description:
-          "Проста згенерована матрична таблиця з React з можливістю відображення та прораховування статистичних даних",
-        additionalInfo:
-          "Інтерактивна сітка з динамічним розрахунком та візуалізацією даних · React, CSS Modules",
-      },
       webstudio: {
         title: "Веб-студія",
         description: "Веб-студія для створення веб-сайтів.",
         additionalInfo:
           "Лендінг для діджитал-агентства з сучасним UI/UX та плавними анімаціями · HTML, CSS, JavaScript",
       },
-      youtube: {
-        title: "Клон YouTube",
+      novus: {
+        title: "Novus - Агентство веб-розробки",
         description:
-          "Міні-клон YouTube з пошуком, списком відео та відеоплеєром",
+          "Сучасний сайт агентства веб-розробки з елегантним дизайном, плавними анімаціями та адаптивною версткою.",
         additionalInfo:
-          "Відеоплатформа на базі React з інтеграцією YouTube Data API v3, пошуком у реальному часі та адаптивним плеєром · React, Material UI, YouTube API, Firebase",
+          "Креативний лендінг агентства з сучасними анімаціями та преміум-дизайном · NextJS, TypeScript, TailwindCSS",
       },
-      covid: {
-        title: "Трекер Covid-19",
-        description: "Трекер для відстеження covid-19",
-        additionalInfo:
-          "Дашборд статистики в реальному часі для відстеження випадків COVID-19 у світі · React, Chart.js, Disease.sh API",
+    },
+
+    // Experience data
+    experienceData: {
+      ukrpay: {
+        position: "Senior Front-End Розробник",
+        companyDescription: "Провідна фінтех-компанія, що спеціалізується на платіжних рішеннях.",
+        achievements: [
+          "Архітектура платформи управління мерчантами, що обслуговує 500+ мерчантів та обробляє 10,000+ щоденних транзакцій з нульовим простоєм під час 3x зростання користувачів.",
+          "Розробка та впровадження бібліотеки компонентів з 40+ компонентами, що скоротило час розробки функцій на 40%.",
+          "Оптимізація бандлу додатку з code-splitting та lazy loading, покращення початкового завантаження сторінки на 35%.",
+          "Платформа масштабована в 3x без перепроектування архітектури."
+        ]
       },
-      facebook: {
-        title: "Клон Facebook",
-        description: "Демо клон facebook з React та firebase",
-        additionalInfo:
-          "Клон соціальної мережі з автентифікацією та базою даних у реальному часі · React, Firebase, Material UI",
+      atlana: {
+        position: "Front-End Розробник",
+        companyDescription: "Технологічна компанія з нерухомості, орієнтована на покращення пошуку об'єктів.",
+        achievements: [
+          "Розробка інтерактивного пошуку нерухомості з інтеграцією Mapbox, геолокаційною фільтрацією та розширеним фасетним пошуком.",
+          "Створення SEO-оптимізованих сторінок лістингів з використанням Next.js SSG, що стимулювало зростання органічного трафіку.",
+          "Досягнення 95+ балів Lighthouse за Performance, Accessibility, Best Practices та SEO.",
+          "Скорочення часу завантаження сторінки на 50%."
+        ]
       },
-      abz: {
-        title: "Тестове завдання ABZ",
-        description:
-          "Pixel-perfect верстка з сильним фокусом на оптимізацію продуктивності",
-        additionalInfo:
-          "Високопродуктивний лендінг агентства з піксель-перфект дизайном · HTML, SCSS, JavaScript",
-      },
-      bootstrap: {
-        title: "Простий додаток на bootstrap",
-        description: "Простий сайт з bootstrap",
-        additionalInfo:
-          "Адаптивний веб-додаток, побудований на фреймворку Bootstrap 5 · HTML, Bootstrap, jQuery",
-      },
-      menu: {
-        title: "Просте меню",
-        description: "Просте меню для ресторану",
-        additionalInfo:
-          "Інтерактивне цифрове меню для ресторанів та кафе · React, CSS",
-      },
+      impltech: {
+        position: "Front-End Розробник",
+        companyDescription: "Технологічна компанія, що розробляє інноваційні рішення для торгівлі в реальному часі.",
+        achievements: [
+          "Створення інтерфейсу для торгівлі в реальному часі з одночасною трансляцією 50+ символів акцій з затримкою оновлення UI менше 50мс.",
+          "Менторство 2 junior розробників з WebSocket патернів та оптимізації продуктивності React.",
+          "Підтримка 1,000+ оновлень цін/секунду в пікові години торгів з стабільним рендерингом менше 50мс."
+        ]
+      }
     },
 
     // Demo page
@@ -686,15 +659,16 @@ export const translations: Record<
     // Navigation
     about: "за мен",
     skills: "умения",
+    experience: "опит",
     projects: "проекти",
     contact: "пиши ми",
 
     // About section
     aboutMe: "За мен",
     aboutBgText: "Aboutme",
-    jobTitle: "Web разработчик и UI/UX дизайнер",
+    jobTitle: "Senior Full-Stack Разработчик",
     description:
-      "Front-end разработчик с 5+ години опит в проектирането и създаването на адаптивен web дизайн и мобилни приложения. Владея CSS и JS фреймуърци, имам задълбочени познания по UX и психология на потребителите.",
+      "Senior Full-Stack разработчик с 7+ години опит в изграждането на високопроизводителни финтех платформи. Експертиза в мащабируеми React/TypeScript архитектури, ръководство на екипи за разработка и менторство на инженери. Доказан опит в изграждането на корпоративни решения, които подобряват бизнес резултатите.",
     personalInfo: {
       name: "Име",
       birthday: "Рожден ден",
@@ -715,11 +689,15 @@ export const translations: Record<
     // Personal values
     available: "Наличен",
     master: "Магистър",
-    fiveYearsPlus: "5+ години",
+    fiveYearsPlus: "7+ години",
 
     // Skills section
     mySkills: "Моите умения",
     skillsBgText: "Skills",
+
+    // Experience section
+    myExperience: "Трудов опит",
+    experienceBgText: "Опит",
 
     // Projects section
     portfolio: "портфолио",
@@ -740,9 +718,9 @@ export const translations: Record<
     letsWorkTogether: "Нека работим заедно...",
 
     // Meta tags
-    portfolioTitle: "Портфолио - Володимир Пестов",
+    portfolioTitle: "Володимир Пестов — Senior Full-Stack Разработчик",
     portfolioDescription:
-      "Web разработчик, Web дизайнер, FrontEnd, BackEnd - портфолио на Володимир Пестов",
+      "Senior Full-Stack разработчик с 7+ години опит във финтех, React, TypeScript — портфолио на Володимир Пестов",
 
     // Language switcher
     language: "Език",
@@ -774,14 +752,6 @@ export const translations: Record<
           "Разработена е персонализирана No-Code система, базирана на JSON Schema и React. Внедрен е визуален конструктор с над 30 типа полета, сложна условна логика и валидация в движение. Приложена е React виртуализация за големи форми (над 100 полета) за поддържане на висока производителност.",
         result:
           "Пълно премахване на зависимостта от разработчици при създаване на форми. Времето за пускане на продукт на пазара е намалено от няколко седмици на няколко часа.",
-      },
-      youtube: {
-        challenge:
-          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
-        solution:
-          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
-        result:
-          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
       },
     },
 
@@ -836,57 +806,52 @@ export const translations: Record<
         additionalInfo:
           "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
-      matrix: {
-        title: "Матрична таблица",
-        description:
-          "Проста генерирана матрична таблица с React с възможност за показване и изчисляване на статистически данни",
-        additionalInfo:
-          "Интерактивна мрежа с динамично изчисляване и визуализация на данни · React, CSS Modules",
-      },
       webstudio: {
         title: "Уеб студио",
         description: "Уеб студио за създаване на уебсайтове.",
         additionalInfo:
           "Лендинг страница за дигитална агенция с модерен UI/UX и плавни анимации · HTML, CSS, JavaScript",
       },
-      youtube: {
-        title: "Клонинг на YouTube",
+      novus: {
+        title: "Novus - Агенция за уеб разработка",
         description:
-          "Мини клонинг на YouTube с търсене, списък с видеа и видео плейър",
+          "Модерен уебсайт на агенция за уеб разработка с елегантен дизайн, плавни анимации и адаптивно оформление.",
         additionalInfo:
-          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
+          "Креативна лендинг страница за агенция с модерни анимации и премиум дизайн · NextJS, TypeScript, TailwindCSS",
       },
-      covid: {
-        title: "Тракер за Covid-19",
-        description: "Тракер за covid-19",
-        additionalInfo:
-          "Табло със статистика в реално време за проследяване на случаите на COVID-19 в световен мащаб · React, Chart.js, Disease.sh API",
+    },
+
+    // Experience data
+    experienceData: {
+      ukrpay: {
+        position: "Senior Front-End Разработчик",
+        companyDescription: "Водеща финтех компания, специализирана в платежни решения.",
+        achievements: [
+          "Архитектура на платформа за управление на търговци, обслужваща 500+ търговци и обработваща 10,000+ дневни транзакции с нулево престой при 3x ръст на потребители.",
+          "Проектиране и внедряване на библиотека от компоненти с 40+ компонента, намаляваща времето за разработка на функции с 40%.",
+          "Оптимизация на пакета на приложението с code-splitting и lazy loading, подобряване на първоначалното зареждане на страницата с 35%.",
+          "Платформата мащабирана 3x без архитектурни преписвания."
+        ]
       },
-      facebook: {
-        title: "Клонинг на Facebook",
-        description: "Демо клонинг на facebook с React и firebase",
-        additionalInfo:
-          "Клонинг на социална медийна платформа с автентификация и база данни в реално време · React, Firebase, Material UI",
+      atlana: {
+        position: "Front-End Разработчик",
+        companyDescription: "Технологична компания за недвижими имоти, фокусирана върху подобряване на търсенето на имоти.",
+        achievements: [
+          "Разработка на интерактивно търсене на имоти с интеграция на Mapbox, геолокационно филтриране и разширено фасетно търсене.",
+          "Създаване на SEO-оптимизирани страници с използване на Next.js SSG, стимулиращо ръста на органичния трафик.",
+          "Постигане на 95+ Lighthouse резултати за Performance, Accessibility, Best Practices и SEO.",
+          "Намаляване на времето за зареждане на страницата с 50%."
+        ]
       },
-      abz: {
-        title: "Тестова задача ABZ",
-        description:
-          "Доставени pixel-perfect оформления със силен фокус върху оптимизация на производителността",
-        additionalInfo:
-          "Високопроизводителна лендинг страница на агенция с пиксел-перфектен дизайн · HTML, SCSS, JavaScript",
-      },
-      bootstrap: {
-        title: "Просто приложение с bootstrap",
-        description: "Прост сайт с bootstrap",
-        additionalInfo:
-          "Адаптивно уеб приложение, изградено с рамката Bootstrap 5 · HTML, Bootstrap, jQuery",
-      },
-      menu: {
-        title: "Просто меню",
-        description: "Просто меню за ресторант",
-        additionalInfo:
-          "Интерактивно цифрово меню за ресторанти и кафенета · React, CSS",
-      },
+      impltech: {
+        position: "Front-End Разработчик",
+        companyDescription: "Технологична компания, разработваща иновативни решения за търговия в реално време.",
+        achievements: [
+          "Изграждане на интерфейс за търговия в реално време, стриймващ 50+ символа на акции едновременно със закъснение на обновяване на UI под 50мс.",
+          "Менторство на 2 junior разработчици по WebSocket шаблони и оптимизация на производителността на React.",
+          "Поддържане на 1,000+ обновления на цени/секунда по време на пиковите часове с последователен рендеринг под 50мс."
+        ]
+      }
     },
 
     // Demo page
@@ -923,15 +888,16 @@ export const translations: Record<
     // Navigation
     about: "o mnie",
     skills: "umiejętności",
+    experience: "doświadczenie",
     projects: "projekty",
     contact: "napisz do mnie",
 
     // About section
     aboutMe: "O mnie",
     aboutBgText: "Aboutme",
-    jobTitle: "Web Developer & UI/UX Designer",
+    jobTitle: "Senior Full-Stack Developer",
     description:
-      "Front-end developer z ponad 5-letnim doświadczeniem w projektowaniu i tworzeniu responsywnych stron internetowych oraz aplikacji mobilnych. Biegły w frameworkach CSS i JS, z rozległą wiedzą z zakresu UX i psychologii użytkownika.",
+      "Senior Full-Stack Developer z 7+ letnim doświadczeniem w tworzeniu wysokowydajnych platform fintech. Specjalizacja w skalowalnych architekturach React/TypeScript, kierowaniu zespołami deweloperskimi i mentorowaniu inżynierów. Udowodnione doświadczenie w dostarczaniu rozwiązań korporacyjnych wpływających na wyniki biznesowe.",
     personalInfo: {
       name: "Imię",
       birthday: "Data urodzenia",
@@ -952,11 +918,15 @@ export const translations: Record<
     // Personal values
     available: "Dostępny",
     master: "Magister",
-    fiveYearsPlus: "5+ lat",
+    fiveYearsPlus: "7+ lat",
 
     // Skills section
     mySkills: "Moje umiejętności",
     skillsBgText: "Skills",
+
+    // Experience section
+    myExperience: "Doświadczenie zawodowe",
+    experienceBgText: "Doświadczenie",
 
     // Projects section
     portfolio: "portfolio",
@@ -977,9 +947,9 @@ export const translations: Record<
     letsWorkTogether: "Pracujmy razem...",
 
     // Meta tags
-    portfolioTitle: "Portfolio - Volodymyr Pestov",
+    portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "WebDeveloper, WebDesigner, FrontEnd, BackEnd - portfolio Volodymyra Pestova",
+      "Senior Full-Stack Developer z 7+ letnim doświadczeniem w fintech, React, TypeScript — portfolio Volodymyra Pestova",
 
     // Language switcher
     language: "Język",
@@ -1011,14 +981,6 @@ export const translations: Record<
           "Opracowano niestandardowy system No-Code oparty na JSON Schema i React. Wdrożono wizualny konstruktor z ponad 30 typami pól, złożoną logiką warunkową i walidacją w locie. Zastosowano wirtualizację React dla dużych formularzy (ponad 100 pól) w celu utrzymania wysokiej wydajności.",
         result:
           "Całkowite wyeliminowanie zależności od programistów przy tworzeniu formularzy. Czas wprowadzenia produktu na rynek skrócony z kilku tygodni do kilku godzin.",
-      },
-      youtube: {
-        challenge:
-          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
-        solution:
-          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
-        result:
-          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
       },
     },
 
@@ -1073,57 +1035,52 @@ export const translations: Record<
         additionalInfo:
           "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
-      matrix: {
-        title: "Tabela macierzowa",
-        description:
-          "Prosta wygenerowana tabela macierzowa z React z możliwością wyświetlania i obliczania danych statystycznych",
-        additionalInfo:
-          "Interaktywna siatka z dynamicznym obliczaniem i wizualizacją danych · React, CSS Modules",
-      },
       webstudio: {
         title: "Studio internetowe",
         description: "Studio internetowe do tworzenia stron internetowych.",
         additionalInfo:
           "Strona docelowa dla agencji cyfrowej z nowoczesnym interfejsem UI/UX i płynnymi animacjami · HTML, CSS, JavaScript",
       },
-      youtube: {
-        title: "Klon YouTube",
+      novus: {
+        title: "Novus - Agencja tworzenia stron",
         description:
-          "Mini klon YouTube z wyszukiwaniem, listą wideo i odtwarzaczem wideo",
+          "Nowoczesna strona agencji tworzenia stron internetowych z eleganckim designem, płynnymi animacjami i responsywnym układem.",
         additionalInfo:
-          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
+          "Kreatywna strona docelowa agencji z nowoczesnymi animacjami i premiumowym designem · NextJS, TypeScript, TailwindCSS",
       },
-      covid: {
-        title: "Tracker Covid-19",
-        description: "Tracker dla covid-19",
-        additionalInfo:
-          "Panel statystyk w czasie rzeczywistym do śledzenia przypadków COVID-19 na całym świecie · React, Chart.js, Disease.sh API",
+    },
+
+    // Experience data
+    experienceData: {
+      ukrpay: {
+        position: "Senior Front-End Developer",
+        companyDescription: "Wiodąca firma fintech specjalizująca się w rozwiązaniach płatniczych.",
+        achievements: [
+          "Architektura platformy zarządzania sprzedawcami obsługującej 500+ sprzedawców i przetwarzającej 10 000+ dziennych transakcji z zerowym przestojem przy 3-krotnym wzroście użytkowników.",
+          "Zaprojektowanie i wdrożenie biblioteki komponentów z 40+ komponentami, skracającej czas rozwoju funkcji o 40%.",
+          "Optymalizacja pakietu aplikacji z podziałem kodu i leniwym ładowaniem, poprawiająca początkowe ładowanie strony o 35%.",
+          "Platforma przeskalowana 3x bez przebudowy architektury."
+        ]
       },
-      facebook: {
-        title: "Klon Facebook",
-        description: "Demo klon facebook z React i firebase",
-        additionalInfo:
-          "Klon platformy mediów społecznościowych z uwierzytelnianiem i bazą danych w czasie rzeczywistym · React, Firebase, Material UI",
+      atlana: {
+        position: "Front-End Developer",
+        companyDescription: "Firma technologiczna zajmująca się nieruchomościami, skoncentrowana na ulepszaniu wyszukiwania nieruchomości.",
+        achievements: [
+          "Opracowanie interaktywnego wyszukiwania nieruchomości z integracją Mapbox, filtrowaniem geolokalizacyjnym i zaawansowanym wyszukiwaniem fasetowym.",
+          "Stworzenie stron z listingami zoptymalizowanymi pod SEO przy użyciu Next.js SSG, stymulujących wzrost ruchu organicznego.",
+          "Osiągnięcie wyników Lighthouse powyżej 95 w kategoriach Performance, Accessibility, Best Practices i SEO.",
+          "Skrócenie czasu ładowania strony o 50%."
+        ]
       },
-      abz: {
-        title: "Zadanie testowe ABZ",
-        description:
-          "Dostarczone układy pixel-perfect z silnym naciskiem na optymalizację wydajności",
-        additionalInfo:
-          "Wysokowydajna strona docelowa agencji o perfekcyjnym wyglądzie · HTML, SCSS, JavaScript",
-      },
-      bootstrap: {
-        title: "Prosta aplikacja bootstrap",
-        description: "Prosta strona z bootstrap",
-        additionalInfo:
-          "Responsywna aplikacja internetowa zbudowana z wykorzystaniem frameworka Bootstrap 5 · HTML, Bootstrap, jQuery",
-      },
-      menu: {
-        title: "Proste menu",
-        description: "Proste menu dla restauracji",
-        additionalInfo:
-          "Interaktywne cyfrowe menu dla restauracji i kawiarni · React, CSS",
-      },
+      impltech: {
+        position: "Front-End Developer",
+        companyDescription: "Firma technologiczna rozwijająca innowacyjne rozwiązania do handlu w czasie rzeczywistym.",
+        achievements: [
+          "Budowa interfejsu handlowego w czasie rzeczywistym strumieniującego ponad 50 symboli giełdowych jednocześnie z opóźnieniem aktualizacji UI poniżej 50ms.",
+          "Mentoring 2 junior deweloperów w zakresie wzorców WebSocket i optymalizacji wydajności React.",
+          "Utrzymanie ponad 1000 aktualizacji cen/sekundę w godzinach szczytu z renderingiem poniżej 50ms."
+        ]
+      }
     },
 
     // Demo page
@@ -1160,15 +1117,16 @@ export const translations: Record<
     // Navigation
     about: "su di me",
     skills: "competenze",
+    experience: "esperienza",
     projects: "progetti",
     contact: "scrivimi",
 
     // About section
     aboutMe: "Su di me",
     aboutBgText: "Aboutme",
-    jobTitle: "Web Developer & UI/UX Designer",
+    jobTitle: "Senior Full-Stack Developer",
     description:
-      "Sviluppatore Front-end con oltre 5 anni di esperienza nella progettazione e creazione di design web responsive e app mobili. Competente nei framework CSS e JS, con una vasta conoscenza di UX e psicologia dell'utente.",
+      "Sviluppatore Senior Full-Stack con 7+ anni di esperienza nella creazione di piattaforme fintech ad alte prestazioni. Competenze in architetture React/TypeScript scalabili, leadership di team di sviluppo e mentoring di ingegneri. Comprovata esperienza nella realizzazione di soluzioni enterprise che generano risultati di business.",
     personalInfo: {
       name: "Nome",
       birthday: "Data di nascita",
@@ -1189,11 +1147,15 @@ export const translations: Record<
     // Personal values
     available: "Disponibile",
     master: "Laurea Magistrale",
-    fiveYearsPlus: "5+ anni",
+    fiveYearsPlus: "7+ anni",
 
     // Skills section
     mySkills: "Le mie competenze",
     skillsBgText: "Skills",
+
+    // Experience section
+    myExperience: "Esperienza lavorativa",
+    experienceBgText: "Esperienza",
 
     // Projects section
     portfolio: "portfolio",
@@ -1214,9 +1176,9 @@ export const translations: Record<
     letsWorkTogether: "Lavoriamo insieme...",
 
     // Meta tags
-    portfolioTitle: "Portfolio - Volodymyr Pestov",
+    portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "WebDeveloper, WebDesigner, FrontEnd, BackEnd - portfolio di Volodymyr Pestov",
+      "Senior Full-Stack Developer con 7+ anni di esperienza in fintech, React, TypeScript — portfolio di Volodymyr Pestov",
 
     // Language switcher
     language: "Lingua",
@@ -1248,14 +1210,6 @@ export const translations: Record<
           "È stato sviluppato un sistema No-Code personalizzato basato su JSON Schema e React. Implementato un costruttore visuale con oltre 30 tipi di campi, logica condizionale complessa e validazione al volo. Applicata la virtualizzazione React per moduli di grandi dimensioni (oltre 100 campi) per mantenere alte prestazioni.",
         result:
           "Completa eliminazione della dipendenza dagli sviluppatori nella creazione di moduli. Time-to-Market ridotto da diverse settimane a poche ore.",
-      },
-      youtube: {
-        challenge:
-          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
-        solution:
-          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
-        result:
-          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
       },
     },
 
@@ -1310,57 +1264,52 @@ export const translations: Record<
         additionalInfo:
           "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
-      matrix: {
-        title: "Tabella a matrice",
-        description:
-          "Semplice tabella a matrice generata con React con visualizzazione e calcolo di dati statistici",
-        additionalInfo:
-          "Griglia interattiva con calcolo dinamico e visualizzazione dei dati · React, CSS Modules",
-      },
       webstudio: {
         title: "Web-studio",
         description: "Studio web per la creazione di siti web.",
         additionalInfo:
           "Landing page per un'agenzia digitale con UI/UX moderna e animazioni fluide · HTML, CSS, JavaScript",
       },
-      youtube: {
-        title: "Clone YouTube",
+      novus: {
+        title: "Novus - Agenzia di sviluppo web",
         description:
-          "Mini clone YouTube con ricerca, lista video e lettore video",
+          "Sito web moderno di un'agenzia di sviluppo web con design elegante, animazioni fluide e layout responsive.",
         additionalInfo:
-          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
+          "Landing page creativa per agenzia con animazioni moderne e design premium · NextJS, TypeScript, TailwindCSS",
       },
-      covid: {
-        title: "Tracker Covid-19",
-        description: "Tracker per covid-19",
-        additionalInfo:
-          "Dashboard delle statistiche in tempo reale per il monitoraggio dei casi di COVID-19 a livello globale · React, Chart.js, Disease.sh API",
+    },
+
+    // Experience data
+    experienceData: {
+      ukrpay: {
+        position: "Senior Front-End Developer",
+        companyDescription: "Azienda fintech leader specializzata in soluzioni di pagamento.",
+        achievements: [
+          "Architettura di piattaforma di gestione commercianti che serve 500+ commercianti ed elabora 10.000+ transazioni giornaliere con zero downtime durante una crescita utenti 3x.",
+          "Progettazione e implementazione di una libreria di componenti con 40+ componenti, riducendo i tempi di sviluppo delle funzionalità del 40%.",
+          "Ottimizzazione del bundle dell'applicazione con code-splitting e lazy loading, migliorando il caricamento iniziale della pagina del 35%.",
+          "Piattaforma scalata 3x senza riscritture architetturali."
+        ]
       },
-      facebook: {
-        title: "Clone Facebook",
-        description: "Demo clone di facebook con React e firebase",
-        additionalInfo:
-          "Clone di una piattaforma di social media con autenticazione e database in tempo reale · React, Firebase, Material UI",
+      atlana: {
+        position: "Front-End Developer",
+        companyDescription: "Azienda tecnologica immobiliare focalizzata sul miglioramento delle esperienze di ricerca immobiliare.",
+        achievements: [
+          "Sviluppo di ricerca immobiliare interattiva con integrazione Mapbox, filtraggio per geolocalizzazione e ricerca sfaccettata avanzata.",
+          "Creazione di pagine di annunci ottimizzate per SEO utilizzando Next.js SSG, stimolando la crescita del traffico organico.",
+          "Raggiungimento di punteggi Lighthouse superiori a 95 in Performance, Accessibilità, Best Practices e SEO.",
+          "Riduzione del tempo di caricamento della pagina del 50%."
+        ]
       },
-      abz: {
-        title: "Compito test ABZ",
-        description:
-          "Layout pixel-perfect con forte focus sull'ottimizzazione delle prestazioni",
-        additionalInfo:
-          "Landing page di un'agenzia ad alte prestazioni con design pixel-perfect · HTML, SCSS, JavaScript",
-      },
-      bootstrap: {
-        title: "App bootstrap semplice",
-        description: "Sito semplice con bootstrap",
-        additionalInfo:
-          "Applicazione web responsive costruita con il framework Bootstrap 5 · HTML, Bootstrap, jQuery",
-      },
-      menu: {
-        title: "Menu semplice",
-        description: "Menu semplice per ristorante",
-        additionalInfo:
-          "Menu digitale interattivo per ristoranti e caffè · React, CSS",
-      },
+      impltech: {
+        position: "Front-End Developer",
+        companyDescription: "Azienda tecnologica che sviluppa soluzioni innovative per il trading in tempo reale.",
+        achievements: [
+          "Costruzione di un'interfaccia di trading in tempo reale che trasmette 50+ simboli azionari simultaneamente con latenza di aggiornamento UI inferiore a 50ms.",
+          "Mentoring di 2 sviluppatori junior su pattern WebSocket e ottimizzazione delle prestazioni React.",
+          "Mantenimento di 1.000+ aggiornamenti di prezzo/secondo durante le ore di punta con rendering costante sotto 50ms."
+        ]
+      }
     },
 
     // Demo page
@@ -1397,15 +1346,16 @@ export const translations: Record<
     // Navigation
     about: "à propos",
     skills: "compétences",
+    experience: "expérience",
     projects: "projets",
     contact: "écrivez-moi",
 
     // About section
     aboutMe: "À propos de moi",
     aboutBgText: "Aboutme",
-    jobTitle: "Développeur Web & Designer UI/UX",
+    jobTitle: "Développeur Senior Full-Stack",
     description:
-      "Développeur Front-end avec plus de 5 ans d'expérience dans la conception et la création de design web responsive et d'applications mobiles. Maîtrise des frameworks CSS et JS, avec une vaste connaissance de l'UX et de la psychologie utilisateur.",
+      "Développeur Senior Full-Stack avec 7+ ans d'expérience dans la création de plateformes fintech haute performance. Expertise en architectures React/TypeScript évolutives, direction d'équipes de développement et mentorat d'ingénieurs. Expérience éprouvée dans la livraison de solutions entreprise générant des résultats business.",
     personalInfo: {
       name: "Nom",
       birthday: "Date de naissance",
@@ -1426,11 +1376,15 @@ export const translations: Record<
     // Personal values
     available: "Disponible",
     master: "Master",
-    fiveYearsPlus: "5+ ans",
+    fiveYearsPlus: "7+ ans",
 
     // Skills section
     mySkills: "Mes compétences",
     skillsBgText: "Skills",
+
+    // Experience section
+    myExperience: "Expérience professionnelle",
+    experienceBgText: "Expérience",
 
     // Projects section
     portfolio: "portfolio",
@@ -1451,9 +1405,9 @@ export const translations: Record<
     letsWorkTogether: "Travaillons ensemble...",
 
     // Meta tags
-    portfolioTitle: "Portfolio - Volodymyr Pestov",
+    portfolioTitle: "Volodymyr Pestov — Développeur Senior Full-Stack",
     portfolioDescription:
-      "WebDeveloper, WebDesigner, FrontEnd, BackEnd - portfolio de Volodymyr Pestov",
+      "Développeur Senior Full-Stack avec 7+ ans d'expérience en fintech, React, TypeScript — portfolio de Volodymyr Pestov",
 
     // Language switcher
     language: "Langue",
@@ -1485,14 +1439,6 @@ export const translations: Record<
           "Développement d'un système No-Code personnalisé basé sur JSON Schema et React. Implémentation d'un constructeur visuel avec plus de 30 types de champs, une logique conditionnelle complexe et une validation à la volée. Application de la virtualisation React pour les grands formulaires (plus de 100 champs) afin de maintenir des performances élevées.",
         result:
           "Élimination complète de la dépendance aux développeurs lors de la création de formulaires. Time-to-Market réduit de plusieurs semaines à quelques heures.",
-      },
-      youtube: {
-        challenge:
-          "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
-        solution:
-          "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
-        result:
-          "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
       },
     },
 
@@ -1547,57 +1493,52 @@ export const translations: Record<
         additionalInfo:
           "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
-      matrix: {
-        title: "Tableau matriciel",
-        description:
-          "Simple tableau matriciel généré avec React avec affichage et calcul de données statistiques",
-        additionalInfo:
-          "Grille interactive avec calcul dynamique et visualisation des données · React, CSS Modules",
-      },
       webstudio: {
         title: "Studio Web",
         description: "Studio Web pour la création de sites Web.",
         additionalInfo:
           "Page d'accueil pour une agence numérique avec une interface UI/UX moderne et des animations fluides · HTML, CSS, JavaScript",
       },
-      youtube: {
-        title: "Clone YouTube",
+      novus: {
+        title: "Novus - Agence de développement web",
         description:
-          "Mini clone YouTube avec recherche, liste de vidéos et lecteur vidéo",
+          "Site web moderne d'une agence de développement web avec un design élégant, des animations fluides et une mise en page responsive.",
         additionalInfo:
-          "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
+          "Page d'accueil créative pour agence avec des animations modernes et un design premium · NextJS, TypeScript, TailwindCSS",
       },
-      covid: {
-        title: "Tracker Covid-19",
-        description: "Tracker pour covid-19",
-        additionalInfo:
-          "Tableau de bord des statistiques en temps réel pour le suivi des cas de COVID-19 dans le monde · React, Chart.js, Disease.sh API",
+    },
+
+    // Experience data
+    experienceData: {
+      ukrpay: {
+        position: "Développeur Front-End Senior",
+        companyDescription: "Entreprise fintech leader spécialisée dans les solutions de paiement.",
+        achievements: [
+          "Architecture d'une plateforme de gestion des commerçants servant 500+ commerçants et traitant 10 000+ transactions quotidiennes avec zéro temps d'arrêt lors d'une croissance 3x des utilisateurs.",
+          "Conception et implémentation d'une bibliothèque de composants avec 40+ composants, réduisant le temps de développement des fonctionnalités de 40%.",
+          "Optimisation du bundle de l'application avec le fractionnement de code et le chargement différé, améliorant le chargement initial de la page de 35%.",
+          "Plateforme mise à l'échelle 3x sans réécriture architecturale."
+        ]
       },
-      facebook: {
-        title: "Clone Facebook",
-        description: "Démo clone de facebook avec React et firebase",
-        additionalInfo:
-          "Clone de plateforme de médias sociaux avec authentification et base de données en temps réel · React, Firebase, Material UI",
+      atlana: {
+        position: "Développeur Front-End",
+        companyDescription: "Entreprise technologique immobilière axée sur l'amélioration des expériences de recherche de biens.",
+        achievements: [
+          "Développement d'une recherche immobilière interactive avec intégration Mapbox, filtrage par géolocalisation et recherche à facettes avancée.",
+          "Création de pages d'annonces optimisées pour le SEO utilisant Next.js SSG, stimulant la croissance du trafic organique.",
+          "Obtention de scores Lighthouse supérieurs à 95 en Performance, Accessibilité, Bonnes Pratiques et SEO.",
+          "Réduction du temps de chargement des pages de 50%."
+        ]
       },
-      abz: {
-        title: "Tâche de test ABZ",
-        description:
-          "Mise en page pixel-perfect avec un fort accent sur l'optimisation des performances",
-        additionalInfo:
-          "Page d'accueil d'agence haute performance avec un design pixel-perfect · HTML, SCSS, JavaScript",
-      },
-      bootstrap: {
-        title: "Application bootstrap simple",
-        description: "Site simple avec bootstrap",
-        additionalInfo:
-          "Application web responsive construite avec le framework Bootstrap 5 · HTML, Bootstrap, jQuery",
-      },
-      menu: {
-        title: "Menu simple",
-        description: "Menu simple pour restaurant",
-        additionalInfo:
-          "Menu numérique interactif pour les restaurants et les cafés · React, CSS",
-      },
+      impltech: {
+        position: "Développeur Front-End",
+        companyDescription: "Entreprise technologique développant des solutions innovantes pour le trading en temps réel.",
+        achievements: [
+          "Construction d'une interface de trading en temps réel diffusant 50+ symboles boursiers simultanément avec une latence de mise à jour de l'interface inférieure à 50ms.",
+          "Mentorat de 2 développeurs juniors sur les patterns WebSocket et l'optimisation des performances React.",
+          "Maintien de 1 000+ mises à jour de prix/seconde pendant les heures de pointe avec un rendu constant sous 50ms."
+        ]
+      }
     },
 
     // Demo page

@@ -13,6 +13,9 @@ import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
 const About = dynamic(() =>
   import("../src/components/About/About").then((m) => m.About)
 );
+const Experience = dynamic(() =>
+  import("../src/components/Experience/Experience").then((m) => m.Experience)
+);
 const Skills = dynamic(() =>
   import("../src/components/Skills/Skills").then((m) => m.Skills)
 );
@@ -44,6 +47,9 @@ const Home: NextPage = () => {
         <Header />
         <div className="animate-on-scroll fade-in-up">
           <About />
+        </div>
+        <div className="animate-on-scroll fade-in-right">
+          <Experience />
         </div>
         <div className="animate-on-scroll fade-in-left">
           <Skills />

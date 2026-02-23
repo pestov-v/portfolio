@@ -180,130 +180,17 @@ export const _projects: TProjects = [
     additionalInfo:
       "Landing page for a digital agency with a modern UI/UX and smooth animations · NextJS, TypeScript, TailwindCSS",
   },
-  // {
-  //   id: 12,
-  //   title: "Online market",
-  //   description: "Simple online market on Next.js with MongoDB",
-  //   href: "https://market-pestov-v.vercel.app/",
-  //   image: "market",
-  //   alt: "Online market",
-  // },
   {
-    id: 9,
-    translationKey: "matrix",
-    title: "Matrix table",
+    id: 11,
+    translationKey: "novus",
+    title: "Novus - Web Development Agency",
     description:
-      "Simple generated matrix table with React featuring statistical data display and calculation",
-    href: "https://pestov-v.github.io/matrix-table/",
-    image: "matrix-table",
-    alt: "Matrix table",
-  },
-  {
-    id: 8,
-    translationKey: "youtube",
-    title: "Youtube Clone",
-    description: "Mini youtube clone with search, video list, and video player",
-    href: "https://clone-a72b1.web.app/",
-    image: "youtube",
-    alt: "Youtube Clone",
+      "Modern web development agency website with sleek design, smooth animations, and responsive layout.",
+    href: "https://novus-theta.vercel.app/",
+    image: "novus",
+    alt: "Novus Web Development Agency",
     additionalInfo:
-      "Video streaming application with search, real-time data from YouTube API, and responsive player interface · React, Material UI, YouTube API, Firebase",
-    caseStudy: {
-      challenge:
-        "Building a functional video streaming interface that efficiently communicates with the YouTube Data API while maintaining a seamless user experience across devices.",
-      solution:
-        "Developed a React application integrated with YouTube v3 API. Features include a global search system, category-based filtering, and a custom-styled video player page with suggested content.",
-      result:
-        "Successfully simplified the core YouTube experience into a lightweight, high-performance web application. Features sub-second API responses and high accessibility scores.",
-      technologies: ["React", "Material UI", "YouTube API", "Firebase"],
-    },
-  },
-  {
-    id: 7,
-    translationKey: "covid",
-    title: "Covid-19 tracker",
-    description: "Tracker for covid-19",
-    href: "https://nakryt.github.io/covid-19-tracker/",
-    image: "covid-19-tracker",
-    alt: "Covid-19 tracker",
-  },
-  {
-    id: 6,
-    translationKey: "facebook",
-    title: "Facebook Clone",
-    description: "Demo facebook-clone with React and firebase",
-    href: "https://facebook-clone-a4fee.web.app/",
-    image: "facebook",
-    alt: "Facebook App",
-  },
-  // {
-  //   id: 8,
-  //   title: "What's App Clone",
-  //   description: "Demo WhatsApp-clone with React and firebase",
-  //   href: "https://whats-app-clone-7599c.web.app/",
-  //   image: "whatsapp",
-  //   alt: "What's App",
-  // },
-  // {
-  //   id: 7,
-  //   title: "Simple Blog",
-  //   description: "Simple social blog with React, Express, MongoDB and GraphQL",
-  //   href: "https://blogmerng.herokuapp.com/",
-  //   image: "blog-merng",
-  //   alt: "Social blog",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Simple Amazona",
-  //   description: "Online market like amazon with React, Express and MongoDB",
-  //   href: "https://simple-amazona.herokuapp.com/",
-  //   image: "amazona",
-  //   alt: "amazona mart",
-  // },
-
-  {
-    id: 5,
-    translationKey: "abz",
-    title: "ABZ-test task",
-    description:
-      "Delivered pixel-perfect layouts with a strong focus on performance optimization",
-    href: "https://nakryt.github.io/test/",
-    image: "abz-test",
-    alt: "abz-agency test",
-  },
-  // {
-  //   id: 4,
-  //   title: "Todo application",
-  //   description: "React todo application with database on firebase",
-  //   href: "https://todo-998f4.web.app/",
-  //   image: "todo-app",
-  //   alt: "todo application",
-  // },
-  // {
-  //   id: 3,
-  //   title: "Quiz application",
-  //   description: "React quiz application with database on firebase",
-  //   href: "https://quiz-36da1.web.app/quiz/-M-pVyWbXPA2yCL4xf0d",
-  //   image: "quiz",
-  //   alt: "quiz application",
-  // },
-  {
-    id: 2,
-    translationKey: "bootstrap",
-    title: "Simple bootstrap app",
-    description: "Simple site with bootstrap",
-    href: "https://simplebootstrapsite.web.app/",
-    image: "bootstrap-app",
-    alt: "bootstrap application",
-  },
-  {
-    id: 1,
-    translationKey: "menu",
-    title: "Simple menu",
-    description: "Simple menu for restaurant",
-    href: "https://nakryt.github.io/simple-menu/",
-    image: "simple-menu",
-    alt: "menu application",
+      "Creative agency landing page with modern animations and premium design · NextJS, TypeScript, TailwindCSS",
   },
 ];
 
@@ -328,16 +215,48 @@ interface ISkill {
 }
 
 export const SKILLS: ISkill[] = [
-  { title: "html", percent: 92, color: COLORS.secondary },
-  { title: "css", percent: 87, color: COLORS.success },
-  { title: "JavaScript", percent: 90, color: COLORS.info },
-  { title: "nodejs", percent: 71, color: COLORS.warning },
-  { title: "react", percent: 88, color: COLORS.danger },
-  { title: "react native", percent: 63, color: COLORS.secondary },
-  { title: "nextjs", percent: 85, color: COLORS.primary },
-  { title: "nestjs", percent: 78, color: COLORS.info },
-  { title: "java", percent: 54, color: COLORS.success },
-  { title: "angular", percent: 48, color: COLORS.danger },
+  { title: "React", percent: 92, color: COLORS.danger },
+  { title: "TypeScript", percent: 90, color: COLORS.info },
+  { title: "JavaScript", percent: 90, color: COLORS.warning },
+  { title: "Next.js", percent: 85, color: COLORS.primary },
+  { title: "HTML/CSS", percent: 92, color: COLORS.secondary },
+  { title: "Node.js", percent: 75, color: COLORS.success },
+  { title: "NestJS", percent: 78, color: COLORS.info },
+  { title: "PostgreSQL", percent: 70, color: COLORS.primary },
+  { title: "Redux", percent: 85, color: COLORS.danger },
+  { title: "REST API", percent: 88, color: COLORS.secondary },
+];
+
+export interface IExperience {
+  id: number;
+  translationKey: string;
+  company: string;
+  period: string;
+  location: string;
+}
+
+export const EXPERIENCE: IExperience[] = [
+  {
+    id: 1,
+    translationKey: "ukrpay",
+    company: "Ukrpay",
+    period: "01/2023 - Present",
+    location: "Ukraine",
+  },
+  {
+    id: 2,
+    translationKey: "atlana",
+    company: "Atlana",
+    period: "03/2022 - 10/2022",
+    location: "Ukraine",
+  },
+  {
+    id: 3,
+    translationKey: "impltech",
+    company: "Impltech",
+    period: "03/2021 - 02/2022",
+    location: "Ukraine",
+  },
 ];
 
 export const socialLinks = [

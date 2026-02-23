@@ -17,11 +17,6 @@ export const About = () => {
 
   const additionalInfo = [
     { id: "name", title: t.personalInfo.name, value: "Volodymyr Pestov" },
-    {
-      id: "birthday",
-      title: t.personalInfo.birthday,
-      value: "15 September 1987",
-    },
     { id: "degree", title: t.personalInfo.degree, value: t.master },
     {
       id: "experience",
@@ -45,32 +40,11 @@ export const About = () => {
       title: t.personalInfo.address,
       value: "Nesebar, Bulgaria",
     },
-    { id: "freelance", title: t.personalInfo.freelance, value: t.available },
     {
       id: "telegram",
       title: t.personalInfo.telegram,
       value: "@pestov_v",
       icon: "telegram",
-    },
-    {
-      id: "viber",
-      title: t.personalInfo.viber,
-      value: "+380970097343",
-      icon: "viber",
-    },
-    {
-      id: "whatsapp",
-      title: t.personalInfo.whatsapp,
-      value: "+380970097343",
-      icon: "whatsapp",
-    },
-    {
-      id: "facebook",
-      title: t.personalInfo.facebook,
-      value: "Facebook",
-      icon: "facebook",
-      href: socialLinks.find((link) => link.id === "facebook")?.href,
-      hideTitle: true,
     },
     {
       id: "github",

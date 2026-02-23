@@ -21,11 +21,11 @@ export const Header: NextPage = () => {
 
   useEffect(() => {
     const skillsEn =
-      "Front End Developer, Back End Developer, Web Designer, Web Developer, Applications Developer";
+      "Full-Stack Developer, Frontend Architect, Software Engineer";
     const skillsUk =
-      "Front End Розробник, Back End Розробник, Web Дизайнер, Web Розробник, Розробник Додатків";
+      "Full-Stack Розробник, Frontend Архітектор, Software Engineer";
     const skillsBg =
-      "Front End Разработчик, Back End Разработчик, Web Дизайнер, Web Разработчик, Разработчик на Приложения";
+      "Full-Stack Разработчик, Frontend Архитект, Software Engineer";
 
     let skills = skillsEn;
     if (language === "uk") skills = skillsUk;
@@ -71,7 +71,7 @@ export const Header: NextPage = () => {
         rotation: () => Math.random() * 60 - 30,
         ease: "back.out",
         stagger: {
-          amount: 0.5,
+          amount: 1.5,
           from: "random",
         },
       });

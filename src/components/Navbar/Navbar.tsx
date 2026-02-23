@@ -16,9 +16,10 @@ export const Navbar = () => {
 
   const links = [
     { id: 1, href: "#about", title: t.about },
-    { id: 2, href: "#skills", title: t.skills },
-    { id: 3, href: "#projects", title: t.projects },
-    { id: 4, href: "#mail", title: t.contact },
+    { id: 2, href: "#experience", title: t.experience },
+    { id: 3, href: "#skills", title: t.skills },
+    { id: 4, href: "#projects", title: t.projects },
+    { id: 5, href: "#mail", title: t.contact },
   ];
 
   useVisible({

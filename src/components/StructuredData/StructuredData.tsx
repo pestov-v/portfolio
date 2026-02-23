@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const SITE_URL = "https://pestov-v.github.io";
+const SITE_URL = "https://pestov.pro";
 const PROFILE_IMAGE = `${SITE_URL}/img/profile/profile.jpg`;
 
 /**
@@ -14,9 +14,9 @@ const personSchema = {
   name: "Volodymyr Pestov",
   givenName: "Volodymyr",
   familyName: "Pestov",
-  jobTitle: "Web Developer & UI/UX Designer",
+  jobTitle: "Senior Full-Stack Developer",
   description:
-    "Front-end developer with 5+ years of experience designing and building responsive web design and mobile apps. Proficient with CSS and JS Frameworks, with extensive knowledge of UX and user psychology.",
+    "Senior Full-Stack Developer with 7+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript architectures, leading development teams, and mentoring engineers.",
   url: SITE_URL,
   image: {
     "@type": "ImageObject",
@@ -33,8 +33,8 @@ const personSchema = {
   },
   alumniOf: {
     "@type": "EducationalOrganization",
-    name: "University",
-    description: "Master's degree",
+    name: "Yuriy Fedkovych Chernivtsi National University",
+    description: "Master's Equivalent in Applied Mathematics",
   },
   knowsAbout: [
     "React",
@@ -68,9 +68,9 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
   url: SITE_URL,
-  name: "Volodymyr Pestov — Portfolio",
+  name: "Volodymyr Pestov — Senior Full-Stack Developer",
   description:
-    "Portfolio of Volodymyr Pestov — Web Developer & UI/UX Designer with 5+ years of experience.",
+    "Portfolio of Volodymyr Pestov — Senior Full-Stack Developer with 7+ years of experience in fintech, React, TypeScript.",
   author: { "@id": `${SITE_URL}/#person` },
   inLanguage: ["en", "uk", "bg", "pl", "it", "fr"],
 };
@@ -84,7 +84,7 @@ const profilePageSchema = {
   "@type": "ProfilePage",
   "@id": `${SITE_URL}/#profilepage`,
   url: SITE_URL,
-  name: "Volodymyr Pestov — Portfolio",
+  name: "Volodymyr Pestov — Senior Full-Stack Developer",
   dateModified: new Date().toISOString().split("T")[0],
   mainEntity: { "@id": `${SITE_URL}/#person` },
   isPartOf: { "@id": `${SITE_URL}/#website` },
@@ -204,18 +204,24 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
+      name: "Experience",
+      item: `${SITE_URL}/#experience`,
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
       name: "Skills",
       item: `${SITE_URL}/#skills`,
     },
     {
       "@type": "ListItem",
-      position: 4,
+      position: 5,
       name: "Projects",
       item: `${SITE_URL}/#projects`,
     },
     {
       "@type": "ListItem",
-      position: 5,
+      position: 6,
       name: "Contact",
       item: `${SITE_URL}/#mail`,
     },
