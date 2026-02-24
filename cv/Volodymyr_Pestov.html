@@ -40,12 +40,12 @@
       }
 
       .header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
       }
 
       .header h1 {
         font-size: 36px;
-        margin-bottom: 8px;
+        margin-bottom: 1rem;
         color: #2c3e50;
         font-weight: 700;
         letter-spacing: 0.5px;
@@ -59,7 +59,7 @@
       }
 
       .contact-section {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         display: flex;
         flex-direction: column;
         gap: 8px 20px;
@@ -127,7 +127,7 @@
       .section-title {
         font-size: 16px;
         font-weight: 700;
-        padding-bottom: 5px;
+        padding-bottom: 1rem;
         color: #2c3e50;
         letter-spacing: 0.5px;
         text-transform: uppercase;
@@ -144,7 +144,7 @@
         font-size: 13px;
         text-align: justify;
         line-height: 1.7;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
       }
 
       .experience-item {
@@ -190,8 +190,8 @@
 
       .achievements li {
         font-size: 12px;
-        margin-bottom: 5px;
-        padding-left: 18px;
+        margin-bottom: 0.75rem;
+        padding-left: 1rem;
         position: relative;
         line-height: 1.6;
       }
@@ -369,7 +369,7 @@
       <div class="main-content">
         <div class="header">
           <h1>VOLODYMYR PESTOV</h1>
-          <h2>Senior Front-End Developer</h2>
+          <h2>Senior Front-End Developer / Tech Lead</h2>
         </div>
 
         <div class="contact-section">
@@ -407,7 +407,9 @@
 
         <div class="experience-item">
           <div class="experience-header">
-            <div class="position-title">Senior Front-End Developer</div>
+            <div class="position-title">
+              Senior Front-End Developer / Tech Lead
+            </div>
             <div class="period">01/2023 - Present</div>
           </div>
           <div class="company-name">Ukrpay</div>
@@ -417,21 +419,38 @@
           </div>
           <ul class="achievements">
             <li>
-              Architected merchant management platform serving 500+ merchants
-              and processing 10,000+ daily transactions with zero downtime
-              during 3x user growth.
+              <strong>Engineering Leadership:</strong> Led frontend team,
+              establishing Style Guides and Code Review processes, improving
+              code quality and accelerating onboarding of new developers.
             </li>
             <li>
-              Designed and implemented a reusable component library with 40+
-              components, cutting feature development time by 40%.
+              <strong>Architecture &amp; Scalability:</strong> Architected
+              merchant management platform (500+ clients) that sustained 3x user
+              growth without refactoring critical components or architecture
+              rewrites.
             </li>
             <li>
-              Optimized application bundle with code-splitting and lazy loading,
-              improving initial page load by 35%.
+              <strong>Strategic Optimization:</strong> Built a custom No-code
+              dynamic forms engine (JSON Schema), enabling business to launch
+              new products in hours instead of weeks of development.
             </li>
-            <li>Impact: Platform scaled 3x with zero architecture rewrites.</li>
+            <li>
+              <strong>Quality Assurance:</strong> Implemented TDD culture with
+              Jest &amp; React Testing Library, reducing regression bugs by 30%
+              and maintaining 95+ Lighthouse CI Performance/SEO scores via
+              automated monitoring.
+            </li>
+            <li>
+              <strong>CI/CD &amp; Cloud:</strong> Configured GitHub Actions /
+              GitLab CI pipelines automating build, test and deploy; deployed
+              frontend apps on AWS S3/CloudFront &amp; Vercel; used Docker to
+              eliminate local-vs-production environment drift.
+            </li>
           </ul>
         </div>
+
+        <br />
+        <br />
 
         <div class="experience-item">
           <div class="experience-header">
