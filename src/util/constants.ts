@@ -170,17 +170,6 @@ export const _projects: TProjects = [
       "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
   },
   {
-    id: 10,
-    translationKey: "webstudio",
-    title: "Web-studio",
-    description: "Web-studio for creating websites.",
-    href: "https://web-studio-smoky.vercel.app",
-    image: "web-studio",
-    alt: "Web-studio",
-    additionalInfo:
-      "Landing page for a digital agency with a modern UI/UX and smooth animations · NextJS, TypeScript, TailwindCSS",
-  },
-  {
     id: 11,
     translationKey: "novus",
     title: "Novus - Web Development Agency",
@@ -191,6 +180,17 @@ export const _projects: TProjects = [
     alt: "Novus Web Development Agency",
     additionalInfo:
       "Creative agency landing page with modern animations and premium design · NextJS, TypeScript, TailwindCSS",
+  },
+  {
+    id: 10,
+    translationKey: "webstudio",
+    title: "Web-studio",
+    description: "Web-studio for creating websites.",
+    href: "https://web-studio-smoky.vercel.app",
+    image: "web-studio",
+    alt: "Web-studio",
+    additionalInfo:
+      "Landing page for a digital agency with a modern UI/UX and smooth animations · NextJS, TypeScript, TailwindCSS",
   },
 ];
 
