@@ -12,7 +12,7 @@ echo "Converting $HTML_FILE to $PDF_FILE..."
   --headless \
   --disable-gpu \
   --print-to-pdf="$PDF_FILE" \
-  --print-to-pdf-no-header \
+  --no-pdf-header-footer \
   "file://$(pwd)/$HTML_FILE" 2>&1 | grep -v "ERROR"
 
 if [ -f "$PDF_FILE" ]; then

@@ -1,0 +1,331 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "0KmVI",
+      "x": 0,
+      "y": 0,
+      "name": "Cover Letter",
+      "width": 595,
+      "height": 842,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "padding": 56,
+      "children": [
+        {
+          "type": "frame",
+          "id": "Wn1kR",
+          "name": "header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 4,
+          "children": [
+            {
+              "type": "text",
+              "id": "XGJh9",
+              "name": "name",
+              "fill": "#000000",
+              "content": "VOLODYMYR PESTOV",
+              "fontFamily": "Outfit",
+              "fontSize": 36,
+              "fontWeight": "900",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "bfUp9",
+              "name": "title",
+              "fill": "#71717A",
+              "content": "Senior Frontend Developer",
+              "fontFamily": "Outfit",
+              "fontSize": 16,
+              "fontWeight": "300",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "kr6AT",
+              "name": "contactRow",
+              "fill": "#A1A1AA",
+              "content": "pestov.pro",
+              "fontFamily": "Inter",
+              "fontSize": 12
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "qt1Xe",
+          "name": "divider",
+          "fill": "#000000",
+          "width": "fill_container",
+          "height": 2
+        },
+        {
+          "type": "frame",
+          "id": "Jtzpo",
+          "name": "spacer1",
+          "width": "fill_container",
+          "height": 28
+        },
+        {
+          "type": "text",
+          "id": "1Tdrr",
+          "name": "greeting",
+          "fill": "#000000",
+          "content": "Dear Hiring Manager,",
+          "fontFamily": "Outfit",
+          "fontSize": 16,
+          "fontWeight": "600"
+        },
+        {
+          "type": "frame",
+          "id": "nAH8D",
+          "name": "spacer2",
+          "width": "fill_container",
+          "height": 16
+        },
+        {
+          "type": "text",
+          "id": "nJM62",
+          "name": "intro",
+          "fill": "#27272A",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "My name is Volodymyr, and I am a Senior Frontend Developer with over six years of experience building high-performance platforms in the fintech sector. I specialize in React, TypeScript, Next.js, and modern state management tools such as Redux and Zustand. I am writing to express my interest in contributing to your engineering team.",
+          "lineHeight": 1.65,
+          "fontFamily": "Inter",
+          "fontSize": 13
+        },
+        {
+          "type": "frame",
+          "id": "egNz6",
+          "name": "spacer3",
+          "width": "fill_container",
+          "height": 16
+        },
+        {
+          "type": "text",
+          "id": "nEHmj",
+          "name": "highlightsLabel",
+          "fill": "#A1A1AA",
+          "content": "KEY ACHIEVEMENTS",
+          "fontFamily": "Outfit",
+          "fontSize": 11,
+          "fontWeight": "700",
+          "letterSpacing": 2
+        },
+        {
+          "type": "frame",
+          "id": "7nOPK",
+          "name": "spacer4",
+          "width": "fill_container",
+          "height": 12
+        },
+        {
+          "type": "frame",
+          "id": "aVT9i",
+          "name": "highlights",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "7dRaN",
+              "name": "h1",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 3,
+                  "id": "BgJcN",
+                  "name": "h1dot",
+                  "fill": "#000000",
+                  "width": 6,
+                  "height": 6
+                },
+                {
+                  "type": "frame",
+                  "id": "FuJgs",
+                  "name": "h1spacer",
+                  "width": 0,
+                  "height": 4
+                },
+                {
+                  "type": "text",
+                  "id": "TX6yC",
+                  "name": "h1text",
+                  "fill": "#27272A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Built a dynamic forms system that reduced product launch time from weeks to hours",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ElYKp",
+              "name": "h2",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 3,
+                  "id": "AO8p5",
+                  "name": "h2dot",
+                  "fill": "#000000",
+                  "width": 6,
+                  "height": 6
+                },
+                {
+                  "type": "frame",
+                  "id": "0wPqb",
+                  "name": "h2spacer",
+                  "width": 0,
+                  "height": 4
+                },
+                {
+                  "type": "text",
+                  "id": "oVGhl",
+                  "name": "h2text",
+                  "fill": "#27272A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Engineered a real-time trading interface handling 1,000+ price updates per second with less than 50ms latency",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5QlR1",
+              "name": "h3",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 3,
+                  "id": "QpGMT",
+                  "name": "h3dot",
+                  "fill": "#000000",
+                  "width": 6,
+                  "height": 6
+                },
+                {
+                  "type": "frame",
+                  "id": "YdgnK",
+                  "name": "h3spacer",
+                  "width": 0,
+                  "height": 4
+                },
+                {
+                  "type": "text",
+                  "id": "z5CGf",
+                  "name": "h3text",
+                  "fill": "#27272A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Developed merchant platforms processing 10,000+ daily transactions for over 500 merchants",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Lbubg",
+          "name": "spacer5",
+          "width": "fill_container",
+          "height": 16
+        },
+        {
+          "type": "text",
+          "id": "LcoU9",
+          "name": "body2",
+          "fill": "#27272A",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Beyond frontend expertise, I have practical experience with Node.js, PostgreSQL, MongoDB, WebSocket, and CI/CD pipelines. As a technical leader, I have mentored developers and consistently delivered scalable solutions with measurable business impact.",
+          "lineHeight": 1.65,
+          "fontFamily": "Inter",
+          "fontSize": 13
+        },
+        {
+          "type": "frame",
+          "id": "IstSi",
+          "name": "spacer6",
+          "width": "fill_container",
+          "height": 16
+        },
+        {
+          "type": "text",
+          "id": "6Gv9q",
+          "name": "body3",
+          "fill": "#27272A",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "I focus on creating efficient, user-friendly interfaces that solve real business problems. I would be happy to discuss how my experience can contribute to your team.",
+          "lineHeight": 1.65,
+          "fontFamily": "Inter",
+          "fontSize": 13
+        },
+        {
+          "type": "frame",
+          "id": "EmWim",
+          "name": "spacer7",
+          "width": "fill_container",
+          "height": 32
+        },
+        {
+          "type": "text",
+          "id": "bH07J",
+          "name": "closing",
+          "fill": "#27272A",
+          "content": "Best regards,",
+          "fontFamily": "Inter",
+          "fontSize": 13
+        },
+        {
+          "type": "frame",
+          "id": "DPVh7",
+          "name": "spacer8",
+          "width": "fill_container",
+          "height": 4
+        },
+        {
+          "type": "text",
+          "id": "JrIqG",
+          "name": "sigName",
+          "fill": "#000000",
+          "content": "Volodymyr Pestov",
+          "fontFamily": "Outfit",
+          "fontSize": 18,
+          "fontWeight": "800",
+          "letterSpacing": -0.5
+        },
+        {
+          "type": "text",
+          "id": "TteKd",
+          "name": "sigLink",
+          "fill": "#A1A1AA",
+          "content": "https://pestov.pro",
+          "fontFamily": "Inter",
+          "fontSize": 12
+        }
+      ]
+    }
+  ]
+}
