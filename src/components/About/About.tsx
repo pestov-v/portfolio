@@ -1,13 +1,10 @@
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { socialLinks } from "../../util/constants";
-import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import style from "./About.module.scss";
-import { AboutImage } from "./AboutImage/AboutImage";
-import { InfoItem } from "./InfoItem/InfoItem";
 
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
@@ -15,74 +12,18 @@ export const About = () => {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
 
-  const additionalInfo = [
-    { id: "name", title: t.personalInfo.name, value: "Volodymyr Pestov" },
-    { id: "degree", title: t.personalInfo.degree, value: t.master },
-    {
-      id: "experience",
-      title: t.personalInfo.experience,
-      value: t.fiveYearsPlus,
-    },
-    {
-      id: "phone",
-      title: t.personalInfo.phone,
-      value: "+38 (097) 00 97 343",
-      icon: "phone",
-    },
-    {
-      id: "email",
-      title: t.personalInfo.email,
-      value: "pestov.volodymyr@gmail.com",
-      icon: "email",
-    },
-    {
-      id: "address",
-      title: t.personalInfo.address,
-      value: "Nesebar, Bulgaria",
-    },
-    {
-      id: "telegram",
-      title: t.personalInfo.telegram,
-      value: "@pestov_v",
-      icon: "telegram",
-    },
-    {
-      id: "github",
-      title: t.personalInfo.github,
-      value: "GitHub",
-      icon: "github",
-      href: socialLinks.find((link) => link.id === "github")?.href,
-      hideTitle: true,
-    },
-    {
-      id: "linkedin",
-      title: t.personalInfo.linkedin,
-      value: "LinkedIn",
-      icon: "linkedin",
-      href: socialLinks.find((link) => link.id === "linkedin")?.href,
-      hideTitle: true,
-    },
-  ];
-
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
-
     const items = gsap.utils.toArray<HTMLElement>(".scrambled", section);
     if (!items.length) return;
-
-    // Store original text before clearing
     const originalTexts = items.map((el) => el.textContent?.trim() ?? "");
-
-    // Pin width to prevent layout shift during scramble (uppercase chars are wider)
     items.forEach((el) => {
       el.style.minWidth = `${el.getBoundingClientRect().width}px`;
       el.style.opacity = "0";
       el.textContent = "";
     });
-
     const timeline = gsap.timeline({ id: "ScrambleText", paused: true });
-
     items.forEach((element, index) => {
       const text = originalTexts[index];
       const tl = gsap
@@ -104,18 +45,15 @@ export const About = () => {
         );
       timeline.add(tl, index * 0.15);
     });
-
     const st = ScrollTrigger.create({
       trigger: section,
       start: "top 75%",
       once: true,
       onEnter: () => timeline.play(),
     });
-
     return () => {
       st.kill();
       timeline.kill();
-      // Restore original text and release pinned width on cleanup
       items.forEach((el, i) => {
         el.textContent = originalTexts[i];
         el.style.opacity = "";
@@ -132,50 +70,65 @@ export const About = () => {
       ref={sectionRef}
       aria-labelledby="about-title"
     >
-      <div className={style.container}>
-        <SectionTitle title={t.aboutMe} bgText={t.aboutBgText} />
-
-        <div className={style.info}>
-          <div className="animate-on-scroll fade-in-left">
-            <AboutImage />
-          </div>
-
-          <div className={style.infoWrapper}>
-            <div className="animate-on-scroll fade-in-right stagger-1">
-              <h3 className={style.infoTitle}>{t.jobTitle}</h3>
-            </div>
-
-            <div className="animate-on-scroll fade-in-up stagger-2">
-              <p className={style.description}>{t.description}</p>
-            </div>
-
-            <div
-              className={`${style.additionalInfo} animate-on-scroll fade-in-up stagger-3`}
+      <div className={style.inner}>
+        <div className={style.left}>
+          <span className={style.tag}>// 01. ABOUT</span>
+          <h2 className={style.title} id="about-title">
+            Who I am.
+          </h2>
+          <p className={style.body}>{t.description}</p>
+          <div className={style.socialLinks}>
+            <a
+              href="https://github.com/pestov-v"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.socialBtn}
             >
-              {additionalInfo.map(
-                ({ id, title, value, icon, href, hideTitle }, index) => (
-                  <div
-                    key={id}
-                    className={`animate-on-scroll scale-in stagger-${Math.min(
-                      index + 1,
-                      5,
-                    )}`}
-                  >
-                    <InfoItem
-                      title={title}
-                      value={value}
-                      icon={icon}
-                      href={href}
-                      hideTitle={hideTitle}
-                    />
-                  </div>
-                ),
-              )}
+              ↗ github
+            </a>
+            <a
+              href="http://linkedin.com/in/pestov-volodymyr-405011206/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.socialBtn}
+            >
+              ↗ linkedin
+            </a>
+          </div>
+        </div>
+
+        <div className={style.right}>
+          <div className={style.photoWrap}>
+            <Image
+              src="/img/profile/profile.jpg"
+              alt="Volodymyr Pestov"
+              width={400}
+              height={440}
+              className={style.photo}
+            />
+          </div>
+          <div className={style.infoCards}>
+            <div className={style.infoCard}>
+              <span className={`${style.infoKey} scrambled`}>location</span>
+              <span className={style.infoValue}>Nesebar, Bulgaria 🇧🇬</span>
+            </div>
+            <div className={style.infoCard}>
+              <span className={`${style.infoKey} scrambled`}>status</span>
+              <span className={`${style.infoValue} ${style.infoValueAccent}`}>
+                ✓ open to work
+              </span>
+            </div>
+            <div className={style.infoCard}>
+              <span className={`${style.infoKey} scrambled`}>email</span>
+              <span className={style.infoValue}>pestov.volodymyr@gmail.com</span>
+            </div>
+            <div className={style.infoCard}>
+              <span className={`${style.infoKey} scrambled`}>telegram</span>
+              <span className={style.infoValue}>@pestov_v</span>
             </div>
           </div>
         </div>
       </div>
-      <i className={style["arrow-next"]} aria-hidden="true" />
     </section>
   );
 };
