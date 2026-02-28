@@ -21,14 +21,14 @@ const getSystemTheme = (): ResolvedTheme => {
 };
 
 const getStoredTheme = (): Theme => {
-  if (typeof window === "undefined") return "system";
+  if (typeof window === "undefined") return "dark";
   const stored = localStorage.getItem("theme") as Theme | null;
-  return stored && ["light", "dark", "system"].includes(stored) ? stored : "system";
+  return stored && ["light", "dark", "system"].includes(stored) ? stored : "dark";
 };
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setThemeState] = useState<Theme>("system");
-  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("light");
+  const [theme, setThemeState] = useState<Theme>("dark");
+  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("dark");
 
   const updateResolvedTheme = useCallback((newTheme: Theme) => {
     const resolved = newTheme === "system" ? getSystemTheme() : newTheme;
