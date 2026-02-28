@@ -428,7 +428,7 @@ export const translations: Record<
           "Optimized application bundle with code-splitting and lazy loading, improving initial page load by 35%.",
           "Platform scaled 3x with zero architecture rewrites.",
         ],
-        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
+        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
       },
       atlana: {
         position: "Front-End Developer",
@@ -688,7 +688,7 @@ export const translations: Record<
           "Оптимізація бандлу додатку з code-splitting та lazy loading, покращення початкового завантаження сторінки на 35%.",
           "Платформа масштабована в 3x без перепроектування архітектури.",
         ],
-        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
+        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
       },
       atlana: {
         position: "Front-End Розробник",
@@ -948,7 +948,7 @@ export const translations: Record<
           "Оптимизация на пакета на приложението с code-splitting и lazy loading, подобряване на първоначалното зареждане на страницата с 35%.",
           "Платформата мащабирана 3x без архитектурни преписвания.",
         ],
-        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
+        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
       },
       atlana: {
         position: "Front-End Разработчик",
@@ -1208,7 +1208,7 @@ export const translations: Record<
           "Optymalizacja pakietu aplikacji z podziałem kodu i leniwym ładowaniem, poprawiająca początkowe ładowanie strony o 35%.",
           "Platforma przeskalowana 3x bez przebudowy architektury.",
         ],
-        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
+        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
       },
       atlana: {
         position: "Front-End Developer",
@@ -1468,7 +1468,7 @@ export const translations: Record<
           "Ottimizzazione del bundle dell'applicazione con code-splitting e lazy loading, migliorando il caricamento iniziale della pagina del 35%.",
           "Piattaforma scalata 3x senza riscritture architetturali.",
         ],
-        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
+        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
       },
       atlana: {
         position: "Front-End Developer",
@@ -1728,7 +1728,7 @@ export const translations: Record<
           "Optimisation du bundle de l'application avec le fractionnement de code et le chargement différé, améliorant le chargement initial de la page de 35%.",
           "Plateforme mise à l'échelle 3x sans réécriture architecturale.",
         ],
-        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
+        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
       },
       atlana: {
         position: "Développeur Front-End",
