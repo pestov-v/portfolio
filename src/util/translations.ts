@@ -175,16 +175,19 @@ export interface Translation {
       position: string;
       companyDescription: string;
       achievements: string[];
+      tags: string[];
     };
     atlana: {
       position: string;
       companyDescription: string;
       achievements: string[];
+      tags: string[];
     };
     impltech: {
       position: string;
       companyDescription: string;
       achievements: string[];
+      tags: string[];
     };
   };
 
@@ -425,6 +428,7 @@ export const translations: Record<
           "Optimized application bundle with code-splitting and lazy loading, improving initial page load by 35%.",
           "Platform scaled 3x with zero architecture rewrites.",
         ],
+        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
       },
       atlana: {
         position: "Front-End Developer",
@@ -436,6 +440,7 @@ export const translations: Record<
           "Achieved 95+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO.",
           "Reduced page load time by 50%.",
         ],
+        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
       impltech: {
         position: "Front-End Developer",
@@ -446,6 +451,7 @@ export const translations: Record<
           "Mentored 2 junior developers on WebSocket patterns and React performance optimization.",
           "Sustained 1,000+ price updates/second during peak trading hours with consistent sub-50ms rendering.",
         ],
+        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
     },
 
@@ -682,6 +688,7 @@ export const translations: Record<
           "Оптимізація бандлу додатку з code-splitting та lazy loading, покращення початкового завантаження сторінки на 35%.",
           "Платформа масштабована в 3x без перепроектування архітектури.",
         ],
+        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
       },
       atlana: {
         position: "Front-End Розробник",
@@ -693,6 +700,7 @@ export const translations: Record<
           "Досягнення 95+ балів Lighthouse за Performance, Accessibility, Best Practices та SEO.",
           "Скорочення часу завантаження сторінки на 50%.",
         ],
+        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
       impltech: {
         position: "Front-End Розробник",
@@ -703,6 +711,7 @@ export const translations: Record<
           "Менторство 2 junior розробників з WebSocket патернів та оптимізації продуктивності React.",
           "Підтримка 1,000+ оновлень цін/секунду в пікові години торгів з стабільним рендерингом менше 50мс.",
         ],
+        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
     },
 
@@ -939,6 +948,7 @@ export const translations: Record<
           "Оптимизация на пакета на приложението с code-splitting и lazy loading, подобряване на първоначалното зареждане на страницата с 35%.",
           "Платформата мащабирана 3x без архитектурни преписвания.",
         ],
+        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
       },
       atlana: {
         position: "Front-End Разработчик",
@@ -950,6 +960,7 @@ export const translations: Record<
           "Постигане на 95+ Lighthouse резултати за Performance, Accessibility, Best Practices и SEO.",
           "Намаляване на времето за зареждане на страницата с 50%.",
         ],
+        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
       impltech: {
         position: "Front-End Разработчик",
@@ -960,6 +971,7 @@ export const translations: Record<
           "Менторство на 2 junior разработчици по WebSocket шаблони и оптимизация на производителността на React.",
           "Поддържане на 1,000+ обновления на цени/секунда по време на пиковите часове с последователен рендеринг под 50мс.",
         ],
+        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
     },
 
@@ -1196,6 +1208,7 @@ export const translations: Record<
           "Optymalizacja pakietu aplikacji z podziałem kodu i leniwym ładowaniem, poprawiająca początkowe ładowanie strony o 35%.",
           "Platforma przeskalowana 3x bez przebudowy architektury.",
         ],
+        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
       },
       atlana: {
         position: "Front-End Developer",
@@ -1207,6 +1220,7 @@ export const translations: Record<
           "Osiągnięcie wyników Lighthouse powyżej 95 w kategoriach Performance, Accessibility, Best Practices i SEO.",
           "Skrócenie czasu ładowania strony o 50%.",
         ],
+        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
       impltech: {
         position: "Front-End Developer",
@@ -1217,6 +1231,7 @@ export const translations: Record<
           "Mentoring 2 junior deweloperów w zakresie wzorców WebSocket i optymalizacji wydajności React.",
           "Utrzymanie ponad 1000 aktualizacji cen/sekundę w godzinach szczytu z renderingiem poniżej 50ms.",
         ],
+        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
     },
 
@@ -1453,6 +1468,7 @@ export const translations: Record<
           "Ottimizzazione del bundle dell'applicazione con code-splitting e lazy loading, migliorando il caricamento iniziale della pagina del 35%.",
           "Piattaforma scalata 3x senza riscritture architetturali.",
         ],
+        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
       },
       atlana: {
         position: "Front-End Developer",
@@ -1464,6 +1480,7 @@ export const translations: Record<
           "Raggiungimento di punteggi Lighthouse superiori a 95 in Performance, Accessibilità, Best Practices e SEO.",
           "Riduzione del tempo di caricamento della pagina del 50%.",
         ],
+        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
       impltech: {
         position: "Front-End Developer",
@@ -1474,6 +1491,7 @@ export const translations: Record<
           "Mentoring di 2 sviluppatori junior su pattern WebSocket e ottimizzazione delle prestazioni React.",
           "Mantenimento di 1.000+ aggiornamenti di prezzo/secondo durante le ore di punta con rendering costante sotto 50ms.",
         ],
+        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
     },
 
@@ -1710,6 +1728,7 @@ export const translations: Record<
           "Optimisation du bundle de l'application avec le fractionnement de code et le chargement différé, améliorant le chargement initial de la page de 35%.",
           "Plateforme mise à l'échelle 3x sans réécriture architecturale.",
         ],
+        tags: ["Payment Systems", "Merchant Management", "POS Terminals", "Fintech"],
       },
       atlana: {
         position: "Développeur Front-End",
@@ -1721,6 +1740,7 @@ export const translations: Record<
           "Obtention de scores Lighthouse supérieurs à 95 en Performance, Accessibilité, Bonnes Pratiques et SEO.",
           "Réduction du temps de chargement des pages de 50%.",
         ],
+        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
       impltech: {
         position: "Développeur Front-End",
@@ -1731,6 +1751,7 @@ export const translations: Record<
           "Mentorat de 2 développeurs juniors sur les patterns WebSocket et l'optimisation des performances React.",
           "Maintien de 1 000+ mises à jour de prix/seconde pendant les heures de pointe avec un rendu constant sous 50ms.",
         ],
+        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
     },
 

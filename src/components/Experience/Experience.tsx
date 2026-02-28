@@ -39,6 +39,11 @@ export const Experience = () => {
                   item.translationKey as keyof typeof t.experienceData
                 ].achievements
               }
+              tags={
+                t.experienceData[
+                  item.translationKey as keyof typeof t.experienceData
+                ].tags
+              }
               isActive={index === 0}
             />
           ))}

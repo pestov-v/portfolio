@@ -7,6 +7,7 @@ interface IExperienceItemProps {
   location: string;
   companyDescription: string;
   achievements: string[];
+  tags?: string[];
   isActive?: boolean;
 }
 
@@ -17,6 +18,7 @@ export const ExperienceItem = ({
   location,
   companyDescription,
   achievements,
+  tags,
   isActive = false,
 }: IExperienceItemProps) => {
   return (
@@ -28,6 +30,13 @@ export const ExperienceItem = ({
           {company} · {location}
         </span>
         <p className={style.description}>{companyDescription}</p>
+        {!isActive && tags && tags.length > 0 && (
+          <div className={style.tagsInline}>
+            {tags.map((tag, i) => (
+              <span key={i} className={style.tag}>{tag}</span>
+            ))}
+          </div>
+        )}
       </div>
       {isActive && achievements?.length > 0 && (
         <div className={style.tags}>

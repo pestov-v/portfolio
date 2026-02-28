@@ -20,7 +20,7 @@
   background: var(--re-bg-card);
   border-color: transparent;
   border-left: 3px solid var(--re-accent);
-  border-radius: 0 10px 10px 0;
+  border-radius: 4px 10px 10px 4px;
 }
 
 .active .period {
@@ -70,12 +70,20 @@
   align-items: flex-end;
   gap: 8px;
   flex-shrink: 0;
+  max-width: 40rem;
 
   @media (max-width: 1023px) {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
   }
+}
+
+.tagsInline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
 }
 
 .tag {
