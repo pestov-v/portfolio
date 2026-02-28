@@ -3,9 +3,7 @@ import dynamic from "next/dynamic";
 
 import { MainLayout } from "../src/Layouts/MainLayout";
 import { Header } from "../src/components/Header/Header";
-import { LanguageSwitcher } from "../src/components/LanguageSwitcher/LanguageSwitcher";
 import { Navbar } from "../src/components/Navbar/Navbar";
-import { ThemeSwitcher } from "../src/components/ThemeSwitcher/ThemeSwitcher";
 // import { ScrollTopButton } from "../src/components/ui/ScrollTopButton/ScrollTopButton";
 import { usePreventScrollJank } from "../src/hooks/usePreventScrollJank";
 import { useScrollAnimations } from "../src/hooks/useScrollAnimations";
@@ -40,10 +38,8 @@ const Home: NextPage = () => {
       <a href="#main-content" className={style.skipLink}>
         Skip to main content
       </a>
-      <ThemeSwitcher />
-      <LanguageSwitcher />
       <Navbar />
-      <main id="main-content" className={style.main}>
+      <main id="main-content" className={style.main} style={{ paddingTop: "72px" }}>
         <Header />
         <div className="animate-on-scroll fade-in-up">
           <About />

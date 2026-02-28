@@ -2,10 +2,6 @@
 @import "../../styles/breakpoints";
 
 .themeSwitcher {
-  position: fixed;
-  top: 1em;
-  right: 8.125em;
-  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,8 +51,6 @@
 
 @include respond-below(xs) {
   .themeSwitcher {
-    top: 0.75em;
-    right: 7em;
     width: 2.5em;
     height: 2.5em;
   }

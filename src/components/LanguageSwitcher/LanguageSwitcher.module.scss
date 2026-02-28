@@ -2,20 +2,12 @@
 @import "../../styles/breakpoints";
 
 .languageSwitcher {
-  position: fixed;
-  top: 1.35em;
-  right: 1.25em;
-  z-index: 1000;
+  position: relative;
 
   // Optimize for smooth scrolling on mobile
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-
-  @include respond-below(xs) {
-    top: 1.1em;
-    right: 1em;
-  }
 }
 
 .currentLanguage {

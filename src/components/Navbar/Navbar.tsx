@@ -1,89 +1,81 @@
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { useVisible } from "../../hooks/useVisible";
+import { ThemeSwitcher } from "../ThemeSwitcher/ThemeSwitcher";
+import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
 import style from "./Navbar.module.scss";
 
-interface Refs {
-  [key: string]: RefObject<HTMLElement>;
-}
-interface IProps {
-  refs: Refs;
-}
 export const Navbar = () => {
   const { t } = useLanguage();
-  const navbar = useRef<HTMLElement>(null);
+  const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    { id: 1, href: "#about", title: t.about },
-    { id: 2, href: "#experience", title: t.experience },
-    { id: 3, href: "#skills", title: t.skills },
-    { id: 4, href: "#projects", title: t.projects },
-    { id: 5, href: "#mail", title: t.contact },
+    { id: 1, href: "#about", title: "about" },
+    { id: 2, href: "#experience", title: "experience" },
+    { id: 3, href: "#skills", title: "skills" },
+    { id: 4, href: "#projects", title: "projects" },
+    { id: 5, href: "#mail", title: "contact" },
   ];
 
-  useVisible({
-    element: navbar,
-    style: style.visible,
-    throttleTime: 10,
-    offsetY: 100,
-  });
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);
-  };
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [isMenuOpen]);
 
   return (
-    <>
-      <nav className={style.navbar} ref={navbar} aria-label="Main navigation">
-        <button
-          className={style.burgerButton}
-          onClick={toggleMenu}
-          type="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMenuOpen}
-          aria-controls="nav-links"
-        >
-          <span
-            className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`}
-          />
-          <span
-            className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`}
-          />
-          <span
-            className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`}
-          />
-        </button>
+    <nav
+      className={`${style.navbar} ${scrolled ? style.scrolled : ""}`}
+      aria-label="Main navigation"
+    >
+      <a href="#" className={style.logo} aria-label="Back to top">VP.</a>
 
-        <ul id="nav-links" className={`${style.links} ${isMenuOpen ? style.menuOpen : ""}`} role="list">
-          {links.map(({ id, href, title }) => (
-            <li key={id}>
-              <a href={href} className={style.link} onClick={handleLinkClick}>
-                {title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <ul className={style.links} role="list">
+        {links.map(({ id, href, title }) => (
+          <li key={id}>
+            <a href={href} className={style.link}>{title}</a>
+          </li>
+        ))}
+      </ul>
+
+      <div className={style.controls}>
+        <ThemeSwitcher />
+        <LanguageSwitcher />
+        <a href="#mail" className={style.cta}>hire me</a>
+      </div>
+
+      <button
+        className={style.burger}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
+      >
+        <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+        <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+        <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+      </button>
+
       {isMenuOpen && (
-        <div className={style.overlay} onClick={handleLinkClick} aria-hidden="true" />
+        <div className={style.mobileMenu}>
+          <ul role="list">
+            {links.map(({ id, href, title }) => (
+              <li key={id}>
+                <a href={href} className={style.mobileLink} onClick={() => setIsMenuOpen(false)}>
+                  {title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="#mail" className={style.mobileCta} onClick={() => setIsMenuOpen(false)}>
+            hire me
+          </a>
+        </div>
       )}
-    </>
+    </nav>
   );
 };
