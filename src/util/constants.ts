@@ -225,7 +225,7 @@ export const SKILLS: ISkill[] = [
   { title: "NestJS", percent: 78, color: COLORS.info, category: "backend" },
   { title: "PostgreSQL", percent: 70, color: COLORS.primary, category: "backend" },
   { title: "REST API", percent: 88, color: COLORS.secondary, category: "backend" },
-  { title: "Redux", percent: 85, color: COLORS.danger, category: "devops" },
+  { title: "Redux", percent: 85, color: COLORS.danger, category: "frontend" },
   { title: "Git", percent: 90, color: COLORS.warning, category: "devops" },
   { title: "Docker", percent: 65, color: COLORS.info, category: "devops" },
 ];

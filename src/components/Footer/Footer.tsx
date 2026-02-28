@@ -19,7 +19,7 @@ export const Footer = () => {
           github
         </a>
         <a
-          href="http://linkedin.com/in/pestov-volodymyr-405011206/"
+          href="https://linkedin.com/in/pestov-volodymyr-405011206/"
           target="_blank"
           rel="noopener noreferrer"
           className={style.link}

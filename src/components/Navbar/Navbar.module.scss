@@ -74,7 +74,7 @@
   align-items: center;
   padding: 10px 24px;
   background: var(--re-accent);
-  color: #0A0F1C;
+  color: var(--re-on-accent);
   font-family: var(--re-font-mono);
   font-size: 12px;
   font-weight: 600;
@@ -159,7 +159,7 @@
   align-self: flex-start;
   padding: 12px 28px;
   background: var(--re-accent);
-  color: #0A0F1C;
+  color: var(--re-on-accent);
   font-family: var(--re-font-mono);
   font-size: 14px;
   font-weight: 600;

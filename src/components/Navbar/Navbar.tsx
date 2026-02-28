@@ -28,6 +28,16 @@ export const Navbar = () => {
     return () => { document.body.style.overflow = ""; };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
+    if (isMenuOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
+
   return (
     <nav
       className={`${style.navbar} ${scrolled ? style.scrolled : ""}`}
