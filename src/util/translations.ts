@@ -440,7 +440,7 @@ export const translations: Record<
       impltech: {
         position: "Front-End Developer",
         companyDescription:
-          "A tech company developing innovative solutions for real-time trading.",
+          "Impltech is a custom software development company delivering tailor-made digital products for clients across finance, trading, and tech industries. The team brings deep engineering expertise to build high-performance, data-intensive applications from the ground up.",
         achievements: [
           "Built a live trading interface streaming 50+ stock symbols simultaneously with <50ms UI update latency.",
           "Mentored 2 junior developers on WebSocket patterns and React performance optimization.",
@@ -697,7 +697,7 @@ export const translations: Record<
       impltech: {
         position: "Front-End Розробник",
         companyDescription:
-          "Технологічна компанія, що розробляє інноваційні рішення для торгівлі в реальному часі.",
+          "Impltech — компанія з розробки кастомного програмного забезпечення, що створює цифрові продукти на замовлення для клієнтів у сферах фінансів, трейдингу та технологій. Команда поєднує глибоку інженерну експертизу для створення високопродуктивних, data-intensive додатків з нуля.",
         achievements: [
           "Створення інтерфейсу для торгівлі в реальному часі з одночасною трансляцією 50+ символів акцій з затримкою оновлення UI менше 50мс.",
           "Менторство 2 junior розробників з WebSocket патернів та оптимізації продуктивності React.",
@@ -954,7 +954,7 @@ export const translations: Record<
       impltech: {
         position: "Front-End Разработчик",
         companyDescription:
-          "Технологична компания, разработваща иновативни решения за търговия в реално време.",
+          "Impltech е компания за разработка на персонализиран софтуер, доставяща дигитални продукти по поръчка за клиенти в областта на финансите, търговията и технологиите. Екипът прилага задълбочена инженерна експертиза за изграждане на високопроизводителни, данъчно-интензивни приложения от нулата.",
         achievements: [
           "Изграждане на интерфейс за търговия в реално време, стриймващ 50+ символа на акции едновременно със закъснение на обновяване на UI под 50мс.",
           "Менторство на 2 junior разработчици по WebSocket шаблони и оптимизация на производителността на React.",
@@ -1211,7 +1211,7 @@ export const translations: Record<
       impltech: {
         position: "Front-End Developer",
         companyDescription:
-          "Firma technologiczna rozwijająca innowacyjne rozwiązania do handlu w czasie rzeczywistym.",
+          "Impltech to firma zajmująca się tworzeniem oprogramowania na zamówienie, dostarczająca spersonalizowane produkty cyfrowe dla klientów z branży finansowej, handlowej i technologicznej. Zespół łączy głęboką wiedzę inżynierską, aby budować wydajne, intensywnie korzystające z danych aplikacje od podstaw.",
         achievements: [
           "Budowa interfejsu handlowego w czasie rzeczywistym strumieniującego ponad 50 symboli giełdowych jednocześnie z opóźnieniem aktualizacji UI poniżej 50ms.",
           "Mentoring 2 junior deweloperów w zakresie wzorców WebSocket i optymalizacji wydajności React.",
@@ -1468,7 +1468,7 @@ export const translations: Record<
       impltech: {
         position: "Front-End Developer",
         companyDescription:
-          "Azienda tecnologica che sviluppa soluzioni innovative per il trading in tempo reale.",
+          "Impltech è un'azienda di sviluppo software personalizzato che fornisce prodotti digitali su misura per clienti nel settore finanziario, del trading e tecnologico. Il team porta una profonda competenza ingegneristica per costruire applicazioni ad alte prestazioni e data-intensive da zero.",
         achievements: [
           "Costruzione di un'interfaccia di trading in tempo reale che trasmette 50+ simboli azionari simultaneamente con latenza di aggiornamento UI inferiore a 50ms.",
           "Mentoring di 2 sviluppatori junior su pattern WebSocket e ottimizzazione delle prestazioni React.",
@@ -1725,7 +1725,7 @@ export const translations: Record<
       impltech: {
         position: "Développeur Front-End",
         companyDescription:
-          "Entreprise technologique développant des solutions innovantes pour le trading en temps réel.",
+          "Impltech est une société de développement de logiciels personnalisés qui livre des produits numériques sur mesure pour des clients dans les secteurs de la finance, du trading et de la technologie. L'équipe apporte une expertise technique approfondie pour construire des applications haute performance et intensives en données from scratch.",
         achievements: [
           "Construction d'une interface de trading en temps réel diffusant 50+ symboles boursiers simultanément avec une latence de mise à jour de l'interface inférieure à 50ms.",
           "Mentorat de 2 développeurs juniors sur les patterns WebSocket et l'optimisation des performances React.",
