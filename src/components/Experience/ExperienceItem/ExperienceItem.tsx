@@ -1,12 +1,13 @@
 import style from "./ExperienceItem.module.scss";
 
-interface ExperienceItemProps {
+interface IExperienceItemProps {
   company: string;
   position: string;
   period: string;
   location: string;
   companyDescription: string;
   achievements: string[];
+  isActive?: boolean;
 }
 
 export const ExperienceItem = ({
@@ -16,27 +17,27 @@ export const ExperienceItem = ({
   location,
   companyDescription,
   achievements,
-}: ExperienceItemProps) => {
+  isActive = false,
+}: IExperienceItemProps) => {
   return (
-    <article className={style.item}>
-      <div className={style.header}>
-        <div className={style.titleGroup}>
-          <h3 className={style.position}>{position}</h3>
-          <div className={style.company}>{company}</div>
-          <div className={style.companyDescription}>{companyDescription}</div>
-        </div>
-        <div className={style.meta}>
-          <span className={style.period}>{period}</span>
-          <span className={style.location}>{location}</span>
-        </div>
+    <div className={`${style.card} ${isActive ? style.active : ""}`}>
+      <div className={style.left}>
+        <span className={style.period}>{period}</span>
+        <h3 className={style.position}>{position}</h3>
+        <span className={style.company}>
+          {company} · {location}
+        </span>
+        <p className={style.description}>{companyDescription}</p>
       </div>
-      <ul className={style.achievements}>
-        {achievements.map((achievement, index) => (
-          <li key={index} className={style.achievement}>
-            {achievement}
-          </li>
-        ))}
-      </ul>
-    </article>
+      {isActive && achievements?.length > 0 && (
+        <div className={style.tags}>
+          {achievements.slice(0, 3).map((ach, i) => (
+            <span key={i} className={style.tag}>
+              {ach}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };

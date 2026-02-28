@@ -1,121 +1,88 @@
-@import "src/styles/colors";
-@import "src/styles/breakpoints";
+.card {
+  padding: 32px 36px;
+  border-radius: 10px;
+  border: 1px solid var(--re-border);
+  background: var(--re-bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  transition: background 0.2s ease;
 
-.item {
-  background: var(--background-body);
-  border-radius: 12px;
-  padding: 1.5em;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-  @include respond-above(sm) {
-    padding: 2em;
-  }
-
-  &:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
-  }
-
-  .header {
-    display: flex;
+  @media (max-width: 1023px) {
     flex-direction: column;
-    gap: 0.75em;
-    margin-bottom: 1.25em;
-
-    @include respond-above(sm) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1.5em;
-    }
-
-    .titleGroup {
-      flex: 1;
-
-      .position {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--text-primary, var(--color-dark));
-        margin: 0 0 0.25em;
-        line-height: 1.3;
-
-        @include respond-above(sm) {
-          font-size: 1.4rem;
-        }
-      }
-
-      .company {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--color-primary);
-        margin-bottom: 0.25em;
-      }
-
-      .companyDescription {
-        font-size: 0.875rem;
-        font-style: italic;
-        color: var(--text-secondary);
-        line-height: 1.4;
-      }
-    }
-
-    .meta {
-      display: flex;
-      flex-direction: row;
-      gap: 1em;
-      flex-shrink: 0;
-
-      @include respond-above(sm) {
-        flex-direction: column;
-        gap: 0.35em;
-        text-align: right;
-      }
-
-      .period {
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: var(--text-secondary);
-        white-space: nowrap;
-      }
-
-      .location {
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-        white-space: nowrap;
-      }
-    }
+    gap: 16px;
+    padding: 24px;
   }
+}
 
-  .achievements {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 1em;
-    border-top: 1px solid var(--border-color, hsla(0, 0%, 50%, 0.2));
+.active {
+  background: var(--re-bg-card);
+  border-color: transparent;
+  border-left: 3px solid var(--re-accent);
+  border-radius: 0 10px 10px 0;
+}
 
-    .achievement {
-      position: relative;
-      padding-left: 1.25em;
-      margin-bottom: 0.6em;
-      font-size: 0.925rem;
-      line-height: 1.6;
-      color: var(--text-primary, var(--color-dark));
+.active .period {
+  color: var(--re-accent);
+}
 
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.6em;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--color-primary);
-      }
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+.period {
+  font-family: var(--re-font-mono);
+  font-size: 11px;
+  color: var(--re-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.position {
+  font-family: var(--re-font-sans);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--re-text-primary);
+  margin: 0;
+}
+
+.company {
+  font-family: var(--re-font-mono);
+  font-size: 13px;
+  color: var(--re-text-muted);
+}
+
+.description {
+  font-family: var(--re-font-sans);
+  font-size: 14px;
+  color: var(--re-text-secondary);
+  line-height: 1.6;
+  max-width: 780px;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+
+  @media (max-width: 1023px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
+}
+
+.tag {
+  padding: 4px 12px;
+  background: var(--re-accent-muted);
+  color: var(--re-accent);
+  font-family: var(--re-font-mono);
+  font-size: 11px;
+  border-radius: 4px;
 }
