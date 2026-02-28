@@ -53,6 +53,20 @@
   --bg-primary: var(--background-body);
   --bg-secondary: var(--background-section);
   --border-color: hsla(0, 0%, 50%, 0.2);
+
+  // Redesign tokens — light theme
+  --re-bg-primary: #F8FAFC;
+  --re-bg-secondary: #FFFFFF;
+  --re-bg-card: #F1F5F9;
+  --re-accent: #0891B2;
+  --re-accent-muted: rgba(8, 145, 178, 0.1);
+  --re-accent-border: rgba(8, 145, 178, 0.2);
+  --re-text-primary: #0F172A;
+  --re-text-secondary: #475569;
+  --re-text-muted: #94A3B8;
+  --re-border: #E2E8F0;
+  --re-font-sans: 'Inter', sans-serif;
+  --re-font-mono: 'JetBrains Mono', monospace;
 }
 
 // Dark theme — applied to both .app and portals outside it
@@ -79,4 +93,18 @@
   --bg-primary: var(--background-body);
   --bg-secondary: var(--background-section);
   --border-color: hsla(0, 0%, 80%, 0.15);
+
+  // Redesign tokens — dark theme
+  --re-bg-primary: #0A0F1C;
+  --re-bg-secondary: #0F172A;
+  --re-bg-card: #1E293B;
+  --re-accent: #22D3EE;
+  --re-accent-muted: rgba(34, 211, 238, 0.1);
+  --re-accent-border: rgba(34, 211, 238, 0.2);
+  --re-text-primary: #FFFFFF;
+  --re-text-secondary: #94A3B8;
+  --re-text-muted: #64748B;
+  --re-border: #1E293B;
+  --re-font-sans: 'Inter', sans-serif;
+  --re-font-mono: 'JetBrains Mono', monospace;
 }
