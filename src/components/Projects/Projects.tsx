@@ -1,5 +1,4 @@
 import { MermaidDiagram } from "components/ui/MermaidDiagram/MermaidDiagram";
-import { SectionTitle } from "components/ui/SectionTitle/SectionTitle";
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";
 import Image from "next/image";
@@ -65,7 +64,8 @@ export const Projects = () => {
       aria-labelledby="portfolio-title"
     >
       <div className={style.container}>
-        <SectionTitle title={t.portfolio} bgText={t.portfolioBgText} />
+        <span className={style.tag}>// 04. PROJECTS</span>
+        <h2 className={style.sectionTitle} id="portfolio-title">Things I&apos;ve built.</h2>
 
         <div className={style.projectsWrapper} ref={gridRef}>
           {projects.map((item, index) => {
@@ -122,6 +122,15 @@ export const Projects = () => {
                       <div className={style.cardText}>
                         <h2 className={style.title}>{title}</h2>
                         <p className={style.description}>{description}</p>
+                        {item.caseStudy?.technologies && (
+                          <div className={style.techTags}>
+                            {item.caseStudy.technologies.slice(0, 3).map((tech) => (
+                              <span key={tech} className={style.techTag}>
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                         {additionalInfo && !isActive && (
                           <p className={style.additionalInfo}>
                             {additionalInfo}
@@ -139,7 +148,7 @@ export const Projects = () => {
                       >
                         {hasCaseStudy && (
                           <div className={style.caseStudy}>
-                            <h3 className={style.sectionTitle}>
+                            <h3 className={style.caseStudyTitle}>
                               {t.projectModal.caseStudy}
                             </h3>
 
