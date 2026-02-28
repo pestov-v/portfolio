@@ -61,8 +61,33 @@ export interface Translation {
   sendButton: string;
   thankYouMessage: string;
 
+  // Header (redesign)
+  badgeAvailable: string;
+  headerDescription: string;
+  viewMyWork: string;
+  yearsExp: string;
+  projectsCount: string;
+  coffee: string;
+
   // Footer
   letsWorkTogether: string;
+  hireMe: string;
+  letsWorkTogetherSubtitle: string;
+
+  // About (redesign)
+  whoIAm: string;
+
+  // Experience (redesign)
+  whereIveWorked: string;
+
+  // Skills (redesign)
+  mySkillsTitle: string;
+  frontend: string;
+  backend: string;
+  devops: string;
+
+  // Projects (redesign)
+  myProjectsTitle: string;
 
   // Meta tags
   portfolioTitle: string;
@@ -195,7 +220,7 @@ export const translations: Record<
   en: {
     // Header
     greeting: "Hello, I'm",
-    name: "Volodymyr",
+    name: "Volodymyr Pestov",
     downloadCV: "Download CV",
 
     // Navigation
@@ -256,8 +281,33 @@ export const translations: Record<
     sendButton: "Send",
     thankYouMessage: "Thank you for your message!",
 
+    // Header (redesign)
+    badgeAvailable: "available for work",
+    headerDescription: "Building high-performance web applications with modern technologies and clean, maintainable architecture.",
+    viewMyWork: "view my work",
+    yearsExp: "YEARS EXP.",
+    projectsCount: "PROJECTS",
+    coffee: "COFFEE",
+
     // Footer
     letsWorkTogether: "Let's work together...",
+    hireMe: "hire me",
+    letsWorkTogetherSubtitle: "Have a project in mind? I'd love to hear about it.",
+
+    // About (redesign)
+    whoIAm: "Who I am.",
+
+    // Experience (redesign)
+    whereIveWorked: "Where I've worked.",
+
+    // Skills (redesign)
+    mySkillsTitle: "My skills",
+    frontend: "Frontend",
+    backend: "Backend",
+    devops: "DevOps",
+
+    // Projects (redesign)
+    myProjectsTitle: "My projects",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
@@ -367,33 +417,36 @@ export const translations: Record<
     experienceData: {
       ukrpay: {
         position: "Senior Front-End Developer",
-        companyDescription: "Leading fintech company specializing in payment solutions.",
+        companyDescription:
+          "Leading fintech company specializing in payment solutions.",
         achievements: [
           "Architected merchant management platform serving 500+ merchants and processing 10,000+ daily transactions with zero downtime during 3x user growth.",
           "Designed and implemented a reusable component library with 40+ components, cutting feature development time by 40%.",
           "Optimized application bundle with code-splitting and lazy loading, improving initial page load by 35%.",
-          "Platform scaled 3x with zero architecture rewrites."
-        ]
+          "Platform scaled 3x with zero architecture rewrites.",
+        ],
       },
       atlana: {
         position: "Front-End Developer",
-        companyDescription: "Real estate technology company focused on enhancing property search experiences.",
+        companyDescription:
+          "Atlana is a web development company specialized in providing tailored web solutions for business needs. Solid expertise covers wide range of successfully completed projects from startups to international government portals.",
         achievements: [
           "Developed interactive property search with Mapbox integration, geolocation filtering, and advanced faceted search.",
           "Created SEO-optimized listing pages using Next.js SSG, driving organic traffic growth.",
           "Achieved 95+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO.",
-          "Reduced page load time by 50%."
-        ]
+          "Reduced page load time by 50%.",
+        ],
       },
       impltech: {
         position: "Front-End Developer",
-        companyDescription: "A tech company developing innovative solutions for real-time trading.",
+        companyDescription:
+          "A tech company developing innovative solutions for real-time trading.",
         achievements: [
           "Built a live trading interface streaming 50+ stock symbols simultaneously with <50ms UI update latency.",
           "Mentored 2 junior developers on WebSocket patterns and React performance optimization.",
-          "Sustained 1,000+ price updates/second during peak trading hours with consistent sub-50ms rendering."
-        ]
-      }
+          "Sustained 1,000+ price updates/second during peak trading hours with consistent sub-50ms rendering.",
+        ],
+      },
     },
 
     // Demo page
@@ -485,8 +538,33 @@ export const translations: Record<
     sendButton: "Відправити",
     thankYouMessage: "Дякую за ваше повідомлення!",
 
+    // Header (redesign)
+    badgeAvailable: "доступний для роботи",
+    headerDescription: "Розробка високопродуктивних веб-додатків із сучасними технологіями та чистою, підтримуваною архітектурою.",
+    viewMyWork: "дивитись мої роботи",
+    yearsExp: "РОКІВ ДОСВІДУ",
+    projectsCount: "ПРОЕКТІВ",
+    coffee: "КАВИ",
+
     // Footer
     letsWorkTogether: "Давайте працювати разом...",
+    hireMe: "найміть мене",
+    letsWorkTogetherSubtitle: "Маєте проект на думці? Я хотів би почути про нього.",
+
+    // About (redesign)
+    whoIAm: "Хто я.",
+
+    // Experience (redesign)
+    whereIveWorked: "Де я працював.",
+
+    // Skills (redesign)
+    mySkillsTitle: "Мої навички",
+    frontend: "Frontend",
+    backend: "Backend",
+    devops: "DevOps",
+
+    // Projects (redesign)
+    myProjectsTitle: "Мої проекти",
 
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Розробник",
@@ -596,33 +674,36 @@ export const translations: Record<
     experienceData: {
       ukrpay: {
         position: "Senior Front-End Розробник",
-        companyDescription: "Провідна фінтех-компанія, що спеціалізується на платіжних рішеннях.",
+        companyDescription:
+          "Провідна фінтех-компанія, що спеціалізується на платіжних рішеннях.",
         achievements: [
           "Архітектура платформи управління мерчантами, що обслуговує 500+ мерчантів та обробляє 10,000+ щоденних транзакцій з нульовим простоєм під час 3x зростання користувачів.",
           "Розробка та впровадження бібліотеки компонентів з 40+ компонентами, що скоротило час розробки функцій на 40%.",
           "Оптимізація бандлу додатку з code-splitting та lazy loading, покращення початкового завантаження сторінки на 35%.",
-          "Платформа масштабована в 3x без перепроектування архітектури."
-        ]
+          "Платформа масштабована в 3x без перепроектування архітектури.",
+        ],
       },
       atlana: {
         position: "Front-End Розробник",
-        companyDescription: "Технологічна компанія з нерухомості, орієнтована на покращення пошуку об'єктів.",
+        companyDescription:
+          "Atlana — веб-розробна компанія, спеціалізована на розробці кастомізованих веб-рішень для бізнес-потреб. Міцна експертиза охоплює широкий спектр успішно реалізованих проектів від стартапів до міжнародних державних порталів.",
         achievements: [
           "Розробка інтерактивного пошуку нерухомості з інтеграцією Mapbox, геолокаційною фільтрацією та розширеним фасетним пошуком.",
           "Створення SEO-оптимізованих сторінок лістингів з використанням Next.js SSG, що стимулювало зростання органічного трафіку.",
           "Досягнення 95+ балів Lighthouse за Performance, Accessibility, Best Practices та SEO.",
-          "Скорочення часу завантаження сторінки на 50%."
-        ]
+          "Скорочення часу завантаження сторінки на 50%.",
+        ],
       },
       impltech: {
         position: "Front-End Розробник",
-        companyDescription: "Технологічна компанія, що розробляє інноваційні рішення для торгівлі в реальному часі.",
+        companyDescription:
+          "Технологічна компанія, що розробляє інноваційні рішення для торгівлі в реальному часі.",
         achievements: [
           "Створення інтерфейсу для торгівлі в реальному часі з одночасною трансляцією 50+ символів акцій з затримкою оновлення UI менше 50мс.",
           "Менторство 2 junior розробників з WebSocket патернів та оптимізації продуктивності React.",
-          "Підтримка 1,000+ оновлень цін/секунду в пікові години торгів з стабільним рендерингом менше 50мс."
-        ]
-      }
+          "Підтримка 1,000+ оновлень цін/секунду в пікові години торгів з стабільним рендерингом менше 50мс.",
+        ],
+      },
     },
 
     // Demo page
@@ -714,8 +795,33 @@ export const translations: Record<
     sendButton: "Изпрати",
     thankYouMessage: "Благодаря за съобщението!",
 
+    // Header (redesign)
+    badgeAvailable: "достъпен за работа",
+    headerDescription: "Разработка на високопроизводителни уеб приложения със съвременни технологии и чиста, поддържаема архитектура.",
+    viewMyWork: "виж моята работа",
+    yearsExp: "ГОДИНИ ОПИТ",
+    projectsCount: "ПРОЕКТИ",
+    coffee: "КАФЕ",
+
     // Footer
     letsWorkTogether: "Нека работим заедно...",
+    hireMe: "наеми ме",
+    letsWorkTogetherSubtitle: "Имаш проект на ум? Бих искал да чуя за него.",
+
+    // About (redesign)
+    whoIAm: "Кой съм.",
+
+    // Experience (redesign)
+    whereIveWorked: "Където съм работил.",
+
+    // Skills (redesign)
+    mySkillsTitle: "Моите умения",
+    frontend: "Frontend",
+    backend: "Backend",
+    devops: "DevOps",
+
+    // Projects (redesign)
+    myProjectsTitle: "Моите проекти",
 
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Разработчик",
@@ -825,33 +931,36 @@ export const translations: Record<
     experienceData: {
       ukrpay: {
         position: "Senior Front-End Разработчик",
-        companyDescription: "Водеща финтех компания, специализирана в платежни решения.",
+        companyDescription:
+          "Водеща финтех компания, специализирана в платежни решения.",
         achievements: [
           "Архитектура на платформа за управление на търговци, обслужваща 500+ търговци и обработваща 10,000+ дневни транзакции с нулево престой при 3x ръст на потребители.",
           "Проектиране и внедряване на библиотека от компоненти с 40+ компонента, намаляваща времето за разработка на функции с 40%.",
           "Оптимизация на пакета на приложението с code-splitting и lazy loading, подобряване на първоначалното зареждане на страницата с 35%.",
-          "Платформата мащабирана 3x без архитектурни преписвания."
-        ]
+          "Платформата мащабирана 3x без архитектурни преписвания.",
+        ],
       },
       atlana: {
         position: "Front-End Разработчик",
-        companyDescription: "Технологична компания за недвижими имоти, фокусирана върху подобряване на търсенето на имоти.",
+        companyDescription:
+          "Atlana е компания за разработка на уеб приложения, специализирана в предоставянето на персонализирани уеб решения за бизнес нужди. Солидната експертиза обхваща широк спектър от успешно завършени проекти от стартъпи до международни държавни портали.",
         achievements: [
           "Разработка на интерактивно търсене на имоти с интеграция на Mapbox, геолокационно филтриране и разширено фасетно търсене.",
           "Създаване на SEO-оптимизирани страници с използване на Next.js SSG, стимулиращо ръста на органичния трафик.",
           "Постигане на 95+ Lighthouse резултати за Performance, Accessibility, Best Practices и SEO.",
-          "Намаляване на времето за зареждане на страницата с 50%."
-        ]
+          "Намаляване на времето за зареждане на страницата с 50%.",
+        ],
       },
       impltech: {
         position: "Front-End Разработчик",
-        companyDescription: "Технологична компания, разработваща иновативни решения за търговия в реално време.",
+        companyDescription:
+          "Технологична компания, разработваща иновативни решения за търговия в реално време.",
         achievements: [
           "Изграждане на интерфейс за търговия в реално време, стриймващ 50+ символа на акции едновременно със закъснение на обновяване на UI под 50мс.",
           "Менторство на 2 junior разработчици по WebSocket шаблони и оптимизация на производителността на React.",
-          "Поддържане на 1,000+ обновления на цени/секунда по време на пиковите часове с последователен рендеринг под 50мс."
-        ]
-      }
+          "Поддържане на 1,000+ обновления на цени/секунда по време на пиковите часове с последователен рендеринг под 50мс.",
+        ],
+      },
     },
 
     // Demo page
@@ -943,8 +1052,33 @@ export const translations: Record<
     sendButton: "Wyślij",
     thankYouMessage: "Dziękuję za wiadomość!",
 
+    // Header (redesign)
+    badgeAvailable: "dostępny do pracy",
+    headerDescription: "Budowanie wysokowydajnych aplikacji internetowych za pomocą nowoczesnych technologii i czystej, łatwej w utrzymaniu architektury.",
+    viewMyWork: "zobacz moją pracę",
+    yearsExp: "LAT DOŚWIADCZENIA",
+    projectsCount: "PROJEKTÓW",
+    coffee: "KAWY",
+
     // Footer
     letsWorkTogether: "Pracujmy razem...",
+    hireMe: "zatrudnij mnie",
+    letsWorkTogetherSubtitle: "Masz projekt na uwadze? Chętnie o nim słyszę.",
+
+    // About (redesign)
+    whoIAm: "Kim jestem.",
+
+    // Experience (redesign)
+    whereIveWorked: "Gdzie pracowałem.",
+
+    // Skills (redesign)
+    mySkillsTitle: "Moje umiejętności",
+    frontend: "Frontend",
+    backend: "Backend",
+    devops: "DevOps",
+
+    // Projects (redesign)
+    myProjectsTitle: "Moje projekty",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
@@ -1054,33 +1188,36 @@ export const translations: Record<
     experienceData: {
       ukrpay: {
         position: "Senior Front-End Developer",
-        companyDescription: "Wiodąca firma fintech specjalizująca się w rozwiązaniach płatniczych.",
+        companyDescription:
+          "Wiodąca firma fintech specjalizująca się w rozwiązaniach płatniczych.",
         achievements: [
           "Architektura platformy zarządzania sprzedawcami obsługującej 500+ sprzedawców i przetwarzającej 10 000+ dziennych transakcji z zerowym przestojem przy 3-krotnym wzroście użytkowników.",
           "Zaprojektowanie i wdrożenie biblioteki komponentów z 40+ komponentami, skracającej czas rozwoju funkcji o 40%.",
           "Optymalizacja pakietu aplikacji z podziałem kodu i leniwym ładowaniem, poprawiająca początkowe ładowanie strony o 35%.",
-          "Platforma przeskalowana 3x bez przebudowy architektury."
-        ]
+          "Platforma przeskalowana 3x bez przebudowy architektury.",
+        ],
       },
       atlana: {
         position: "Front-End Developer",
-        companyDescription: "Firma technologiczna zajmująca się nieruchomościami, skoncentrowana na ulepszaniu wyszukiwania nieruchomości.",
+        companyDescription:
+          "Atlana to firma zajmująca się rozwojem sieci Web specjalizująca się w dostarczaniu dostosowanych rozwiązań internetowych do potrzeb biznesu. Solidna wiedza obejmuje szeroki zakres pomyślnie ukończonych projektów od startupów po międzynarodowe portale rządowe.",
         achievements: [
           "Opracowanie interaktywnego wyszukiwania nieruchomości z integracją Mapbox, filtrowaniem geolokalizacyjnym i zaawansowanym wyszukiwaniem fasetowym.",
           "Stworzenie stron z listingami zoptymalizowanymi pod SEO przy użyciu Next.js SSG, stymulujących wzrost ruchu organicznego.",
           "Osiągnięcie wyników Lighthouse powyżej 95 w kategoriach Performance, Accessibility, Best Practices i SEO.",
-          "Skrócenie czasu ładowania strony o 50%."
-        ]
+          "Skrócenie czasu ładowania strony o 50%.",
+        ],
       },
       impltech: {
         position: "Front-End Developer",
-        companyDescription: "Firma technologiczna rozwijająca innowacyjne rozwiązania do handlu w czasie rzeczywistym.",
+        companyDescription:
+          "Firma technologiczna rozwijająca innowacyjne rozwiązania do handlu w czasie rzeczywistym.",
         achievements: [
           "Budowa interfejsu handlowego w czasie rzeczywistym strumieniującego ponad 50 symboli giełdowych jednocześnie z opóźnieniem aktualizacji UI poniżej 50ms.",
           "Mentoring 2 junior deweloperów w zakresie wzorców WebSocket i optymalizacji wydajności React.",
-          "Utrzymanie ponad 1000 aktualizacji cen/sekundę w godzinach szczytu z renderingiem poniżej 50ms."
-        ]
-      }
+          "Utrzymanie ponad 1000 aktualizacji cen/sekundę w godzinach szczytu z renderingiem poniżej 50ms.",
+        ],
+      },
     },
 
     // Demo page
@@ -1172,8 +1309,33 @@ export const translations: Record<
     sendButton: "Invia",
     thankYouMessage: "Grazie per il tuo messaggio!",
 
+    // Header (redesign)
+    badgeAvailable: "disponibile per il lavoro",
+    headerDescription: "Costruire applicazioni web ad alte prestazioni con tecnologie moderne e architettura pulita e mantenibile.",
+    viewMyWork: "vedi il mio lavoro",
+    yearsExp: "ANNI DI ESPERIENZA",
+    projectsCount: "PROGETTI",
+    coffee: "CAFFÈ",
+
     // Footer
     letsWorkTogether: "Lavoriamo insieme...",
+    hireMe: "assumimi",
+    letsWorkTogetherSubtitle: "Hai un progetto in mente? Mi piacerebbe sentirne parlare.",
+
+    // About (redesign)
+    whoIAm: "Chi sono.",
+
+    // Experience (redesign)
+    whereIveWorked: "Dove ho lavorato.",
+
+    // Skills (redesign)
+    mySkillsTitle: "Le mie competenze",
+    frontend: "Frontend",
+    backend: "Backend",
+    devops: "DevOps",
+
+    // Projects (redesign)
+    myProjectsTitle: "I miei progetti",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
@@ -1283,33 +1445,36 @@ export const translations: Record<
     experienceData: {
       ukrpay: {
         position: "Senior Front-End Developer",
-        companyDescription: "Azienda fintech leader specializzata in soluzioni di pagamento.",
+        companyDescription:
+          "Azienda fintech leader specializzata in soluzioni di pagamento.",
         achievements: [
           "Architettura di piattaforma di gestione commercianti che serve 500+ commercianti ed elabora 10.000+ transazioni giornaliere con zero downtime durante una crescita utenti 3x.",
           "Progettazione e implementazione di una libreria di componenti con 40+ componenti, riducendo i tempi di sviluppo delle funzionalità del 40%.",
           "Ottimizzazione del bundle dell'applicazione con code-splitting e lazy loading, migliorando il caricamento iniziale della pagina del 35%.",
-          "Piattaforma scalata 3x senza riscritture architetturali."
-        ]
+          "Piattaforma scalata 3x senza riscritture architetturali.",
+        ],
       },
       atlana: {
         position: "Front-End Developer",
-        companyDescription: "Azienda tecnologica immobiliare focalizzata sul miglioramento delle esperienze di ricerca immobiliare.",
+        companyDescription:
+          "Atlana è un'azienda di sviluppo web specializzata nella fornitura di soluzioni web personalizzate per le esigenze aziendali. L'esperienza solida copre un'ampia gamma di progetti completati con successo, da startup a portali governativi internazionali.",
         achievements: [
           "Sviluppo di ricerca immobiliare interattiva con integrazione Mapbox, filtraggio per geolocalizzazione e ricerca sfaccettata avanzata.",
           "Creazione di pagine di annunci ottimizzate per SEO utilizzando Next.js SSG, stimolando la crescita del traffico organico.",
           "Raggiungimento di punteggi Lighthouse superiori a 95 in Performance, Accessibilità, Best Practices e SEO.",
-          "Riduzione del tempo di caricamento della pagina del 50%."
-        ]
+          "Riduzione del tempo di caricamento della pagina del 50%.",
+        ],
       },
       impltech: {
         position: "Front-End Developer",
-        companyDescription: "Azienda tecnologica che sviluppa soluzioni innovative per il trading in tempo reale.",
+        companyDescription:
+          "Azienda tecnologica che sviluppa soluzioni innovative per il trading in tempo reale.",
         achievements: [
           "Costruzione di un'interfaccia di trading in tempo reale che trasmette 50+ simboli azionari simultaneamente con latenza di aggiornamento UI inferiore a 50ms.",
           "Mentoring di 2 sviluppatori junior su pattern WebSocket e ottimizzazione delle prestazioni React.",
-          "Mantenimento di 1.000+ aggiornamenti di prezzo/secondo durante le ore di punta con rendering costante sotto 50ms."
-        ]
-      }
+          "Mantenimento di 1.000+ aggiornamenti di prezzo/secondo durante le ore di punta con rendering costante sotto 50ms.",
+        ],
+      },
     },
 
     // Demo page
@@ -1401,8 +1566,33 @@ export const translations: Record<
     sendButton: "Envoyer",
     thankYouMessage: "Merci pour votre message!",
 
+    // Header (redesign)
+    badgeAvailable: "disponible pour travailler",
+    headerDescription: "Construire des applications web performantes avec des technologies modernes et une architecture propre et maintenable.",
+    viewMyWork: "voir mon travail",
+    yearsExp: "ANS D'EXPÉRIENCE",
+    projectsCount: "PROJETS",
+    coffee: "CAFÉ",
+
     // Footer
     letsWorkTogether: "Travaillons ensemble...",
+    hireMe: "embauchez-moi",
+    letsWorkTogetherSubtitle: "Vous avez un projet en tête ? J'aimerais en entendre parler.",
+
+    // About (redesign)
+    whoIAm: "Qui suis-je.",
+
+    // Experience (redesign)
+    whereIveWorked: "Où j'ai travaillé.",
+
+    // Skills (redesign)
+    mySkillsTitle: "Mes compétences",
+    frontend: "Frontend",
+    backend: "Backend",
+    devops: "DevOps",
+
+    // Projects (redesign)
+    myProjectsTitle: "Mes projets",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Développeur Senior Full-Stack",
@@ -1512,33 +1702,36 @@ export const translations: Record<
     experienceData: {
       ukrpay: {
         position: "Développeur Front-End Senior",
-        companyDescription: "Entreprise fintech leader spécialisée dans les solutions de paiement.",
+        companyDescription:
+          "Entreprise fintech leader spécialisée dans les solutions de paiement.",
         achievements: [
           "Architecture d'une plateforme de gestion des commerçants servant 500+ commerçants et traitant 10 000+ transactions quotidiennes avec zéro temps d'arrêt lors d'une croissance 3x des utilisateurs.",
           "Conception et implémentation d'une bibliothèque de composants avec 40+ composants, réduisant le temps de développement des fonctionnalités de 40%.",
           "Optimisation du bundle de l'application avec le fractionnement de code et le chargement différé, améliorant le chargement initial de la page de 35%.",
-          "Plateforme mise à l'échelle 3x sans réécriture architecturale."
-        ]
+          "Plateforme mise à l'échelle 3x sans réécriture architecturale.",
+        ],
       },
       atlana: {
         position: "Développeur Front-End",
-        companyDescription: "Entreprise technologique immobilière axée sur l'amélioration des expériences de recherche de biens.",
+        companyDescription:
+          "Atlana est une entreprise de développement Web spécialisée dans la fourniture de solutions Web personnalisées adaptées aux besoins des entreprises. L'expertise solide couvre un large éventail de projets réussis, des startups aux portails gouvernementaux internationaux.",
         achievements: [
           "Développement d'une recherche immobilière interactive avec intégration Mapbox, filtrage par géolocalisation et recherche à facettes avancée.",
           "Création de pages d'annonces optimisées pour le SEO utilisant Next.js SSG, stimulant la croissance du trafic organique.",
           "Obtention de scores Lighthouse supérieurs à 95 en Performance, Accessibilité, Bonnes Pratiques et SEO.",
-          "Réduction du temps de chargement des pages de 50%."
-        ]
+          "Réduction du temps de chargement des pages de 50%.",
+        ],
       },
       impltech: {
         position: "Développeur Front-End",
-        companyDescription: "Entreprise technologique développant des solutions innovantes pour le trading en temps réel.",
+        companyDescription:
+          "Entreprise technologique développant des solutions innovantes pour le trading en temps réel.",
         achievements: [
           "Construction d'une interface de trading en temps réel diffusant 50+ symboles boursiers simultanément avec une latence de mise à jour de l'interface inférieure à 50ms.",
           "Mentorat de 2 développeurs juniors sur les patterns WebSocket et l'optimisation des performances React.",
-          "Maintien de 1 000+ mises à jour de prix/seconde pendant les heures de pointe avec un rendu constant sous 50ms."
-        ]
-      }
+          "Maintien de 1 000+ mises à jour de prix/seconde pendant les heures de pointe avec un rendu constant sous 50ms.",
+        ],
+      },
     },
 
     // Demo page

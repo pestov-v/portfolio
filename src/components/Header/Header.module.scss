@@ -34,8 +34,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 .badgeText {
@@ -55,6 +60,10 @@
   margin: 0;
   max-width: 1000px;
   white-space: pre-line;
+
+  & > div {
+    padding-bottom: 0.1em;
+  }
 }
 
 .role {
@@ -102,7 +111,9 @@
   text-decoration: none;
   transition: opacity 0.2s ease;
 
-  &:hover { opacity: 0.85; }
+  &:hover {
+    opacity: 0.85;
+  }
 }
 
 .btnSecondary {
@@ -118,7 +129,9 @@
   border: 1px solid var(--re-accent-border);
   border-radius: 6px;
   text-decoration: none;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
 
   &:hover {
     border-color: var(--re-accent);

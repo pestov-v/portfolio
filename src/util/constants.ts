@@ -218,7 +218,6 @@ interface ISkill {
 export const SKILLS: ISkill[] = [
   { title: "React", percent: 92, color: COLORS.danger, category: "frontend" },
   { title: "TypeScript", percent: 90, color: COLORS.info, category: "frontend" },
-  { title: "JavaScript", percent: 90, color: COLORS.warning, category: "frontend" },
   { title: "Next.js", percent: 85, color: COLORS.primary, category: "frontend" },
   { title: "HTML/CSS", percent: 92, color: COLORS.secondary, category: "frontend" },
   { title: "Node.js", percent: 75, color: COLORS.success, category: "backend" },
