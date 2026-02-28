@@ -30,7 +30,7 @@ export const ExperienceItem = ({
           {company} · {location}
         </span>
         <p className={style.description}>{companyDescription}</p>
-        {!isActive && tags && tags.length > 0 && (
+        {tags && tags.length > 0 && (
           <div className={style.tagsInline}>
             {tags.map((tag, i) => (
               <span key={i} className={style.tag}>{tag}</span>
@@ -38,7 +38,7 @@ export const ExperienceItem = ({
           </div>
         )}
       </div>
-      {isActive && achievements?.length > 0 && (
+      {achievements?.length > 0 && (
         <div className={style.tags}>
           {achievements.slice(0, 3).map((ach, i) => (
             <span key={i} className={style.tag}>

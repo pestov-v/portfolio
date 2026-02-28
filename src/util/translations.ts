@@ -435,10 +435,9 @@ export const translations: Record<
         companyDescription:
           "Atlana is a web development company specialized in providing tailored web solutions for business needs. Solid expertise covers wide range of successfully completed projects from startups to international government portals.",
         achievements: [
-          "Developed interactive property search with Mapbox integration, geolocation filtering, and advanced faceted search.",
-          "Created SEO-optimized listing pages using Next.js SSG, driving organic traffic growth.",
-          "Achieved 95+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO.",
-          "Reduced page load time by 50%.",
+          "Built an end-to-end property listing platform with interactive Mapbox map, geolocation filters, and neighborhood-level search — enabling users to explore listings visually across the city.",
+          "Implemented saved searches, property comparison, and user watchlists — increasing session depth and return visit rate for the platform.",
+          "Achieved 95+ Lighthouse scores and 50% faster page loads via Next.js SSG, structured data markup, and image optimization.",
         ],
         tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
@@ -447,9 +446,9 @@ export const translations: Record<
         companyDescription:
           "Impltech is a custom software development company delivering tailor-made digital products for clients across finance, trading, and tech industries. The team brings deep engineering expertise to build high-performance, data-intensive applications from the ground up.",
         achievements: [
-          "Built a live trading interface streaming 50+ stock symbols simultaneously with <50ms UI update latency.",
-          "Mentored 2 junior developers on WebSocket patterns and React performance optimization.",
-          "Sustained 1,000+ price updates/second during peak trading hours with consistent sub-50ms rendering.",
+          "Developed a real-time trading interface for a brokerage platform streaming live price feeds for 50+ instruments via WebSocket with sub-50ms UI latency.",
+          "Built interactive candlestick charts with multiple timeframes, technical indicators, and drawing tools — delivering a professional-grade trading experience.",
+          "Implemented a full order management system supporting market, limit, and stop orders with instant execution feedback and real-time portfolio P&L tracking.",
         ],
         tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
@@ -695,10 +694,9 @@ export const translations: Record<
         companyDescription:
           "Atlana — веб-розробна компанія, спеціалізована на розробці кастомізованих веб-рішень для бізнес-потреб. Міцна експертиза охоплює широкий спектр успішно реалізованих проектів від стартапів до міжнародних державних порталів.",
         achievements: [
-          "Розробка інтерактивного пошуку нерухомості з інтеграцією Mapbox, геолокаційною фільтрацією та розширеним фасетним пошуком.",
-          "Створення SEO-оптимізованих сторінок лістингів з використанням Next.js SSG, що стимулювало зростання органічного трафіку.",
-          "Досягнення 95+ балів Lighthouse за Performance, Accessibility, Best Practices та SEO.",
-          "Скорочення часу завантаження сторінки на 50%.",
+          "Розробив платформу об'яв нерухомості з інтерактивною картою Mapbox, геолокаційними фільтрами та пошуком на рівні кварталів — дозволяючи користувачам переглядати оголошення візуально по всьому місту.",
+          "Реалізував збережені пошуки, порівняння об'єктів нерухомості та списки спостереження — збільшивши глибину сесій та кількість повторних відвідувань платформи.",
+          "Досяг 95+ балів Lighthouse та пришвидшив завантаження сторінок на 50% за допомогою Next.js SSG, розмітки структурованих даних та оптимізації зображень.",
         ],
         tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
@@ -707,9 +705,9 @@ export const translations: Record<
         companyDescription:
           "Impltech — компанія з розробки кастомного програмного забезпечення, що створює цифрові продукти на замовлення для клієнтів у сферах фінансів, трейдингу та технологій. Команда поєднує глибоку інженерну експертизу для створення високопродуктивних, data-intensive додатків з нуля.",
         achievements: [
-          "Створення інтерфейсу для торгівлі в реальному часі з одночасною трансляцією 50+ символів акцій з затримкою оновлення UI менше 50мс.",
-          "Менторство 2 junior розробників з WebSocket патернів та оптимізації продуктивності React.",
-          "Підтримка 1,000+ оновлень цін/секунду в пікові години торгів з стабільним рендерингом менше 50мс.",
+          "Розробив торговий інтерфейс реального часу для брокерської платформи, що транслює живі цінові потоки для 50+ інструментів через WebSocket із затримкою UI менше 50мс.",
+          "Побудував інтерактивні свічкові графіки з кількома таймфреймами, технічними індикаторами та інструментами малювання — забезпечивши трейдинговий досвід професійного рівня.",
+          "Реалізував повну систему управління ордерами з підтримкою ринкових, лімітних та стоп-ордерів із миттєвим зворотним зв'язком про виконання та відстеженням P&L портфеля в реальному часі.",
         ],
         tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
@@ -955,10 +953,9 @@ export const translations: Record<
         companyDescription:
           "Atlana е компания за разработка на уеб приложения, специализирана в предоставянето на персонализирани уеб решения за бизнес нужди. Солидната експертиза обхваща широк спектър от успешно завършени проекти от стартъпи до международни държавни портали.",
         achievements: [
-          "Разработка на интерактивно търсене на имоти с интеграция на Mapbox, геолокационно филтриране и разширено фасетно търсене.",
-          "Създаване на SEO-оптимизирани страници с използване на Next.js SSG, стимулиращо ръста на органичния трафик.",
-          "Постигане на 95+ Lighthouse резултати за Performance, Accessibility, Best Practices и SEO.",
-          "Намаляване на времето за зареждане на страницата с 50%.",
+          "Изградих платформа за обяви за имоти с интерактивна Mapbox карта, геолокационни филтри и търсене на ниво квартал — позволявайки на потребителите да разглеждат обяви визуално из целия град.",
+          "Внедрих запазени търсения, сравнение на имоти и списъци за наблюдение — увеличавайки дълбочината на сесиите и процента на повторни посещения на платформата.",
+          "Постигнах 95+ Lighthouse резултати и 50% по-бързо зареждане чрез Next.js SSG, маркиране на структурирани данни и оптимизация на изображения.",
         ],
         tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
@@ -967,9 +964,9 @@ export const translations: Record<
         companyDescription:
           "Impltech е компания за разработка на персонализиран софтуер, доставяща дигитални продукти по поръчка за клиенти в областта на финансите, търговията и технологиите. Екипът прилага задълбочена инженерна експертиза за изграждане на високопроизводителни, данъчно-интензивни приложения от нулата.",
         achievements: [
-          "Изграждане на интерфейс за търговия в реално време, стриймващ 50+ символа на акции едновременно със закъснение на обновяване на UI под 50мс.",
-          "Менторство на 2 junior разработчици по WebSocket шаблони и оптимизация на производителността на React.",
-          "Поддържане на 1,000+ обновления на цени/секунда по време на пиковите часове с последователен рендеринг под 50мс.",
+          "Разработих търговски интерфейс в реално време за брокерска платформа, стриймваща живи ценови потоци за 50+ инструмента чрез WebSocket с UI закъснение под 50мс.",
+          "Изградих интерактивни свещни графики с множество времеви рамки, технически индикатори и инструменти за рисуване — осигурявайки търговски опит от професионален клас.",
+          "Внедрих пълна система за управление на ордери с поддръжка на пазарни, лимитни и стоп-ордери с моментална обратна връзка за изпълнение и проследяване на P&L в реално време.",
         ],
         tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
@@ -1215,10 +1212,9 @@ export const translations: Record<
         companyDescription:
           "Atlana to firma zajmująca się rozwojem sieci Web specjalizująca się w dostarczaniu dostosowanych rozwiązań internetowych do potrzeb biznesu. Solidna wiedza obejmuje szeroki zakres pomyślnie ukończonych projektów od startupów po międzynarodowe portale rządowe.",
         achievements: [
-          "Opracowanie interaktywnego wyszukiwania nieruchomości z integracją Mapbox, filtrowaniem geolokalizacyjnym i zaawansowanym wyszukiwaniem fasetowym.",
-          "Stworzenie stron z listingami zoptymalizowanymi pod SEO przy użyciu Next.js SSG, stymulujących wzrost ruchu organicznego.",
-          "Osiągnięcie wyników Lighthouse powyżej 95 w kategoriach Performance, Accessibility, Best Practices i SEO.",
-          "Skrócenie czasu ładowania strony o 50%.",
+          "Zbudowałem kompleksową platformę ogłoszeń nieruchomości z interaktywną mapą Mapbox, filtrami geolokalizacyjnymi i wyszukiwaniem na poziomie dzielnicy — umożliwiając użytkownikom wizualne przeglądanie ofert w całym mieście.",
+          "Wdrożyłem zapisane wyszukiwania, porównywanie nieruchomości i listy obserwowanych — zwiększając głębokość sesji i wskaźnik powrotów na platformę.",
+          "Osiągnąłem wyniki Lighthouse 95+ i 50% szybsze ładowanie stron dzięki Next.js SSG, znacznikowi danych strukturalnych i optymalizacji obrazów.",
         ],
         tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
@@ -1227,9 +1223,9 @@ export const translations: Record<
         companyDescription:
           "Impltech to firma zajmująca się tworzeniem oprogramowania na zamówienie, dostarczająca spersonalizowane produkty cyfrowe dla klientów z branży finansowej, handlowej i technologicznej. Zespół łączy głęboką wiedzę inżynierską, aby budować wydajne, intensywnie korzystające z danych aplikacje od podstaw.",
         achievements: [
-          "Budowa interfejsu handlowego w czasie rzeczywistym strumieniującego ponad 50 symboli giełdowych jednocześnie z opóźnieniem aktualizacji UI poniżej 50ms.",
-          "Mentoring 2 junior deweloperów w zakresie wzorców WebSocket i optymalizacji wydajności React.",
-          "Utrzymanie ponad 1000 aktualizacji cen/sekundę w godzinach szczytu z renderingiem poniżej 50ms.",
+          "Opracowałem interfejs handlowy w czasie rzeczywistym dla platformy brokerskiej, streamującej żywe dane cenowe dla 50+ instrumentów przez WebSocket z opóźnieniem UI poniżej 50ms.",
+          "Zbudowałem interaktywne wykresy świecowe z wieloma ramami czasowymi, wskaźnikami technicznymi i narzędziami do rysowania — zapewniając profesjonalne doświadczenie handlowe.",
+          "Wdrożyłem pełny system zarządzania zleceniami obsługujący zlecenia rynkowe, limitowane i stop z natychmiastową informacją zwrotną o realizacji i śledzeniem P&L portfela w czasie rzeczywistym.",
         ],
         tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
@@ -1475,10 +1471,9 @@ export const translations: Record<
         companyDescription:
           "Atlana è un'azienda di sviluppo web specializzata nella fornitura di soluzioni web personalizzate per le esigenze aziendali. L'esperienza solida copre un'ampia gamma di progetti completati con successo, da startup a portali governativi internazionali.",
         achievements: [
-          "Sviluppo di ricerca immobiliare interattiva con integrazione Mapbox, filtraggio per geolocalizzazione e ricerca sfaccettata avanzata.",
-          "Creazione di pagine di annunci ottimizzate per SEO utilizzando Next.js SSG, stimolando la crescita del traffico organico.",
-          "Raggiungimento di punteggi Lighthouse superiori a 95 in Performance, Accessibilità, Best Practices e SEO.",
-          "Riduzione del tempo di caricamento della pagina del 50%.",
+          "Ho costruito una piattaforma completa di annunci immobiliari con mappa Mapbox interattiva, filtri di geolocalizzazione e ricerca a livello di quartiere — permettendo agli utenti di esplorare gli annunci visivamente in tutta la città.",
+          "Ho implementato ricerche salvate, confronto di proprietà e liste di controllo — aumentando la profondità delle sessioni e il tasso di visite ripetute sulla piattaforma.",
+          "Ho raggiunto punteggi Lighthouse 95+ e caricamento pagine 50% più veloce tramite Next.js SSG, markup dei dati strutturati e ottimizzazione delle immagini.",
         ],
         tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
@@ -1487,9 +1482,9 @@ export const translations: Record<
         companyDescription:
           "Impltech è un'azienda di sviluppo software personalizzato che fornisce prodotti digitali su misura per clienti nel settore finanziario, del trading e tecnologico. Il team porta una profonda competenza ingegneristica per costruire applicazioni ad alte prestazioni e data-intensive da zero.",
         achievements: [
-          "Costruzione di un'interfaccia di trading in tempo reale che trasmette 50+ simboli azionari simultaneamente con latenza di aggiornamento UI inferiore a 50ms.",
-          "Mentoring di 2 sviluppatori junior su pattern WebSocket e ottimizzazione delle prestazioni React.",
-          "Mantenimento di 1.000+ aggiornamenti di prezzo/secondo durante le ore di punta con rendering costante sotto 50ms.",
+          "Ho sviluppato un'interfaccia di trading in tempo reale per una piattaforma di brokeraggio che trasmette feed di prezzi live per 50+ strumenti via WebSocket con latenza UI inferiore a 50ms.",
+          "Ho costruito grafici a candele interattivi con più timeframe, indicatori tecnici e strumenti di disegno — offrendo un'esperienza di trading di livello professionale.",
+          "Ho implementato un sistema completo di gestione degli ordini con supporto per ordini di mercato, limite e stop con feedback di esecuzione immediato e tracciamento P&L del portafoglio in tempo reale.",
         ],
         tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },
@@ -1735,10 +1730,9 @@ export const translations: Record<
         companyDescription:
           "Atlana est une entreprise de développement Web spécialisée dans la fourniture de solutions Web personnalisées adaptées aux besoins des entreprises. L'expertise solide couvre un large éventail de projets réussis, des startups aux portails gouvernementaux internationaux.",
         achievements: [
-          "Développement d'une recherche immobilière interactive avec intégration Mapbox, filtrage par géolocalisation et recherche à facettes avancée.",
-          "Création de pages d'annonces optimisées pour le SEO utilisant Next.js SSG, stimulant la croissance du trafic organique.",
-          "Obtention de scores Lighthouse supérieurs à 95 en Performance, Accessibilité, Bonnes Pratiques et SEO.",
-          "Réduction du temps de chargement des pages de 50%.",
+          "J'ai construit une plateforme complète d'annonces immobilières avec une carte Mapbox interactive, des filtres de géolocalisation et une recherche au niveau du quartier — permettant aux utilisateurs de parcourir les annonces visuellement dans toute la ville.",
+          "J'ai implémenté des recherches sauvegardées, la comparaison de propriétés et des listes de surveillance — augmentant la profondeur des sessions et le taux de visites répétées sur la plateforme.",
+          "J'ai atteint des scores Lighthouse 95+ et un chargement des pages 50% plus rapide via Next.js SSG, le balisage des données structurées et l'optimisation des images.",
         ],
         tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
       },
@@ -1747,9 +1741,9 @@ export const translations: Record<
         companyDescription:
           "Impltech est une société de développement de logiciels personnalisés qui livre des produits numériques sur mesure pour des clients dans les secteurs de la finance, du trading et de la technologie. L'équipe apporte une expertise technique approfondie pour construire des applications haute performance et intensives en données from scratch.",
         achievements: [
-          "Construction d'une interface de trading en temps réel diffusant 50+ symboles boursiers simultanément avec une latence de mise à jour de l'interface inférieure à 50ms.",
-          "Mentorat de 2 développeurs juniors sur les patterns WebSocket et l'optimisation des performances React.",
-          "Maintien de 1 000+ mises à jour de prix/seconde pendant les heures de pointe avec un rendu constant sous 50ms.",
+          "J'ai développé une interface de trading en temps réel pour une plateforme de courtage diffusant des flux de prix en direct pour 50+ instruments via WebSocket avec une latence UI inférieure à 50ms.",
+          "J'ai construit des graphiques en chandeliers interactifs avec plusieurs horizons temporels, des indicateurs techniques et des outils de dessin — offrant une expérience de trading de niveau professionnel.",
+          "J'ai implémenté un système complet de gestion des ordres prenant en charge les ordres au marché, à cours limité et stop avec un retour d'exécution immédiat et un suivi du P&L du portefeuille en temps réel.",
         ],
         tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
       },

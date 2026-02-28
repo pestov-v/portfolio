@@ -19,9 +19,12 @@ export const Header: NextPage = () => {
   const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    const skillsEn = "Full-Stack Developer, Frontend Architect, Software Engineer";
-    const skillsUk = "Full-Stack Розробник, Frontend Архітектор, Software Engineer";
-    const skillsBg = "Full-Stack Разработчик, Frontend Архитект, Software Engineer";
+    const skillsEn =
+      "Full-Stack Developer, Frontend Architect, Software Engineer";
+    const skillsUk =
+      "Full-Stack Розробник, Frontend Архітектор, Software Engineer";
+    const skillsBg =
+      "Full-Stack Разработчик, Frontend Архитект, Software Engineer";
     let skills = skillsEn;
     if (language === "uk") skills = skillsUk;
     else if (language === "bg") skills = skillsBg;
@@ -34,7 +37,9 @@ export const Header: NextPage = () => {
       smartBackspace: false,
       loop: true,
     });
-    return () => { typed?.current?.destroy(); };
+    return () => {
+      typed?.current?.destroy();
+    };
   }, [language]);
 
   useEffect(() => {
@@ -80,11 +85,14 @@ export const Header: NextPage = () => {
       </p>
 
       <p className={style.description}>
-        Building high-performance web applications with modern technologies and clean, maintainable architecture.
+        Building high-performance web applications with modern technologies and
+        clean, maintainable architecture.
       </p>
 
       <div className={style.btns}>
-        <a href="#projects" className={style.btnPrimary}>view my work</a>
+        <a href="#projects" className={style.btnPrimary}>
+          view my work
+        </a>
         <a
           href="/Volodymyr_Pestov.pdf"
           target="_blank"
@@ -99,7 +107,7 @@ export const Header: NextPage = () => {
 
       <div className={style.stats}>
         <div className={style.statItem}>
-          <span className={style.statNumber}>5+</span>
+          <span className={style.statNumber}>7+</span>
           <span className={style.statLabel}>YEARS EXP.</span>
         </div>
         <div className={style.statDivider} aria-hidden="true" />
