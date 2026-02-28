@@ -212,19 +212,22 @@ interface ISkill {
   delay?: number;
   percent: number;
   color: TColors;
+  category: "frontend" | "backend" | "devops";
 }
 
 export const SKILLS: ISkill[] = [
-  { title: "React", percent: 92, color: COLORS.danger },
-  { title: "TypeScript", percent: 90, color: COLORS.info },
-  { title: "JavaScript", percent: 90, color: COLORS.warning },
-  { title: "Next.js", percent: 85, color: COLORS.primary },
-  { title: "HTML/CSS", percent: 92, color: COLORS.secondary },
-  { title: "Node.js", percent: 75, color: COLORS.success },
-  { title: "NestJS", percent: 78, color: COLORS.info },
-  { title: "PostgreSQL", percent: 70, color: COLORS.primary },
-  { title: "Redux", percent: 85, color: COLORS.danger },
-  { title: "REST API", percent: 88, color: COLORS.secondary },
+  { title: "React", percent: 92, color: COLORS.danger, category: "frontend" },
+  { title: "TypeScript", percent: 90, color: COLORS.info, category: "frontend" },
+  { title: "JavaScript", percent: 90, color: COLORS.warning, category: "frontend" },
+  { title: "Next.js", percent: 85, color: COLORS.primary, category: "frontend" },
+  { title: "HTML/CSS", percent: 92, color: COLORS.secondary, category: "frontend" },
+  { title: "Node.js", percent: 75, color: COLORS.success, category: "backend" },
+  { title: "NestJS", percent: 78, color: COLORS.info, category: "backend" },
+  { title: "PostgreSQL", percent: 70, color: COLORS.primary, category: "backend" },
+  { title: "REST API", percent: 88, color: COLORS.secondary, category: "backend" },
+  { title: "Redux", percent: 85, color: COLORS.danger, category: "devops" },
+  { title: "Git", percent: 90, color: COLORS.warning, category: "devops" },
+  { title: "Docker", percent: 65, color: COLORS.info, category: "devops" },
 ];
 
 export interface IExperience {

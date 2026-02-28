@@ -1,55 +1,55 @@
-import { useRef, useState, useEffect } from "react";
-
+import { useRef } from "react";
 import { SKILLS } from "util/constants";
-import { useShowSkills } from "./useShowSkills";
 import { ProgressBar } from "components/ui/ProgressBar/ProgressBar";
-import { SectionTitle } from "components/ui/SectionTitle/SectionTitle";
+import { useShowSkills } from "./useShowSkills";
 import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Skills.module.scss";
+
+const CATEGORIES = [
+  { key: "frontend" as const, label: "FRONTEND" },
+  { key: "backend" as const, label: "BACKEND" },
+  { key: "devops" as const, label: "DEVOPS / TOOLS" },
+];
 
 export const Skills = () => {
   const { t } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
   useShowSkills({ ref, className: style.show });
-
-  // Detect mobile on client side (SSR-safe)
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 1024);
-  }, []);
 
   return (
     <section className={style.skills} id="skills">
-      <SectionTitle title={t.mySkills} bgText={t.skillsBgText} />
-
-      <div className={style.progressWrapper} ref={ref}>
-        {SKILLS.map(({ title, percent, color }, index) => (
-          <div
-            className={`${style.progressItem} animate-on-scroll ${index % 2 === 0 ? 'fade-in-left' : 'fade-in-right'} stagger-${Math.min(index + 1, 5)}`}
-            key={title}
-          >
-            <p
-              className={[
-                style.progressTitle,
-                index % 2 ? style.flexEnd : "",
-              ].join(" ")}
-            >
-              {title}
-            </p>
-            <ProgressBar
-              percent={`${percent}%`}
-              addWidthImmediately={isMobile}
-              transitionDelay={0}
-              reverse={index % 2 !== 0}
-              color={color}
-              label={title}
-            />
-          </div>
-        ))}
+      <div className={style.inner}>
+        <span className={style.tag}>// 03. SKILLS</span>
+        <h2 className={style.title}>What I build with.</h2>
+        <div className={style.grid} ref={ref}>
+          {CATEGORIES.map(({ key, label }) => {
+            const categorySkills = SKILLS.filter((s) => s.category === key);
+            return (
+              <div key={key} className={style.category}>
+                <span className={style.categoryLabel}>{label}</span>
+                <div className={style.skillList}>
+                  {categorySkills.map(({ title, percent, color }) => (
+                    <div key={title} className={style.skillItem}>
+                      <div className={style.skillRow}>
+                        <span className={style.skillName}>{title}</span>
+                        <span className={style.skillPercent}>{percent}%</span>
+                      </div>
+                      <ProgressBar
+                        percent={`${percent}%`}
+                        addWidthImmediately={false}
+                        transitionDelay={0}
+                        reverse={false}
+                        color={color}
+                        label={title}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-
-      <i className={style["arrow-next"]} aria-hidden="true" />
     </section>
   );
 };

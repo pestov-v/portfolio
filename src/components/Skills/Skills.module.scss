@@ -1,65 +1,96 @@
-@import "src/styles/breakpoints";
-@import "src/styles/common";
-
 .skills {
-  position: relative;
-  min-height: 100vh;
-  padding: 6em 0 4em 0;
+  background: var(--re-bg-secondary);
+  padding: 100px 80px;
 
-  @extend .paralax;
-  &::before {
-    background-image: url("/img/develop.jpeg");
+  @media (max-width: 1023px) {
+    padding: 80px 24px;
   }
-  @include respond-above(xlg) {
-    padding-top: 10em;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.tag {
+  font-family: var(--re-font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--re-accent);
+  letter-spacing: 0.2em;
+}
+
+.title {
+  font-family: var(--re-font-sans);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--re-text-primary);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
   }
+}
 
-  .progressWrapper {
-    @extend .container;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 1em;
-    padding-top: 2em;
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    // On mobile: show immediately (no animation)
-    @media (max-width: 1023px) {
-      opacity: 1;
-    }
+.categoryLabel {
+  font-family: var(--re-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--re-accent);
+  letter-spacing: 0.2em;
+}
 
-    // On desktop: animate
-    @media (min-width: 1024px) {
-      opacity: 0;
-      transition: opacity 1s ease-out;
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-      &.show {
-        opacity: 1;
-      }
-    }
+.skillItem {
+  padding: 20px;
+  background: var(--re-bg-card);
+  border: 1px solid var(--re-accent-muted);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    @include respond-above(sm) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 2em;
-    }
+.skillRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    @include respond-above(xlg) {
-      padding-top: 4em;
-    }
+.skillName {
+  font-family: var(--re-font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--re-text-primary);
+}
 
-    .progressItem {
-      display: flex;
-      flex-direction: column;
-      grid-gap: 0.3em;
+.skillPercent {
+  font-family: var(--re-font-mono);
+  font-size: 12px;
+  color: var(--re-text-muted);
+}
 
-      .progressTitle {
-        font-weight: 500;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-
-        &.flexEnd {
-          align-self: flex-end;
-        }
-      }
-    }
-  }
+// The show class is toggled by useShowSkills hook
+.show {
+  // Intentionally empty — hook adds this class, ProgressBar uses it to animate width
 }
