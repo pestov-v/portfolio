@@ -1,38 +1,37 @@
-import React from "react";
 import style from "./Footer.module.scss";
-import Image from "next/image";
-import { socialLinks } from "../../util/constants";
-import { useLanguage } from "../../contexts/LanguageContext";
 
 export const Footer = () => {
-  const { t } = useLanguage();
-  
   return (
-    <footer className={style.section} id="contact">
-      <div className={style.header}>
-        <h2 id="footer-heading">{t.letsWorkTogether}</h2>
-      </div>
-      <nav aria-labelledby="footer-heading">
-        <ul className={style.links} role="list">
-          {socialLinks.map(({ id, href, title }) => (
-            <li key={id}>
-              <a
-                href={href}
-                className={style.details}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${title} (opens in new tab)`}
-              >
-                <Image
-                  width={48}
-                  height={48}
-                  src={`/img/icons/${id}.svg`}
-                  alt=""
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
+    <footer className={style.footer}>
+      <a href="#" className={style.logo} aria-label="Back to top">
+        VP.
+      </a>
+      <p className={style.copy}>
+        © 2025 Volodymyr Pestov — built with passion
+      </p>
+      <nav className={style.links} aria-label="Social links">
+        <a
+          href="https://github.com/pestov-v"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={style.link}
+        >
+          github
+        </a>
+        <a
+          href="http://linkedin.com/in/pestov-volodymyr-405011206/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={style.link}
+        >
+          linkedin
+        </a>
+        <a
+          href="mailto:pestov.volodymyr@gmail.com"
+          className={`${style.link} ${style.linkAccent}`}
+        >
+          email
+        </a>
       </nav>
     </footer>
   );
