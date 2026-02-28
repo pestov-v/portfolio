@@ -1,10 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { FormEvent, useEffect, useRef, useState } from "react";
-
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useTextInput } from "../../hooks/useTextInput/useTextInput";
-import { TextInput } from "../ui/FormControls/TextInput/TextInput";
-import { SectionTitle } from "../ui/SectionTitle/SectionTitle";
 import style from "./SendMail.module.scss";
 
 export const SendMail = () => {
@@ -33,18 +30,15 @@ export const SendMail = () => {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!form.current || isSending) return;
-
     setIsSending(true);
     try {
       await emailjs.sendForm(
         "service_f6tyqgq",
         "template_5lm9rln",
         form.current,
-        "_t-9w7H78xR5SS4K6"
+        "_t-9w7H78xR5SS4K6",
       );
-
       alert(t.thankYouMessage);
       formData.name.reset();
       formData.email.reset();
@@ -61,45 +55,87 @@ export const SendMail = () => {
     formData.name.isValid && formData.email.isValid && formData.text.isValid;
 
   return (
-    <section className={style.SendMail} id="mail">
-      <div className={style.container}>
-        <SectionTitle
-          title={t.sendMeLetter}
-          bgText={t.mailMe}
-          className={style.SendMail__title}
-        />
+    <section className={style.contact} id="mail" aria-labelledby="contact-title">
+      <div className={style.inner}>
+        <span className={style.tag}>// 05. CONTACT</span>
+        <h2 className={style.title} id="contact-title">
+          Let&apos;s work together.
+        </h2>
+        <p className={style.subtitle}>
+          Have a project in mind? I&apos;d love to hear about it.
+        </p>
 
-        <form className={style.SendMail__form} ref={form} onSubmit={onSubmit} aria-busy={isSending}>
-          <TextInput
-            {...formData.name.inputProps}
-            errors={formData.name.errors}
-            name="user_name"
-            label={t.namePlaceholder}
-            placeholder={t.namePlaceholder}
-          />
-          <TextInput
-            {...formData.email.inputProps}
-            errors={formData.email.errors}
-            name="user_email"
-            label={t.emailPlaceholder}
-            placeholder={t.emailPlaceholder}
-          />
+        <form
+          className={style.form}
+          ref={form}
+          onSubmit={onSubmit}
+          aria-busy={isSending}
+        >
+          <div className={style.row}>
+            <div className={style.field}>
+              <label className={style.label} htmlFor="user_name">
+                NAME
+              </label>
+              <input
+                id="user_name"
+                name="user_name"
+                type="text"
+                className={style.input}
+                placeholder={t.namePlaceholder}
+                {...formData.name.inputProps}
+              />
+              {formData.name.errors.map((err, i) => (
+                <span key={i} className={style.error}>
+                  {err}
+                </span>
+              ))}
+            </div>
+            <div className={style.field}>
+              <label className={style.label} htmlFor="user_email">
+                EMAIL
+              </label>
+              <input
+                id="user_email"
+                name="user_email"
+                type="email"
+                className={style.input}
+                placeholder={t.emailPlaceholder}
+                {...formData.email.inputProps}
+              />
+              {formData.email.errors.map((err, i) => (
+                <span key={i} className={style.error}>
+                  {err}
+                </span>
+              ))}
+            </div>
+          </div>
 
-          <TextInput
-            {...formData.text.inputProps}
-            errors={formData.text.errors}
-            textarea
-            name="message"
-            label={t.messagePlaceholder}
-            placeholder={t.messagePlaceholder}
-          />
+          <div className={style.field}>
+            <label className={style.label} htmlFor="message">
+              MESSAGE
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              className={style.textarea}
+              placeholder={t.messagePlaceholder}
+              rows={5}
+              {...formData.text.inputProps}
+            />
+            {formData.text.errors.map((err, i) => (
+              <span key={i} className={style.error}>
+                {err}
+              </span>
+            ))}
+          </div>
+
           <button
-            className={style.btn}
             type="submit"
+            className={style.submit}
             disabled={!isValidForm || isSending}
             aria-label={isSending ? "Sending…" : t.sendButton}
           >
-            {isSending ? <div className={style.loader} aria-hidden="true" /> : t.sendButton}
+            {isSending ? "sending…" : "send message →"}
           </button>
         </form>
       </div>
