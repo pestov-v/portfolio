@@ -18,7 +18,7 @@ export const isInView = (el: HTMLElement | null) => {
 };
 
 const IMG_PATH = "/img/projects/";
-export const getImagePath = (name: string) => `${IMG_PATH}${name}.webp`;
+export const getImagePath = (name: string) => `${IMG_PATH}${name}.avif`;
 export const addImagePath = (projects: IProject[]) => {
   return projects.map((item) => ({ ...item, image: getImagePath(item.image) }));
 };

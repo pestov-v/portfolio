@@ -35,7 +35,7 @@ export const _projects: TProjects = [
     description:
       "Modern e-commerce platform with advanced product management, checkout process, and admin panel.",
     href: "https://aurinia.com.ua",
-    image: "aurinia",
+    image: "suitcase",
     alt: "Aurinia E-commerce Platform",
     additionalInfo:
       "Full-featured online store with material management and comprehensive order processing",
@@ -217,13 +217,38 @@ interface ISkill {
 
 export const SKILLS: ISkill[] = [
   { title: "React", percent: 92, color: COLORS.danger, category: "frontend" },
-  { title: "TypeScript", percent: 90, color: COLORS.info, category: "frontend" },
-  { title: "Next.js", percent: 85, color: COLORS.primary, category: "frontend" },
-  { title: "HTML/CSS", percent: 92, color: COLORS.secondary, category: "frontend" },
+  {
+    title: "TypeScript",
+    percent: 90,
+    color: COLORS.info,
+    category: "frontend",
+  },
+  {
+    title: "Next.js",
+    percent: 85,
+    color: COLORS.primary,
+    category: "frontend",
+  },
+  {
+    title: "HTML/CSS",
+    percent: 92,
+    color: COLORS.secondary,
+    category: "frontend",
+  },
   { title: "Node.js", percent: 75, color: COLORS.success, category: "backend" },
   { title: "NestJS", percent: 78, color: COLORS.info, category: "backend" },
-  { title: "PostgreSQL", percent: 70, color: COLORS.primary, category: "backend" },
-  { title: "REST API", percent: 88, color: COLORS.secondary, category: "backend" },
+  {
+    title: "PostgreSQL",
+    percent: 70,
+    color: COLORS.primary,
+    category: "backend",
+  },
+  {
+    title: "REST API",
+    percent: 88,
+    color: COLORS.secondary,
+    category: "backend",
+  },
   { title: "Redux", percent: 85, color: COLORS.danger, category: "frontend" },
   { title: "Git", percent: 90, color: COLORS.warning, category: "devops" },
   { title: "Docker", percent: 65, color: COLORS.info, category: "devops" },

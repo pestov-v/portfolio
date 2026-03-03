@@ -67,7 +67,11 @@ export const Projects = () => {
         <span className={style.tag}>// 04. PROJECTS</span>
         <h2 className={style.sectionTitle} id="portfolio-title">Things I&apos;ve built.</h2>
 
-        <div className={style.projectsWrapper} ref={gridRef}>
+        <div
+          className={style.projectsWrapper}
+          ref={gridRef}
+          style={activeId !== null ? { gridAutoRows: "auto" } : undefined}
+        >
           {projects.map((item, index) => {
             const isActive = activeId === item.id;
             const projectData = (t.projectsData as any)[item.translationKey];
@@ -118,6 +122,7 @@ export const Projects = () => {
                         className={style.image}
                         width={isActive ? 640 : 480}
                         height={isActive ? 1151 : 270}
+                        style={{ height: isActive ? "auto" : "220px" }}
                       />
                       <div className={style.cardText}>
                         <h2 className={style.title}>{title}</h2>
