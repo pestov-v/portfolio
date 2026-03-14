@@ -65,16 +65,20 @@ export const Navbar = () => {
         <a href="#mail" className={style.cta}>hire me</a>
       </div>
 
-      <button
-        className={style.burger}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-label="Toggle menu"
-        aria-expanded={isMenuOpen}
-      >
-        <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
-        <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
-        <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
-      </button>
+      <div className={style.mobileControls}>
+        <ThemeSwitcher />
+        <LanguageSwitcher />
+        <button
+          className={style.burger}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+          <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
+        </button>
+      </div>
 
       <div
         className={style.scrollProgress}
@@ -93,10 +97,6 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className={style.mobileControls}>
-            <ThemeSwitcher />
-            <LanguageSwitcher />
-          </div>
           <a href="#mail" className={style.mobileCta} onClick={() => setIsMenuOpen(false)}>
             hire me
           </a>

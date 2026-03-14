@@ -103,17 +103,13 @@
 }
 
 .burger {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 8px;
   background: none;
   border: none;
   cursor: pointer;
-
-  @media (max-width: 1023px) {
-    display: flex;
-  }
 }
 
 .burgerLine {
@@ -170,9 +166,13 @@
 }
 
 .mobileControls {
-  display: flex;
+  display: none;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+
+  @media (max-width: 1023px) {
+    display: flex;
+  }
 }
 
 .mobileCta {
