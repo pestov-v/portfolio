@@ -93,6 +93,10 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className={style.mobileControls}>
+            <ThemeSwitcher />
+            <LanguageSwitcher />
+          </div>
           <a href="#mail" className={style.mobileCta} onClick={() => setIsMenuOpen(false)}>
             hire me
           </a>

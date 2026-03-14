@@ -169,6 +169,12 @@
   }
 }
 
+.mobileControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .mobileCta {
   align-self: flex-start;
   padding: 12px 28px;
