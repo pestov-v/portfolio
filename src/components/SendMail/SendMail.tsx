@@ -65,6 +65,7 @@ export const SendMail = () => {
           Have a project in mind? I&apos;d love to hear about it.
         </p>
 
+        <div className={style.formWrap}>
         <form
           className={style.form}
           ref={form}
@@ -138,6 +139,7 @@ export const SendMail = () => {
             {isSending ? "sending…" : "send message →"}
           </button>
         </form>
+        </div>
       </div>
     </section>
   );

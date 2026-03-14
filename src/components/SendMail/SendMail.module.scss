@@ -41,12 +41,40 @@
   margin: 0;
 }
 
+.formWrap {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--gradient-angle, 0deg),
+    var(--re-accent) 0%,
+    transparent 25%,
+    var(--re-accent) 50%,
+    transparent 75%,
+    var(--re-accent) 100%
+  );
+  animation: rotateBorder 4s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    background: var(--re-accent-muted);
+  }
+}
+
 .form {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
   text-align: left;
+  background: var(--re-bg-secondary);
+  border-radius: 8px;
+  padding: 32px;
+
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 }
 
 .row {
@@ -132,5 +160,17 @@
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+  }
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotateBorder {
+  to {
+    --gradient-angle: 360deg;
   }
 }
