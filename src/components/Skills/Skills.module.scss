@@ -70,11 +70,21 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  cursor: default;
 
-  @media (min-width: 1024px) {
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
+  &:hover {
+    border-color: var(--re-accent);
+    box-shadow:
+      0 0 30px var(--re-glow, rgba(34, 211, 238, 0.35)),
+      0 0 60px var(--re-glow-wide, rgba(34, 211, 238, 0.15));
+    transform: translateY(-2px);
   }
+
+  // transform-style & backface-visibility set via GSAP during animation only
 }
 
 .skillRow {
@@ -100,7 +110,7 @@
 .barTrack {
   width: 100%;
   height: 3px;
-  background: var(--re-bg-primary, #0F172A);
+  background: var(--re-bg-primary, #0f172a);
   border-radius: 3px;
   overflow: hidden;
 }

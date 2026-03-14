@@ -68,6 +68,8 @@
   --re-font-sans: 'Inter', sans-serif;
   --re-font-mono: 'JetBrains Mono', monospace;
   --re-on-accent: #0F172A;
+  --re-glow: rgba(8, 145, 178, 0.3);
+  --re-glow-wide: rgba(8, 145, 178, 0.12);
 }
 
 // Dark theme — applied to both .app and portals outside it
@@ -109,4 +111,6 @@
   --re-font-sans: 'Inter', sans-serif;
   --re-font-mono: 'JetBrains Mono', monospace;
   --re-on-accent: #0A0F1C;
+  --re-glow: rgba(34, 211, 238, 0.35);
+  --re-glow-wide: rgba(34, 211, 238, 0.15);
 }

@@ -29,7 +29,12 @@ export const useShowSkills = ({ ref }: IProps) => {
     if (!cards.length) return;
 
     const ctx = gsap.context(() => {
-      gsap.set(cards, { rotateY: 90, opacity: 0 });
+      gsap.set(cards, {
+        rotateY: 90,
+        opacity: 0,
+        transformStyle: "preserve-3d",
+        backfaceVisibility: "hidden",
+      });
       gsap.to(cards, {
         rotateY: 0,
         opacity: 1,
@@ -40,6 +45,11 @@ export const useShowSkills = ({ ref }: IProps) => {
           trigger: container,
           start: "top 80%",
           once: true,
+        },
+        onComplete: () => {
+          gsap.set(cards, {
+            clearProps: "transformStyle,backfaceVisibility,transform",
+          });
         },
       });
     }, container);
