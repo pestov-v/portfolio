@@ -66,7 +66,14 @@ export const _projects: TProjects = [
     alt: "OschadPay Payment System",
     additionalInfo:
       "Transaction creation & monitoring · Tax-ready report generation · Merchant & product registry · Terminal provisioning & management · Financial analytics dashboard",
-    technologies: ["React", "TypeScript", "Redux", "Ant Design", "REST API", "Node.js"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Ant Design",
+      "REST API",
+      "Node.js",
+    ],
     caseStudy: {
       challenge:
         "The bank operated dozens of payment terminals with no unified dashboard. Transaction creation was manual, merchant onboarding took days, product catalogues lived in spreadsheets, and generating tax-compliant reports required hours of data stitching across multiple systems.",
@@ -95,7 +102,13 @@ export const _projects: TProjects = [
     alt: "Onboarding Questionnaire Management System",
     additionalInfo:
       "Enterprise-level form builder with template management, category organization, and advanced field customization",
-    technologies: ["React", "TypeScript", "JSON Schema", "React Hook Form", "React Window"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "JSON Schema",
+      "React Hook Form",
+      "React Window",
+    ],
     caseStudy: {
       challenge:
         "The process of launching new payment products took weeks, as each new form required a full development, testing, and frontend deployment cycle.",
@@ -149,7 +162,14 @@ export const _projects: TProjects = [
     alt: "Hostel management system",
     additionalInfo:
       "Full-stack booking system with real-time availability, guest management, and reservation tracking",
-    technologies: ["Next.js", "NestJS", "TypeScript", "TailwindCSS", "Postgres", "TypeORM"],
+    technologies: [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Postgres",
+      "TypeORM",
+    ],
   },
   {
     id: 13,
@@ -162,7 +182,14 @@ export const _projects: TProjects = [
     alt: "Deal crm system",
     additionalInfo:
       "Sales pipeline management with deal tracking, client database, and analytics dashboard",
-    technologies: ["Next.js", "NestJS", "TypeScript", "TailwindCSS", "Postgres", "TypeORM"],
+    technologies: [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Postgres",
+      "TypeORM",
+    ],
   },
   {
     id: 12,
@@ -175,7 +202,14 @@ export const _projects: TProjects = [
     alt: "Candidates crm system",
     additionalInfo:
       "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics",
-    technologies: ["React", "Express", "TypeScript", "TailwindCSS", "Postgres", "TypeORM"],
+    technologies: [
+      "React",
+      "Express",
+      "TypeScript",
+      "TailwindCSS",
+      "Postgres",
+      "TypeORM",
+    ],
   },
   {
     id: 11,
@@ -237,12 +271,6 @@ export const SKILLS: ISkill[] = [
     title: "Next.js",
     percent: 85,
     color: COLORS.primary,
-    category: "frontend",
-  },
-  {
-    title: "HTML/CSS",
-    percent: 92,
-    color: COLORS.secondary,
     category: "frontend",
   },
   { title: "Node.js", percent: 75, color: COLORS.success, category: "backend" },
