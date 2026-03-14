@@ -9,13 +9,6 @@
   font: inherit;
 }
 
-html {
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
 
 .sr-only {
   position: absolute;
