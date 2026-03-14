@@ -31,8 +31,58 @@
   margin: 0;
 }
 
-.list {
+$line-left: 16px; // center of the timeline line
+$dot-size: 16px;
+
+.timeline {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding-left: $line-left + 28px; // line center + gap to cards
+
+  @media (max-width: 1023px) {
+    padding-left: $line-left + 20px;
+  }
+}
+
+// Vertical SVG line
+.line {
+  position: absolute;
+  left: $line-left - 1px; // center the 2px stroke on $line-left
+  top: 0;
+  width: 2px;
+  height: 100%;
+  color: var(--re-accent);
+  overflow: visible;
+
+  line {
+    stroke-width: 2;
+  }
+}
+
+.timelineItem {
+  position: relative;
+}
+
+// Dot on the timeline
+.dot {
+  position: absolute;
+  left: -28px - ($dot-size / 2); // from card edge back to line center, then half-dot left
+  top: 36px;
+  width: $dot-size;
+  height: $dot-size;
+  border-radius: 50%;
+  background: var(--re-bg-primary);
+  border: 2px solid var(--re-accent);
+  z-index: 1;
+  box-shadow: 0 0 12px var(--re-glow, rgba(34, 211, 238, 0.35));
+
+  @media (max-width: 1023px) {
+    $dot-sm: 12px;
+    left: -20px - ($dot-sm / 2);
+    width: $dot-sm;
+    height: $dot-sm;
+    top: 28px;
+  }
 }
