@@ -50,14 +50,15 @@
   overflow: hidden;
   background: var(--re-bg-card);
   border: 1px solid var(--re-accent-muted);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease-out;
   display: flex;
   flex-direction: column;
   height: 100%;
+  will-change: transform;
 
   &:hover {
     border-color: var(--re-accent-border);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 }
 

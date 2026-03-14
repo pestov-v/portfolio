@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { IProject, projects } from "util/constants";
+import { useTilt } from "../../hooks/useTilt";
 import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Projects.module.scss";
 
@@ -15,6 +16,7 @@ export const Projects = () => {
   const { t } = useLanguage();
   const [activeId, setActiveId] = useState<number | null>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  useTilt(gridRef);
 
   const handleCardClick = (project: IProject) => {
     if (!gridRef.current) return;
@@ -98,6 +100,7 @@ export const Projects = () => {
               >
                 <div
                   data-flip-id={`card-${item.id}`}
+                  data-tilt={!isActive ? "" : undefined}
                   className={`${style.cardWrapper} ${isActive ? style.cardWrapperActive : ""}`}
                   onClick={() => !isActive && handleCardClick(item)}
                   role="button"
