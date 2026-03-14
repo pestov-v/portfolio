@@ -125,7 +125,7 @@ export const Header: NextPage = () => {
         </div>
         <div className={style.statDivider} aria-hidden="true" />
         <div className={style.statItem}>
-          <span className={style.statNumber}>30+</span>
+          <span className={style.statNumber}>10+</span>
           <span className={style.statLabel}>PROJECTS</span>
         </div>
         <div className={style.statDivider} aria-hidden="true" />
