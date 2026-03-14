@@ -63,13 +63,13 @@
 }
 
 .skillItem {
-  padding: 20px;
+  padding: 16px 20px;
   background: var(--re-bg-card);
   border: 1px solid var(--re-accent-muted);
   border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  gap: 16px;
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease,
@@ -83,14 +83,39 @@
       0 0 60px var(--re-glow-wide, rgba(34, 211, 238, 0.15));
     transform: translateY(-2px);
   }
-
-  // transform-style & backface-visibility set via GSAP during animation only
 }
 
-.skillRow {
+.circleWrap {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.circleSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circleTrack {
+  stroke: var(--re-bg-primary, #0f172a);
+}
+
+.circleFill {
+  stroke: var(--re-accent);
+}
+
+.circlePercent {
+  position: absolute;
+  inset: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  font-family: var(--re-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--re-accent);
 }
 
 .skillName {
@@ -98,26 +123,4 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--re-text-primary);
-}
-
-.skillPercent {
-  font-family: var(--re-font-mono);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--re-accent);
-}
-
-.barTrack {
-  width: 100%;
-  height: 3px;
-  background: var(--re-bg-primary, #0f172a);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.barFill {
-  height: 100%;
-  background: var(--re-accent);
-  border-radius: 3px;
-  transition: width 1.2s ease-out;
 }

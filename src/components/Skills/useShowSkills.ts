@@ -8,9 +8,10 @@ const DESKTOP_BREAKPOINT = 1024;
 
 interface IProps {
   ref: RefObject<HTMLElement>;
+  onReveal?: () => void;
 }
 
-export const useShowSkills = ({ ref }: IProps) => {
+export const useShowSkills = ({ ref, onReveal }: IProps) => {
   useEffect(() => {
     const container = ref.current;
     if (!container) return;
@@ -23,7 +24,10 @@ export const useShowSkills = ({ ref }: IProps) => {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (!isDesktop || prefersReducedMotion) return;
+    if (!isDesktop || prefersReducedMotion) {
+      onReveal?.();
+      return;
+    }
 
     const cards = container.querySelectorAll<HTMLElement>("[data-skill-card]");
     if (!cards.length) return;
@@ -45,6 +49,9 @@ export const useShowSkills = ({ ref }: IProps) => {
           trigger: container,
           start: "top 80%",
           once: true,
+        },
+        onStart: () => {
+          onReveal?.();
         },
         onComplete: () => {
           gsap.set(cards, {
