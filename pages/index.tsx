@@ -26,6 +26,9 @@ const SendMail = dynamic(() =>
 const Footer = dynamic(() =>
   import("../src/components/Footer/Footer").then((m) => m.Footer)
 );
+const CodeToUI = dynamic(() =>
+  import("../src/components/CodeToUI/CodeToUI").then((m) => m.CodeToUI)
+);
 
 import style from "../src/styles/Home.module.scss";
 
@@ -53,6 +56,7 @@ const Home: NextPage = () => {
         <div className="animate-on-scroll fade-in-up">
           <Projects />
         </div>
+        <CodeToUI />
         <div className="animate-on-scroll scale-in">
           <SendMail />
         </div>
