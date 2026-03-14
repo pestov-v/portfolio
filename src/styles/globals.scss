@@ -39,7 +39,7 @@ html {
 html {
   padding: 0;
   margin: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), "Outfit", sans-serif;
   background-color: var(--background-body, hsl(0, 0%, 100%));
   color: var(--text-primary, hsl(0, 0%, 27%));
 
@@ -60,7 +60,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit), "Outfit", sans-serif;
   background-color: transparent;
   color: var(--text-primary, hsl(0, 0%, 27%));
 
@@ -103,7 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Syne", sans-serif;
+  font-family: var(--font-outfit), "Outfit", sans-serif;
   font-weight: 800;
 }
 

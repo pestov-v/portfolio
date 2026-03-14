@@ -14,7 +14,7 @@
   overflow: hidden; // Prevent background text from overflowing
 
   text-transform: uppercase;
-  font-family: "Unbounded", sans-serif;
+  font-family: var(--font-unbounded), "Unbounded", sans-serif;
   font-weight: 500;
 
   line-height: 1;
@@ -45,7 +45,7 @@
 
   .sectionTitle__title {
     font-size: 2.2rem;
-    font-family: "Unbounded", sans-serif;
+    font-family: var(--font-unbounded), "Unbounded", sans-serif;
     font-weight: 500; // Для Bebas Neue 400 це стандарт
     background: -webkit-linear-gradient(
       var(--color-primary-light),

@@ -65,8 +65,8 @@
   --re-text-secondary: #475569;
   --re-text-muted: #94A3B8;
   --re-border: #E2E8F0;
-  --re-font-sans: 'Inter', sans-serif;
-  --re-font-mono: 'JetBrains Mono', monospace;
+  --re-font-sans: var(--font-inter), 'Inter', sans-serif;
+  --re-font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   --re-on-accent: #0F172A;
   --re-glow: rgba(8, 145, 178, 0.3);
   --re-glow-wide: rgba(8, 145, 178, 0.12);
@@ -108,8 +108,8 @@
   --re-text-secondary: #94A3B8;
   --re-text-muted: #64748B;
   --re-border: #1E293B;
-  --re-font-sans: 'Inter', sans-serif;
-  --re-font-mono: 'JetBrains Mono', monospace;
+  --re-font-sans: var(--font-inter), 'Inter', sans-serif;
+  --re-font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
   --re-on-accent: #0A0F1C;
   --re-glow: rgba(34, 211, 238, 0.35);
   --re-glow-wide: rgba(34, 211, 238, 0.15);

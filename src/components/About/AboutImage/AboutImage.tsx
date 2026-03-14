@@ -18,6 +18,8 @@ export const AboutImage = () => {
         src={`${IMG_PATH}-small.jpg`}
         alt="Volodymyr Pestov — web developer"
         className={style.AboutImage}
+        loading="lazy"
+        decoding="async"
       />
     </picture>
   );

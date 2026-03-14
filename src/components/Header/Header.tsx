@@ -1,21 +1,14 @@
-import gsap from "gsap";
-import { CustomBounce } from "gsap/CustomBounce";
-import { CustomEase } from "gsap/CustomEase";
-import { SplitText } from "gsap/SplitText";
 import { NextPage } from "next";
 import { useEffect, useRef } from "react";
-import Typed from "typed.js";
 import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Header.module.scss";
-
-gsap.registerPlugin(CustomEase, CustomBounce, SplitText);
 
 export const imgPath = "img/profile/profile";
 
 export const Header: NextPage = () => {
   const { t, language } = useLanguage();
   const el = useRef(null);
-  const typed = useRef<Typed>(null);
+  const typed = useRef<any>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -29,41 +22,61 @@ export const Header: NextPage = () => {
     if (language === "uk") skills = skillsUk;
     else if (language === "bg") skills = skillsBg;
     if (!el?.current) return;
-    // @ts-ignore
-    typed.current = new Typed(el.current, {
-      strings: skills.split(", "),
-      typeSpeed: 100,
-      backSpeed: 20,
-      smartBackspace: false,
-      loop: true,
+    let instance: any;
+    import("typed.js").then(({ default: Typed }) => {
+      if (!el.current) return;
+      instance = new Typed(el.current, {
+        strings: skills.split(", "),
+        typeSpeed: 100,
+        backSpeed: 20,
+        smartBackspace: false,
+        loop: true,
+      });
+      typed.current = instance;
     });
     return () => {
-      typed?.current?.destroy();
+      instance?.destroy();
     };
   }, [language]);
 
   useEffect(() => {
     if (!textRef.current) return;
-    let tween: gsap.core.Tween;
-    let split: SplitText;
-    const raf = requestAnimationFrame(() => {
-      if (!textRef.current) return;
-      split = SplitText.create(textRef.current, {
-        type: "chars,words,lines",
-        mask: "lines",
-      });
-      if (split.chars.length > 0) {
-        (split.chars[0] as HTMLElement).style.marginRight = "-0.04em";
-      }
-      tween = gsap.from(split.chars, {
-        yPercent: () => (Math.random() > 0.5 ? 100 : -100),
-        rotation: () => Math.random() * 60 - 30,
-        ease: "back.out",
-        stagger: { amount: 1.5, from: "random" },
+    let tween: any;
+    let split: any;
+    let raf: number;
+    let cancelled = false;
+
+    Promise.all([
+      import("gsap"),
+      import("gsap/CustomBounce"),
+      import("gsap/CustomEase"),
+      import("gsap/SplitText"),
+    ]).then(([gsapMod, { CustomBounce }, { CustomEase }, { SplitText }]) => {
+      if (cancelled || !textRef.current) return;
+      const gsap = gsapMod.default;
+      gsap.registerPlugin(CustomEase, CustomBounce, SplitText);
+
+      raf = requestAnimationFrame(() => {
+        if (!textRef.current) return;
+        split = SplitText.create(textRef.current, {
+          type: "chars,words,lines",
+          mask: "lines",
+        });
+        if (split.chars.length > 0) {
+          (split.chars[0] as HTMLElement).style.marginRight = "-0.04em";
+        }
+        tween = gsap.from(split.chars, {
+          yPercent: () => (Math.random() > 0.5 ? 100 : -100),
+          rotation: () => Math.random() * 60 - 30,
+          ease: "back.out",
+          stagger: { amount: 1.5, from: "random" },
+        });
       });
     });
+
     return () => {
-      cancelAnimationFrame(raf);
+      cancelled = true;
+      if (raf) cancelAnimationFrame(raf);
       tween?.kill();
       split?.revert();
     };
