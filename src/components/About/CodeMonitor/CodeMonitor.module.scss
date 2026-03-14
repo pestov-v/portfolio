@@ -1,0 +1,270 @@
+// ─── 3D Code Monitor ─── Apple-style scroll animation ───
+.monitorContainer {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  @media (max-width: 1023px) {
+    max-width: 100%;
+  }
+}
+
+.perspective {
+  perspective: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.monitor {
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+// ─── Screen Glow ───
+.screenGlow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(34, 211, 238, 0.08) 0%,
+    rgba(34, 211, 238, 0.02) 40%,
+    transparent 70%
+  );
+  border-radius: 30px;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(20px);
+}
+
+// ─── Bezel ───
+.bezel {
+  background: linear-gradient(145deg, #1a1f2e, #0d1117);
+  border-radius: 14px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+// ─── Top Bar (macOS style) ───
+.topBar {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, #1e2433, #171c28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.trafficLights {
+  display: flex;
+  gap: 6px;
+}
+
+.trafficRed,
+.trafficYellow,
+.trafficGreen {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.trafficRed {
+  background: #ff5f57;
+  box-shadow: 0 0 4px rgba(255, 95, 87, 0.4);
+}
+
+.trafficYellow {
+  background: #febc2e;
+  box-shadow: 0 0 4px rgba(254, 188, 46, 0.4);
+}
+
+.trafficGreen {
+  background: #28c840;
+  box-shadow: 0 0 4px rgba(40, 200, 64, 0.4);
+}
+
+.fileName {
+  flex: 1;
+  text-align: center;
+  font-family: var(--re-font-mono, 'JetBrains Mono', monospace);
+  font-size: 11px;
+  color: rgba(148, 163, 184, 0.6);
+  letter-spacing: 0.03em;
+}
+
+.topBarRight {
+  width: 50px; // Balance the traffic lights
+}
+
+// ─── Screen ───
+.screen {
+  display: flex;
+  background: linear-gradient(180deg, #0d1117, #0a0e16);
+  min-height: 340px;
+  padding: 16px 0;
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    min-height: 280px;
+  }
+}
+
+// ─── Line Numbers ───
+.lineNumbers {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px 0 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  user-select: none;
+}
+
+.lineNum {
+  font-family: var(--re-font-mono, 'JetBrains Mono', monospace);
+  font-size: 11px;
+  line-height: 1.7;
+  color: rgba(100, 116, 139, 0.4);
+  text-align: right;
+  min-width: 20px;
+}
+
+// ─── Code Content ───
+.codeContent {
+  flex: 1;
+  padding: 0 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.codeLine {
+  font-family: var(--re-font-mono, 'JetBrains Mono', monospace);
+  font-size: 12px;
+  line-height: 1.7;
+  color: #c9d1d9;
+  white-space: nowrap;
+  padding-left: calc(var(--indent, 0) * 16px);
+  will-change: opacity, transform;
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+}
+
+// ─── Cursor ───
+.cursor {
+  display: inline-block;
+  font-family: var(--re-font-mono, 'JetBrains Mono', monospace);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--re-accent, #22D3EE);
+  will-change: opacity;
+}
+
+// ─── Syntax Highlighting ───
+.hlKeyword {
+  color: #ff7b72;
+  font-weight: 500;
+}
+
+.hlString {
+  color: #a5d6ff;
+}
+
+.hlComponent {
+  color: #7ee787;
+}
+
+.hlTag {
+  color: #ff7b72;
+}
+
+.hlType {
+  color: #d2a8ff;
+  font-style: italic;
+}
+
+.hlOperator {
+  color: #ff7b72;
+}
+
+.hlBracket {
+  color: #8b949e;
+}
+
+.keywordLine {
+  color: #c9d1d9;
+}
+
+.componentLine {
+  color: #c9d1d9;
+}
+
+// ─── Monitor Stand ───
+.stand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+
+.standNeck {
+  width: 40px;
+  height: 28px;
+  background: linear-gradient(180deg, #1a1f2e 0%, #131720 100%);
+  border-left: 1px solid rgba(255, 255, 255, 0.04);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.standBase {
+  width: 120px;
+  height: 8px;
+  background: linear-gradient(180deg, #1e2433, #171c28);
+  border-radius: 0 0 8px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+// ─── Floating Particles ───
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: var(--re-accent, #22D3EE);
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: float 4s ease-in-out infinite var(--delay);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-12px) scale(1.3);
+    opacity: 0.35;
+  }
+}
