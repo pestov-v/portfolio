@@ -23,6 +23,20 @@
   backdrop-filter: blur(10px);
 }
 
+.scrollProgress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--re-accent);
+  transform-origin: left;
+  transform: scaleX(0);
+  will-change: transform;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .logo {
   font-family: var(--re-font-mono);
   font-size: 24px;

@@ -17,8 +17,14 @@ export const Navbar = () => {
     { id: 5, href: "#mail", title: "contact" },
   ];
 
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(docHeight > 0 ? window.scrollY / docHeight : 0);
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -69,6 +75,12 @@ export const Navbar = () => {
         <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
         <span className={`${style.burgerLine} ${isMenuOpen ? style.active : ""}`} />
       </button>
+
+      <div
+        className={style.scrollProgress}
+        style={{ transform: `scaleX(${scrollProgress})` }}
+        aria-hidden="true"
+      />
 
       {isMenuOpen && (
         <div className={style.mobileMenu}>
