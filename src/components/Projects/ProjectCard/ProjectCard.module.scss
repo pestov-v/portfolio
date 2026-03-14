@@ -1,11 +1,6 @@
 @import "src/styles/common";
 
 .card {
-  --rotate-x: 0deg;
-  --rotate-y: 0deg;
-  --pointer-x: 50%;
-  --pointer-y: 50%;
-
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,50 +8,24 @@
   color: var(--color-dark);
   width: 100%;
   max-width: 350px;
-  height: 480px; /* Фіксована висота для всіх карточок */
+  height: 480px;
   padding: 0;
   border-radius: 12px;
   background: var(--color-white);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: pointer;
-  transform-style: preserve-3d;
-  perspective: 1000px;
 
   @include respond-above(sm) {
     margin: 1em;
   }
 
-  &.tiltActive {
-    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y)) scale(1.02);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-  }
-
   &:hover,
   &:focus {
+    border-color: var(--color-primary);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  }
-
-  .shine {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 12px;
-    background: radial-gradient(
-      circle at var(--pointer-x) var(--pointer-y),
-      rgba(255, 255, 255, 0.15) 0%,
-      transparent 60%
-    );
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-  }
-
-  &.tiltActive .shine {
-    opacity: 1;
   }
 
   .cardContent {

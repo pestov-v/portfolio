@@ -49,8 +49,11 @@
   border-radius: 12px;
   overflow: hidden;
   background: var(--re-bg-card);
-  border: 1px solid var(--re-accent-muted);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease-out;
+  border: 2px solid var(--re-accent-muted);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease-out;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -240,7 +243,9 @@
   color: var(--re-text-secondary);
   cursor: pointer;
   font-size: 16px;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
 
   &:hover {
     border-color: var(--re-accent);
