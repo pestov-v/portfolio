@@ -15,7 +15,7 @@ const Experience = dynamic(() =>
   import("../src/components/Experience/Experience").then((m) => m.Experience)
 );
 const Skills = dynamic(() =>
-  import("../src/components/Skills/Skills").then((m) => m.Skills)
+  import("../src/components/Skills/SkillOrbit").then((m) => m.SkillOrbit)
 );
 const Projects = dynamic(() =>
   import("../src/components/Projects/Projects").then((m) => m.Projects)
