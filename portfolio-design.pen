@@ -1,0 +1,597 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Volodymyr Portfolio",
+      "clip": true,
+      "width": 1440,
+      "fill": "#E8E9EB",
+      "layout": "vertical",
+      "padding": [
+        32,
+        40
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "ejY8F",
+          "name": "Top Bar",
+          "width": "fill_container",
+          "gap": 24,
+          "padding": [
+            16,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "1yC1I",
+              "name": "brand",
+              "fill": "#1A1A1A",
+              "content": "PESTOV.PRO / FRONTEND SYSTEMS",
+              "fontFamily": "Geist Mono",
+              "fontSize": 14,
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "f7NZr",
+              "name": "location",
+              "fill": "#666666",
+              "content": "FINTECH / SAAS / PLATFORM TEAMS",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "text",
+              "id": "UxGps",
+              "name": "avail",
+              "fill": "#1A1A1A",
+              "content": "BOOK INTRO CALL / REMOTE WORLDWIDE",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "700",
+              "letterSpacing": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tweE9",
+          "name": "Hero",
+          "width": "fill_container",
+          "padding": [
+            48,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Qo8nC",
+              "name": "Hero Left",
+              "width": 920,
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                16,
+                0,
+                48,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cE6hP",
+                  "name": "heroTag",
+                  "fill": "#666666",
+                  "content": "LANDING PAGE / SENIOR FRONT-END DEVELOPER / TECH LEAD",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "6hh9y",
+                  "name": "heroTitle",
+                  "fill": "#1A1A1A",
+                  "content": "I DESIGN AND\nBUILD FRONTENDS\nTHAT SURVIVE SCALE",
+                  "lineHeight": 0.95,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 64,
+                  "fontWeight": "200"
+                },
+                {
+                  "type": "text",
+                  "id": "XSg2l",
+                  "name": "heroBody",
+                  "fill": "#333333",
+                  "content": "For fintech, SaaS, and platform teams\nthat need more than a pretty UI.\nI build React and TypeScript systems\nthat stay fast under growth, reduce\nrelease risk, and give product teams\nroom to move.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "DI4g1",
+                  "name": "Hero Links",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IZdD0",
+                      "name": "link1",
+                      "fill": "#1A1A1A",
+                      "content": "VIEW WORK  /",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "M5JhX",
+                      "name": "link2",
+                      "fill": "#1A1A1A",
+                      "content": "BOOK CALL  /",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "XWzR9",
+                      "name": "link3",
+                      "fill": "#1A1A1A",
+                      "content": "GET CV",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PEBZJ",
+              "name": "Hero Right",
+              "width": 440,
+              "fill": "#1A1A1A",
+              "layout": "vertical",
+              "gap": 24,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SyB8l",
+                  "name": "proofLabel",
+                  "fill": "#E8E9EB",
+                  "content": "WHY TEAMS HIRE ME",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "l7TBX",
+                  "name": "proof1",
+                  "fill": "#FFFFFF",
+                  "content": "Architecture that\nhandles growth\nwithout rewrites",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 22,
+                  "fontWeight": "200"
+                },
+                {
+                  "type": "text",
+                  "id": "PfgTB",
+                  "name": "proof2",
+                  "fill": "#FFFFFF",
+                  "content": "Delivery systems that\nturn weeks of friction\ninto hours of action",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 22,
+                  "fontWeight": "200"
+                },
+                {
+                  "type": "text",
+                  "id": "H0iGR",
+                  "name": "proof3",
+                  "fill": "#FFFFFF",
+                  "content": "Quality practices that\nprotect releases and\nkeep teams moving",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 22,
+                  "fontWeight": "200"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xFHYo",
+          "name": "Stats Row",
+          "width": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "jV6zr",
+              "name": "Stat 01",
+              "width": 453,
+              "fill": "#C2956A",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                24,
+                28
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VpbyO",
+                  "name": "stat1a",
+                  "fill": "#FFFFFF",
+                  "content": "OUTCOME / 01",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "VjXlf",
+                  "name": "stat1b",
+                  "fill": "#FFFFFF",
+                  "content": "Stabilize frontend\narchitecture before\nproduct growth gets expensive.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 18,
+                  "fontWeight": "200"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "k7w89",
+              "name": "Stat 02",
+              "width": 453,
+              "fill": "#A38979",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                24,
+                28
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EYcta",
+                  "name": "stat2a",
+                  "fill": "#FFFFFF",
+                  "content": "OUTCOME / 02",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "xusXX",
+                  "name": "stat2b",
+                  "fill": "#FFFFFF",
+                  "content": "Ship new internal tools,\nforms, and workflows\ndramatically faster.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 18,
+                  "fontWeight": "200"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5qMs9",
+              "name": "Stat 03",
+              "width": 454,
+              "fill": "#8F5A3C",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": [
+                24,
+                28
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RWzxb",
+                  "name": "stat3a",
+                  "fill": "#FFFFFF",
+                  "content": "OUTCOME / 03",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "8bJhq",
+                  "name": "stat3b",
+                  "fill": "#FFFFFF",
+                  "content": "Raise engineering quality\nwith tests, review standards,\nand measurable performance.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 18,
+                  "fontWeight": "200"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "t2ZjK",
+          "name": "Content Grid",
+          "width": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "tGUk4",
+              "name": "Main Column",
+              "width": 920,
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                48,
+                0,
+                56,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "1XfmQ",
+                  "name": "expLabel",
+                  "fill": "#666666",
+                  "content": "HOW I HELP",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "unn7F",
+                  "name": "expIntro",
+                  "fill": "#1A1A1A",
+                  "content": "I work where frontend complexity starts\naffecting business speed: scaling merchant systems,\nreal-time dashboards, internal tools, and critical\nuser flows that cannot afford chaos.",
+                  "lineHeight": 1.15,
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 24,
+                  "fontWeight": "200"
+                },
+                {
+                  "type": "frame",
+                  "id": "r4tXv",
+                  "name": "Ukrpay Card",
+                  "width": "fill_container",
+                  "fill": "#F2F2F3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "r37WG",
+                      "name": "exp1text",
+                      "fill": "#1A1A1A",
+                      "content": "SYSTEMS / FINTECH PLATFORM\nBuilt the frontend direction for a merchant platform serving 500+ businesses. Introduced scalable architecture, code review, test discipline, and a JSON-schema form engine that unlocked faster launches with less engineering drag.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 20,
+                      "fontWeight": "200"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DzBeT",
+                  "name": "Atlana Card",
+                  "width": "fill_container",
+                  "fill": "#F2F2F3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ITaL3",
+                      "name": "exp2text",
+                      "fill": "#1A1A1A",
+                      "content": "SYSTEMS / PRODUCT DISCOVERY + SEO\nDelivered a property platform with interactive maps, comparison flows, and search UX shaped for deeper sessions. Combined fast delivery with 95+ Lighthouse performance targets and production-grade polish.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 20,
+                      "fontWeight": "200"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tVKVD",
+                  "name": "Impltech Card",
+                  "width": "fill_container",
+                  "fill": "#F2F2F3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xj1qW",
+                      "name": "exp3text",
+                      "fill": "#1A1A1A",
+                      "content": "SYSTEMS / REAL-TIME TRADING UI\nImplemented brokerage interfaces with live feeds, charts, and execution workflows where latency and clarity directly affected user trust. The UI had to be fast because the product context demanded it.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 20,
+                      "fontWeight": "200"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xy4k6",
+                  "name": "Freelance Card",
+                  "width": "fill_container",
+                  "fill": "#F2F2F3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fTIfp",
+                      "name": "exp4text",
+                      "fill": "#1A1A1A",
+                      "content": "DELIVERY MODEL\nI can operate as a senior IC, technical lead, or bridge between design, product, and engineering. That includes architecture, implementation, review culture, testing strategy, and release confidence.",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 20,
+                      "fontWeight": "200"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xRPHU",
+              "name": "Knowledge Rail",
+              "width": 440,
+              "fill": "#1A1A1A",
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                48,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FozFs",
+                  "name": "stackLabel",
+                  "fill": "#E8E9EB",
+                  "content": "CAPABILITIES / STACK / CONTACT",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "1miLh",
+                  "name": "stackText",
+                  "fill": "#FFFFFF",
+                  "content": "WHAT YOU GET\nReact + TypeScript architecture\nNext.js product surfaces\nDesign-system aware UI delivery\nState and data orchestration\nPerformance and Core Web Vitals\nTesting strategy and CI hygiene\nMentoring and review systems\n\nCORE STACK\nReact, TypeScript, Next.js\nRedux, Zustand, React Query\nNode.js, NestJS, PostgreSQL\nREST, WebSocket, Docker",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 18
+                },
+                {
+                  "type": "text",
+                  "id": "4BYn7",
+                  "name": "domainText",
+                  "fill": "#E8E9EB",
+                  "content": "BEST FIT\nFintech and payment products\nInternal platforms and operator tooling\nData-dense dashboards\nReal-time interfaces\nTeams moving from ad-hoc to structured delivery\n\nWORKING STYLE\nDirect communication\nStrong ownership\nQuality gates over guesswork\nFast iteration without chaos",
+                  "lineHeight": 1.55,
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                },
+                {
+                  "type": "frame",
+                  "id": "pj63x",
+                  "name": "Contact Panel",
+                  "width": "fill_container",
+                  "fill": "#E8E9EB",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QpuGV",
+                      "name": "contactTitle",
+                      "fill": "#1A1A1A",
+                      "content": "START A CONVERSATION",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "qJTNw",
+                      "name": "contactText",
+                      "fill": "#1A1A1A",
+                      "content": "pestov.volodymyr@gmail.com\n+380 970 097 343\npestov.pro\nlinkedin.com/in/pestov-volodymyr-405011206\ngithub.com/pestov-v\n\nBased in Bulgaria / Remote-first",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 18
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rl19v",
+          "name": "Footer CTA",
+          "width": "fill_container",
+          "fill": "#1A1A1A",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": 24,
+          "children": [
+            {
+              "type": "text",
+              "id": "e6nSF",
+              "name": "footerLead",
+              "fill": "#FFFFFF",
+              "content": "NEED A FRONTEND THAT CAN\nTAKE PRODUCT PRESSURE WITHOUT BREAKING?",
+              "lineHeight": 1,
+              "fontFamily": "Geist Mono",
+              "fontSize": 34,
+              "fontWeight": "200"
+            },
+            {
+              "type": "text",
+              "id": "mrCfG",
+              "name": "footerMeta",
+              "fill": "#E8E9EB",
+              "content": "INTRO CALL\nPROJECT RESCUE\nLONG-TERM LEADERSHIP",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 16
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
