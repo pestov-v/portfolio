@@ -107,7 +107,7 @@ export const Header: NextPage = () => {
 
       <div className={style.stats}>
         <div className={style.statItem}>
-          <span className={style.statNumber}>7+</span>
+          <span className={style.statNumber}>6+</span>
           <span className={style.statLabel}>YEARS EXP.</span>
         </div>
         <div className={style.statDivider} aria-hidden="true" />

@@ -238,7 +238,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Developer",
     description:
-      "Senior Full-Stack Developer with 7+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript architectures, leading development teams, and mentoring engineers. Proven track record of delivering enterprise solutions that drive business outcomes.",
+      "Senior Full-Stack Developer with 6+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript architectures, leading development teams, and mentoring engineers. Proven track record of delivering enterprise solutions that drive business outcomes.",
     personalInfo: {
       name: "Name",
       birthday: "Birthday",
@@ -259,7 +259,7 @@ export const translations: Record<
     // Personal values
     available: "Available",
     master: "Master",
-    fiveYearsPlus: "7+ years",
+    fiveYearsPlus: "6+ years",
 
     // Skills section
     mySkills: "My Skills",
@@ -286,7 +286,8 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "available for work",
-    headerDescription: "Building high-performance web applications with modern technologies and clean, maintainable architecture.",
+    headerDescription:
+      "Building high-performance web applications with modern technologies and clean, maintainable architecture.",
     viewMyWork: "view my work",
     yearsExp: "YEARS EXP.",
     projectsCount: "PROJECTS",
@@ -295,7 +296,8 @@ export const translations: Record<
     // Footer
     letsWorkTogether: "Let's work together...",
     hireMe: "hire me",
-    letsWorkTogetherSubtitle: "Have a project in mind? I'd love to hear about it.",
+    letsWorkTogetherSubtitle:
+      "Have a project in mind? I'd love to hear about it.",
 
     // About (redesign)
     whoIAm: "Who I am.",
@@ -315,7 +317,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "Senior Full-Stack Developer with 7+ years of experience in fintech, React, TypeScript — portfolio of Volodymyr Pestov",
+      "Senior Full-Stack Developer with 6+ years of experience in fintech, React, TypeScript — portfolio of Volodymyr Pestov",
 
     // Language switcher
     language: "Language",
@@ -428,7 +430,13 @@ export const translations: Record<
           "Optimized application bundle with code-splitting and lazy loading, improving initial page load by 35%.",
           "Platform scaled 3x with zero architecture rewrites.",
         ],
-        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
+        tags: [
+          "No-Code Form Builder",
+          "Merchant & Sales Platform",
+          "Credit Factory",
+          "Tax Report Automation",
+          "Fintech",
+        ],
       },
       atlana: {
         position: "Front-End Developer",
@@ -439,7 +447,13 @@ export const translations: Record<
           "Implemented saved searches, property comparison, and user watchlists — increasing session depth and return visit rate for the platform.",
           "Achieved 95+ Lighthouse scores and 50% faster page loads via Next.js SSG, structured data markup, and image optimization.",
         ],
-        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
+        tags: [
+          "Real Estate App",
+          "Team of 4 devs",
+          "Mapbox Integration",
+          "Next.js SSG",
+          "SEO Optimization",
+        ],
       },
       impltech: {
         position: "Front-End Developer",
@@ -450,7 +464,13 @@ export const translations: Record<
           "Built interactive candlestick charts with multiple timeframes, technical indicators, and drawing tools — delivering a professional-grade trading experience.",
           "Implemented a full order management system supporting market, limit, and stop orders with instant execution feedback and real-time portfolio P&L tracking.",
         ],
-        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
+        tags: [
+          "Trading Platform UI",
+          "WebSocket",
+          "Real-time Data",
+          "50+ Stock Symbols",
+          "React",
+        ],
       },
     },
 
@@ -497,7 +517,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Розробник",
     description:
-      "Senior Full-Stack розробник з 7+ роками досвіду створення високопродуктивних фінтех-платформ. Експертиза в масштабованих архітектурах React/TypeScript, керівництві командами розробки та менторстві інженерів. Підтверджений досвід створення корпоративних рішень, що впливають на бізнес-результати.",
+      "Senior Full-Stack розробник з 6+ роками досвіду створення високопродуктивних фінтех-платформ. Експертиза в масштабованих архітектурах React/TypeScript, керівництві командами розробки та менторстві інженерів. Підтверджений досвід створення корпоративних рішень, що впливають на бізнес-результати.",
     personalInfo: {
       name: "Ім'я",
       birthday: "День народження",
@@ -518,7 +538,7 @@ export const translations: Record<
     // Personal values
     available: "Доступний",
     master: "Магістр",
-    fiveYearsPlus: "7+ років",
+    fiveYearsPlus: "6+ років",
 
     // Skills section
     mySkills: "Мої навички",
@@ -545,7 +565,8 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "доступний для роботи",
-    headerDescription: "Розробка високопродуктивних веб-додатків із сучасними технологіями та чистою, підтримуваною архітектурою.",
+    headerDescription:
+      "Розробка високопродуктивних веб-додатків із сучасними технологіями та чистою, підтримуваною архітектурою.",
     viewMyWork: "дивитись мої роботи",
     yearsExp: "РОКІВ ДОСВІДУ",
     projectsCount: "ПРОЕКТІВ",
@@ -554,7 +575,8 @@ export const translations: Record<
     // Footer
     letsWorkTogether: "Давайте працювати разом...",
     hireMe: "найміть мене",
-    letsWorkTogetherSubtitle: "Маєте проект на думці? Я хотів би почути про нього.",
+    letsWorkTogetherSubtitle:
+      "Маєте проект на думці? Я хотів би почути про нього.",
 
     // About (redesign)
     whoIAm: "Хто я.",
@@ -574,7 +596,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Розробник",
     portfolioDescription:
-      "Senior Full-Stack розробник з 7+ роками досвіду у фінтех, React, TypeScript — портфоліо Володимира Пестова",
+      "Senior Full-Stack розробник з 6+ роками досвіду у фінтех, React, TypeScript — портфоліо Володимира Пестова",
 
     // Language switcher
     language: "Мова",
@@ -687,7 +709,13 @@ export const translations: Record<
           "Оптимізація бандлу додатку з code-splitting та lazy loading, покращення початкового завантаження сторінки на 35%.",
           "Платформа масштабована в 3x без перепроектування архітектури.",
         ],
-        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
+        tags: [
+          "No-Code Form Builder",
+          "Merchant & Sales Platform",
+          "Credit Factory",
+          "Tax Report Automation",
+          "Fintech",
+        ],
       },
       atlana: {
         position: "Front-End Розробник",
@@ -698,7 +726,13 @@ export const translations: Record<
           "Реалізував збережені пошуки, порівняння об'єктів нерухомості та списки спостереження — збільшивши глибину сесій та кількість повторних відвідувань платформи.",
           "Досяг 95+ балів Lighthouse та пришвидшив завантаження сторінок на 50% за допомогою Next.js SSG, розмітки структурованих даних та оптимізації зображень.",
         ],
-        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
+        tags: [
+          "Real Estate App",
+          "Team of 4 devs",
+          "Mapbox Integration",
+          "Next.js SSG",
+          "SEO Optimization",
+        ],
       },
       impltech: {
         position: "Front-End Розробник",
@@ -709,7 +743,13 @@ export const translations: Record<
           "Побудував інтерактивні свічкові графіки з кількома таймфреймами, технічними індикаторами та інструментами малювання — забезпечивши трейдинговий досвід професійного рівня.",
           "Реалізував повну систему управління ордерами з підтримкою ринкових, лімітних та стоп-ордерів із миттєвим зворотним зв'язком про виконання та відстеженням P&L портфеля в реальному часі.",
         ],
-        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
+        tags: [
+          "Trading Platform UI",
+          "WebSocket",
+          "Real-time Data",
+          "50+ Stock Symbols",
+          "React",
+        ],
       },
     },
 
@@ -756,7 +796,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Разработчик",
     description:
-      "Senior Full-Stack разработчик с 7+ години опит в изграждането на високопроизводителни финтех платформи. Експертиза в мащабируеми React/TypeScript архитектури, ръководство на екипи за разработка и менторство на инженери. Доказан опит в изграждането на корпоративни решения, които подобряват бизнес резултатите.",
+      "Senior Full-Stack разработчик с 6+ години опит в изграждането на високопроизводителни финтех платформи. Експертиза в мащабируеми React/TypeScript архитектури, ръководство на екипи за разработка и менторство на инженери. Доказан опит в изграждането на корпоративни решения, които подобряват бизнес резултатите.",
     personalInfo: {
       name: "Име",
       birthday: "Рожден ден",
@@ -777,7 +817,7 @@ export const translations: Record<
     // Personal values
     available: "Наличен",
     master: "Магистър",
-    fiveYearsPlus: "7+ години",
+    fiveYearsPlus: "6+ години",
 
     // Skills section
     mySkills: "Моите умения",
@@ -804,7 +844,8 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "достъпен за работа",
-    headerDescription: "Разработка на високопроизводителни уеб приложения със съвременни технологии и чиста, поддържаема архитектура.",
+    headerDescription:
+      "Разработка на високопроизводителни уеб приложения със съвременни технологии и чиста, поддържаема архитектура.",
     viewMyWork: "виж моята работа",
     yearsExp: "ГОДИНИ ОПИТ",
     projectsCount: "ПРОЕКТИ",
@@ -833,7 +874,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Разработчик",
     portfolioDescription:
-      "Senior Full-Stack разработчик с 7+ години опит във финтех, React, TypeScript — портфолио на Володимир Пестов",
+      "Senior Full-Stack разработчик с 6+ години опит във финтех, React, TypeScript — портфолио на Володимир Пестов",
 
     // Language switcher
     language: "Език",
@@ -946,7 +987,13 @@ export const translations: Record<
           "Оптимизация на пакета на приложението с code-splitting и lazy loading, подобряване на първоначалното зареждане на страницата с 35%.",
           "Платформата мащабирана 3x без архитектурни преписвания.",
         ],
-        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
+        tags: [
+          "No-Code Form Builder",
+          "Merchant & Sales Platform",
+          "Credit Factory",
+          "Tax Report Automation",
+          "Fintech",
+        ],
       },
       atlana: {
         position: "Front-End Разработчик",
@@ -957,7 +1004,13 @@ export const translations: Record<
           "Внедрих запазени търсения, сравнение на имоти и списъци за наблюдение — увеличавайки дълбочината на сесиите и процента на повторни посещения на платформата.",
           "Постигнах 95+ Lighthouse резултати и 50% по-бързо зареждане чрез Next.js SSG, маркиране на структурирани данни и оптимизация на изображения.",
         ],
-        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
+        tags: [
+          "Real Estate App",
+          "Team of 4 devs",
+          "Mapbox Integration",
+          "Next.js SSG",
+          "SEO Optimization",
+        ],
       },
       impltech: {
         position: "Front-End Разработчик",
@@ -968,7 +1021,13 @@ export const translations: Record<
           "Изградих интерактивни свещни графики с множество времеви рамки, технически индикатори и инструменти за рисуване — осигурявайки търговски опит от професионален клас.",
           "Внедрих пълна система за управление на ордери с поддръжка на пазарни, лимитни и стоп-ордери с моментална обратна връзка за изпълнение и проследяване на P&L в реално време.",
         ],
-        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
+        tags: [
+          "Trading Platform UI",
+          "WebSocket",
+          "Real-time Data",
+          "50+ Stock Symbols",
+          "React",
+        ],
       },
     },
 
@@ -1015,7 +1074,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Developer",
     description:
-      "Senior Full-Stack Developer z 7+ letnim doświadczeniem w tworzeniu wysokowydajnych platform fintech. Specjalizacja w skalowalnych architekturach React/TypeScript, kierowaniu zespołami deweloperskimi i mentorowaniu inżynierów. Udowodnione doświadczenie w dostarczaniu rozwiązań korporacyjnych wpływających na wyniki biznesowe.",
+      "Senior Full-Stack Developer z 6+ letnim doświadczeniem w tworzeniu wysokowydajnych platform fintech. Specjalizacja w skalowalnych architekturach React/TypeScript, kierowaniu zespołami deweloperskimi i mentorowaniu inżynierów. Udowodnione doświadczenie w dostarczaniu rozwiązań korporacyjnych wpływających na wyniki biznesowe.",
     personalInfo: {
       name: "Imię",
       birthday: "Data urodzenia",
@@ -1036,7 +1095,7 @@ export const translations: Record<
     // Personal values
     available: "Dostępny",
     master: "Magister",
-    fiveYearsPlus: "7+ lat",
+    fiveYearsPlus: "6+ lat",
 
     // Skills section
     mySkills: "Moje umiejętności",
@@ -1063,7 +1122,8 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "dostępny do pracy",
-    headerDescription: "Budowanie wysokowydajnych aplikacji internetowych za pomocą nowoczesnych technologii i czystej, łatwej w utrzymaniu architektury.",
+    headerDescription:
+      "Budowanie wysokowydajnych aplikacji internetowych za pomocą nowoczesnych technologii i czystej, łatwej w utrzymaniu architektury.",
     viewMyWork: "zobacz moją pracę",
     yearsExp: "LAT DOŚWIADCZENIA",
     projectsCount: "PROJEKTÓW",
@@ -1092,7 +1152,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "Senior Full-Stack Developer z 7+ letnim doświadczeniem w fintech, React, TypeScript — portfolio Volodymyra Pestova",
+      "Senior Full-Stack Developer z 6+ letnim doświadczeniem w fintech, React, TypeScript — portfolio Volodymyra Pestova",
 
     // Language switcher
     language: "Język",
@@ -1205,7 +1265,13 @@ export const translations: Record<
           "Optymalizacja pakietu aplikacji z podziałem kodu i leniwym ładowaniem, poprawiająca początkowe ładowanie strony o 35%.",
           "Platforma przeskalowana 3x bez przebudowy architektury.",
         ],
-        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
+        tags: [
+          "No-Code Form Builder",
+          "Merchant & Sales Platform",
+          "Credit Factory",
+          "Tax Report Automation",
+          "Fintech",
+        ],
       },
       atlana: {
         position: "Front-End Developer",
@@ -1216,7 +1282,13 @@ export const translations: Record<
           "Wdrożyłem zapisane wyszukiwania, porównywanie nieruchomości i listy obserwowanych — zwiększając głębokość sesji i wskaźnik powrotów na platformę.",
           "Osiągnąłem wyniki Lighthouse 95+ i 50% szybsze ładowanie stron dzięki Next.js SSG, znacznikowi danych strukturalnych i optymalizacji obrazów.",
         ],
-        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
+        tags: [
+          "Real Estate App",
+          "Team of 4 devs",
+          "Mapbox Integration",
+          "Next.js SSG",
+          "SEO Optimization",
+        ],
       },
       impltech: {
         position: "Front-End Developer",
@@ -1227,7 +1299,13 @@ export const translations: Record<
           "Zbudowałem interaktywne wykresy świecowe z wieloma ramami czasowymi, wskaźnikami technicznymi i narzędziami do rysowania — zapewniając profesjonalne doświadczenie handlowe.",
           "Wdrożyłem pełny system zarządzania zleceniami obsługujący zlecenia rynkowe, limitowane i stop z natychmiastową informacją zwrotną o realizacji i śledzeniem P&L portfela w czasie rzeczywistym.",
         ],
-        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
+        tags: [
+          "Trading Platform UI",
+          "WebSocket",
+          "Real-time Data",
+          "50+ Stock Symbols",
+          "React",
+        ],
       },
     },
 
@@ -1274,7 +1352,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Developer",
     description:
-      "Sviluppatore Senior Full-Stack con 7+ anni di esperienza nella creazione di piattaforme fintech ad alte prestazioni. Competenze in architetture React/TypeScript scalabili, leadership di team di sviluppo e mentoring di ingegneri. Comprovata esperienza nella realizzazione di soluzioni enterprise che generano risultati di business.",
+      "Sviluppatore Senior Full-Stack con 6+ anni di esperienza nella creazione di piattaforme fintech ad alte prestazioni. Competenze in architetture React/TypeScript scalabili, leadership di team di sviluppo e mentoring di ingegneri. Comprovata esperienza nella realizzazione di soluzioni enterprise che generano risultati di business.",
     personalInfo: {
       name: "Nome",
       birthday: "Data di nascita",
@@ -1295,7 +1373,7 @@ export const translations: Record<
     // Personal values
     available: "Disponibile",
     master: "Laurea Magistrale",
-    fiveYearsPlus: "7+ anni",
+    fiveYearsPlus: "6+ anni",
 
     // Skills section
     mySkills: "Le mie competenze",
@@ -1322,7 +1400,8 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "disponibile per il lavoro",
-    headerDescription: "Costruire applicazioni web ad alte prestazioni con tecnologie moderne e architettura pulita e mantenibile.",
+    headerDescription:
+      "Costruire applicazioni web ad alte prestazioni con tecnologie moderne e architettura pulita e mantenibile.",
     viewMyWork: "vedi il mio lavoro",
     yearsExp: "ANNI DI ESPERIENZA",
     projectsCount: "PROGETTI",
@@ -1331,7 +1410,8 @@ export const translations: Record<
     // Footer
     letsWorkTogether: "Lavoriamo insieme...",
     hireMe: "assumimi",
-    letsWorkTogetherSubtitle: "Hai un progetto in mente? Mi piacerebbe sentirne parlare.",
+    letsWorkTogetherSubtitle:
+      "Hai un progetto in mente? Mi piacerebbe sentirne parlare.",
 
     // About (redesign)
     whoIAm: "Chi sono.",
@@ -1351,7 +1431,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "Senior Full-Stack Developer con 7+ anni di esperienza in fintech, React, TypeScript — portfolio di Volodymyr Pestov",
+      "Senior Full-Stack Developer con 6+ anni di esperienza in fintech, React, TypeScript — portfolio di Volodymyr Pestov",
 
     // Language switcher
     language: "Lingua",
@@ -1464,7 +1544,13 @@ export const translations: Record<
           "Ottimizzazione del bundle dell'applicazione con code-splitting e lazy loading, migliorando il caricamento iniziale della pagina del 35%.",
           "Piattaforma scalata 3x senza riscritture architetturali.",
         ],
-        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
+        tags: [
+          "No-Code Form Builder",
+          "Merchant & Sales Platform",
+          "Credit Factory",
+          "Tax Report Automation",
+          "Fintech",
+        ],
       },
       atlana: {
         position: "Front-End Developer",
@@ -1475,7 +1561,13 @@ export const translations: Record<
           "Ho implementato ricerche salvate, confronto di proprietà e liste di controllo — aumentando la profondità delle sessioni e il tasso di visite ripetute sulla piattaforma.",
           "Ho raggiunto punteggi Lighthouse 95+ e caricamento pagine 50% più veloce tramite Next.js SSG, markup dei dati strutturati e ottimizzazione delle immagini.",
         ],
-        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
+        tags: [
+          "Real Estate App",
+          "Team of 4 devs",
+          "Mapbox Integration",
+          "Next.js SSG",
+          "SEO Optimization",
+        ],
       },
       impltech: {
         position: "Front-End Developer",
@@ -1486,7 +1578,13 @@ export const translations: Record<
           "Ho costruito grafici a candele interattivi con più timeframe, indicatori tecnici e strumenti di disegno — offrendo un'esperienza di trading di livello professionale.",
           "Ho implementato un sistema completo di gestione degli ordini con supporto per ordini di mercato, limite e stop con feedback di esecuzione immediato e tracciamento P&L del portafoglio in tempo reale.",
         ],
-        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
+        tags: [
+          "Trading Platform UI",
+          "WebSocket",
+          "Real-time Data",
+          "50+ Stock Symbols",
+          "React",
+        ],
       },
     },
 
@@ -1533,7 +1631,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Développeur Senior Full-Stack",
     description:
-      "Développeur Senior Full-Stack avec 7+ ans d'expérience dans la création de plateformes fintech haute performance. Expertise en architectures React/TypeScript évolutives, direction d'équipes de développement et mentorat d'ingénieurs. Expérience éprouvée dans la livraison de solutions entreprise générant des résultats business.",
+      "Développeur Senior Full-Stack avec 6+ ans d'expérience dans la création de plateformes fintech haute performance. Expertise en architectures React/TypeScript évolutives, direction d'équipes de développement et mentorat d'ingénieurs. Expérience éprouvée dans la livraison de solutions entreprise générant des résultats business.",
     personalInfo: {
       name: "Nom",
       birthday: "Date de naissance",
@@ -1554,7 +1652,7 @@ export const translations: Record<
     // Personal values
     available: "Disponible",
     master: "Master",
-    fiveYearsPlus: "7+ ans",
+    fiveYearsPlus: "6+ ans",
 
     // Skills section
     mySkills: "Mes compétences",
@@ -1581,7 +1679,8 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "disponible pour travailler",
-    headerDescription: "Construire des applications web performantes avec des technologies modernes et une architecture propre et maintenable.",
+    headerDescription:
+      "Construire des applications web performantes avec des technologies modernes et une architecture propre et maintenable.",
     viewMyWork: "voir mon travail",
     yearsExp: "ANS D'EXPÉRIENCE",
     projectsCount: "PROJETS",
@@ -1590,7 +1689,8 @@ export const translations: Record<
     // Footer
     letsWorkTogether: "Travaillons ensemble...",
     hireMe: "embauchez-moi",
-    letsWorkTogetherSubtitle: "Vous avez un projet en tête ? J'aimerais en entendre parler.",
+    letsWorkTogetherSubtitle:
+      "Vous avez un projet en tête ? J'aimerais en entendre parler.",
 
     // About (redesign)
     whoIAm: "Qui suis-je.",
@@ -1610,7 +1710,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Développeur Senior Full-Stack",
     portfolioDescription:
-      "Développeur Senior Full-Stack avec 7+ ans d'expérience en fintech, React, TypeScript — portfolio de Volodymyr Pestov",
+      "Développeur Senior Full-Stack avec 6+ ans d'expérience en fintech, React, TypeScript — portfolio de Volodymyr Pestov",
 
     // Language switcher
     language: "Langue",
@@ -1723,7 +1823,13 @@ export const translations: Record<
           "Optimisation du bundle de l'application avec le fractionnement de code et le chargement différé, améliorant le chargement initial de la page de 35%.",
           "Plateforme mise à l'échelle 3x sans réécriture architecturale.",
         ],
-        tags: ["No-Code Form Builder", "Merchant & Sales Platform", "Credit Factory", "Tax Report Automation", "Fintech"],
+        tags: [
+          "No-Code Form Builder",
+          "Merchant & Sales Platform",
+          "Credit Factory",
+          "Tax Report Automation",
+          "Fintech",
+        ],
       },
       atlana: {
         position: "Développeur Front-End",
@@ -1734,7 +1840,13 @@ export const translations: Record<
           "J'ai implémenté des recherches sauvegardées, la comparaison de propriétés et des listes de surveillance — augmentant la profondeur des sessions et le taux de visites répétées sur la plateforme.",
           "J'ai atteint des scores Lighthouse 95+ et un chargement des pages 50% plus rapide via Next.js SSG, le balisage des données structurées et l'optimisation des images.",
         ],
-        tags: ["Real Estate App", "Team of 4 devs", "Mapbox Integration", "Next.js SSG", "SEO Optimization"],
+        tags: [
+          "Real Estate App",
+          "Team of 4 devs",
+          "Mapbox Integration",
+          "Next.js SSG",
+          "SEO Optimization",
+        ],
       },
       impltech: {
         position: "Développeur Front-End",
@@ -1745,7 +1857,13 @@ export const translations: Record<
           "J'ai construit des graphiques en chandeliers interactifs avec plusieurs horizons temporels, des indicateurs techniques et des outils de dessin — offrant une expérience de trading de niveau professionnel.",
           "J'ai implémenté un système complet de gestion des ordres prenant en charge les ordres au marché, à cours limité et stop avec un retour d'exécution immédiat et un suivi du P&L du portefeuille en temps réel.",
         ],
-        tags: ["Trading Platform UI", "WebSocket", "Real-time Data", "50+ Stock Symbols", "React"],
+        tags: [
+          "Trading Platform UI",
+          "WebSocket",
+          "Real-time Data",
+          "50+ Stock Symbols",
+          "React",
+        ],
       },
     },
 

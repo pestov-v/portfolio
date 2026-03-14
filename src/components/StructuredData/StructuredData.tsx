@@ -16,7 +16,7 @@ const personSchema = {
   familyName: "Pestov",
   jobTitle: "Senior Full-Stack Developer",
   description:
-    "Senior Full-Stack Developer with 7+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript architectures, leading development teams, and mentoring engineers.",
+    "Senior Full-Stack Developer with 6+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript architectures, leading development teams, and mentoring engineers.",
   url: SITE_URL,
   image: {
     "@type": "ImageObject",
@@ -70,7 +70,7 @@ const websiteSchema = {
   url: SITE_URL,
   name: "Volodymyr Pestov — Senior Full-Stack Developer",
   description:
-    "Portfolio of Volodymyr Pestov — Senior Full-Stack Developer with 7+ years of experience in fintech, React, TypeScript.",
+    "Portfolio of Volodymyr Pestov — Senior Full-Stack Developer with 6+ years of experience in fintech, React, TypeScript.",
   author: { "@id": `${SITE_URL}/#person` },
   inLanguage: ["en", "uk", "bg", "pl", "it", "fr"],
 };
@@ -169,13 +169,7 @@ const projectsListSchema = {
         description:
           "Full-stack hostel booking system with real-time availability, guest management, and reservation tracking.",
         creator: { "@id": `${SITE_URL}/#person` },
-        keywords: [
-          "Next.js",
-          "NestJS",
-          "TypeScript",
-          "PostgreSQL",
-          "Booking",
-        ],
+        keywords: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Booking"],
       },
     },
   ],

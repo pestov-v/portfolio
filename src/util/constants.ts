@@ -23,6 +23,7 @@ export interface IProject {
   href: string;
   alt: string;
   additionalInfo?: string;
+  technologies?: string[];
   caseStudy?: ICaseStudy;
 }
 export type TProjects = IProject[];
@@ -39,6 +40,7 @@ export const _projects: TProjects = [
     alt: "Aurinia E-commerce Platform",
     additionalInfo:
       "Full-featured online store with material management and comprehensive order processing",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Postgres"],
   },
   {
     id: 17,
@@ -51,6 +53,7 @@ export const _projects: TProjects = [
     alt: "CFWeb Corporate Finance Application",
     additionalInfo:
       "Enterprise-level financial management platform with advanced user management and compliance tools",
+    technologies: ["React", "TypeScript", "Redux", "Ant Design", "REST API"],
   },
   {
     id: 16,
@@ -63,6 +66,7 @@ export const _projects: TProjects = [
     alt: "OschadPay Payment System",
     additionalInfo:
       "Transaction creation & monitoring · Tax-ready report generation · Merchant & product registry · Terminal provisioning & management · Financial analytics dashboard",
+    technologies: ["React", "TypeScript", "Redux", "Ant Design", "REST API", "Node.js"],
     caseStudy: {
       challenge:
         "The bank operated dozens of payment terminals with no unified dashboard. Transaction creation was manual, merchant onboarding took days, product catalogues lived in spreadsheets, and generating tax-compliant reports required hours of data stitching across multiple systems.",
@@ -91,6 +95,7 @@ export const _projects: TProjects = [
     alt: "Onboarding Questionnaire Management System",
     additionalInfo:
       "Enterprise-level form builder with template management, category organization, and advanced field customization",
+    technologies: ["React", "TypeScript", "JSON Schema", "React Hook Form", "React Window"],
     caseStudy: {
       challenge:
         "The process of launching new payment products took weeks, as each new form required a full development, testing, and frontend deployment cycle.",
@@ -143,7 +148,8 @@ export const _projects: TProjects = [
     image: "hostel",
     alt: "Hostel management system",
     additionalInfo:
-      "Full-stack booking system with real-time availability, guest management, and reservation tracking · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Full-stack booking system with real-time availability, guest management, and reservation tracking",
+    technologies: ["Next.js", "NestJS", "TypeScript", "TailwindCSS", "Postgres", "TypeORM"],
   },
   {
     id: 13,
@@ -155,7 +161,8 @@ export const _projects: TProjects = [
     image: "deals",
     alt: "Deal crm system",
     additionalInfo:
-      "Sales pipeline management with deal tracking, client database, and analytics dashboard · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Sales pipeline management with deal tracking, client database, and analytics dashboard",
+    technologies: ["Next.js", "NestJS", "TypeScript", "TailwindCSS", "Postgres", "TypeORM"],
   },
   {
     id: 12,
@@ -167,7 +174,8 @@ export const _projects: TProjects = [
     image: "candidates",
     alt: "Candidates crm system",
     additionalInfo:
-      "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics · React, Express, TypeScript, TailwindCSS, Postgres, TypeORM",
+      "Applicant tracking system with candidate profiles, interview scheduling, and recruitment analytics",
+    technologies: ["React", "Express", "TypeScript", "TailwindCSS", "Postgres", "TypeORM"],
   },
   {
     id: 11,
@@ -179,7 +187,8 @@ export const _projects: TProjects = [
     image: "novus",
     alt: "Novus Web Development Agency",
     additionalInfo:
-      "Creative agency landing page with modern animations and premium design · NextJS, TypeScript, TailwindCSS",
+      "Creative agency landing page with modern animations and premium design",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS"],
   },
   {
     id: 10,
@@ -190,7 +199,8 @@ export const _projects: TProjects = [
     image: "web-studio",
     alt: "Web-studio",
     additionalInfo:
-      "Landing page for a digital agency with a modern UI/UX and smooth animations · NextJS, TypeScript, TailwindCSS",
+      "Landing page for a digital agency with a modern UI/UX and smooth animations",
+    technologies: ["Next.js", "TypeScript", "TailwindCSS"],
   },
 ];
 

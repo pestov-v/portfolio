@@ -1,10 +1,10 @@
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./About.module.scss";
+import { CodeMonitor } from "./CodeMonitor/CodeMonitor";
 
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
@@ -98,15 +98,9 @@ export const About = () => {
         </div>
 
         <div className={style.right}>
-          <div className={style.photoWrap}>
-            <Image
-              src="/img/profile/profile.jpg"
-              alt="Volodymyr Pestov"
-              width={400}
-              height={440}
-              className={style.photo}
-            />
-          </div>
+          {/* 3D Apple-style Code Monitor with scroll animation */}
+          <CodeMonitor />
+
           <div className={style.infoCards}>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>location</span>

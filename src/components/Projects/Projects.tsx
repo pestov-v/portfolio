@@ -127,9 +127,9 @@ export const Projects = () => {
                       <div className={style.cardText}>
                         <h2 className={style.title}>{title}</h2>
                         <p className={style.description}>{description}</p>
-                        {item.caseStudy?.technologies && (
+                        {(item.technologies || item.caseStudy?.technologies) && (
                           <div className={style.techTags}>
-                            {item.caseStudy.technologies.slice(0, 3).map((tech) => (
+                            {(item.technologies || item.caseStudy!.technologies)!.slice(0, 4).map((tech) => (
                               <span key={tech} className={style.techTag}>
                                 {tech}
                               </span>
