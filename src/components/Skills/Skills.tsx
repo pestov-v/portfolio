@@ -1,8 +1,6 @@
 import { useRef } from "react";
 import { SKILLS } from "util/constants";
-import { ProgressBar } from "components/ui/ProgressBar/ProgressBar";
 import { useShowSkills } from "./useShowSkills";
-import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Skills.module.scss";
 
 const CATEGORIES = [
@@ -12,9 +10,8 @@ const CATEGORIES = [
 ];
 
 export const Skills = () => {
-  const { t } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
-  useShowSkills({ ref, className: style.show });
+  useShowSkills({ ref });
 
   return (
     <section className={style.skills} id="skills">
@@ -28,20 +25,25 @@ export const Skills = () => {
               <div key={key} className={style.category}>
                 <span className={style.categoryLabel}>{label}</span>
                 <div className={style.skillList}>
-                  {categorySkills.map(({ title, percent, color }) => (
-                    <div key={title} className={style.skillItem}>
+                  {categorySkills.map(({ title, percent }) => (
+                    <div key={title} className={style.skillItem} data-skill-card>
                       <div className={style.skillRow}>
                         <span className={style.skillName}>{title}</span>
                         <span className={style.skillPercent}>{percent}%</span>
                       </div>
-                      <ProgressBar
-                        percent={`${percent}%`}
-                        addWidthImmediately={false}
-                        transitionDelay={0}
-                        reverse={false}
-                        color={color}
-                        label={title}
-                      />
+                      <div
+                        className={style.barTrack}
+                        role="progressbar"
+                        aria-valuenow={percent}
+                        aria-valuemin={0}
+                        aria-valuemax={100}
+                        aria-label={`${title}: ${percent}%`}
+                      >
+                        <div
+                          className={style.barFill}
+                          style={{ width: `${percent}%` }}
+                        />
+                      </div>
                     </div>
                   ))}
                 </div>
