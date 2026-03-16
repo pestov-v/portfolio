@@ -189,6 +189,12 @@ export interface Translation {
       achievements: string[];
       tags: string[];
     };
+    freelance: {
+      position: string;
+      companyDescription: string;
+      achievements: string[];
+      tags: string[];
+    };
   };
 
   // Demo page
@@ -472,6 +478,24 @@ export const translations: Record<
           "React",
         ],
       },
+      freelance: {
+        position: "Freelance Front-End Developer",
+        companyDescription:
+          "Independent freelance practice delivering custom web solutions for small and medium businesses across various industries. Focused on building responsive, performant websites and web apps from scratch — from design to deployment.",
+        achievements: [
+          "Developed an online booking system for a beauty salon with a real-time appointment calendar, client notifications, and an admin dashboard — replacing a fully manual workflow.",
+          "Created a product catalogue web app for a wholesale supplier with dynamic filtering, search, and a PDF price-list export feature.",
+          "Delivered a landing page funnel for a coaching business with integrated contact forms, analytics tracking, and A/B-tested CTA sections — increasing lead conversion by 30%.",
+          "Built a personal portfolio and blog platform for a photographer with a custom image gallery, lazy loading, and SEO optimisation — achieving 90+ Lighthouse score.",
+        ],
+        tags: [
+          "4 Projects Delivered",
+          "HTML / CSS / JS",
+          "React",
+          "WordPress",
+          "SEO",
+        ],
+      },
     },
 
     // Demo page
@@ -749,6 +773,24 @@ export const translations: Record<
           "Real-time Data",
           "50+ Stock Symbols",
           "React",
+        ],
+      },
+      freelance: {
+        position: "Freelance Front-End Розробник",
+        companyDescription:
+          "Самостійна фріланс-практика — розробка кастомних веб-рішень для малого та середнього бізнесу в різних галузях. Фокус на створенні адаптивних, продуктивних сайтів та веб-додатків з нуля — від дизайну до деплою.",
+        achievements: [
+          "Створив систему онлайн-бронювання для салону краси з календарем запису в реальному часі, сповіщеннями клієнтів та адмін-панеллю — повністю замінив ручний процес.",
+          "Розробив веб-додаток каталогу продукції для оптового постачальника з динамічною фільтрацією, пошуком та функцією експорту прайс-листа в PDF.",
+          "Реалізував лендінг-воронку для коучингового бізнесу з формами зворотнього зв'язку, відстеженням аналітики та A/B-тестованими CTA-секціями — конверсія лідів зросла на 30%.",
+          "Побудував портфоліо та блог-платформу для фотографа з кастомною галереєю зображень, lazy loading та SEO-оптимізацією — досягнуто 90+ балів Lighthouse.",
+        ],
+        tags: [
+          "4 реалізованих проекти",
+          "HTML / CSS / JS",
+          "React",
+          "WordPress",
+          "SEO",
         ],
       },
     },
@@ -1029,6 +1071,24 @@ export const translations: Record<
           "React",
         ],
       },
+      freelance: {
+        position: "Фрийланс Front-End Разработчик",
+        companyDescription:
+          "Самостоятелна фрийланс практика — разработка на персонализирани уеб решения за малък и среден бизнес в различни индустрии. Фокус върху изграждането на адаптивни, производителни уебсайтове и уеб приложения от нулата — от дизайн до деплой.",
+        achievements: [
+          "Разработих онлайн система за записи за салон за красота с календар в реално време, известия за клиенти и административен панел — напълно замених ръчния процес.",
+          "Създадох уеб приложение за каталог на продукти за търговец на едро с динамично филтриране, търсене и функция за експорт на ценова листа в PDF.",
+          "Реализирах лендинг фуния за коучинг бизнес с форми за обратна връзка, аналитично проследяване и A/B-тествани CTA секции — конверсията на лийдове нарасна с 30%.",
+          "Изградих портфолио и блог платформа за фотограф с персонализирана галерия, lazy loading и SEO оптимизация — постигнат резултат 90+ в Lighthouse.",
+        ],
+        tags: [
+          "4 реализирани проекта",
+          "HTML / CSS / JS",
+          "React",
+          "WordPress",
+          "SEO",
+        ],
+      },
     },
 
     // Demo page
@@ -1305,6 +1365,24 @@ export const translations: Record<
           "Real-time Data",
           "50+ Stock Symbols",
           "React",
+        ],
+      },
+      freelance: {
+        position: "Freelance Front-End Developer",
+        companyDescription:
+          "Samodzielna praktyka freelancerska — tworzenie niestandardowych rozwiązań internetowych dla małych i średnich firm z różnych branż. Skupienie na budowaniu responsywnych, wydajnych stron i aplikacji webowych od podstaw — od projektu do wdrożenia.",
+        achievements: [
+          "Opracowałem system rezerwacji online dla salonu urody z kalendarzem w czasie rzeczywistym, powiadomieniami dla klientów i panelem administracyjnym — w pełni zastąpiłem ręczny proces.",
+          "Stworzyłem aplikację webową katalogu produktów dla hurtownika z dynamicznym filtrowaniem, wyszukiwaniem i funkcją eksportu cennika do PDF.",
+          "Zrealizowałem landing page dla biznesu coachingowego z formularzami kontaktowymi, śledzeniem analityki i testowanymi A/B sekcjami CTA — konwersja leadów wzrosła o 30%.",
+          "Zbudowałem portfolio i platformę blogową dla fotografa z niestandardową galerią, lazy loadingiem i optymalizacją SEO — osiągnąłem wynik 90+ w Lighthouse.",
+        ],
+        tags: [
+          "4 zrealizowane projekty",
+          "HTML / CSS / JS",
+          "React",
+          "WordPress",
+          "SEO",
         ],
       },
     },
@@ -1586,6 +1664,24 @@ export const translations: Record<
           "React",
         ],
       },
+      freelance: {
+        position: "Sviluppatore Front-End Freelance",
+        companyDescription:
+          "Pratica freelance autonoma — sviluppo di soluzioni web personalizzate per piccole e medie imprese in vari settori. Focalizzato sulla creazione di siti e web app responsivi e performanti da zero — dal design al deploy.",
+        achievements: [
+          "Ho sviluppato un sistema di prenotazione online per un salone di bellezza con calendario in tempo reale, notifiche ai clienti e pannello admin — sostituendo completamente il processo manuale.",
+          "Ho creato una web app catalogo prodotti per un fornitore all'ingrosso con filtri dinamici, ricerca ed esportazione del listino prezzi in PDF.",
+          "Ho realizzato un funnel landing page per un business di coaching con moduli di contatto, tracciamento analytics e sezioni CTA testate in A/B — la conversione dei lead è aumentata del 30%.",
+          "Ho costruito un portfolio e blog per un fotografo con galleria immagini personalizzata, lazy loading e ottimizzazione SEO — raggiunto un punteggio 90+ in Lighthouse.",
+        ],
+        tags: [
+          "4 progetti consegnati",
+          "HTML / CSS / JS",
+          "React",
+          "WordPress",
+          "SEO",
+        ],
+      },
     },
 
     // Demo page
@@ -1863,6 +1959,24 @@ export const translations: Record<
           "Real-time Data",
           "50+ Stock Symbols",
           "React",
+        ],
+      },
+      freelance: {
+        position: "Développeur Front-End Freelance",
+        companyDescription:
+          "Pratique freelance indépendante — développement de solutions web personnalisées pour des petites et moyennes entreprises dans divers secteurs. Axé sur la création de sites et applications web responsifs et performants de A à Z — du design au déploiement.",
+        achievements: [
+          "J'ai développé un système de réservation en ligne pour un salon de beauté avec un calendrier en temps réel, des notifications clients et un panneau d'administration — remplaçant entièrement le processus manuel.",
+          "J'ai créé une application web de catalogue de produits pour un grossiste avec des filtres dynamiques, une recherche et une fonctionnalité d'export du tarif en PDF.",
+          "J'ai réalisé un funnel landing page pour un business de coaching avec des formulaires de contact, un suivi analytique et des sections CTA testées en A/B — la conversion des leads a augmenté de 30%.",
+          "J'ai construit un portfolio et une plateforme de blog pour un photographe avec une galerie d'images personnalisée, du lazy loading et une optimisation SEO — score 90+ obtenu dans Lighthouse.",
+        ],
+        tags: [
+          "4 projets livrés",
+          "HTML / CSS / JS",
+          "React",
+          "WordPress",
+          "SEO",
         ],
       },
     },

@@ -322,6 +322,13 @@ export const EXPERIENCE: IExperience[] = [
     period: "03/2021 - 02/2022",
     location: "Ukraine",
   },
+  {
+    id: 4,
+    translationKey: "freelance",
+    company: "Freelance",
+    period: "09/2019 - 03/2021",
+    location: "Ukraine",
+  },
 ];
 
 export const socialLinks = [

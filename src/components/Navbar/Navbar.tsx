@@ -62,7 +62,9 @@ export const Navbar = () => {
       <div className={style.controls}>
         <ThemeSwitcher />
         <LanguageSwitcher />
-        <a href="#mail" className={style.cta}>hire me</a>
+        <div className={style.ctaWrap}>
+          <a href="#mail" className={style.cta}>hire me</a>
+        </div>
       </div>
 
       <div className={style.mobileControls}>
@@ -97,9 +99,11 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
-          <a href="#mail" className={style.mobileCta} onClick={() => setIsMenuOpen(false)}>
-            hire me
-          </a>
+          <div className={style.mobileCtaWrap}>
+            <a href="#mail" className={style.mobileCta} onClick={() => setIsMenuOpen(false)}>
+              hire me
+            </a>
+          </div>
         </div>
       )}
     </nav>
