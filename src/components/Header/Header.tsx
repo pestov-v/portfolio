@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { trackResumeDownload } from "../../lib/analytics";
 import style from "./Header.module.scss";
 
 export const imgPath = "img/profile/profile";
@@ -113,6 +114,7 @@ export const Header: NextPage = () => {
           download
           className={style.btnSecondary}
           aria-label={`${t.downloadCV} (PDF, opens in new tab)`}
+          onClick={() => trackResumeDownload()}
         >
           {t.downloadCV}
         </a>

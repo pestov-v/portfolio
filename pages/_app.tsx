@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { trackPageView } from "../src/lib/analytics";
 import { LanguageProvider } from "../src/contexts/LanguageContext";
 import { ThemeProvider } from "../src/contexts/ThemeContext";
 import { Chat } from "../src/components/Chat/Chat";
@@ -21,6 +22,10 @@ const fontVariables = [
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isChatOpen, setIsChatOpen] = useState(false);
+
+  useEffect(() => {
+    trackPageView();
+  }, []);
 
   return (
     <div className={fontVariables}>

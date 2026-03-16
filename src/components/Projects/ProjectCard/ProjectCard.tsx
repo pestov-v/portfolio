@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { IProject } from 'util/constants';
 import { useLanguage } from '../../../contexts/LanguageContext';
+import { trackProjectClick } from '../../../lib/analytics';
 import style from './ProjectCard.module.scss';
 
 interface ProjectCardProps extends IProject {
@@ -21,12 +22,16 @@ export const ProjectCard: FC<ProjectCardProps> = (props) => {
   return (
     <div
       className={style.card}
-      onClick={onClick}
+      onClick={() => {
+        trackProjectClick(title);
+        onClick?.();
+      }}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
+          trackProjectClick(title);
           onClick?.();
         }
       }}
