@@ -14,6 +14,7 @@
     "@ai-sdk/openai": "^0.0.24",
     "@ai-sdk/react": "^3.0.88",
     "@emailjs/browser": "^3.9.1",
+    "@upstash/redis": "^1.37.0",
     "ai": "^6.0.86",
     "gsap": "^3.14.2",
     "mermaid": "^11.12.2",

@@ -17,6 +17,9 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const sessionIdRef = useRef<string>(
+    `session_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
+  );
 
   const [messages, setMessages] = useState<Array<{ role: string; content: string; id: string }>>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -78,6 +81,7 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
         body: JSON.stringify({
           messages: [...messages, userMsg].map(m => ({ role: m.role, content: m.content })),
           model: selectedModel,
+          sessionId: sessionIdRef.current,
         }),
       });
 
