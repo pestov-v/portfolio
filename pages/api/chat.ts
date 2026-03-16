@@ -1,5 +1,5 @@
 import { google } from "@ai-sdk/google";
-import { streamText } from "ai";
+import { generateText } from "ai";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { redis } from "../../src/lib/redis";
 import { PORTFOLIO_CONTEXT } from "../../src/lib/portfolio-context";
@@ -43,37 +43,33 @@ export default async function handler(
     const selectedModel =
       models[model as keyof typeof models] || models["gemini-2.5-flash"];
 
-    const result = streamText({
+    const { text } = await generateText({
       model: selectedModel,
       messages,
       system: PORTFOLIO_CONTEXT + dynamicContext,
-      onFinish: async ({ text }) => {
-        // Save chat history to Redis after stream completes
-        if (sessionId && text) {
-          try {
-            const chatData = {
-              sessionId,
-              messages: [...messages, { role: "assistant", content: text }],
-              model,
-              updatedAt: new Date().toISOString(),
-            };
-            await Promise.all([
-              redis.set(`chat:session:${sessionId}`, JSON.stringify(chatData), {
-                ex: 60 * 60 * 24 * 30,
-              }),
-              redis.zadd("chat:sessions", {
-                score: Date.now(),
-                member: sessionId,
-              }),
-            ]);
-          } catch {
-            // Redis write failed — non-critical
-          }
-        }
-      },
     });
 
-    result.pipeTextStreamToResponse(res);
+    // Save chat history to Redis
+    if (sessionId && text) {
+      redis
+        .set(
+          `chat:session:${sessionId}`,
+          JSON.stringify({
+            sessionId,
+            messages: [...messages, { role: "assistant", content: text }],
+            model,
+            updatedAt: new Date().toISOString(),
+          }),
+          { ex: 60 * 60 * 24 * 30 }
+        )
+        .catch(() => {});
+      redis
+        .zadd("chat:sessions", { score: Date.now(), member: sessionId })
+        .catch(() => {});
+    }
+
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.send(text);
   } catch (error: any) {
     if (res.headersSent) return;
 
