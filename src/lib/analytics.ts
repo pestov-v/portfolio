@@ -1,6 +1,6 @@
 const ANALYTICS_API = "/api/analytics";
 
-type EventType = "page_view" | "project_click" | "resume_download";
+type EventType = "page_view" | "project_click" | "project_visit" | "resume_download";
 
 interface EventData {
   [key: string]: string | number | boolean | undefined;
@@ -27,6 +27,10 @@ export function trackPageView() {
 
 export function trackProjectClick(projectName: string) {
   trackEvent("project_click", { projectName });
+}
+
+export function trackProjectVisit(projectName: string, url: string) {
+  trackEvent("project_visit", { projectName, url });
 }
 
 export function trackResumeDownload() {

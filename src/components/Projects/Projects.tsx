@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { IProject, projects } from "util/constants";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { trackProjectClick, trackProjectVisit } from "../../lib/analytics";
 import style from "./Projects.module.scss";
 
 gsap.registerPlugin(Flip);
@@ -20,6 +21,9 @@ export const Projects = () => {
     if (!gridRef.current) return;
 
     const isClosing = activeId === project.id;
+    if (!isClosing) {
+      trackProjectClick(project.title);
+    }
 
     // 1. Capture positions BEFORE DOM changes
     const state = Flip.getState(
@@ -242,6 +246,7 @@ export const Projects = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={style.visitButton}
+                            onClick={() => trackProjectVisit(title, item.href)}
                           >
                             {t.projectModal.visitProject}
                             <span aria-hidden="true"> →</span>
