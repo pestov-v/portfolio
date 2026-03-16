@@ -43,39 +43,37 @@ export default async function handler(
     const selectedModel =
       models[model as keyof typeof models] || models["gemini-2.5-flash"];
 
-    const result = await streamText({
+    const result = streamText({
       model: selectedModel,
       messages,
       system: PORTFOLIO_CONTEXT + dynamicContext,
+      onFinish: async ({ text }) => {
+        // Save chat history to Redis after stream completes
+        if (sessionId && text) {
+          try {
+            const chatData = {
+              sessionId,
+              messages: [...messages, { role: "assistant", content: text }],
+              model,
+              updatedAt: new Date().toISOString(),
+            };
+            await Promise.all([
+              redis.set(`chat:session:${sessionId}`, JSON.stringify(chatData), {
+                ex: 60 * 60 * 24 * 30,
+              }),
+              redis.zadd("chat:sessions", {
+                score: Date.now(),
+                member: sessionId,
+              }),
+            ]);
+          } catch {
+            // Redis write failed — non-critical
+          }
+        }
+      },
     });
 
-    res.setHeader("Content-Type", "text/plain; charset=utf-8");
-    res.setHeader("Transfer-Encoding", "chunked");
-
-    let assistantResponse = "";
-    for await (const textPart of result.textStream) {
-      res.write(textPart);
-      assistantResponse += textPart;
-    }
-
-    res.end();
-
-    // Save chat history to Redis (fire-and-forget)
-    if (sessionId) {
-      const chatData = {
-        sessionId,
-        messages: [...messages, { role: "assistant", content: assistantResponse }],
-        model,
-        updatedAt: new Date().toISOString(),
-      };
-      redis
-        .set(`chat:session:${sessionId}`, JSON.stringify(chatData), { ex: 60 * 60 * 24 * 30 }) // 30 days TTL
-        .catch(() => {});
-      // Add session to index
-      redis
-        .zadd("chat:sessions", { score: Date.now(), member: sessionId })
-        .catch(() => {});
-    }
+    result.pipeTextStreamToResponse(res);
   } catch (error: any) {
     if (res.headersSent) return;
 
