@@ -50,13 +50,17 @@ let devtoolsTracked = false;
 export function initDevtoolsTracking() {
   if (typeof window === "undefined") return;
 
-  import("devtools-detector").then(({ addListener, launch }) => {
-    addListener((isOpen) => {
-      if (isOpen && !devtoolsTracked) {
-        devtoolsTracked = true;
-        trackEvent("devtools_open");
-      }
-    });
-    launch();
-  });
+  const threshold = 160;
+
+  const check = () => {
+    const widthDiff = window.outerWidth - window.innerWidth > threshold;
+    const heightDiff = window.outerHeight - window.innerHeight > threshold;
+    if ((widthDiff || heightDiff) && !devtoolsTracked) {
+      devtoolsTracked = true;
+      trackEvent("devtools_open");
+    }
+  };
+
+  window.addEventListener("resize", check, { passive: true });
+  check();
 }
