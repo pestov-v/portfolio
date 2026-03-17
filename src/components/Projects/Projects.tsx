@@ -1,3 +1,4 @@
+import { GlowingEffect } from "components/ui/glowing-effect";
 import { MermaidDiagram } from "components/ui/MermaidDiagram/MermaidDiagram";
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";
@@ -117,6 +118,16 @@ export const Projects = () => {
                     }
                   }}
                 >
+                  {!isActive && (
+                    <GlowingEffect
+                      spread={40}
+                      glow
+                      disabled={false}
+                      proximity={64}
+                      inactiveZone={0.01}
+                      borderWidth={3}
+                    />
+                  )}
                   <div className={style.cardInner}>
                     {/* Always-visible preview */}
                     <div className={style.cardPreview}>

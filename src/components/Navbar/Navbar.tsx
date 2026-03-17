@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { ThemeSwitcher } from "../ThemeSwitcher/ThemeSwitcher";
+import { ThemeToggle } from "../ui/theme-toggle";
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
 import style from "./Navbar.module.scss";
 
@@ -60,7 +60,7 @@ export const Navbar = () => {
       </ul>
 
       <div className={style.controls}>
-        <ThemeSwitcher />
+        <ThemeToggle />
         <LanguageSwitcher />
         <div className={style.ctaWrap}>
           <a href="#mail" className={style.cta}>hire me</a>
@@ -68,7 +68,7 @@ export const Navbar = () => {
       </div>
 
       <div className={style.mobileControls}>
-        <ThemeSwitcher />
+        <ThemeToggle />
         <LanguageSwitcher />
         <button
           className={style.burger}
