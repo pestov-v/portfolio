@@ -3,6 +3,7 @@ import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { trackSocialClick } from "../../lib/analytics";
 import style from "./About.module.scss";
 import { CodeMonitor } from "./CodeMonitor/CodeMonitor";
 import ShaderBackground from "../ui/shader-background";
@@ -85,6 +86,7 @@ export const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={style.socialBtn}
+              onClick={() => trackSocialClick("github")}
             >
               ↗ github
             </a>
@@ -93,6 +95,7 @@ export const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={style.socialBtn}
+              onClick={() => trackSocialClick("linkedin")}
             >
               ↗ linkedin
             </a>

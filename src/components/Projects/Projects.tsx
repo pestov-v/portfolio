@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { IProject, projects } from "util/constants";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { trackProjectClick, trackProjectVisit } from "../../lib/analytics";
+import { trackProjectClick, trackProjectVisit, trackLiveDemoClick } from "../../lib/analytics";
 import style from "./Projects.module.scss";
 
 gsap.registerPlugin(Flip);
@@ -288,7 +288,7 @@ export const Projects = () => {
               <h3>{t.demo.tryLiveDemo}</h3>
               <p>{t.demo.subtitle}</p>
             </div>
-            <Link href="/demo" className={style.demoButton}>
+            <Link href="/demo" className={style.demoButton} onClick={() => trackLiveDemoClick()}>
               {t.demo.tryLiveDemo}
               <span aria-hidden="true"> →</span>
             </Link>

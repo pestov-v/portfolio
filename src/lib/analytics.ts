@@ -1,6 +1,6 @@
 const ANALYTICS_API = "/api/analytics";
 
-type EventType = "page_view" | "project_click" | "project_visit" | "resume_download";
+type EventType = "page_view" | "project_click" | "project_visit" | "resume_download" | "devtools_open" | "live_demo_click" | "social_click";
 
 interface EventData {
   [key: string]: string | number | boolean | undefined;
@@ -35,4 +35,28 @@ export function trackProjectVisit(projectName: string, url: string) {
 
 export function trackResumeDownload() {
   trackEvent("resume_download");
+}
+
+export function trackLiveDemoClick() {
+  trackEvent("live_demo_click");
+}
+
+export function trackSocialClick(platform: string) {
+  trackEvent("social_click", { platform });
+}
+
+let devtoolsTracked = false;
+
+export function initDevtoolsTracking() {
+  if (typeof window === "undefined") return;
+
+  import("devtools-detector").then(({ addListener, launch }) => {
+    addListener((isOpen) => {
+      if (isOpen && !devtoolsTracked) {
+        devtoolsTracked = true;
+        trackEvent("devtools_open");
+      }
+    });
+    launch();
+  });
 }

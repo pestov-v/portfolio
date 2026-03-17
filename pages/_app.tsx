@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
-import { trackPageView } from "../src/lib/analytics";
+import { trackPageView, initDevtoolsTracking } from "../src/lib/analytics";
 import { LanguageProvider } from "../src/contexts/LanguageContext";
 import { ThemeProvider } from "../src/contexts/ThemeContext";
 import { Chat } from "../src/components/Chat/Chat";
@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     trackPageView();
+    initDevtoolsTracking();
   }, []);
 
   return (

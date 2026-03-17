@@ -1,6 +1,6 @@
+import { motion } from "motion/react";
 import { NextPage } from "next";
 import { useEffect, useRef } from "react";
-import { motion } from "motion/react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { trackResumeDownload } from "../../lib/analytics";
 import { cn } from "../../lib/utils";
@@ -53,7 +53,7 @@ function ElegantShape({
             "backdrop-blur-[2px] border-2 border-white/[0.15]",
             "shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]",
             "after:absolute after:inset-0 after:rounded-full",
-            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]"
+            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]",
           )}
         />
       </motion.div>
@@ -235,7 +235,7 @@ export const Header: NextPage = () => {
           <div className={style.stats}>
             <div className={style.statItem}>
               <span className={style.statNumber}>6+</span>
-              <span className={style.statLabel}>YEARS EXP.</span>
+              <span className={style.statLabel}>YEARS&nbsp;EXP.</span>
             </div>
             <div className={style.statDivider} aria-hidden="true" />
             <div className={style.statItem}>
