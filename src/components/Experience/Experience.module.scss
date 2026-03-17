@@ -1,6 +1,7 @@
 .experience {
   background: var(--re-bg-primary);
   padding: 100px 80px;
+  overflow-y: clip;
 
   @media (max-width: 1023px) {
     padding: 80px 24px;

@@ -11,6 +11,7 @@ import {
   outfit,
   unbounded,
 } from "../src/styles/fonts";
+import "../src/styles/tailwind.css";
 import "../src/styles/globals.scss";
 
 const fontVariables = [
