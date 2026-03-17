@@ -176,7 +176,7 @@ export const Header: NextPage = () => {
           initial="hidden"
           animate="visible"
         >
-          <h1 className={style.name}>Who I am.</h1>
+          <h1 className={style.name}>Who am I..?</h1>
         </motion.div>
 
         <motion.div
