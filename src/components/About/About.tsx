@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./About.module.scss";
 import { CodeMonitor } from "./CodeMonitor/CodeMonitor";
+import ShaderBackground from "../ui/shader-background";
 
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
@@ -70,11 +71,12 @@ export const About = () => {
       ref={sectionRef}
       aria-labelledby="about-title"
     >
+      <ShaderBackground className={style.shaderCanvas} />
       <div className={style.inner}>
         <div className={style.left}>
           <span className={style.tag}>// 01. ABOUT</span>
           <h2 className={style.title} id="about-title">
-            Who I am.
+            {t.name}
           </h2>
           <p className={style.body}>{t.description}</p>
           <div className={style.socialLinks}>

@@ -70,6 +70,7 @@
   --re-on-accent: #0F172A;
   --re-glow: rgba(8, 145, 178, 0.3);
   --re-glow-wide: rgba(8, 145, 178, 0.12);
+  --re-card-shadow: rgba(0, 0, 0, 0.15);
 }
 
 // Dark theme — applied to both .app and portals outside it
@@ -113,4 +114,5 @@
   --re-on-accent: #0A0F1C;
   --re-glow: rgba(34, 211, 238, 0.35);
   --re-glow-wide: rgba(34, 211, 238, 0.15);
+  --re-card-shadow: rgba(34, 211, 238, 0.2);
 }

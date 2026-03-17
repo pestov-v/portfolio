@@ -1,13 +1,24 @@
 .about {
+  position: relative;
   background: var(--re-bg-secondary);
   padding: 100px 80px;
+  overflow: hidden;
 
   @media (max-width: 1023px) {
     padding: 80px 24px;
   }
 }
 
+.shaderCanvas {
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .inner {
+  position: relative;
+  z-index: 1;
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
