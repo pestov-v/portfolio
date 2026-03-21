@@ -156,14 +156,22 @@ const ShaderBackground: React.FC<ShaderBackgroundProps> = ({ className }) => {
 
     let animId: number;
     const startTime = Date.now();
+    let isVisible = true;
+    let pausedAt = 0;
+    let totalPausedTime = 0;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
     const render = () => {
-      const time = (Date.now() - startTime) / 1000;
+      if (!isVisible) return;
+      const elapsed = (Date.now() - startTime - totalPausedTime) / 1000;
       gl.clearColor(0, 0, 0, 1);
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(program);
       gl.uniform2f(resolutionLoc, canvas.width, canvas.height);
-      gl.uniform1f(timeLoc, time);
+      gl.uniform1f(timeLoc, elapsed);
       gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
       gl.vertexAttribPointer(vertexPos, 2, gl.FLOAT, false, 0, 0);
       gl.enableVertexAttribArray(vertexPos);
@@ -171,7 +179,46 @@ const ShaderBackground: React.FC<ShaderBackgroundProps> = ({ className }) => {
       animId = requestAnimationFrame(render);
     };
 
-    animId = requestAnimationFrame(render);
+    if (prefersReducedMotion) {
+      // Render a single static frame then stop
+      const elapsed = 0;
+      gl.clearColor(0, 0, 0, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.useProgram(program);
+      gl.uniform2f(resolutionLoc, canvas.width, canvas.height);
+      gl.uniform1f(timeLoc, elapsed);
+      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+      gl.vertexAttribPointer(vertexPos, 2, gl.FLOAT, false, 0, 0);
+      gl.enableVertexAttribArray(vertexPos);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    } else {
+      const visibilityObserver = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            if (!isVisible) {
+              totalPausedTime += Date.now() - pausedAt;
+              isVisible = true;
+              animId = requestAnimationFrame(render);
+            }
+          } else {
+            isVisible = false;
+            pausedAt = Date.now();
+            cancelAnimationFrame(animId);
+          }
+        },
+        { threshold: 0 }
+      );
+      visibilityObserver.observe(canvas);
+      animId = requestAnimationFrame(render);
+
+      const cleanup = () => {
+        cancelAnimationFrame(animId);
+        observer.disconnect();
+        visibilityObserver.disconnect();
+      };
+
+      return cleanup;
+    }
 
     return () => {
       cancelAnimationFrame(animId);

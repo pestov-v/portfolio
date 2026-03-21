@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import styles from "./Chat.module.scss";
 
 interface ChatProps {
@@ -25,13 +25,25 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // Buffer for streaming chunks — avoids setMessages on every chunk
+  const streamBufferRef = useRef("");
+  const rafRef = useRef<number | null>(null);
+
+  const isNearBottom = useCallback(() => {
+    const container = messagesEndRef.current?.parentElement;
+    if (!container) return true;
+    return container.scrollHeight - container.scrollTop - container.clientHeight < 120;
+  }, []);
+
+  const scrollToBottom = useCallback((force = false) => {
+    if (force || isNearBottom()) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [isNearBottom]);
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages.length]); // Only scroll when a new message is added, not on every stream update
 
   // Auto-focus input when modal opens
   useEffect(() => {
@@ -91,33 +103,53 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
-      let assistantMessage = "";
       const assistantId = (Date.now() + 1).toString();
+      streamBufferRef.current = "";
 
       if (reader) {
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-
-          const chunk = decoder.decode(value);
-          assistantMessage += chunk;
-
-          // Update or add assistant message
+        // Flush buffered stream content to state, throttled via rAF
+        const flushBuffer = () => {
+          const content = streamBufferRef.current;
           setMessages((prev) => {
             const existing = prev.find((m) => m.id === assistantId);
             if (existing) {
               return prev.map((m) =>
-                m.id === assistantId ? { ...m, content: assistantMessage } : m
+                m.id === assistantId ? { ...m, content } : m
               );
             }
-            return [...prev, { role: "assistant", content: assistantMessage, id: assistantId }];
+            return [...prev, { role: "assistant", content, id: assistantId }];
           });
+          scrollToBottom();
+          rafRef.current = null;
+        };
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          streamBufferRef.current += decoder.decode(value, { stream: true });
+
+          // Schedule a single rAF flush — skip if one is already pending
+          if (!rafRef.current) {
+            rafRef.current = requestAnimationFrame(flushBuffer);
+          }
         }
+
+        // Final flush to ensure last chunk is rendered
+        if (rafRef.current) {
+          cancelAnimationFrame(rafRef.current);
+          rafRef.current = null;
+        }
+        flushBuffer();
       }
 
       console.log("✅ Response received");
     } catch (err: any) {
       console.error("❌ Error sending message:", err);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
       setError(err.message);
     } finally {
       setIsLoading(false);

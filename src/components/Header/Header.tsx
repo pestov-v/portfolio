@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { NextPage } from "next";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
@@ -23,6 +23,8 @@ function ElegantShape({
   rotate?: number;
   gradient?: string;
 }) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -150, rotate: rotate - 15 }}
@@ -36,12 +38,12 @@ function ElegantShape({
       className={cn("absolute", className)}
     >
       <motion.div
-        animate={{ y: [0, 15, 0] }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        animate={shouldReduceMotion ? {} : { y: [0, 15, 0] }}
+        transition={
+          shouldReduceMotion
+            ? {}
+            : { duration: 12, repeat: Infinity, ease: "easeInOut" }
+        }
         style={{ width, height }}
         className="relative"
       >
