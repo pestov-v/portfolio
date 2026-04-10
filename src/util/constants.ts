@@ -30,6 +30,68 @@ export type TProjects = IProject[];
 
 export const _projects: TProjects = [
   {
+    id: 19,
+    translationKey: "collabpulse",
+    title: "CollabPulse - Micro-collaboration Platform",
+    description:
+      "Modern micro-collaboration platform with advanced product management, checkout process, and admin panel.",
+    href: "https://collabpulse.io",
+    image: "collabpulse",
+    alt: "CollabPulse Micro-collaboration Platform",
+    additionalInfo:
+      "Full-featured micro-collaboration platform with advanced product management, checkout process, and admin panel",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "NestJS",
+      "Postgres",
+    ],
+    caseStudy: {
+      challenge:
+        "Teams working on short-lived projects had no lightweight tool for coordination. Traditional project management software was too heavy — creating a project, assigning tasks, and tracking micro-deliverables required too much setup. Collaboration happened across scattered chats and threads with no unified pulse on team activity or progress.",
+      solution:
+        "Built a micro-collaboration platform where teams can spin up focused workspaces in seconds, assign micro-tasks, and track activity in real time. Integrated a product management layer and checkout flow so teams can package and monetise their collaborative output. The admin panel gives full visibility into workspaces, members, and billing from a single control surface.",
+      result:
+        "Coordination overhead reduced significantly — teams go from idea to active workspace in under a minute. Monetisation of collaboration services enabled directly within the platform, eliminating the need for third-party billing tools. Admin panel consolidates workspace health, user management, and revenue tracking in one place.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "NestJS",
+        "Postgres",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[Team Member] -->|Creates workspace| B(CollabPulse Core)
+
+    subgraph "Collaboration Layer"
+    B --> C[Workspace Engine]
+    C --> D[Micro-task Board]
+    C --> E[Activity Pulse Feed]
+    D <-->|Real-time sync| E
+    end
+
+    subgraph "Monetisation Layer"
+    C --> F[Product Catalogue]
+    F --> G[Checkout Flow]
+    G --> H[Order Confirmation]
+    end
+
+    subgraph "Admin Layer"
+    B --> I[Admin Panel]
+    I --> J[Workspace Registry]
+    I --> K[User Management]
+    I --> L[Revenue Dashboard]
+    end`,
+          caption:
+            "Platform architecture: a collaboration layer handles real-time micro-task coordination, a monetisation layer enables product packaging and checkout, and the admin panel provides full operational visibility across all workspaces.",
+        },
+      ],
+    },
+  },
+  {
     id: 18,
     translationKey: "aurinia",
     title: "Aurinia - E-commerce Platform",
@@ -40,7 +102,57 @@ export const _projects: TProjects = [
     alt: "Aurinia E-commerce Platform",
     additionalInfo:
       "Full-featured online store with material management and comprehensive order processing",
-    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Postgres"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "NestJS",
+      "Postgres",
+    ],
+    caseStudy: {
+      challenge:
+        "A materials retailer was managing inventory, orders, and customer data across spreadsheets and disconnected tools. Product listings required manual updates, the checkout process was handled externally, and the admin had no real-time view of stock levels or order status — leading to fulfilment errors and lost sales.",
+      solution:
+        "Delivered a full-stack e-commerce platform with a product catalogue supporting rich material descriptions, pricing tiers, and image management. Built a multi-step checkout with order validation and confirmation emails. The admin panel covers the complete order lifecycle — from placement through fulfilment — alongside inventory management, category configuration, and sales reporting.",
+      result:
+        "Inventory sync made manual stock updates obsolete — catalogue changes reflect instantly in the storefront. Order processing errors dropped to near zero through structured checkout validation. Admin gained real-time visibility into stock levels, pending orders, and revenue without leaving the platform.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "NestJS",
+        "Postgres",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[Customer] -->|Browses catalogue| B(Storefront)
+
+    subgraph "Shopping Flow"
+    B --> C[Product Page]
+    C --> D[Cart]
+    D --> E[Checkout]
+    E --> F[Order Confirmation]
+    end
+
+    subgraph "Backend Processing"
+    F --> G[Order Service]
+    G --> H[Inventory Update]
+    G --> I[Email Notification]
+    end
+
+    subgraph "Admin Panel"
+    J[Admin] --> K[Product Management]
+    J --> L[Order Management]
+    J --> M[Inventory Dashboard]
+    K <-->|Sync| H
+    L <-->|Tracks| G
+    end`,
+          caption:
+            "End-to-end e-commerce flow: the customer journey from catalogue browsing through checkout triggers automated backend processing, while the admin panel provides real-time control over products, orders, and inventory.",
+        },
+      ],
+    },
   },
   {
     id: 17,
@@ -224,18 +336,18 @@ export const _projects: TProjects = [
       "Creative agency landing page with modern animations and premium design",
     technologies: ["Next.js", "TypeScript", "TailwindCSS"],
   },
-  {
-    id: 10,
-    translationKey: "webstudio",
-    title: "Web-studio",
-    description: "Web-studio for creating websites.",
-    href: "https://web-studio-smoky.vercel.app",
-    image: "web-studio",
-    alt: "Web-studio",
-    additionalInfo:
-      "Landing page for a digital agency with a modern UI/UX and smooth animations",
-    technologies: ["Next.js", "TypeScript", "TailwindCSS"],
-  },
+  // {
+  //   id: 10,
+  //   translationKey: "webstudio",
+  //   title: "Web-studio",
+  //   description: "Web-studio for creating websites.",
+  //   href: "https://web-studio-smoky.vercel.app",
+  //   image: "web-studio",
+  //   alt: "Web-studio",
+  //   additionalInfo:
+  //     "Landing page for a digital agency with a modern UI/UX and smooth animations",
+  //   technologies: ["Next.js", "TypeScript", "TailwindCSS"],
+  // },
 ];
 
 export const projects = addImagePath(_projects);

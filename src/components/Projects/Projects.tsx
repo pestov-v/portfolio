@@ -2,16 +2,21 @@ import { GlowingEffect } from "components/ui/glowing-effect";
 import { MermaidDiagram } from "components/ui/MermaidDiagram/MermaidDiagram";
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { IProject, projects } from "util/constants";
 import { useLanguage } from "../../contexts/LanguageContext";
-import { trackProjectClick, trackProjectVisit, trackLiveDemoClick } from "../../lib/analytics";
+import {
+  trackLiveDemoClick,
+  trackProjectClick,
+  trackProjectVisit,
+} from "../../lib/analytics";
 import style from "./Projects.module.scss";
 
-gsap.registerPlugin(Flip);
+gsap.registerPlugin(Flip, ScrollTrigger);
 
 export const Projects = () => {
   const { t } = useLanguage();
@@ -25,6 +30,9 @@ export const Projects = () => {
     if (!isClosing) {
       trackProjectClick(project.title);
     }
+
+    // Remember which card is being closed so we can scroll to it after layout collapses
+    const closingProjectId = isClosing ? project.id : null;
 
     // 1. Capture positions BEFORE DOM changes
     const state = Flip.getState(
@@ -42,12 +50,28 @@ export const Projects = () => {
       ease: "power2.inOut",
       stagger: 0.03,
       onComplete: () => {
-        if (!isClosing) {
+        // Recalculate ScrollTrigger positions after layout change
+        ScrollTrigger.refresh();
+
+        if (closingProjectId !== null) {
+          // After layout has collapsed, scroll to the card's actual (final) top position
+          const card = gridRef.current?.querySelector(
+            `[data-flip-id="card-${closingProjectId}"]`,
+          );
+          if (card) {
+            const cardTop = card.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: cardTop - 100, behavior: "smooth" });
+          }
+        } else if (!isClosing) {
           // Scroll only after layout is fully settled
           const activeCard = gridRef.current?.querySelector(
             `[data-flip-id="card-${project.id}"]`,
           );
-          activeCard?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          if (activeCard) {
+            const cardTop =
+              activeCard.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: cardTop - 100, behavior: "smooth" });
+          }
         }
       },
     });
@@ -70,7 +94,9 @@ export const Projects = () => {
     >
       <div className={style.container}>
         <span className={style.tag}>// 04. PROJECTS</span>
-        <h2 className={style.sectionTitle} id="portfolio-title">Things I&apos;ve built.</h2>
+        <h2 className={style.sectionTitle} id="portfolio-title">
+          Things I&apos;ve built.
+        </h2>
 
         <div
           className={style.projectsWrapper}
@@ -142,13 +168,17 @@ export const Projects = () => {
                       <div className={style.cardText}>
                         <h2 className={style.title}>{title}</h2>
                         <p className={style.description}>{description}</p>
-                        {(item.technologies || item.caseStudy?.technologies) && (
+                        {(item.technologies ||
+                          item.caseStudy?.technologies) && (
                           <div className={style.techTags}>
-                            {(item.technologies || item.caseStudy!.technologies)!.slice(0, 4).map((tech) => (
-                              <span key={tech} className={style.techTag}>
-                                {tech}
-                              </span>
-                            ))}
+                            {(item.technologies ||
+                              item.caseStudy!.technologies)!
+                              .slice(0, 4)
+                              .map((tech) => (
+                                <span key={tech} className={style.techTag}>
+                                  {tech}
+                                </span>
+                              ))}
                           </div>
                         )}
                         {additionalInfo && !isActive && (
@@ -288,7 +318,11 @@ export const Projects = () => {
               <h3>{t.demo.tryLiveDemo}</h3>
               <p>{t.demo.subtitle}</p>
             </div>
-            <Link href="/demo" className={style.demoButton} onClick={() => trackLiveDemoClick()}>
+            <Link
+              href="/demo"
+              className={style.demoButton}
+              onClick={() => trackLiveDemoClick()}
+            >
               {t.demo.tryLiveDemo}
               <span aria-hidden="true"> →</span>
             </Link>
