@@ -1,12 +1,20 @@
-import { useEffect, useRef, useMemo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 import style from "./CodeMonitor.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
 // Pre-tokenized code lines for consistent SSR/CSR rendering
-type TokenType = "keyword" | "string" | "type" | "component" | "tag" | "operator" | "bracket" | "text";
+type TokenType =
+  | "keyword"
+  | "string"
+  | "type"
+  | "component"
+  | "tag"
+  | "operator"
+  | "bracket"
+  | "text";
 
 interface Token {
   type: TokenType;
@@ -21,25 +29,162 @@ interface CodeLine {
 const t = (type: TokenType, value: string): Token => ({ type, value });
 
 const CODE_LINES: CodeLine[] = [
-  { indent: 0, tokens: [t("keyword", "import"), t("text", " { "), t("type", "Project"), t("text", " } "), t("keyword", "from"), t("text", " "), t("string", '"@/types"'), t("text", ";")] },
+  {
+    indent: 0,
+    tokens: [
+      t("keyword", "import"),
+      t("text", " { "),
+      t("type", "Project"),
+      t("text", " } "),
+      t("keyword", "from"),
+      t("text", " "),
+      t("string", '"@/types"'),
+      t("text", ";"),
+    ],
+  },
   { indent: 0, tokens: [] },
-  { indent: 0, tokens: [t("keyword", "async"), t("text", " "), t("keyword", "function"), t("text", " getProjects"), t("bracket", "("), t("bracket", ")"), t("text", " "), t("bracket", "{")] },
-  { indent: 1, tokens: [t("keyword", "const"), t("text", " res = "), t("keyword", "await"), t("text", " fetch"), t("bracket", "("), t("string", '"/api/projects"'), t("text", ", "), t("bracket", "{")] },
-  { indent: 2, tokens: [t("text", "next: "), t("bracket", "{"), t("text", " revalidate: "), t("string", "3600"), t("text", " "), t("bracket", "}"), t("text", ",")] },
+  {
+    indent: 0,
+    tokens: [
+      t("keyword", "async"),
+      t("text", " "),
+      t("keyword", "function"),
+      t("text", " getProjects"),
+      t("bracket", "("),
+      t("bracket", ")"),
+      t("text", " "),
+      t("bracket", "{"),
+    ],
+  },
+  {
+    indent: 1,
+    tokens: [
+      t("keyword", "const"),
+      t("text", " res = "),
+      t("keyword", "await"),
+      t("text", " fetch"),
+      t("bracket", "("),
+      t("string", '"/api/projects"'),
+      t("text", ", "),
+      t("bracket", "{"),
+    ],
+  },
+  {
+    indent: 2,
+    tokens: [
+      t("text", "next: "),
+      t("bracket", "{"),
+      t("text", " revalidate: "),
+      t("string", "3600"),
+      t("text", " "),
+      t("bracket", "}"),
+      t("text", ","),
+    ],
+  },
   { indent: 1, tokens: [t("bracket", "}"), t("bracket", ")"), t("text", ";")] },
-  { indent: 1, tokens: [t("keyword", "return"), t("text", " res.json"), t("bracket", "("), t("bracket", ")"), t("text", ";")] },
+  {
+    indent: 1,
+    tokens: [
+      t("keyword", "return"),
+      t("text", " res.json"),
+      t("bracket", "("),
+      t("bracket", ")"),
+      t("text", ";"),
+    ],
+  },
   { indent: 0, tokens: [t("bracket", "}"), t("text", "")] },
   { indent: 0, tokens: [] },
-  { indent: 0, tokens: [t("keyword", "export"), t("text", " "), t("keyword", "default"), t("text", " "), t("keyword", "async"), t("text", " "), t("keyword", "function"), t("text", " "), t("type", "Portfolio"), t("bracket", "("), t("bracket", ")"), t("text", " "), t("bracket", "{")] },
-  { indent: 1, tokens: [t("keyword", "const"), t("text", " projects: "), t("type", "Project"), t("text", "[] = "), t("keyword", "await"), t("text", " getProjects"), t("bracket", "("), t("bracket", ")"), t("text", ";")] },
+  {
+    indent: 0,
+    tokens: [
+      t("keyword", "export"),
+      t("text", " "),
+      t("keyword", "default"),
+      t("text", " "),
+      t("keyword", "async"),
+      t("text", " "),
+      t("keyword", "function"),
+      t("text", " "),
+      t("type", "Portfolio"),
+      t("bracket", "("),
+      t("bracket", ")"),
+      t("text", " "),
+      t("bracket", "{"),
+    ],
+  },
+  {
+    indent: 1,
+    tokens: [
+      t("keyword", "const"),
+      t("text", " projects: "),
+      t("type", "Project"),
+      t("text", "[] = "),
+      t("keyword", "await"),
+      t("text", " getProjects"),
+      t("bracket", "("),
+      t("bracket", ")"),
+      t("text", ";"),
+    ],
+  },
   { indent: 0, tokens: [] },
-  { indent: 1, tokens: [t("keyword", "return"), t("text", " "), t("bracket", "(")] },
-  { indent: 2, tokens: [t("operator", "<"), t("tag", "main"), t("text", " className="), t("string", '"portfolio"'), t("operator", ">")] },
-  { indent: 3, tokens: [t("operator", "<"), t("component", "Header"), t("text", " "), t("operator", "/>")] },
-  { indent: 3, tokens: [t("operator", "<"), t("component", "About"), t("text", " "), t("operator", "/>")] },
-  { indent: 3, tokens: [t("operator", "<"), t("component", "Projects"), t("text", " data="), t("bracket", "{"), t("text", "projects"), t("bracket", "}"), t("text", " "), t("operator", "/>")] },
-  { indent: 3, tokens: [t("operator", "<"), t("component", "Contact"), t("text", " "), t("operator", "/>")] },
-  { indent: 2, tokens: [t("operator", "</"), t("tag", "main"), t("operator", ">")] },
+  {
+    indent: 1,
+    tokens: [t("keyword", "return"), t("text", " "), t("bracket", "(")],
+  },
+  {
+    indent: 2,
+    tokens: [
+      t("operator", "<"),
+      t("tag", "main"),
+      t("text", " className="),
+      t("string", '"portfolio"'),
+      t("operator", ">"),
+    ],
+  },
+  {
+    indent: 3,
+    tokens: [
+      t("operator", "<"),
+      t("component", "Header"),
+      t("text", " "),
+      t("operator", "/>"),
+    ],
+  },
+  {
+    indent: 3,
+    tokens: [
+      t("operator", "<"),
+      t("component", "About"),
+      t("text", " "),
+      t("operator", "/>"),
+    ],
+  },
+  {
+    indent: 3,
+    tokens: [
+      t("operator", "<"),
+      t("component", "Projects"),
+      t("text", " data="),
+      t("bracket", "{"),
+      t("text", "projects"),
+      t("bracket", "}"),
+      t("text", " "),
+      t("operator", "/>"),
+    ],
+  },
+  {
+    indent: 3,
+    tokens: [
+      t("operator", "<"),
+      t("component", "Contact"),
+      t("text", " "),
+      t("operator", "/>"),
+    ],
+  },
+  {
+    indent: 2,
+    tokens: [t("operator", "</"), t("tag", "main"), t("operator", ">")],
+  },
   { indent: 1, tokens: [t("bracket", ")"), t("text", ";")] },
   { indent: 0, tokens: [t("bracket", "}")] },
 ];
@@ -100,8 +245,8 @@ export const CodeMonitor = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
-        start: "top 80%",
-        end: "bottom 30%",
+        start: "top 90%",
+        end: "center center",
         scrub: 0.8,
       },
     });
@@ -117,7 +262,7 @@ export const CodeMonitor = () => {
         duration: 0.3,
         ease: "power2.out",
       },
-      0
+      0,
     );
 
     // Phase 1b: Glow effect
@@ -128,7 +273,7 @@ export const CodeMonitor = () => {
         duration: 0.3,
         ease: "power2.out",
       },
-      0.05
+      0.05,
     );
 
     // Phase 2: Cursor appears
@@ -138,7 +283,7 @@ export const CodeMonitor = () => {
         opacity: 1,
         duration: 0.05,
       },
-      0.2
+      0.2,
     );
 
     // Phase 3: Code lines appear one by one
@@ -152,7 +297,7 @@ export const CodeMonitor = () => {
           duration: 0.04,
           ease: "power1.out",
         },
-        startTime
+        startTime,
       );
     });
 
@@ -218,24 +363,20 @@ export const CodeMonitor = () => {
                   <div
                     key={i}
                     className={style.codeLine}
-                    style={
-                      { "--indent": line.indent } as React.CSSProperties
-                    }
+                    style={{ "--indent": line.indent } as React.CSSProperties}
                   >
-                    {line.tokens.length > 0 ? (
-                      line.tokens.map((token, j) => {
-                        const cls = TOKEN_STYLE_MAP[token.type];
-                        return cls ? (
-                          <span key={j} className={cls}>
-                            {token.value}
-                          </span>
-                        ) : (
-                          <span key={j}>{token.value}</span>
-                        );
-                      })
-                    ) : (
-                      "\u00A0"
-                    )}
+                    {line.tokens.length > 0
+                      ? line.tokens.map((token, j) => {
+                          const cls = TOKEN_STYLE_MAP[token.type];
+                          return cls ? (
+                            <span key={j} className={cls}>
+                              {token.value}
+                            </span>
+                          ) : (
+                            <span key={j}>{token.value}</span>
+                          );
+                        })
+                      : "\u00A0"}
                   </div>
                 ))}
                 <span className={style.cursor} ref={cursorRef}>

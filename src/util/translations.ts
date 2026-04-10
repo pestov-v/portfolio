@@ -63,6 +63,7 @@ export interface Translation {
 
   // Header (redesign)
   badgeAvailable: string;
+  headerTitle: string;
   headerDescription: string;
   viewMyWork: string;
   yearsExp: string;
@@ -82,12 +83,13 @@ export interface Translation {
 
   // Skills (redesign)
   mySkillsTitle: string;
+  whatIBuildWith: string;
   frontend: string;
   backend: string;
   devops: string;
 
   // Projects (redesign)
-  myProjectsTitle: string;
+  thingsIveBuilt: string;
 
   // Meta tags
   portfolioTitle: string;
@@ -108,6 +110,16 @@ export interface Translation {
 
   // Project case studies
   caseStudies: {
+    collabpulse: {
+      challenge: string;
+      solution: string;
+      result: string;
+    };
+    aurinia: {
+      challenge: string;
+      solution: string;
+      result: string;
+    };
     oschadpay: {
       challenge: string;
       solution: string;
@@ -123,6 +135,11 @@ export interface Translation {
   // Projects data
   projectsData: {
     aurinia: {
+      title: string;
+      description: string;
+      additionalInfo: string;
+    };
+    collabpulse: {
       title: string;
       description: string;
       additionalInfo: string;
@@ -292,6 +309,7 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "available for work",
+    headerTitle: "Who am I..?",
     headerDescription:
       "Building high-performance web applications with modern technologies and clean, maintainable architecture.",
     viewMyWork: "view my work",
@@ -300,25 +318,26 @@ export const translations: Record<
     coffee: "COFFEE",
 
     // Footer
-    letsWorkTogether: "Let's work together...",
+    letsWorkTogether: "Let's work together",
     hireMe: "hire me",
     letsWorkTogetherSubtitle:
       "Have a project in mind? I'd love to hear about it.",
 
     // About (redesign)
-    whoIAm: "Who I am.",
+    whoIAm: "Who I am",
 
     // Experience (redesign)
-    whereIveWorked: "Where I've worked.",
+    whereIveWorked: "Where I've worked",
 
     // Skills (redesign)
     mySkillsTitle: "My skills",
+    whatIBuildWith: "What I build with",
     frontend: "Frontend",
     backend: "Backend",
     devops: "DevOps",
 
     // Projects (redesign)
-    myProjectsTitle: "My projects",
+    thingsIveBuilt: "Things I've built",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
@@ -340,6 +359,22 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      collabpulse: {
+        challenge:
+          "Teams working on short-lived projects had no lightweight tool for coordination. Traditional project management software was too heavy — creating a project, assigning tasks, and tracking micro-deliverables required too much setup. Collaboration happened across scattered chats and threads with no unified pulse on team activity or progress.",
+        solution:
+          "Built a micro-collaboration platform where teams can spin up focused workspaces in seconds, assign micro-tasks, and track activity in real time. Integrated a product management layer and checkout flow so teams can package and monetise their collaborative output. The admin panel gives full visibility into workspaces, members, and billing from a single control surface.",
+        result:
+          "Coordination overhead reduced significantly — teams go from idea to active workspace in under a minute. Monetisation of collaboration services enabled directly within the platform, eliminating the need for third-party billing tools. Admin panel consolidates workspace health, user management, and revenue tracking in one place.",
+      },
+      aurinia: {
+        challenge:
+          "A materials retailer was managing inventory, orders, and customer data across spreadsheets and disconnected tools. Product listings required manual updates, the checkout process was handled externally, and the admin had no real-time view of stock levels or order status — leading to fulfilment errors and lost sales.",
+        solution:
+          "Delivered a full-stack e-commerce platform with a product catalogue supporting rich material descriptions, pricing tiers, and image management. Built a multi-step checkout with order validation and confirmation emails. The admin panel covers the complete order lifecycle — from placement through fulfilment — alongside inventory management, category configuration, and sales reporting.",
+        result:
+          "Inventory sync made manual stock updates obsolete — catalogue changes reflect instantly in the storefront. Order processing errors dropped to near zero through structured checkout validation. Admin gained real-time visibility into stock levels, pending orders, and revenue without leaving the platform.",
+      },
       oschadpay: {
         challenge:
           "The bank operated dozens of payment terminals with no unified dashboard. Transaction creation was manual, merchant onboarding took days, product catalogues lived in spreadsheets, and generating tax-compliant reports required hours of data stitching across multiple systems.",
@@ -366,6 +401,13 @@ export const translations: Record<
           "Modern e-commerce platform with advanced product management, checkout process, and admin panel.",
         additionalInfo:
           "Full-featured online store with material management and comprehensive order processing",
+      },
+      collabpulse: {
+        title: "CollabPulse - Micro-collaboration Platform",
+        description:
+          "Modern micro-collaboration platform with advanced product management, checkout process, and admin panel.",
+        additionalInfo:
+          "Full-featured micro-collaboration platform with advanced product management, checkout process, and admin panel",
       },
       cfweb: {
         title: "Credit Factory - Corporate Finance Web Application",
@@ -589,6 +631,7 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "доступний для роботи",
+    headerTitle: "Хто я..?",
     headerDescription:
       "Розробка високопродуктивних веб-додатків із сучасними технологіями та чистою, підтримуваною архітектурою.",
     viewMyWork: "дивитись мої роботи",
@@ -597,25 +640,26 @@ export const translations: Record<
     coffee: "КАВИ",
 
     // Footer
-    letsWorkTogether: "Давайте працювати разом...",
+    letsWorkTogether: "Давайте працювати разом",
     hireMe: "найміть мене",
     letsWorkTogetherSubtitle:
       "Маєте проект на думці? Я хотів би почути про нього.",
 
     // About (redesign)
-    whoIAm: "Хто я.",
+    whoIAm: "Хто я",
 
     // Experience (redesign)
-    whereIveWorked: "Де я працював.",
+    whereIveWorked: "Де я працював",
 
     // Skills (redesign)
     mySkillsTitle: "Мої навички",
+    whatIBuildWith: "Чим я працюю",
     frontend: "Frontend",
     backend: "Backend",
     devops: "DevOps",
 
     // Projects (redesign)
-    myProjectsTitle: "Мої проекти",
+    thingsIveBuilt: "Що я створив",
 
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Розробник",
@@ -637,6 +681,22 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      collabpulse: {
+        challenge:
+          "Команди, які працювали над короткостроковими проектами, не мали легкого інструменту для координації. Традиційне ПЗ для управління проектами було надто важким — створення проекту, призначення завдань та відстеження мікро-результатів вимагало занадто багато налаштувань. Співпраця відбувалась в розрізнених чатах та потоках без єдиного погляду на активність та прогрес команди.",
+        solution:
+          "Створив платформу мікро-колабораціі, де команди можуть створювати сфокусовані робочі простори за секунди, призначати мікро-завдання та відстежувати активність в реальному часі. Інтегрував шар управління продуктами та checkout-процес, щоб команди могли упаковувати та монетизувати свої результати спільної роботи. Адміністративна панель надає повну видимість робочих просторів, членів та біллінгу з єдиного інтерфейсу.",
+        result:
+          "Накладні витрати на координацію суттєво скоротились — команди переходять від ідеї до активного робочого простору за менше однієї хвилини. Монетизація послуг співпраці ввімкнута прямо на платформі, усуваючи потребу в сторонніх інструментах біллінгу. Адміністративна панель консолідує здоров'я робочих просторів, управління користувачами та аналітику доходу в одному місці.",
+      },
+      aurinia: {
+        challenge:
+          "Розничний продавець матеріалів управляв інвентарем, замовленнями та даними клієнтів розрізнено через таблиці й відокремлені інструменти. Оновлення списків товарів вимагало ручної роботи, процес оформлення було делеговано зовні, а адміністратор не мав real-time виду на рівні запасів або статус замовлень — що призводило до помилок у виконанні та втрати продажів.",
+        solution:
+          "Розробив повнофункціональну платформу електронної комерції з каталогом товарів, що підтримує багаті описи матеріалів, рівні цін та управління зображеннями. Побудував багатоступеневий checkout з валідацією замовлень та листами підтвердження. Адміністративна панель охоплює повний життєвий цикл замовлень — від розміщення до виконання — разом з управлінням інвентарем, конфігурацією категорій та аналітикою продажів.",
+        result:
+          "Синхронізація інвентарю усунула ручні оновлення запасів — зміни каталогу миттєво відображаються на скажинці. Помилки обробки замовлень впали майже до нуля завдяки структурованій валідації checkout. Адміністратор отримав real-time видимість рівнів запасів, очікуючих замовлень та доходу без виходу з платформи.",
+      },
       oschadpay: {
         challenge:
           "Банк керував десятками платіжних терміналів без єдиного дашборда. Створення транзакцій було ручним, онбординг мерчантів займав дні, каталоги товарів зберігалися в таблицях, а формування податкових звітів вимагало годин ручного зведення даних з різних систем.",
@@ -663,6 +723,13 @@ export const translations: Record<
           "Сучасна платформа електронної комерції з розширеним управлінням товарами, процесом оформлення замовлення та адміністративною панеллю.",
         additionalInfo:
           "Повнофункціональний інтернет-магазин з управлінням матеріалами та комплексною обробкою замовлень",
+      },
+      collabpulse: {
+        title: "CollabPulse - Платформа мікро-колабораціі",
+        description:
+          "Сучасна платформа мікро-колабораціі з розширеним управлінням продуктами, процесом оформлення та адміністративною панеллю.",
+        additionalInfo:
+          "Повнофункціональна платформа мікро-колабораціі з розширеним управлінням продуктами, процесом оформлення та адміністративною панеллю",
       },
       cfweb: {
         title: "Credit Factory - Веб-додаток корпоративних фінансів",
@@ -886,6 +953,7 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "достъпен за работа",
+    headerTitle: "Кой съм аз..?",
     headerDescription:
       "Разработка на високопроизводителни уеб приложения със съвременни технологии и чиста, поддържаема архитектура.",
     viewMyWork: "виж моята работа",
@@ -894,24 +962,25 @@ export const translations: Record<
     coffee: "КАФЕ",
 
     // Footer
-    letsWorkTogether: "Нека работим заедно...",
+    letsWorkTogether: "Да работим заедно",
     hireMe: "наеми ме",
     letsWorkTogetherSubtitle: "Имаш проект на ум? Бих искал да чуя за него.",
 
     // About (redesign)
-    whoIAm: "Кой съм.",
+    whoIAm: "Кой съм аз",
 
     // Experience (redesign)
-    whereIveWorked: "Където съм работил.",
+    whereIveWorked: "Където съм работил",
 
     // Skills (redesign)
     mySkillsTitle: "Моите умения",
+    whatIBuildWith: "С какво работя",
     frontend: "Frontend",
     backend: "Backend",
     devops: "DevOps",
 
     // Projects (redesign)
-    myProjectsTitle: "Моите проекти",
+    thingsIveBuilt: "Какво съм направил",
 
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Разработчик",
@@ -933,6 +1002,22 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      collabpulse: {
+        challenge:
+          "Екипи, работещи върху краткосрочни проекти, нямаха лекотежен инструмент за координация. Традиционният софтуер за управление на проекти беше твърде тежък — създаването на проект, приписване на задачи и проследяване на микро-доставки изискваше твърде много настройка. Сътрудничеството се случваше в разпръснати чатове и нишки без единствен поглед на активността на екипа или напредъка.",
+        solution:
+          "Построена е платформа за микро-сътрудничество, където екипи могат да създават фокусирани работни пространства за секунди, да приписват микро-задачи и да проследяват активността в реално време. Интегрирана е управленска функция и процес на плащане, така че екипите могат да пакетират и монетизират своята съвместна продукция. Административният панел дава пълна видимост върху работните пространства, членовете и фактурирането от един контролен повърхност.",
+        result:
+          "Преките разходи за координация са намалени значително — екипи преминават от идея до активно работно пространство за под една минута. Монетизацията на съвместни услуги е възможна директно в платформата, елиминирайки необходимостта от стороннишки инструменти за фактуриране. Административният панел консолидира здравето на работните пространства, управлението на потребители и проследяването на приходите на един място.",
+      },
+      aurinia: {
+        challenge:
+          "Един разпродавач на материали управляваше запаси, поръчки и данни на клиентите в електронни таблици и несвързани инструменти. Списъците с продукти изискваха ръчни актуализации, процесът на плащане беше обработван външно, а администраторът нямаше поглед в реално време на нивата на запаса или статуса на поръчките — което води до грешки при изпълнението и загубени продажби.",
+        solution:
+          "Доставена е пълнофункционална платформа за електронна търговия с каталог на продукти, поддържащ богати описания на материали, ценови нива и управление на изображения. Построен е многостепенен процес на плащане с валидиране на поръчките и потвърждени имейли. Административният панел покрива пълния жизнен цикъл на поръчките — от поставяне до изпълнение — наред с управлението на запаси, конфигурация на категории и отчитане на продажби.",
+        result:
+          "Синхронизирането на запаса направи ръчни актуализации излишни — промените в каталога се отразяват мигновено в магазина. Грешките при обработката на поръчки спаднаха почти до нула чрез структурирана валидация при плащане. Администраторът получи видимост в реално време на нивата на запаса, очакващи поръчки и приходи, без да напуска платформата.",
+      },
       oschadpay: {
         challenge:
           "Банката управляваше десетки платежни терминали без единен контролен панел. Създаването на транзакции беше ръчно, въвеждането на търговци отнемаше дни, каталозите с продукти се съхраняваха в електронни таблици, а генерирането на отчети, съобразени с данъчното законодателство, изискваше часове на обработка на данни от множество системи.",
@@ -959,6 +1044,13 @@ export const translations: Record<
           "Модерна платформа за електронна търговия с разширено управление на продукти, процес на плащане и административен панел.",
         additionalInfo:
           "Пълнофункционален онлайн магазин с управление на материали и цялостна обработка на поръчки",
+      },
+      collabpulse: {
+        title: "CollabPulse - Платформа за микро-сътрудничество",
+        description:
+          "Модерна платформа за микро-сътрудничество с разширено управление на продукти, процес на плащане и административен панел.",
+        additionalInfo:
+          "Пълнофункционална платформа за микро-сътрудничество с разширено управление на продукти, процес на плащане и административен панел",
       },
       cfweb: {
         title: "Credit Factory - Уеб приложение за корпоративни финанси",
@@ -1182,6 +1274,7 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "dostępny do pracy",
+    headerTitle: "Kim jestem..?",
     headerDescription:
       "Budowanie wysokowydajnych aplikacji internetowych za pomocą nowoczesnych technologii i czystej, łatwej w utrzymaniu architektury.",
     viewMyWork: "zobacz moją pracę",
@@ -1190,24 +1283,25 @@ export const translations: Record<
     coffee: "KAWY",
 
     // Footer
-    letsWorkTogether: "Pracujmy razem...",
+    letsWorkTogether: "Pracujmy razem",
     hireMe: "zatrudnij mnie",
     letsWorkTogetherSubtitle: "Masz projekt na uwadze? Chętnie o nim słyszę.",
 
     // About (redesign)
-    whoIAm: "Kim jestem.",
+    whoIAm: "Kim jestem",
 
     // Experience (redesign)
-    whereIveWorked: "Gdzie pracowałem.",
+    whereIveWorked: "Gdzie pracowałem",
 
     // Skills (redesign)
     mySkillsTitle: "Moje umiejętności",
+    whatIBuildWith: "Z czym pracuję",
     frontend: "Frontend",
     backend: "Backend",
     devops: "DevOps",
 
     // Projects (redesign)
-    myProjectsTitle: "Moje projekty",
+    thingsIveBuilt: "Co zbudowałem",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
@@ -1229,6 +1323,22 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      collabpulse: {
+        challenge:
+          "Zespoły pracujące nad krótkotrwałymi projektami nie miały lekkiego narzędzia do koordynacji. Tradycyjne oprogramowanie do zarządzania projektami było zbyt ciężkie — tworzenie projektu, przypisywanie zadań i śledzenie mikro-dostaw wymagało zbyt wiele konfiguracji. Współpraca odbywała się w rozproszonych czatach i wątkach bez jednolitego widoku na aktywność zespołu lub postęp.",
+        solution:
+          "Zbudowano platformę do mikro-współpracy, na której zespoły mogą w kilka sekund tworzyć skoncentrowane przestrzenie robocze, przypisywać mikro-zadania i śledzić aktywność w czasie rzeczywistym. Zintegrowano warstwę zarządzania produktem i przepływ realizacji, aby zespoły mogły pakować i monetyzować swoją wspólną wydajność. Panel administracyjny zapewnia pełny przegląd przestrzeni roboczych, członków i rozliczeń z jednej powierzchni sterowania.",
+        result:
+          "Koszty koordynacji znacznie zmniejszone — zespoły przechodzą od pomysłu do aktywnej przestrzeni roboczej w mniej niż minutę. Monetyzacja usług współpracy dostępna bezpośrednio w ramach platformy, eliminując potrzebę stosowania narzędzi rozliczeniowych stron trzecich. Panel administracyjny łączy kondycję przestrzeni roboczych, zarządzanie użytkownikami i śledzenie przychodów w jednym miejscu.",
+      },
+      aurinia: {
+        challenge:
+          "Sprzedawca materiałów zarządzał zapasami, zamówieniami i danymi klientów w arkuszach kalkulacyjnych i niezwiązanych ze sobą narzędziach. Listy produktów wymagały ręcznych aktualizacji, proces realizacji obsługiwany był zewnętrznie, a administrator nie miał widoku w czasie rzeczywistym poziomów zapasów lub statusu zamówień — co prowadziło do błędów w spełnieniu i utraty sprzedaży.",
+        solution:
+          "Dostarczona została pełnoprawna platforma e-commerce z katalogiem produktów wspierającym bogate opisy materiałów, warstwy cenowe i zarządzanie zdjęciami. Zbudowano wieloetapowy proces realizacji ze sprawdzaniem poprawności zamówień i potwierdzonymi wiadomościami e-mail. Panel administracyjny obejmuje pełny cykl życia zamówienia — od złożenia do realizacji — wraz z zarządzaniem zapasami, konfiguracją kategorii i raportowaniem sprzedaży.",
+        result:
+          "Synchronizacja zapasów wyeliminowała potrzebę ręcznych aktualizacji — zmiany katalogu natychmiast odzwierciedlają się w sklepie. Błędy w przetwarzaniu zamówień spadły do zera dzięki zstruktalizowanej walidacji realizacji. Administrator uzyskał widok w czasie rzeczywistym poziomów zapasów, oczekujących zamówień i przychodów bez opuszczania platformy.",
+      },
       oschadpay: {
         challenge:
           "Bank obsługiwał dziesiątki terminali płatniczych bez zunifikowanego panelu kontrolnego. Tworzenie transakcji było ręczne, wdrażanie sprzedawców trwało dni, katalogi produktów przechowywano w arkuszach kalkulacyjnych, a generowanie raportów zgodnych z przepisami podatkowymi wymagało godzin łączenia danych z wielu systemów.",
@@ -1255,6 +1365,13 @@ export const translations: Record<
           "Nowoczesna platforma e-commerce z zaawansowanym zarządzaniem produktami, procesem realizacji zamówień i panelem administracyjnym.",
         additionalInfo:
           "Pełnofunkcjonalny sklep internetowy z zarządzaniem materiałami i kompleksową obsługą zamówień",
+      },
+      collabpulse: {
+        title: "CollabPulse - Platforma mikro-współpracy",
+        description:
+          "Nowoczesna platforma mikro-współpracy z zaawansowanym zarządzaniem produktami, procesem realizacji zamówień i panelem administracyjnym.",
+        additionalInfo:
+          "Pełnoprawna platforma mikro-współpracy z zaawansowanym zarządzaniem produktami, procesem realizacji zamówień i panelem administracyjnym",
       },
       cfweb: {
         title: "Credit Factory - Aplikacja webowa finansów korporacyjnych",
@@ -1478,6 +1595,7 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "disponibile per il lavoro",
+    headerTitle: "Chi sono..?",
     headerDescription:
       "Costruire applicazioni web ad alte prestazioni con tecnologie moderne e architettura pulita e mantenibile.",
     viewMyWork: "vedi il mio lavoro",
@@ -1486,25 +1604,26 @@ export const translations: Record<
     coffee: "CAFFÈ",
 
     // Footer
-    letsWorkTogether: "Lavoriamo insieme...",
+    letsWorkTogether: "Lavoriamo insieme",
     hireMe: "assumimi",
     letsWorkTogetherSubtitle:
       "Hai un progetto in mente? Mi piacerebbe sentirne parlare.",
 
     // About (redesign)
-    whoIAm: "Chi sono.",
+    whoIAm: "Chi sono",
 
     // Experience (redesign)
-    whereIveWorked: "Dove ho lavorato.",
+    whereIveWorked: "Dove ho lavorato",
 
     // Skills (redesign)
     mySkillsTitle: "Le mie competenze",
+    whatIBuildWith: "Con cosa lavoro",
     frontend: "Frontend",
     backend: "Backend",
     devops: "DevOps",
 
     // Projects (redesign)
-    myProjectsTitle: "I miei progetti",
+    thingsIveBuilt: "Quello che ho costruito",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
@@ -1526,6 +1645,22 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      collabpulse: {
+        challenge:
+          "I team che lavorano su progetti a breve termine non avevano uno strumento leggero per il coordinamento. Il software tradizionale di gestione dei progetti era troppo pesante — creare un progetto, assegnare attività e tracciare micro-consegne richiedeva troppe configurazioni. La collaborazione avveniva in chat e thread sparsi senza una visione unificata dell'attività del team o dei progressi.",
+        solution:
+          "È stata costruita una piattaforma di micro-collaborazione in cui i team possono creare spazi di lavoro focalizzati in pochi secondi, assegnare micro-attività e tracciare l'attività in tempo reale. È stato integrato uno strato di gestione dei prodotti e un flusso di checkout in modo che i team possano confezionare e monetizzare i loro risultati collaborativi. Il pannello amministrativo fornisce visibilità completa su spazi di lavoro, membri e fatturazione da un'unica superficie di controllo.",
+        result:
+          "I costi di coordinamento sono significativamente ridotti — i team passano dall'idea a uno spazio di lavoro attivo in meno di un minuto. La monetizzazione dei servizi di collaborazione è abilitata direttamente all'interno della piattaforma, eliminando la necessità di strumenti di fatturazione di terze parti. Il pannello amministrativo consolida la salute degli spazi di lavoro, la gestione degli utenti e il tracciamento dei ricavi in un'unica posizione.",
+      },
+      aurinia: {
+        challenge:
+          "Un rivenditore di materiali gestiva inventario, ordini e dati dei clienti in fogli di calcolo e strumenti disconnessi. Le liste dei prodotti richiedevano aggiornamenti manuali, il processo di checkout era gestito esternamente e l'amministratore non aveva una visione in tempo reale dei livelli di stock o dello stato degli ordini — portando a errori di evasione e perdite di vendite.",
+        solution:
+          "È stata fornita una piattaforma e-commerce completa con un catalogo di prodotti che supporta descrizioni ricche di materiali, fasce di prezzo e gestione delle immagini. È stato creato un processo di checkout multi-step con convalida degli ordini e email di conferma. Il pannello amministrativo copre l'intero ciclo di vita dell'ordine — dalla collocazione all'evasione — insieme alla gestione dell'inventario, alla configurazione delle categorie e ai rapporti sulle vendite.",
+        result:
+          "La sincronizzazione dell'inventario ha reso obsoleti gli aggiornamenti manuali delle scorte — i cambiamenti nel catalogo si riflettono istantaneamente nella vetrina. Gli errori nell'elaborazione degli ordini sono scesi quasi a zero attraverso la convalida strutturata del checkout. L'amministratore ha ottenuto visibilità in tempo reale sui livelli di stock, gli ordini in sospeso e i ricavi senza lasciare la piattaforma.",
+      },
       oschadpay: {
         challenge:
           "La banca gestiva decine di terminali di pagamento senza un dashboard unificato. La creazione di transazioni era manuale, l'onboarding dei commercianti richiedeva giorni, i cataloghi prodotti erano conservati in fogli di calcolo e la generazione di report conformi alle normative fiscali richiedeva ore di assemblaggio dati da più sistemi.",
@@ -1552,6 +1687,13 @@ export const translations: Record<
           "Piattaforma e-commerce moderna con gestione avanzata dei prodotti, processo di checkout e pannello amministrativo.",
         additionalInfo:
           "Negozio online completo con gestione dei materiali ed elaborazione completa degli ordini",
+      },
+      collabpulse: {
+        title: "CollabPulse - Piattaforma di micro-collaborazione",
+        description:
+          "Piattaforma di micro-collaborazione moderna con gestione avanzata dei prodotti, processo di checkout e pannello amministrativo.",
+        additionalInfo:
+          "Piattaforma completa di micro-collaborazione con gestione avanzata dei prodotti, processo di checkout e pannello amministrativo",
       },
       cfweb: {
         title: "Credit Factory - Applicazione web per finanza aziendale",
@@ -1775,6 +1917,7 @@ export const translations: Record<
 
     // Header (redesign)
     badgeAvailable: "disponible pour travailler",
+    headerTitle: "Qui je suis..?",
     headerDescription:
       "Construire des applications web performantes avec des technologies modernes et une architecture propre et maintenable.",
     viewMyWork: "voir mon travail",
@@ -1783,25 +1926,26 @@ export const translations: Record<
     coffee: "CAFÉ",
 
     // Footer
-    letsWorkTogether: "Travaillons ensemble...",
+    letsWorkTogether: "Travaillons ensemble",
     hireMe: "embauchez-moi",
     letsWorkTogetherSubtitle:
       "Vous avez un projet en tête ? J'aimerais en entendre parler.",
 
     // About (redesign)
-    whoIAm: "Qui suis-je.",
+    whoIAm: "Qui je suis",
 
     // Experience (redesign)
-    whereIveWorked: "Où j'ai travaillé.",
+    whereIveWorked: "Où j'ai travaillé",
 
     // Skills (redesign)
     mySkillsTitle: "Mes compétences",
+    whatIBuildWith: "Avec quoi je travaille",
     frontend: "Frontend",
     backend: "Backend",
     devops: "DevOps",
 
     // Projects (redesign)
-    myProjectsTitle: "Mes projets",
+    thingsIveBuilt: "Ce que j'ai construit",
 
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Développeur Senior Full-Stack",
@@ -1823,6 +1967,22 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      collabpulse: {
+        challenge:
+          "Les équipes travaillant sur des projets de courte durée n'avaient pas d'outil léger pour la coordination. Les logiciels traditionnels de gestion de projet étaient trop lourds — créer un projet, assigner des tâches et suivre les micro-livraisons exigeaient trop de configuration. La collaboration se déroulait dans des chats et des fils éparpillés sans une vision unifiée de l'activité de l'équipe ou des progrès.",
+        solution:
+          "Création d'une plateforme de micro-collaboration où les équipes peuvent créer des espaces de travail ciblés en quelques secondes, assigner des micro-tâches et suivre l'activité en temps réel. Intégration d'une couche de gestion des produits et d'un flux de paiement pour permettre aux équipes d'empaqueter et de monétiser leur production collaborative. Le panneau d'administration offre une visibilité complète sur les espaces de travail, les membres et la facturation à partir d'une seule surface de contrôle.",
+        result:
+          "Les frais de coordination sont considérablement réduits — les équipes passent d'une idée à un espace de travail actif en moins d'une minute. La monétisation des services de collaboration est activée directement dans la plateforme, éliminant le besoin d'outils de facturation tiers. Le panneau d'administration consolide la santé des espaces de travail, la gestion des utilisateurs et le suivi des revenus en un seul endroit.",
+      },
+      aurinia: {
+        challenge:
+          "Un détaillant de matériaux gérait l'inventaire, les commandes et les données des clients dans des feuilles de calcul et des outils déconnectés. Les listes de produits nécessitaient des mises à jour manuelles, le processus de paiement était géré en externe et l'administrateur n'avait pas une vue en temps réel des niveaux de stock ou du statut des commandes — entraînant des erreurs de traitement et une perte de ventes.",
+        solution:
+          "Livraison d'une plateforme e-commerce complète avec un catalogue de produits supportant les descriptions riches de matériaux, les niveaux de prix et la gestion des images. Création d'un processus de paiement multi-étapes avec validation des commandes et emails de confirmation. Le panneau d'administration couvre l'ensemble du cycle de vie des commandes — de la création à la livraison — ainsi que la gestion de l'inventaire, la configuration des catégories et les rapports de ventes.",
+        result:
+          "La synchronisation de l'inventaire a rendu les mises à jour manuelles des stocks obsolètes — les modifications du catalogue se reflètent instantanément dans la vitrine. Les erreurs de traitement des commandes sont tombées à zéro grâce à la validation structurée du paiement. L'administrateur a obtenu une visibilité en temps réel sur les niveaux de stock, les commandes en attente et les revenus sans quitter la plateforme.",
+      },
       oschadpay: {
         challenge:
           "La banque exploitait des dizaines de terminaux de paiement sans tableau de bord unifié. La création de transactions était manuelle, l'intégration des commerçants prenait des jours, les catalogues de produits étaient conservés dans des feuilles de calcul et la génération de rapports conformes aux exigences fiscales nécessitait des heures de collecte de données à partir de plusieurs systèmes.",
@@ -1849,6 +2009,13 @@ export const translations: Record<
           "Plateforme e-commerce moderne avec gestion avancée des produits, processus de paiement et panneau d'administration.",
         additionalInfo:
           "Boutique en ligne complète avec gestion des matériaux et traitement complet des commandes",
+      },
+      collabpulse: {
+        title: "CollabPulse - Plateforme de micro-collaboration",
+        description:
+          "Plateforme de micro-collaboration moderne avec gestion avancée des produits, processus de paiement et panneau d'administration.",
+        additionalInfo:
+          "Plateforme complète de micro-collaboration avec gestion avancée des produits, processus de paiement et panneau d'administration",
       },
       cfweb: {
         title: "Credit Factory - Application web de finance d'entreprise",

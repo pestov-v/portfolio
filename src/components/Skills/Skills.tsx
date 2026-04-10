@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { FC, useCallback, useRef, useState } from "react";
 import { SKILLS } from "util/constants";
+import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Skills.module.scss";
 import { useShowSkills } from "./useShowSkills";
 
@@ -114,6 +115,7 @@ const SkillCard: FC<{ title: string; percent: number; revealed: boolean }> = ({
 };
 
 export const Skills = () => {
+  const { t } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
 
@@ -126,7 +128,7 @@ export const Skills = () => {
     <section className={style.skills} id="skills">
       <div className={style.inner}>
         <span className={style.tag}>// 03. SKILLS</span>
-        <h2 className={style.title}>What I build with.</h2>
+        <h2 className={style.title}>{t.whatIBuildWith}</h2>
         <div className={style.grid} ref={ref}>
           {CATEGORIES.map(({ key, label }) => {
             const categorySkills = SKILLS.filter((s) => s.category === key);

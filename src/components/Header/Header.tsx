@@ -168,7 +168,7 @@ export const Header: NextPage = () => {
         >
           <div className={style.badge}>
             <span className={style.badgeDot} aria-hidden="true" />
-            <span className={style.badgeText}>available for work</span>
+            <span className={style.badgeText}>{t.badgeAvailable}</span>
           </div>
         </motion.div>
 
@@ -178,7 +178,7 @@ export const Header: NextPage = () => {
           initial="hidden"
           animate="visible"
         >
-          <h1 className={style.name}>Who am I..?</h1>
+          <h1 className={style.name}>{t.headerTitle}</h1>
         </motion.div>
 
         <motion.div
@@ -199,8 +199,7 @@ export const Header: NextPage = () => {
           animate="visible"
         >
           <p className={style.description}>
-            Building high-performance web applications with modern technologies
-            and clean, maintainable architecture.
+            {t.headerDescription}
           </p>
         </motion.div>
 
@@ -212,7 +211,7 @@ export const Header: NextPage = () => {
         >
           <div className={style.btns}>
             <a href="#projects" className={style.btnPrimary}>
-              view my work
+              {t.viewMyWork}
             </a>
             <a
               href="/Volodymyr_Pestov.pdf"
@@ -237,17 +236,17 @@ export const Header: NextPage = () => {
           <div className={style.stats}>
             <div className={style.statItem}>
               <span className={style.statNumber}>6+</span>
-              <span className={style.statLabel}>YEARS&nbsp;EXP.</span>
+              <span className={style.statLabel}>{t.yearsExp}</span>
             </div>
             <div className={style.statDivider} aria-hidden="true" />
             <div className={style.statItem}>
               <span className={style.statNumber}>10+</span>
-              <span className={style.statLabel}>PROJECTS</span>
+              <span className={style.statLabel}>{t.projectsCount}</span>
             </div>
             <div className={style.statDivider} aria-hidden="true" />
             <div className={style.statItem}>
               <span className={style.statNumber}>∞</span>
-              <span className={style.statLabel}>COFFEE</span>
+              <span className={style.statLabel}>{t.coffee}</span>
             </div>
           </div>
         </motion.div>

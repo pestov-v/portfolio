@@ -31,9 +31,6 @@ export const Projects = () => {
       trackProjectClick(project.title);
     }
 
-    // Remember which card is being closed so we can scroll to it after layout collapses
-    const closingProjectId = isClosing ? project.id : null;
-
     // 1. Capture positions BEFORE DOM changes
     const state = Flip.getState(
       gridRef.current.querySelectorAll("[data-flip-id]"),
@@ -44,6 +41,18 @@ export const Projects = () => {
       setActiveId(isClosing ? null : project.id);
     });
 
+    {
+      // After flushSync the DOM is already in its final layout state —
+      // instantly jump to the card's position before the browser paints
+      const card = gridRef.current.querySelector(
+        `[data-flip-id="card-${project.id}"]`,
+      );
+      if (card) {
+        const cardTop = card.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: cardTop - 100 }); // instant, no smooth
+      }
+    }
+
     // 3. Animate FROM old positions TO new positions (no absolute — keeps elements in flow)
     Flip.from(state, {
       duration: 0.55,
@@ -52,27 +61,6 @@ export const Projects = () => {
       onComplete: () => {
         // Recalculate ScrollTrigger positions after layout change
         ScrollTrigger.refresh();
-
-        if (closingProjectId !== null) {
-          // After layout has collapsed, scroll to the card's actual (final) top position
-          const card = gridRef.current?.querySelector(
-            `[data-flip-id="card-${closingProjectId}"]`,
-          );
-          if (card) {
-            const cardTop = card.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ top: cardTop - 100, behavior: "smooth" });
-          }
-        } else if (!isClosing) {
-          // Scroll only after layout is fully settled
-          const activeCard = gridRef.current?.querySelector(
-            `[data-flip-id="card-${project.id}"]`,
-          );
-          if (activeCard) {
-            const cardTop =
-              activeCard.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ top: cardTop - 100, behavior: "smooth" });
-          }
-        }
       },
     });
 
@@ -95,7 +83,7 @@ export const Projects = () => {
       <div className={style.container}>
         <span className={style.tag}>// 04. PROJECTS</span>
         <h2 className={style.sectionTitle} id="portfolio-title">
-          Things I&apos;ve built.
+          {t.thingsIveBuilt}
         </h2>
 
         <div

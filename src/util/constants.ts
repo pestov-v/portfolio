@@ -155,6 +155,26 @@ export const _projects: TProjects = [
     },
   },
   {
+    id: 14,
+    translationKey: "hostel",
+    title: "Hostel management system",
+    description:
+      "Complete hostel management solution with room booking, guest registration, and administrative dashboard for accommodation facilities.",
+    href: "https://aurinia-hostel.online",
+    image: "hostel",
+    alt: "Hostel management system",
+    additionalInfo:
+      "Full-stack booking system with real-time availability, guest management, and reservation tracking",
+    technologies: [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Postgres",
+      "TypeORM",
+    ],
+  },
+  {
     id: 17,
     translationKey: "cfweb",
     title: "Credit Factory - Corporate Finance Web Application",
@@ -262,26 +282,6 @@ export const _projects: TProjects = [
         },
       ],
     },
-  },
-  {
-    id: 14,
-    translationKey: "hostel",
-    title: "Hostel management system",
-    description:
-      "Complete hostel management solution with room booking, guest registration, and administrative dashboard for accommodation facilities.",
-    href: "https://aurinia-hostel.online",
-    image: "hostel",
-    alt: "Hostel management system",
-    additionalInfo:
-      "Full-stack booking system with real-time availability, guest management, and reservation tracking",
-    technologies: [
-      "Next.js",
-      "NestJS",
-      "TypeScript",
-      "TailwindCSS",
-      "Postgres",
-      "TypeORM",
-    ],
   },
   {
     id: 13,

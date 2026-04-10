@@ -59,10 +59,10 @@ export const SendMail = () => {
       <div className={style.inner}>
         <span className={style.tag}>// 05. CONTACT</span>
         <h2 className={style.title} id="contact-title">
-          Let&apos;s work together.
+          {t.letsWorkTogether}
         </h2>
         <p className={style.subtitle}>
-          Have a project in mind? I&apos;d love to hear about it.
+          {t.letsWorkTogetherSubtitle}
         </p>
 
         <div className={style.formWrap}>

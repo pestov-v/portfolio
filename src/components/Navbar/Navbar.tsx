@@ -10,11 +10,11 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    { id: 1, href: "#about", title: "about" },
-    { id: 2, href: "#experience", title: "experience" },
-    { id: 3, href: "#skills", title: "skills" },
-    { id: 4, href: "#projects", title: "projects" },
-    { id: 5, href: "#mail", title: "contact" },
+    { id: 1, href: "#about", title: t.about },
+    { id: 2, href: "#experience", title: t.experience },
+    { id: 3, href: "#skills", title: t.skills },
+    { id: 4, href: "#projects", title: t.projects },
+    { id: 5, href: "#mail", title: t.contact },
   ];
 
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -63,7 +63,7 @@ export const Navbar = () => {
         <ThemeToggle />
         <LanguageSwitcher />
         <div className={style.ctaWrap}>
-          <a href="#mail" className={style.cta}>hire me</a>
+          <a href="#mail" className={style.cta}>{t.hireMe}</a>
         </div>
       </div>
 
@@ -101,7 +101,7 @@ export const Navbar = () => {
           </ul>
           <div className={style.mobileCtaWrap}>
             <a href="#mail" className={style.mobileCta} onClick={() => setIsMenuOpen(false)}>
-              hire me
+              {t.hireMe}
             </a>
           </div>
         </div>

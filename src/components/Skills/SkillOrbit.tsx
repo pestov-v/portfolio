@@ -2,6 +2,7 @@ import { FC, useEffect, useRef, useState, useCallback } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { SKILLS } from "util/constants";
+import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./SkillOrbit.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -130,6 +131,7 @@ const SkillNode: FC<{
 };
 
 export const SkillOrbit: FC = () => {
+  const { t } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
   const [revealed, setRevealed] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
@@ -157,7 +159,7 @@ export const SkillOrbit: FC = () => {
     <section className={style.skills} id="skills">
       <div className={style.inner}>
         <span className={style.tag}>// 03. SKILLS</span>
-        <h2 className={style.title}>What I build with.</h2>
+        <h2 className={style.title}>{t.whatIBuildWith}</h2>
 
         {isDesktop ? (
           // Desktop: Orbit layout
