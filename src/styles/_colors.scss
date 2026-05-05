@@ -94,6 +94,8 @@
   --color-light: hsl(0, 0%, 50%);
 
   // Demo page dark theme
+  --primary-color: var(--color-primary-light);
+  --secondary-color: var(--color-secondary-light);
   --bg-primary: var(--background-body);
   --bg-secondary: var(--background-section);
   --border-color: hsla(0, 0%, 80%, 0.15);
