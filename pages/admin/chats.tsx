@@ -43,9 +43,9 @@ export default function AdminChats() {
     fetch(`/api/chat-history?secret=${encodeURIComponent(secret)}`)
       .then(async (r) => {
         if (r.status === 401) throw new Error("Wrong password");
-        const body = await r.json().catch(() => ({}));
+        const body = await r.json();
         if (!r.ok) throw new Error(body.error || `Server error ${r.status}`);
-        return r.json();
+        return body;
       })
       .then(setSessions)
       .catch((e) => {
