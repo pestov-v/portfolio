@@ -4,7 +4,7 @@ import { MainLayout } from '../src/Layouts/MainLayout';
 
 const DemoPage: NextPage = () => {
   return (
-    <MainLayout className="">
+    <MainLayout className="app">
       <Demo />
     </MainLayout>
   );
