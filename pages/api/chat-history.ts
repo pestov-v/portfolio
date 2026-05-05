@@ -1,5 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { redis } from "../../src/lib/redis";
+import { createClient } from "@supabase/supabase-js";
+
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SECRET_KEY!
+  );
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -11,42 +18,53 @@ export default async function handler(
     return res.status(401).json({ error: "Unauthorized" });
   }
 
+  const supabase = getSupabase();
+
   if (req.method === "GET") {
     const { sessionId } = req.query;
 
     // Single session
     if (sessionId && typeof sessionId === "string") {
-      const data = await redis.get<string>(`chat:session:${sessionId}`);
-      if (!data) return res.status(404).json({ error: "Session not found" });
-      return res.json(typeof data === "string" ? JSON.parse(data) : data);
+      const { data, error } = await supabase
+        .from("chat_sessions")
+        .select("*")
+        .eq("session_id", sessionId)
+        .single();
+
+      if (error || !data) return res.status(404).json({ error: "Session not found" });
+
+      return res.json({
+        sessionId: data.session_id,
+        messages: data.messages,
+        model: data.model,
+        updatedAt: data.updated_at,
+      });
     }
 
     // List all sessions (newest first)
-    const sessionIds = await redis.zrange("chat:sessions", 0, 99, { rev: true });
-    const sessions = [];
+    const { data: sessions, error } = await supabase
+      .from("chat_sessions")
+      .select("session_id, messages, model, updated_at")
+      .order("updated_at", { ascending: false })
+      .limit(100);
 
-    for (const id of sessionIds) {
-      const data = await redis.get<string>(`chat:session:${id}`);
-      if (data) {
-        const parsed = typeof data === "string" ? JSON.parse(data) : data;
-        sessions.push({
-          sessionId: id,
-          messageCount: parsed.messages?.length || 0,
-          model: parsed.model,
-          updatedAt: parsed.updatedAt,
-          preview: parsed.messages?.[0]?.content?.slice(0, 100) || "",
-        });
-      }
-    }
+    if (error) return res.status(500).json({ error: error.message });
 
-    return res.json(sessions);
+    return res.json(
+      (sessions || []).map((s) => ({
+        sessionId: s.session_id,
+        messageCount: s.messages?.length || 0,
+        model: s.model,
+        updatedAt: s.updated_at,
+        preview: s.messages?.[0]?.content?.slice(0, 100) || "",
+      }))
+    );
   }
 
   if (req.method === "DELETE") {
     const { sessionId } = req.query;
     if (sessionId && typeof sessionId === "string") {
-      await redis.del(`chat:session:${sessionId}`);
-      await redis.zrem("chat:sessions", sessionId);
+      await supabase.from("chat_sessions").delete().eq("session_id", sessionId);
       return res.json({ ok: true });
     }
     return res.status(400).json({ error: "sessionId required" });

@@ -1,6 +1,6 @@
 import { google } from "@ai-sdk/google";
 import { streamText } from "ai";
-import { Redis } from "@upstash/redis";
+import { createClient } from "@supabase/supabase-js";
 import { PORTFOLIO_CONTEXT } from "../../src/lib/portfolio-context";
 
 export const config = {
@@ -36,51 +36,28 @@ export default async function handler(req: Request) {
       );
     }
 
-    // Load additional context from Redis (dynamic FAQ)
-    let dynamicContext = "";
-    try {
-      const redis = new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL!,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-      });
-      const faq = await redis.get<string>("portfolio:faq");
-      if (faq) dynamicContext = `\n\n## Additional FAQ\n${faq}`;
-    } catch {
-      // Redis unavailable — proceed without dynamic context
-    }
-
     const selectedModel =
       models[model as keyof typeof models] || models["gemini-2.5-flash"];
 
     const result = streamText({
       model: selectedModel,
       messages,
-      system: PORTFOLIO_CONTEXT + dynamicContext,
+      system: PORTFOLIO_CONTEXT,
       onFinish: async ({ text }) => {
         if (sessionId && text) {
           try {
-            const redis = new Redis({
-              url: process.env.UPSTASH_REDIS_REST_URL!,
-              token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+            const supabase = createClient(
+              process.env.NEXT_PUBLIC_SUPABASE_URL!,
+              process.env.SUPABASE_SECRET_KEY!
+            );
+            await supabase.from("chat_sessions").upsert({
+              session_id: sessionId,
+              messages: [...messages, { role: "assistant", content: text }],
+              model,
+              updated_at: new Date().toISOString(),
             });
-            await Promise.all([
-              redis.set(
-                `chat:session:${sessionId}`,
-                JSON.stringify({
-                  sessionId,
-                  messages: [...messages, { role: "assistant", content: text }],
-                  model,
-                  updatedAt: new Date().toISOString(),
-                }),
-                { ex: 60 * 60 * 24 * 30 }
-              ),
-              redis.zadd("chat:sessions", {
-                score: Date.now(),
-                member: sessionId,
-              }),
-            ]);
           } catch {
-            // Redis write failed — non-critical
+            // non-critical
           }
         }
       },
