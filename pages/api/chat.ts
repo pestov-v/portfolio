@@ -1,6 +1,5 @@
 import { google } from "@ai-sdk/google";
 import { streamText } from "ai";
-import { createClient } from "@supabase/supabase-js";
 import { PORTFOLIO_CONTEXT } from "../../src/lib/portfolio-context";
 
 export const config = {
@@ -46,16 +45,25 @@ export default async function handler(req: Request) {
       onFinish: async ({ text }) => {
         if (sessionId && text) {
           try {
-            const supabase = createClient(
-              process.env.NEXT_PUBLIC_SUPABASE_URL!,
-              process.env.SUPABASE_SECRET_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-            );
-            await supabase.from("chat_sessions").upsert({
-              session_id: sessionId,
-              messages: [...messages, { role: "assistant", content: text }],
-              model,
-              updated_at: new Date().toISOString(),
-            });
+            const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+            const key = process.env.SUPABASE_SECRET_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+            if (url && key) {
+              await fetch(`${url}/rest/v1/chat_sessions`, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "apikey": key,
+                  "Authorization": `Bearer ${key}`,
+                  "Prefer": "resolution=merge-duplicates",
+                },
+                body: JSON.stringify({
+                  session_id: sessionId,
+                  messages: [...messages, { role: "assistant", content: text }],
+                  model,
+                  updated_at: new Date().toISOString(),
+                }),
+              });
+            }
           } catch {
             // non-critical
           }
