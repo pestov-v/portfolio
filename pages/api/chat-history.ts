@@ -2,10 +2,10 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
 function getSupabase() {
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SECRET_KEY!
-  );
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SECRET_KEY;
+  if (!url || !key) throw new Error(`Missing env: ${!url ? "NEXT_PUBLIC_SUPABASE_URL" : "SUPABASE_SECRET_KEY"}`);
+  return createClient(url, key);
 }
 
 export default async function handler(
@@ -18,7 +18,13 @@ export default async function handler(
     return res.status(401).json({ error: "Unauthorized" });
   }
 
-  const supabase = getSupabase();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let supabase: any;
+  try {
+    supabase = getSupabase();
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message });
+  }
 
   if (req.method === "GET") {
     const { sessionId } = req.query;
@@ -51,7 +57,8 @@ export default async function handler(
     if (error) return res.status(500).json({ error: error.message });
 
     return res.json(
-      (sessions || []).map((s) => ({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (sessions || []).map((s: any) => ({
         sessionId: s.session_id,
         messageCount: s.messages?.length || 0,
         model: s.model,
