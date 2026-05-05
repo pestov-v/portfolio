@@ -469,7 +469,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Front-End Developer",
+        position: "Senior Full-Stack Developer",
         companyDescription:
           "Ukrpay is a leading Ukrainian fintech company specializing in end-to-end payment solutions for banks, financial institutions, and merchants. The company builds robust infrastructure for transaction processing, POS terminal management, and merchant ecosystems — powering thousands of daily financial operations across the country.",
         achievements: [
@@ -791,7 +791,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Front-End Розробник",
+        position: "Senior Full-Stack Розробник",
         companyDescription:
           "Ukrpay — провідна українська фінтех-компанія, що спеціалізується на комплексних платіжних рішеннях для банків, фінансових установ та мерчантів. Компанія будує надійну інфраструктуру для обробки транзакцій, управління POS-терміналами та мерчант-екосистемами — забезпечуючи тисячі щоденних фінансових операцій по всій країні.",
         achievements: [
@@ -1112,7 +1112,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Front-End Разработчик",
+        position: "Senior Full-Stack Разработчик",
         companyDescription:
           "Ukrpay е водеща украинска финтех компания, специализирана в цялостни платежни решения за банки, финансови институции и търговци. Компанията изгражда стабилна инфраструктура за обработка на транзакции, управление на POS терминали и търговски екосистеми — захранвайки хиляди ежедневни финансови операции в цялата страна.",
         achievements: [
@@ -1433,7 +1433,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Front-End Developer",
+        position: "Senior Full-Stack Developer",
         companyDescription:
           "Ukrpay to wiodąca ukraińska firma fintech specjalizująca się w kompleksowych rozwiązaniach płatniczych dla banków, instytucji finansowych i sprzedawców. Firma buduje solidną infrastrukturę do przetwarzania transakcji, zarządzania terminalami POS i ekosystemami handlowymi — obsługując tysiące codziennych operacji finansowych w całym kraju.",
         achievements: [
@@ -1755,7 +1755,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Front-End Developer",
+        position: "Senior Full-Stack Developer",
         companyDescription:
           "Ukrpay è un'azienda fintech ucraina leader specializzata in soluzioni di pagamento end-to-end per banche, istituzioni finanziarie e commercianti. L'azienda costruisce un'infrastruttura robusta per l'elaborazione delle transazioni, la gestione dei terminali POS e gli ecosistemi dei commercianti — alimentando migliaia di operazioni finanziarie quotidiane in tutto il paese.",
         achievements: [
@@ -2077,7 +2077,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Développeur Front-End Senior",
+        position: "Développeur Full-Stack Senior",
         companyDescription:
           "Ukrpay est une entreprise fintech ukrainienne leader spécialisée dans les solutions de paiement de bout en bout pour les banques, les institutions financières et les commerçants. L'entreprise construit une infrastructure robuste pour le traitement des transactions, la gestion des terminaux de point de vente et les écosystèmes marchands — alimentant des milliers d'opérations financières quotidiennes à travers le pays.",
         achievements: [
