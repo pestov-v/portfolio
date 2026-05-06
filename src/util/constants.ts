@@ -284,6 +284,69 @@ export const _projects: TProjects = [
     },
   },
   {
+    id: 20,
+    translationKey: "aurabeauty",
+    title: "Aura Beauty Salon — AI Booking Platform",
+    description:
+      "Premium beauty salon landing with an AI-powered booking assistant that handles appointments through natural conversation, master availability checking, and instant confirmation.",
+    href: "https://beauty-template-v1.vercel.app",
+    image: "aura-beauty",
+    alt: "Aura Beauty Salon AI Booking Platform",
+    additionalInfo:
+      "Multi-theme salon platform with Gemini AI booking agent, Supabase auth, master scheduling, and Telegram notifications",
+    technologies: [
+      "Next.js",
+      "Supabase",
+      "Gemini AI",
+      "TypeScript",
+      "TailwindCSS",
+    ],
+    caseStudy: {
+      challenge:
+        "Beauty salons rely on phone or manual form bookings — a friction-heavy process that loses clients who want to book outside business hours. Staff spend significant time fielding routine scheduling calls, and there is no intelligent layer to handle availability conflicts, master preferences, or disambiguation when multiple specialists share a name.",
+      solution:
+        "Built a full-stack salon platform with an agentic AI booking assistant powered by Gemini. The assistant conducts natural multi-turn conversations in Ukrainian and English, resolves service synonyms, interprets relative dates and times, checks real-time master availability from Supabase, handles disambiguation when multiple masters share a first name, and confirms bookings atomically with Telegram notifications to the owner — all without human involvement.",
+      result:
+        "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero for routine appointments. Master availability conflicts are eliminated through real-time slot locking. Salon owners receive instant Telegram alerts for every new booking.",
+      technologies: [
+        "Next.js",
+        "Supabase",
+        "Gemini AI",
+        "TypeScript",
+        "TailwindCSS",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[Client] -->|Starts chat| B(AI Booking Agent)
+
+    subgraph "Conversation Layer"
+    B --> C[Gemini 2.5 Flash]
+    C -->|Collects service, date, time, name, phone| C
+    C -->|Master name mentioned| D{Disambiguation}
+    D -->|Multiple matches| E[Ask for full name]
+    D -->|Single match| F[Check Availability]
+    end
+
+    subgraph "Availability Layer"
+    F --> G[Supabase — bookings table]
+    G -->|Slot free| H[Emit __BOOK__]
+    G -->|Slot taken| I[Suggest alternatives]
+    end
+
+    subgraph "Confirmation Layer"
+    H --> J[Atomic slot reservation]
+    J --> K[Booking record saved]
+    K --> L[Telegram notification]
+    K --> M[Success UI to client]
+    end`,
+          caption:
+            "Agentic booking loop: Gemini drives the conversation, detects ambiguous master names, checks live Supabase availability, and atomically reserves the slot — triggering a Telegram alert to the owner on confirmation.",
+        },
+      ],
+    },
+  },
+  {
     id: 13,
     translationKey: "deals",
     title: "Deal crm system",

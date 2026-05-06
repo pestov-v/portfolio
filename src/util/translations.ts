@@ -130,6 +130,11 @@ export interface Translation {
       solution: string;
       result: string;
     };
+    aurabeauty: {
+      challenge: string;
+      solution: string;
+      result: string;
+    };
   };
 
   // Projects data
@@ -180,6 +185,11 @@ export interface Translation {
       additionalInfo: string;
     };
     novus: {
+      title: string;
+      description: string;
+      additionalInfo: string;
+    };
+    aurabeauty: {
       title: string;
       description: string;
       additionalInfo: string;
@@ -391,6 +401,14 @@ export const translations: Record<
         result:
           "Complete elimination of developer dependency when creating forms. Time-to-Market reduced from several weeks to several hours.",
       },
+      aurabeauty: {
+        challenge:
+          "Beauty salons rely on phone or manual form bookings — a friction-heavy process that loses clients who want to book outside business hours. Staff spend significant time fielding routine scheduling calls, and there is no intelligent layer to handle availability conflicts, master preferences, or disambiguation when multiple specialists share a name.",
+        solution:
+          "Built a full-stack salon platform with an agentic AI booking assistant powered by Gemini. The assistant conducts natural multi-turn conversations, checks real-time master availability from Supabase, handles disambiguation when multiple masters share a first name, and confirms bookings atomically with Telegram notifications to the owner.",
+        result:
+          "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero for routine appointments. Master availability conflicts are eliminated through real-time slot locking.",
+      },
     },
 
     // Projects data
@@ -463,6 +481,13 @@ export const translations: Record<
           "Modern web development agency website with sleek design, smooth animations, and responsive layout.",
         additionalInfo:
           "Creative agency landing page with modern animations and premium design · NextJS, TypeScript, TailwindCSS",
+      },
+      aurabeauty: {
+        title: "Aura Beauty Salon — AI Booking Platform",
+        description:
+          "Premium beauty salon landing with an AI-powered booking assistant that handles appointments through natural conversation, master availability checking, and instant confirmation.",
+        additionalInfo:
+          "Multi-theme salon platform with Gemini AI booking agent, Supabase auth, master scheduling, and Telegram notifications · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
       },
     },
 
@@ -713,6 +738,14 @@ export const translations: Record<
         result:
           "Повна ліквідація залежності від розробників при створенні форм. Час виходу продукту на ринок (Time-to-Market) скоротився з кількох тижнів до кількох годин.",
       },
+      aurabeauty: {
+        challenge:
+          "Б'юті-салони залежали від телефонних дзвінків або ручних форм для запису — це гальмує клієнтів, які хочуть записатись поза робочим часом. Персонал витрачає значний час на рутинні дзвінки, а конфлікти розкладу та неоднозначність при збігу імен майстрів вирішуються вручну.",
+        solution:
+          "Розроблено повнофункціональну платформу для салону з агентним AI-асистентом на базі Gemini. Асистент веде природні діалоги, перевіряє доступність майстрів у реальному часі через Supabase, розмежовує майстрів з однаковими іменами та атомарно підтверджує запис з Telegram-сповіщенням власнику.",
+        result:
+          "Клієнти записуються 24/7 через розмовний UI менш ніж за дві хвилини. AI-агент зводить навантаження на адміністратора до мінімуму. Конфлікти доступності майстрів усунуті через блокування слотів у реальному часі.",
+      },
     },
 
     // Projects data
@@ -785,6 +818,13 @@ export const translations: Record<
           "Сучасний сайт агентства веб-розробки з елегантним дизайном, плавними анімаціями та адаптивною версткою.",
         additionalInfo:
           "Креативний лендінг агентства з сучасними анімаціями та преміум-дизайном · NextJS, TypeScript, TailwindCSS",
+      },
+      aurabeauty: {
+        title: "Aura Beauty Salon — AI-платформа для запису",
+        description:
+          "Преміальний лендінг б'юті-салону з AI-асистентом для запису, який веде природні діалоги, перевіряє доступність майстрів та миттєво підтверджує запис.",
+        additionalInfo:
+          "Мультитемна платформа з Gemini AI-агентом, Supabase, розкладом майстрів та Telegram-сповіщеннями · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
       },
     },
 
@@ -1034,6 +1074,14 @@ export const translations: Record<
         result:
           "Пълно премахване на зависимостта от разработчици при създаване на форми. Времето за пускане на продукт на пазара е намалено от няколко седмици на няколко часа.",
       },
+      aurabeauty: {
+        challenge:
+          "Beauty salons rely on phone or manual form bookings — a friction-heavy process that loses clients who want to book outside business hours. Staff spend significant time on routine scheduling, and there is no intelligent layer to handle availability conflicts or master disambiguation.",
+        solution:
+          "Built a full-stack salon platform with an agentic AI booking assistant powered by Gemini. The assistant conducts natural multi-turn conversations, checks real-time master availability from Supabase, handles disambiguation when multiple masters share a first name, and confirms bookings atomically with Telegram notifications.",
+        result:
+          "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero. Master availability conflicts are eliminated through real-time slot locking.",
+      },
     },
 
     // Projects data
@@ -1106,6 +1154,13 @@ export const translations: Record<
           "Модерен уебсайт на агенция за уеб разработка с елегантен дизайн, плавни анимации и адаптивно оформление.",
         additionalInfo:
           "Креативна лендинг страница за агенция с модерни анимации и премиум дизайн · NextJS, TypeScript, TailwindCSS",
+      },
+      aurabeauty: {
+        title: "Aura Beauty Salon — AI Booking Platform",
+        description:
+          "Premium beauty salon landing with an AI-powered booking assistant that handles appointments through natural conversation, master availability checking, and instant confirmation.",
+        additionalInfo:
+          "Multi-theme salon platform with Gemini AI booking agent, Supabase auth, master scheduling, and Telegram notifications · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
       },
     },
 
@@ -1355,6 +1410,14 @@ export const translations: Record<
         result:
           "Całkowite wyeliminowanie zależności od programistów przy tworzeniu formularzy. Czas wprowadzenia produktu na rynek skrócony z kilku tygodni do kilku godzin.",
       },
+      aurabeauty: {
+        challenge:
+          "Beauty salons rely on phone or manual form bookings — a friction-heavy process that loses clients who want to book outside business hours. Staff spend significant time on routine scheduling, and there is no intelligent layer to handle availability conflicts or master disambiguation.",
+        solution:
+          "Built a full-stack salon platform with an agentic AI booking assistant powered by Gemini. The assistant conducts natural multi-turn conversations, checks real-time master availability from Supabase, handles disambiguation when multiple masters share a first name, and confirms bookings atomically with Telegram notifications.",
+        result:
+          "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero. Master availability conflicts are eliminated through real-time slot locking.",
+      },
     },
 
     // Projects data
@@ -1427,6 +1490,13 @@ export const translations: Record<
           "Nowoczesna strona agencji tworzenia stron internetowych z eleganckim designem, płynnymi animacjami i responsywnym układem.",
         additionalInfo:
           "Kreatywna strona docelowa agencji z nowoczesnymi animacjami i premiumowym designem · NextJS, TypeScript, TailwindCSS",
+      },
+      aurabeauty: {
+        title: "Aura Beauty Salon — Platforma rezerwacji AI",
+        description:
+          "Premium landing salonu piękności z asystentem rezerwacji AI, który obsługuje wizyty przez naturalną rozmowę, sprawdza dostępność mistrzów i natychmiastowo potwierdza rezerwacje.",
+        additionalInfo:
+          "Wielomotywowa platforma salonowa z agentem AI Gemini, Supabase, harmonogramem mistrzów i powiadomieniami Telegram · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
       },
     },
 
@@ -1677,6 +1747,14 @@ export const translations: Record<
         result:
           "Completa eliminazione della dipendenza dagli sviluppatori nella creazione di moduli. Time-to-Market ridotto da diverse settimane a poche ore.",
       },
+      aurabeauty: {
+        challenge:
+          "Beauty salons rely on phone or manual form bookings — a friction-heavy process that loses clients who want to book outside business hours. Staff spend significant time on routine scheduling, and there is no intelligent layer to handle availability conflicts or master disambiguation.",
+        solution:
+          "Built a full-stack salon platform with an agentic AI booking assistant powered by Gemini. The assistant conducts natural multi-turn conversations, checks real-time master availability from Supabase, handles disambiguation when multiple masters share a first name, and confirms bookings atomically with Telegram notifications.",
+        result:
+          "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero. Master availability conflicts are eliminated through real-time slot locking.",
+      },
     },
 
     // Projects data
@@ -1749,6 +1827,13 @@ export const translations: Record<
           "Sito web moderno di un'agenzia di sviluppo web con design elegante, animazioni fluide e layout responsive.",
         additionalInfo:
           "Landing page creativa per agenzia con animazioni moderne e design premium · NextJS, TypeScript, TailwindCSS",
+      },
+      aurabeauty: {
+        title: "Aura Beauty Salon — Piattaforma prenotazioni AI",
+        description:
+          "Landing premium per salone di bellezza con assistente prenotazione AI che gestisce appuntamenti tramite conversazione naturale, verifica disponibilità dei maestri e conferma istantaneamente.",
+        additionalInfo:
+          "Piattaforma salone multi-tema con agente AI Gemini, Supabase, pianificazione maestri e notifiche Telegram · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
       },
     },
 
@@ -1999,6 +2084,14 @@ export const translations: Record<
         result:
           "Élimination complète de la dépendance aux développeurs lors de la création de formulaires. Time-to-Market réduit de plusieurs semaines à quelques heures.",
       },
+      aurabeauty: {
+        challenge:
+          "Les salons de beauté dépendent des appels téléphoniques ou des formulaires manuels pour les réservations — un processus contraignant qui fait perdre des clients souhaitant prendre rendez-vous en dehors des heures d'ouverture. Le personnel consacre beaucoup de temps aux appels de planification routiniers.",
+        solution:
+          "Création d'une plateforme salon complète avec un assistant de réservation IA agentique propulsé par Gemini. L'assistant mène des conversations naturelles en plusieurs tours, vérifie la disponibilité des maîtres en temps réel via Supabase, gère la désambiguïsation et confirme les réservations avec des notifications Telegram.",
+        result:
+          "Les clients réservent 24h/24 via une interface conversationnelle en moins de deux minutes. L'agent IA réduit la charge de planification à presque zéro. Les conflits de disponibilité sont éliminés grâce au verrouillage des créneaux en temps réel.",
+      },
     },
 
     // Projects data
@@ -2071,6 +2164,13 @@ export const translations: Record<
           "Site web moderne d'une agence de développement web avec un design élégant, des animations fluides et une mise en page responsive.",
         additionalInfo:
           "Page d'accueil créative pour agence avec des animations modernes et un design premium · NextJS, TypeScript, TailwindCSS",
+      },
+      aurabeauty: {
+        title: "Aura Beauty Salon — Plateforme de réservation IA",
+        description:
+          "Landing premium pour salon de beauté avec un assistant de réservation IA qui gère les rendez-vous par conversation naturelle, vérifie la disponibilité des maîtres et confirme instantanément.",
+        additionalInfo:
+          "Plateforme salon multi-thème avec agent IA Gemini, Supabase, planification des maîtres et notifications Telegram · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
       },
     },
 
