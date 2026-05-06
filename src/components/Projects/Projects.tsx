@@ -89,7 +89,6 @@ export const Projects = () => {
         <div
           className={style.projectsWrapper}
           ref={gridRef}
-          style={activeId !== null ? { gridAutoRows: "auto" } : undefined}
         >
           {projects.map((item, index) => {
             const isActive = activeId === item.id;
@@ -108,12 +107,7 @@ export const Projects = () => {
               // so React won't wipe the `animate-in` class added by IntersectionObserver
               <div
                 key={item.id}
-                className={`animate-on-scroll scale-in stagger-${Math.min((index % 3) + 1, 5)}`}
-                style={
-                  isActive
-                    ? { gridColumn: "1 / -1", height: "auto" }
-                    : undefined
-                }
+                className={`animate-on-scroll scale-in stagger-${Math.min((index % 3) + 1, 5)} ${isActive ? style.cardItemActive : style.cardItem}`}
               >
                 <div
                   data-flip-id={`card-${item.id}`}
