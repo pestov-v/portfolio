@@ -107,7 +107,7 @@ export const Projects = () => {
               // so React won't wipe the `animate-in` class added by IntersectionObserver
               <div
                 key={item.id}
-                className={`animate-on-scroll scale-in stagger-${Math.min((index % 3) + 1, 5)} ${isActive ? style.cardItemActive : style.cardItem}`}
+                className={`animate-on-scroll scale-in stagger-${Math.min((index % 3) + 1, 5)} ${isActive ? `${style.cardItemActive} animate-in` : style.cardItem}`}
               >
                 <div
                   data-flip-id={`card-${item.id}`}
