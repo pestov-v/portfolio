@@ -289,7 +289,7 @@ export const _projects: TProjects = [
     title: "JSONtoJSX — AI-Powered Schema Engine & Playground",
     description:
       "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating and editing components through natural language prompts.",
-    href: "https://github.com/pestov-v/jsontojsx",
+    href: "https://create-components-gules.vercel.app",
     image: "jsontojsx",
     alt: "JSONtoJSX Schema Engine Playground",
     additionalInfo:
