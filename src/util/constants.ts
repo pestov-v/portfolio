@@ -341,6 +341,80 @@ export const _projects: TProjects = [
     },
   },
   {
+    id: 22,
+    translationKey: "careconnect",
+    title: "CareConnect — Specialist Marketplace",
+    description:
+      "Two-sided marketplace for finding and booking verified home care specialists — nannies, nurses, cleaners, and caregivers — with Elasticsearch search, real-time chat, and Stripe payments.",
+    href: "https://web-production-fcf11.up.railway.app/",
+    image: "careconnect",
+    alt: "CareConnect Specialist Marketplace",
+    additionalInfo:
+      "Turborepo monorepo · Elasticsearch geo-search · Booking lifecycle · Real-time chat · Stripe payouts · FREE/PRO subscriptions",
+    technologies: [
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "TailwindCSS",
+      "Postgres",
+      "Elasticsearch",
+      "Stripe",
+    ],
+    caseStudy: {
+      challenge:
+        "People needing home care services — nannies, nurses, cleaners, caregivers — had no centralised platform to discover, compare, and book verified specialists. Service seekers relied on word-of-mouth or unverified classifieds. Specialists had no tools for availability management, rate setting, or getting paid. Payment, scheduling, and communication were entirely manual and fragmented across channels.",
+      solution:
+        "Built a full-stack two-sided marketplace with Elasticsearch-powered search and geo-distance filtering. Clients search by category, city, hourly or daily rate, minimum rating, and specialist attributes (can live in, works nights, has own transport, verified). The booking engine handles the full lifecycle — request → confirm → in-progress → complete — with automated Stripe payments and specialist payouts on completion. Each booking gets an attached real-time chat room. Specialists manage weekly availability, add qualification documents, and upgrade to PRO for priority search placement and unlimited monthly bookings. An admin panel moderates specialist profiles before they appear in results.",
+      result:
+        "End-to-end hiring flow from search to payout in one platform. Elasticsearch delivers sub-second specialist search with geo-radius filtering and relevance boosting for PRO subscribers. Stripe payouts automate specialist payments on booking completion, eliminating manual transfers. The FREE/PRO subscription model creates a monetisation layer with measurable upgrade incentive — PRO specialists appear above FREE ones in all search results.",
+      technologies: [
+        "Next.js",
+        "NestJS",
+        "TypeScript",
+        "TailwindCSS",
+        "Postgres",
+        "Elasticsearch",
+        "Stripe",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[Client] -->|Searches specialists| B(Elasticsearch)
+
+    subgraph "Discovery Layer"
+    B --> C{Filters: city, rate, rating, category}
+    C --> D[Geo-distance radius]
+    D --> E[Ranked results: PRO first]
+    end
+
+    subgraph "Booking Lifecycle"
+    E --> F[Booking Request - PENDING]
+    F -->|Specialist accepts| G[CONFIRMED]
+    G --> H[IN_PROGRESS]
+    H -->|Marked complete| I[COMPLETED]
+    end
+
+    subgraph "Payments"
+    G --> J[Stripe Payment Intent]
+    I --> K[Stripe Payout to Specialist]
+    end
+
+    subgraph "Communication"
+    F --> L[Chat Room created]
+    L --> M[Real-time messages]
+    end
+
+    subgraph "Admin Layer"
+    N[Admin] --> O[Moderate profiles]
+    O -->|Approve| P[Indexed in Elasticsearch]
+    end`,
+          caption:
+            "Platform architecture: Elasticsearch handles discovery with geo-filtering and PRO-tier boosting; the booking engine drives the full lifecycle from request to payout; each booking spawns a real-time chat room; admin moderation gates every specialist before they enter search results.",
+        },
+      ],
+    },
+  },
+  {
     id: 20,
     translationKey: "aurabeauty",
     title: "Aura Beauty Salon — AI Booking Platform",

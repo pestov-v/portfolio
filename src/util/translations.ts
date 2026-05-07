@@ -140,6 +140,11 @@ export interface Translation {
       solution: string;
       result: string;
     };
+    careconnect: {
+      challenge: string;
+      solution: string;
+      result: string;
+    };
   };
 
   // Projects data
@@ -200,6 +205,11 @@ export interface Translation {
       additionalInfo: string;
     };
     jsontojsx: {
+      title: string;
+      description: string;
+      additionalInfo: string;
+    };
+    careconnect: {
       title: string;
       description: string;
       additionalInfo: string;
@@ -427,6 +437,14 @@ export const translations: Record<
         result:
           "From a single natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The Form node handles all Mantine v7 input variants with correct onChange signatures. The pipeline is covered by 174 automated tests.",
       },
+      careconnect: {
+        challenge:
+          "People needing home care services — nannies, nurses, cleaners, caregivers — had no centralised platform to discover, compare, and book verified specialists. Service seekers relied on word-of-mouth or unverified classifieds. Specialists had no tools for availability management, rate setting, or getting paid. Payment, scheduling, and communication were entirely manual and fragmented.",
+        solution:
+          "Built a full-stack two-sided marketplace with Elasticsearch-powered search and geo-distance filtering. Clients search by category, city, rate range, rating, and specialist attributes (can live in, works nights, has own transport). The booking engine handles the full lifecycle — request → confirm → in-progress → complete — with Stripe payments and automatic payouts on completion. Each booking spawns a real-time chat room. Specialists manage availability, upload qualifications, and upgrade to PRO for priority placement and unlimited monthly bookings. An admin panel moderates profiles before they enter search results.",
+        result:
+          "End-to-end hiring flow from discovery to payout in one platform. Elasticsearch delivers sub-second search with geo-radius filtering and PRO-tier boosting. Stripe automates specialist payouts on booking completion. The FREE/PRO subscription model creates a monetisation layer with a measurable upgrade incentive.",
+      },
     },
 
     // Projects data
@@ -513,6 +531,13 @@ export const translations: Record<
           "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating and editing components through natural language.",
         additionalInfo:
           "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
+      },
+      careconnect: {
+        title: "CareConnect — Specialist Marketplace",
+        description:
+          "Two-sided marketplace for finding and booking verified home care specialists — nannies, nurses, cleaners, and caregivers — with Elasticsearch search, real-time chat, and Stripe payments.",
+        additionalInfo:
+          "Turborepo monorepo · Elasticsearch geo-search · Booking lifecycle · Real-time chat · Stripe payouts · FREE/PRO subscriptions · Next.js, NestJS, TypeScript, Postgres",
       },
     },
 
@@ -779,6 +804,14 @@ export const translations: Record<
         result:
           "Від природномовного промпту до живого React-прев'ю та production-готового TSX за секунди — включно з повним управлінням станом форми. Form node обробляє всі варіанти Mantine v7 інпутів з правильними сигнатурами onChange. Пайплайн покритий 174 автотестами.",
       },
+      careconnect: {
+        challenge:
+          "Люди, що шукають послуги догляду вдома — няні, медсестри, прибиральниці, доглядальники — не мали централізованої платформи для пошуку, порівняння та бронювання перевірених спеціалістів. Замовники покладались на сарафанне радіо чи неперевірені оголошення. Спеціалісти не мали інструментів для управління зайнятістю, ставками та отримання оплати.",
+        solution:
+          "Розроблено повнофункціональний двосторонній маркетплейс з Elasticsearch-пошуком та гео-фільтрацією. Клієнти шукають за категорією, містом, ставкою, рейтингом та атрибутами (може проживати у клієнта, працює вночі, має власний транспорт). Модуль бронювання охоплює повний цикл — запит → підтвердження → в процесі → завершено — з Stripe-платежами та автоматичними виплатами спеціалістам. Кожне бронювання має прикріплений чат у реальному часі. Спеціалісти управляють графіком, додають кваліфікації та переходять на PRO для пріоритетного розміщення та необмежених бронювань.",
+        result:
+          "Повний цикл найму від пошуку до виплати в одній платформі. Elasticsearch забезпечує пошук за мілісекунди з гео-радіусом та буст PRO-підписників. Stripe автоматизує виплати спеціалістам після завершення бронювання. Модель FREE/PRO підписок створює монетизацію з вимірюваним стимулом до апгрейду.",
+      },
     },
 
     // Projects data
@@ -865,6 +898,13 @@ export const translations: Record<
           "Schema-driven рушій генерації UI, який перетворює JSON-схеми компонентів у живі React-прев'ю та production-готовий TSX-код із AI-playground для генерації та редагування компонентів через природну мову.",
         additionalInfo:
           "Turborepo монорепо · JSON схема → React рендерер · TSX codegen зі станом форми · Мульти-провайдерна AI генерація · 174 тести · Next.js, TypeScript, Mantine, Vitest",
+      },
+      careconnect: {
+        title: "CareConnect — Маркетплейс спеціалістів",
+        description:
+          "Двосторонній маркетплейс для пошуку та бронювання перевірених спеціалістів домашнього догляду — нянь, медсестер, прибиральниць та доглядальників — з Elasticsearch-пошуком, чатом у реальному часі та Stripe-платежами.",
+        additionalInfo:
+          "Turborepo монорепо · Elasticsearch гео-пошук · Цикл бронювання · Чат реального часу · Stripe виплати · FREE/PRO підписки · Next.js, NestJS, TypeScript, Postgres",
       },
     },
 
@@ -1130,6 +1170,14 @@ export const translations: Record<
         result:
           "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
       },
+      careconnect: {
+        challenge:
+          "People needing home care services — nannies, nurses, cleaners, caregivers — had no centralised platform to discover, compare, and book verified specialists. Service seekers relied on word-of-mouth or unverified classifieds. Specialists had no tools for availability management, rate setting, or getting paid.",
+        solution:
+          "Built a full-stack two-sided marketplace with Elasticsearch-powered search and geo-distance filtering. Clients search by category, city, rate range, rating, and specialist attributes. The booking engine handles the full lifecycle with Stripe payments and automatic payouts on completion. Each booking spawns a real-time chat room. Specialists manage availability, upload qualifications, and upgrade to PRO for priority placement.",
+        result:
+          "End-to-end hiring flow from discovery to payout in one platform. Elasticsearch delivers sub-second search with geo-radius filtering and PRO-tier boosting. Stripe automates specialist payouts on booking completion. The FREE/PRO subscription model creates a monetisation layer with a measurable upgrade incentive.",
+      },
     },
 
     // Projects data
@@ -1216,6 +1264,13 @@ export const translations: Record<
           "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
         additionalInfo:
           "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
+      },
+      careconnect: {
+        title: "CareConnect — Specialist Marketplace",
+        description:
+          "Two-sided marketplace for finding and booking verified home care specialists — nannies, nurses, cleaners, and caregivers — with Elasticsearch search, real-time chat, and Stripe payments.",
+        additionalInfo:
+          "Turborepo monorepo · Elasticsearch geo-search · Booking lifecycle · Real-time chat · Stripe payouts · FREE/PRO subscriptions · Next.js, NestJS, TypeScript, Postgres",
       },
     },
 
@@ -1481,6 +1536,14 @@ export const translations: Record<
         result:
           "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
       },
+      careconnect: {
+        challenge:
+          "People needing home care services — nannies, nurses, cleaners, caregivers — had no centralised platform to discover, compare, and book verified specialists. Service seekers relied on word-of-mouth or unverified classifieds. Specialists had no tools for availability management, rate setting, or getting paid.",
+        solution:
+          "Built a full-stack two-sided marketplace with Elasticsearch-powered search and geo-distance filtering. Clients search by category, city, rate range, rating, and specialist attributes. The booking engine handles the full lifecycle with Stripe payments and automatic payouts on completion. Each booking spawns a real-time chat room. Specialists manage availability, upload qualifications, and upgrade to PRO for priority placement.",
+        result:
+          "End-to-end hiring flow from discovery to payout in one platform. Elasticsearch delivers sub-second search with geo-radius filtering and PRO-tier boosting. Stripe automates specialist payouts on booking completion. The FREE/PRO subscription model creates a monetisation layer with a measurable upgrade incentive.",
+      },
     },
 
     // Projects data
@@ -1567,6 +1630,13 @@ export const translations: Record<
           "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
         additionalInfo:
           "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
+      },
+      careconnect: {
+        title: "CareConnect — Specialist Marketplace",
+        description:
+          "Two-sided marketplace for finding and booking verified home care specialists — nannies, nurses, cleaners, and caregivers — with Elasticsearch search, real-time chat, and Stripe payments.",
+        additionalInfo:
+          "Turborepo monorepo · Elasticsearch geo-search · Booking lifecycle · Real-time chat · Stripe payouts · FREE/PRO subscriptions · Next.js, NestJS, TypeScript, Postgres",
       },
     },
 
@@ -1833,6 +1903,14 @@ export const translations: Record<
         result:
           "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
       },
+      careconnect: {
+        challenge:
+          "People needing home care services — nannies, nurses, cleaners, caregivers — had no centralised platform to discover, compare, and book verified specialists. Service seekers relied on word-of-mouth or unverified classifieds. Specialists had no tools for availability management, rate setting, or getting paid.",
+        solution:
+          "Built a full-stack two-sided marketplace with Elasticsearch-powered search and geo-distance filtering. Clients search by category, city, rate range, rating, and specialist attributes. The booking engine handles the full lifecycle with Stripe payments and automatic payouts on completion. Each booking spawns a real-time chat room. Specialists manage availability, upload qualifications, and upgrade to PRO for priority placement.",
+        result:
+          "End-to-end hiring flow from discovery to payout in one platform. Elasticsearch delivers sub-second search with geo-radius filtering and PRO-tier boosting. Stripe automates specialist payouts on booking completion. The FREE/PRO subscription model creates a monetisation layer with a measurable upgrade incentive.",
+      },
     },
 
     // Projects data
@@ -1919,6 +1997,13 @@ export const translations: Record<
           "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
         additionalInfo:
           "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
+      },
+      careconnect: {
+        title: "CareConnect — Specialist Marketplace",
+        description:
+          "Two-sided marketplace for finding and booking verified home care specialists — nannies, nurses, cleaners, and caregivers — with Elasticsearch search, real-time chat, and Stripe payments.",
+        additionalInfo:
+          "Turborepo monorepo · Elasticsearch geo-search · Booking lifecycle · Real-time chat · Stripe payouts · FREE/PRO subscriptions · Next.js, NestJS, TypeScript, Postgres",
       },
     },
 
@@ -2185,6 +2270,14 @@ export const translations: Record<
         result:
           "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
       },
+      careconnect: {
+        challenge:
+          "People needing home care services — nannies, nurses, cleaners, caregivers — had no centralised platform to discover, compare, and book verified specialists. Service seekers relied on word-of-mouth or unverified classifieds. Specialists had no tools for availability management, rate setting, or getting paid.",
+        solution:
+          "Built a full-stack two-sided marketplace with Elasticsearch-powered search and geo-distance filtering. Clients search by category, city, rate range, rating, and specialist attributes. The booking engine handles the full lifecycle with Stripe payments and automatic payouts on completion. Each booking spawns a real-time chat room. Specialists manage availability, upload qualifications, and upgrade to PRO for priority placement.",
+        result:
+          "End-to-end hiring flow from discovery to payout in one platform. Elasticsearch delivers sub-second search with geo-radius filtering and PRO-tier boosting. Stripe automates specialist payouts on booking completion. The FREE/PRO subscription model creates a monetisation layer with a measurable upgrade incentive.",
+      },
     },
 
     // Projects data
@@ -2271,6 +2364,13 @@ export const translations: Record<
           "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
         additionalInfo:
           "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
+      },
+      careconnect: {
+        title: "CareConnect — Specialist Marketplace",
+        description:
+          "Two-sided marketplace for finding and booking verified home care specialists — nannies, nurses, cleaners, and caregivers — with Elasticsearch search, real-time chat, and Stripe payments.",
+        additionalInfo:
+          "Turborepo monorepo · Elasticsearch geo-search · Booking lifecycle · Real-time chat · Stripe payouts · FREE/PRO subscriptions · Next.js, NestJS, TypeScript, Postgres",
       },
     },
 
