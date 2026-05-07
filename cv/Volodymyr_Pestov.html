@@ -70,6 +70,7 @@
 
       .contact-section .contacts {
         display: flex;
+        flex-direction: column;
         gap: 4px;
       }
 
@@ -100,6 +101,8 @@
       }
 
       .contact-item.email {
+        /* display: flex;
+        flex-direction: column; */
         font-size: 0.75rem;
       }
 
@@ -194,7 +197,7 @@
         margin-bottom: 0.25rem;
         padding-left: 1rem;
         position: relative;
-        line-height: 1.6;
+        line-height: 1.5;
       }
 
       .achievements li:before {
@@ -379,6 +382,7 @@
           <div class="contacts">
             <div class="contact-item phone">+380 970 097 343</div>
             <div class="contact-item email">
+              <a href="mailto:dev@pestov.pro">dev@pestov.pro,</a>
               <a href="mailto:pestov.volodymyr@gmail.com"
                 >pestov.volodymyr@gmail.com</a
               >
