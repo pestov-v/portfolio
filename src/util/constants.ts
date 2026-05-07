@@ -30,6 +30,75 @@ export type TProjects = IProject[];
 
 export const _projects: TProjects = [
   {
+    id: 21,
+    translationKey: "jsontojsx",
+    title: "JSONtoJSX — AI-Powered Schema Engine & Playground",
+    description:
+      "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating and editing components through natural language prompts.",
+    href: "https://github.com/pestov-v/jsontojsx",
+    image: "jsontojsx",
+    alt: "JSONtoJSX Schema Engine Playground",
+    additionalInfo:
+      "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Mantine",
+      "Turborepo",
+      "Vitest",
+    ],
+    caseStudy: {
+      challenge:
+        "Prototyping UI components requires context-switching between design tools, code editors, and AI chat interfaces — with no direct path from a high-level component description to deployable code. Generating forms in particular is error-prone: AI tools produce markup without state management, missing <form> elements, and no controlled inputs — code that looks correct but cannot be dropped into a React project without significant manual rework.",
+      solution:
+        "Built a schema engine that sits between AI output and production code. A JSON schema format describes components declaratively, including a Form node type that encodes field definitions alongside the UI tree. The engine has two output paths: a live React renderer for instant preview, and a TSX codegen pipeline that emits fully typed interfaces, useState hooks, curried handleChange callbacks, and handleSubmit functions from the same schema. An AI playground integrates three LLM providers (Gemini, OpenAI, Anthropic), supports multi-variant generation with a picker UI, and includes prompt-based editing. All identifiers interpolated into generated code are validated to prevent code injection.",
+      result:
+        "From a single natural language prompt to a running React preview and copy-pasteable production TSX in seconds — including complete form state management. The schema engine pipeline is covered by 174 automated tests. The Form node type handles all Mantine v7 input variants: event-based, value-direct, and checked inputs, with the correct onChange signature for each.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Mantine",
+        "Turborepo",
+        "Vitest",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[Natural Language Prompt] -->|AI Playground| B(Multi-provider AI Layer)
+
+    subgraph "AI Layer"
+    B --> C{Gemini / OpenAI / Anthropic}
+    C -->|Single mode| D[Schema JSON]
+    C -->|Variants mode| E[3 Schema Variants]
+    E -->|User picks| D
+    end
+
+    subgraph "Schema Engine"
+    D --> F[Schema Validator]
+    F --> G{Output Path}
+    G -->|Live preview| H[React Renderer]
+    G -->|Code export| I[TSX Codegen]
+    end
+
+    subgraph "React Renderer"
+    H --> J[Component Registry]
+    J --> K[FormProvider Context]
+    K --> L[Controlled Inputs]
+    end
+
+    subgraph "TSX Codegen"
+    I --> M[TS Interface]
+    I --> N[useState Hook]
+    I --> O[handleChange + handleSubmit]
+    M & N & O --> P[Production TSX File]
+    end`,
+          caption:
+            "Schema engine pipeline: a natural language prompt flows through an AI layer into a validated JSON schema, which branches into a live React renderer for instant preview and a TSX codegen pipeline that emits fully typed, stateful component code ready for production.",
+        },
+      ],
+    },
+  },
+  {
     id: 19,
     translationKey: "collabpulse",
     title: "CollabPulse - Micro-collaboration Platform",

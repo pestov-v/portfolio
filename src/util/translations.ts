@@ -135,6 +135,11 @@ export interface Translation {
       solution: string;
       result: string;
     };
+    jsontojsx: {
+      challenge: string;
+      solution: string;
+      result: string;
+    };
   };
 
   // Projects data
@@ -190,6 +195,11 @@ export interface Translation {
       additionalInfo: string;
     };
     aurabeauty: {
+      title: string;
+      description: string;
+      additionalInfo: string;
+    };
+    jsontojsx: {
       title: string;
       description: string;
       additionalInfo: string;
@@ -409,6 +419,14 @@ export const translations: Record<
         result:
           "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero for routine appointments. Master availability conflicts are eliminated through real-time slot locking.",
       },
+      jsontojsx: {
+        challenge:
+          "Prototyping UI components requires context-switching between design tools, code editors, and AI chat interfaces — with no direct path from a high-level description to deployable code. AI tools generate form markup without state management, missing form elements, and no controlled inputs — code that looks correct but cannot be dropped into a React project without significant manual rework.",
+        solution:
+          "Built a schema engine that sits between AI output and production code. A JSON schema format describes components declaratively, including a Form node type that encodes field definitions alongside the UI tree. The engine has two output paths: a live React renderer for instant preview, and a TSX codegen pipeline that emits fully typed interfaces, useState hooks, curried handleChange callbacks, and handleSubmit functions. An AI playground integrates three LLM providers, supports multi-variant generation, and includes prompt-based editing.",
+        result:
+          "From a single natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The Form node handles all Mantine v7 input variants with correct onChange signatures. The pipeline is covered by 174 automated tests.",
+      },
     },
 
     // Projects data
@@ -488,6 +506,13 @@ export const translations: Record<
           "Premium beauty salon landing with an AI-powered booking assistant that handles appointments through natural conversation, master availability checking, and instant confirmation.",
         additionalInfo:
           "Multi-theme salon platform with Gemini AI booking agent, Supabase auth, master scheduling, and Telegram notifications · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
+      },
+      jsontojsx: {
+        title: "JSONtoJSX — AI-Powered Schema Engine & Playground",
+        description:
+          "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating and editing components through natural language.",
+        additionalInfo:
+          "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
       },
     },
 
@@ -746,6 +771,14 @@ export const translations: Record<
         result:
           "Клієнти записуються 24/7 через розмовний UI менш ніж за дві хвилини. AI-агент зводить навантаження на адміністратора до мінімуму. Конфлікти доступності майстрів усунуті через блокування слотів у реальному часі.",
       },
+      jsontojsx: {
+        challenge:
+          "Прототипування UI-компонентів вимагає перемикання між дизайн-інструментами, редакторами коду та AI-чатами — без прямого шляху від опису до готового коду. AI-інструменти генерують розмітку форм без стану, без тегу form та без контрольованих інпутів — код, який виглядає правильно, але не можна вставити в React-проект без суттєвого доопрацювання.",
+        solution:
+          "Розроблено schema engine, що стоїть між виводом AI та production-кодом. JSON-схема описує компоненти декларативно, включаючи тип Form, який кодує визначення полів разом з UI-деревом. Два шляхи виводу: живий React-рендерер для миттєвого прев'ю та codegen-пайплайн, що генерує типізовані інтерфейси, useState, handleChange та handleSubmit. AI-playground інтегрує три LLM-провайдери з мульти-варіантною генерацією та редагуванням за промптом.",
+        result:
+          "Від природномовного промпту до живого React-прев'ю та production-готового TSX за секунди — включно з повним управлінням станом форми. Form node обробляє всі варіанти Mantine v7 інпутів з правильними сигнатурами onChange. Пайплайн покритий 174 автотестами.",
+      },
     },
 
     // Projects data
@@ -825,6 +858,13 @@ export const translations: Record<
           "Преміальний лендінг б'юті-салону з AI-асистентом для запису, який веде природні діалоги, перевіряє доступність майстрів та миттєво підтверджує запис.",
         additionalInfo:
           "Мультитемна платформа з Gemini AI-агентом, Supabase, розкладом майстрів та Telegram-сповіщеннями · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
+      },
+      jsontojsx: {
+        title: "JSONtoJSX — Schema Engine з AI-Playground",
+        description:
+          "Schema-driven рушій генерації UI, який перетворює JSON-схеми компонентів у живі React-прев'ю та production-готовий TSX-код із AI-playground для генерації та редагування компонентів через природну мову.",
+        additionalInfo:
+          "Turborepo монорепо · JSON схема → React рендерер · TSX codegen зі станом форми · Мульти-провайдерна AI генерація · 174 тести · Next.js, TypeScript, Mantine, Vitest",
       },
     },
 
@@ -1082,6 +1122,14 @@ export const translations: Record<
         result:
           "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero. Master availability conflicts are eliminated through real-time slot locking.",
       },
+      jsontojsx: {
+        challenge:
+          "Prototyping UI components requires context-switching between design tools, code editors, and AI chat interfaces. AI tools generate form markup without state management, missing form elements, and no controlled inputs — code that looks correct but cannot be dropped into a React project without significant manual rework.",
+        solution:
+          "Built a schema engine that sits between AI output and production code. A JSON schema format describes components declaratively, including a Form node type. The engine has two output paths: a live React renderer and a TSX codegen pipeline that emits typed interfaces, useState hooks, and handleChange callbacks. An AI playground integrates three LLM providers with multi-variant generation.",
+        result:
+          "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
+      },
     },
 
     // Projects data
@@ -1161,6 +1209,13 @@ export const translations: Record<
           "Premium beauty salon landing with an AI-powered booking assistant that handles appointments through natural conversation, master availability checking, and instant confirmation.",
         additionalInfo:
           "Multi-theme salon platform with Gemini AI booking agent, Supabase auth, master scheduling, and Telegram notifications · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
+      },
+      jsontojsx: {
+        title: "JSONtoJSX — AI-Powered Schema Engine & Playground",
+        description:
+          "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
+        additionalInfo:
+          "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
       },
     },
 
@@ -1418,6 +1473,14 @@ export const translations: Record<
         result:
           "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero. Master availability conflicts are eliminated through real-time slot locking.",
       },
+      jsontojsx: {
+        challenge:
+          "Prototyping UI components requires context-switching between design tools, code editors, and AI chat interfaces. AI tools generate form markup without state management, missing form elements, and no controlled inputs — code that looks correct but cannot be dropped into a React project without significant manual rework.",
+        solution:
+          "Built a schema engine that sits between AI output and production code. A JSON schema format describes components declaratively, including a Form node type. The engine has two output paths: a live React renderer and a TSX codegen pipeline that emits typed interfaces, useState hooks, and handleChange callbacks. An AI playground integrates three LLM providers with multi-variant generation.",
+        result:
+          "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
+      },
     },
 
     // Projects data
@@ -1497,6 +1560,13 @@ export const translations: Record<
           "Premium landing salonu piękności z asystentem rezerwacji AI, który obsługuje wizyty przez naturalną rozmowę, sprawdza dostępność mistrzów i natychmiastowo potwierdza rezerwacje.",
         additionalInfo:
           "Wielomotywowa platforma salonowa z agentem AI Gemini, Supabase, harmonogramem mistrzów i powiadomieniami Telegram · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
+      },
+      jsontojsx: {
+        title: "JSONtoJSX — AI-Powered Schema Engine & Playground",
+        description:
+          "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
+        additionalInfo:
+          "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
       },
     },
 
@@ -1755,6 +1825,14 @@ export const translations: Record<
         result:
           "Clients book 24/7 through a conversational UI in under two minutes. The AI agent reduces front-desk scheduling load to near zero. Master availability conflicts are eliminated through real-time slot locking.",
       },
+      jsontojsx: {
+        challenge:
+          "Prototyping UI components requires context-switching between design tools, code editors, and AI chat interfaces. AI tools generate form markup without state management, missing form elements, and no controlled inputs — code that looks correct but cannot be dropped into a React project without significant manual rework.",
+        solution:
+          "Built a schema engine that sits between AI output and production code. A JSON schema format describes components declaratively, including a Form node type. The engine has two output paths: a live React renderer and a TSX codegen pipeline that emits typed interfaces, useState hooks, and handleChange callbacks. An AI playground integrates three LLM providers with multi-variant generation.",
+        result:
+          "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
+      },
     },
 
     // Projects data
@@ -1834,6 +1912,13 @@ export const translations: Record<
           "Landing premium per salone di bellezza con assistente prenotazione AI che gestisce appuntamenti tramite conversazione naturale, verifica disponibilità dei maestri e conferma istantaneamente.",
         additionalInfo:
           "Piattaforma salone multi-tema con agente AI Gemini, Supabase, pianificazione maestri e notifiche Telegram · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
+      },
+      jsontojsx: {
+        title: "JSONtoJSX — AI-Powered Schema Engine & Playground",
+        description:
+          "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
+        additionalInfo:
+          "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
       },
     },
 
@@ -2092,6 +2177,14 @@ export const translations: Record<
         result:
           "Les clients réservent 24h/24 via une interface conversationnelle en moins de deux minutes. L'agent IA réduit la charge de planification à presque zéro. Les conflits de disponibilité sont éliminés grâce au verrouillage des créneaux en temps réel.",
       },
+      jsontojsx: {
+        challenge:
+          "Prototyping UI components requires context-switching between design tools, code editors, and AI chat interfaces. AI tools generate form markup without state management, missing form elements, and no controlled inputs — code that looks correct but cannot be dropped into a React project without significant manual rework.",
+        solution:
+          "Built a schema engine that sits between AI output and production code. A JSON schema format describes components declaratively, including a Form node type. The engine has two output paths: a live React renderer and a TSX codegen pipeline that emits typed interfaces, useState hooks, and handleChange callbacks. An AI playground integrates three LLM providers with multi-variant generation.",
+        result:
+          "From a natural language prompt to a running React preview and production-ready TSX in seconds — including complete form state management. The pipeline is covered by 174 automated tests.",
+      },
     },
 
     // Projects data
@@ -2171,6 +2264,13 @@ export const translations: Record<
           "Landing premium pour salon de beauté avec un assistant de réservation IA qui gère les rendez-vous par conversation naturelle, vérifie la disponibilité des maîtres et confirme instantanément.",
         additionalInfo:
           "Plateforme salon multi-thème avec agent IA Gemini, Supabase, planification des maîtres et notifications Telegram · Next.js, Supabase, Gemini AI, TypeScript, TailwindCSS",
+      },
+      jsontojsx: {
+        title: "JSONtoJSX — AI-Powered Schema Engine & Playground",
+        description:
+          "A schema-driven UI generation engine that converts JSON component schemas into live React previews and production-ready TSX code, with an AI-powered playground for generating components through natural language.",
+        additionalInfo:
+          "Turborepo monorepo · JSON schema → React renderer · TSX codegen with Form state · Multi-provider AI generation · 174 tests · Next.js, TypeScript, Mantine, Vitest",
       },
     },
 
