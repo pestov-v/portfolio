@@ -487,7 +487,7 @@ export const translations: Record<
       hostel: {
         title: "Hostel management system",
         description:
-          "Complete hostel management solution with room booking, guest registration, and administrative dashboard for accommodation facilities.",
+          "Complete hostel management solution with room booking, guest registration, and administrative dashboard for accommodation facilities. Supports partner program integration with payments through partners, including discount management and bonus accrual features.",
         additionalInfo:
           "Full-stack booking system with real-time availability, guest management, and reservation tracking · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
@@ -854,7 +854,7 @@ export const translations: Record<
       hostel: {
         title: "Система управління хостелом",
         description:
-          "Повноцінне рішення для управління хостелом з бронюванням кімнат, реєстрацією гостей та адміністративним дашбордом для об'єктів розміщення.",
+          "Повноцінне рішення для управління хостелом з бронюванням кімнат, реєстрацією гостей та адміністративним дашбордом для об'єктів розміщення. Підтримує підключення партнерської програми з проведенням оплат через партнера, включаючи управління знижками та нарахування бонусів.",
         additionalInfo:
           "Full-stack система бронювання з доступністю в реальному часі, управлінням гостями та відстеженням резервацій · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
@@ -1220,7 +1220,7 @@ export const translations: Record<
       hostel: {
         title: "Система за управление на хостел",
         description:
-          "Пълно решение за управление на хостел с резервация на стаи, регистрация на гости и административно табло за места за настаняване.",
+          "Пълно решение за управление на хостел с резервация на стаи, регистрация на гости и административно табло за места за настаняване. Поддържа интеграция на партньорска програма с плащания чрез партньор, включително управление на отстъпки и начисляване на бонуси.",
         additionalInfo:
           "Fullstack система за резервации с наличност в реално време, управление на гости и проследяване на резервации · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
@@ -1586,7 +1586,7 @@ export const translations: Record<
       hostel: {
         title: "System zarządzania hostelem",
         description:
-          "Kompletne rozwiązanie do zarządzania hostelem z rezerwacją pokoi, rejestracją gości i panelem administracyjnym dla obiektów noclegowych.",
+          "Kompletne rozwiązanie do zarządzania hostelem z rezerwacją pokoi, rejestracją gości i panelem administracyjnym dla obiektów noclegowych. Obsługuje integrację programu partnerskiego z płatnościami przez partnera, w tym zarządzanie rabatami i naliczanie bonusów.",
         additionalInfo:
           "Fullstack system rezerwacji z dostępnością w czasie rzeczywistym, zarządzaniem gośćmi i śledzeniem rezerwacji · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
@@ -1953,7 +1953,7 @@ export const translations: Record<
       hostel: {
         title: "Sistema di gestione ostello",
         description:
-          "Soluzione completa per la gestione di ostelli con prenotazione camere, registrazione ospiti e dashboard amministrativa per strutture ricettive.",
+          "Soluzione completa per la gestione di ostelli con prenotazione camere, registrazione ospiti e dashboard amministrativa per strutture ricettive. Supporta l'integrazione di programmi partner con pagamenti tramite partner, inclusa la gestione degli sconti e l'accumulo di bonus.",
         additionalInfo:
           "Fullstack sistema di prenotazione con disponibilità in tempo reale, gestione ospiti e tracciamento prenotazioni · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
@@ -2320,7 +2320,7 @@ export const translations: Record<
       hostel: {
         title: "Système de gestion d'auberge",
         description:
-          "Solution complète de gestion d'auberge avec réservation de chambres, enregistrement des clients et tableau de bord administratif pour les établissements d'hébergement.",
+          "Solution complète de gestion d'auberge avec réservation de chambres, enregistrement des clients et tableau de bord administratif pour les établissements d'hébergement. Prend en charge l'intégration d'un programme partenaire avec paiements via partenaire, incluant la gestion des remises et l'accumulation de bonus.",
         additionalInfo:
           "Fullstack système de réservation avec disponibilité en temps réel, gestion des clients et suivi des réservations · NextJS, NestJS, TypeScript, TailwindCSS, Postgres, TypeORM",
       },
