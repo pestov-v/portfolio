@@ -115,8 +115,8 @@ export const About = () => {
               <div
                 className="badge-base LI-profile-badge"
                 data-locale="en_US"
-                data-size="large"
-                data-theme="dark"
+                data-size="medium"
+                data-theme="light"
                 data-type="HORIZONTAL"
                 data-vanity="volodymyr-pestov"
                 data-version="v1"
