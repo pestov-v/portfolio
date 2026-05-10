@@ -3,6 +3,7 @@ import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { useTheme } from "../../contexts/ThemeContext";
 import { trackSocialClick } from "../../lib/analytics";
 import ShaderBackground from "../ui/shader-background";
 import style from "./About.module.scss";
@@ -12,6 +13,7 @@ gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
 export const About = () => {
   const { t } = useLanguage();
+  const { resolvedTheme } = useTheme();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -116,7 +118,7 @@ export const About = () => {
                 className="badge-base LI-profile-badge"
                 data-locale="en_US"
                 data-size="medium"
-                data-theme="light"
+                data-theme={resolvedTheme}
                 data-type="HORIZONTAL"
                 data-vanity="volodymyr-pestov"
                 data-version="v1"
