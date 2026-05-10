@@ -4,9 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { trackSocialClick } from "../../lib/analytics";
+import ShaderBackground from "../ui/shader-background";
 import style from "./About.module.scss";
 import { CodeMonitor } from "./CodeMonitor/CodeMonitor";
-import ShaderBackground from "../ui/shader-background";
 
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger);
 
@@ -109,7 +109,25 @@ export const About = () => {
           <div className={style.infoCards}>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>location</span>
-              <span className={style.infoValue}>Nesebar, Bulgaria 🇧🇬</span>
+              <span className={style.infoValue}>Mariehamn, Åland Islands, Finland 🇫🇮</span>
+            </div>
+            <div className={style.infoCard}>
+              <div
+                className="badge-base LI-profile-badge"
+                data-locale="en_US"
+                data-size="large"
+                data-theme="dark"
+                data-type="HORIZONTAL"
+                data-vanity="volodymyr-pestov"
+                data-version="v1"
+              >
+                <a
+                  className="badge-base__link LI-simple-link"
+                  href="https://ax.linkedin.com/in/volodymyr-pestov?trk=profile-badge"
+                >
+                  Pestov Volodymyr
+                </a>
+              </div>
             </div>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>status</span>
@@ -119,7 +137,7 @@ export const About = () => {
             </div>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>email</span>
-              <span className={style.infoValue}>pestov.volodymyr@gmail.com</span>
+              <span className={style.infoValue}>dev@pestov.pro</span>
             </div>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>telegram</span>

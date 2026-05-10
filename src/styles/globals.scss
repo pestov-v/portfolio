@@ -4,6 +4,10 @@
 @use "common";
 @use "scroll-animations";
 
+.badge-base__link {
+  font-family: var(--re-font-sans);
+}
+
 * {
   box-sizing: border-box;
   font: inherit;

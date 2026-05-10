@@ -3,7 +3,14 @@ import { Head, Html, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
+      <Head>
+        <script
+          src="https://platform.linkedin.com/badges/js/profile.js"
+          async
+          defer
+          type="text/javascript"
+        />
+      </Head>
       <body>
         <Main />
         <NextScript />
