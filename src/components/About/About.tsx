@@ -111,7 +111,7 @@ export const About = () => {
           <div className={style.infoCards}>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>location</span>
-              <span className={style.infoValue}>Mariehamn, Åland Islands, Finland 🇫🇮</span>
+              <span className={style.infoValue}>Bulgaria, Nesebar</span>
             </div>
             <div className={style.infoCard}>
               <div
