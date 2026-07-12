@@ -618,12 +618,13 @@ export const translations: Record<
       ukrpay: {
         position: "Senior Full-Stack Developer",
         companyDescription:
-          "Ukrpay is a leading Ukrainian fintech company specializing in end-to-end payment solutions for banks, financial institutions, and merchants. The company builds robust infrastructure for transaction processing, POS terminal management, and merchant ecosystems — powering thousands of daily financial operations across the country.",
+          "Ukrpay is a leading Ukrainian fintech company specializing in end-to-end payment solutions for banks, financial institutions, and merchants — powering thousands of daily transactions across the country.",
         achievements: [
-          "Architected merchant management platform serving 500+ merchants and processing 10,000+ daily transactions with zero downtime during 3x user growth.",
-          "Designed and implemented a reusable component library with 40+ components, cutting feature development time by 40%.",
-          "Optimized application bundle with code-splitting and lazy loading, improving initial page load by 35%.",
-          "Platform scaled 3x with zero architecture rewrites.",
+          "Architected a merchant management platform from scratch, serving 500+ merchants and 10,000+ daily transactions; sustained 3x user growth with zero architecture rewrites.",
+          "Led a frontend team of 3 — introduced TDD, mandatory code review, and style guides, cutting regression bugs by 30% and halving onboarding time.",
+          "Built a JSON Schema-driven no-code dynamic forms engine that cut new product launch time from weeks to hours.",
+          "Set up GitHub Actions / GitLab CI pipelines with Docker-based environment parity, shipping to AWS S3/CloudFront and Vercel.",
+          "Maintained 95+ Lighthouse CI scores for performance and SEO through image optimization and SSR tuning.",
         ],
         tags: [
           "No-Code Form Builder",
@@ -1020,12 +1021,13 @@ export const translations: Record<
       ukrpay: {
         position: "Senior Full-Stack Розробник",
         companyDescription:
-          "Ukrpay — провідна українська фінтех-компанія, що спеціалізується на комплексних платіжних рішеннях для банків, фінансових установ та мерчантів. Компанія будує надійну інфраструктуру для обробки транзакцій, управління POS-терміналами та мерчант-екосистемами — забезпечуючи тисячі щоденних фінансових операцій по всій країні.",
+          "Ukrpay — провідна українська фінтех-компанія, що спеціалізується на комплексних платіжних рішеннях для банків, фінансових установ та мерчантів — забезпечуючи тисячі щоденних транзакцій по всій країні.",
         achievements: [
-          "Архітектура платформи управління мерчантами, що обслуговує 500+ мерчантів та обробляє 10,000+ щоденних транзакцій з нульовим простоєм під час 3x зростання користувачів.",
-          "Розробка та впровадження бібліотеки компонентів з 40+ компонентами, що скоротило час розробки функцій на 40%.",
-          "Оптимізація бандлу додатку з code-splitting та lazy loading, покращення початкового завантаження сторінки на 35%.",
-          "Платформа масштабована в 3x без перепроектування архітектури.",
+          "Спроєктував з нуля платформу управління мерчантами: 500+ мерчантів і 10 000+ транзакцій щодня; витримала 3x зростання користувачів без переписування архітектури.",
+          "Керував фронтенд-командою з 3 розробників — впровадив TDD, обов'язковий код-рев'ю та style guides, що скоротило регресійні баги на 30% і вдвічі пришвидшило онбординг.",
+          "Побудував no-code рушій динамічних форм на базі JSON Schema, що скоротив час запуску нового продукту з тижнів до годин.",
+          "Налаштував пайплайни GitHub Actions / GitLab CI з Docker-паритетом середовищ і деплоєм на AWS S3/CloudFront та Vercel.",
+          "Утримував 95+ балів Lighthouse CI (performance і SEO) завдяки оптимізації зображень та налаштуванню SSR.",
         ],
         tags: [
           "No-Code Form Builder",
@@ -1421,12 +1423,13 @@ export const translations: Record<
       ukrpay: {
         position: "Senior Full-Stack Разработчик",
         companyDescription:
-          "Ukrpay е водеща украинска финтех компания, специализирана в цялостни платежни решения за банки, финансови институции и търговци. Компанията изгражда стабилна инфраструктура за обработка на транзакции, управление на POS терминали и търговски екосистеми — захранвайки хиляди ежедневни финансови операции в цялата страна.",
+          "Ukrpay е водеща украинска финтех компания, специализирана в цялостни платежни решения за банки, финансови институции и търговци — захранвайки хиляди ежедневни транзакции в цялата страна.",
         achievements: [
-          "Архитектура на платформа за управление на търговци, обслужваща 500+ търговци и обработваща 10,000+ дневни транзакции с нулево престой при 3x ръст на потребители.",
-          "Проектиране и внедряване на библиотека от компоненти с 40+ компонента, намаляваща времето за разработка на функции с 40%.",
-          "Оптимизация на пакета на приложението с code-splitting и lazy loading, подобряване на първоначалното зареждане на страницата с 35%.",
-          "Платформата мащабирана 3x без архитектурни преписвания.",
+          "Проектирах от нулата платформа за управление на търговци: 500+ търговци и 10 000+ транзакции дневно; издържа 3x ръст на потребителите без пренаписване на архитектурата.",
+          "Ръководих фронтенд екип от 3 разработчици — въведох TDD, задължителен code review и style guides, което намали регресионните бъгове с 30% и съкрати наполовина онбординга.",
+          "Създадох no-code двигател за динамични форми на базата на JSON Schema, който съкрати пускането на нов продукт от седмици до часове.",
+          "Настроих GitHub Actions / GitLab CI пайплайни с Docker паритет на средите и деплой към AWS S3/CloudFront и Vercel.",
+          "Поддържах 95+ резултати в Lighthouse CI (производителност и SEO) чрез оптимизация на изображения и настройка на SSR.",
         ],
         tags: [
           "No-Code Form Builder",
@@ -1822,12 +1825,13 @@ export const translations: Record<
       ukrpay: {
         position: "Senior Full-Stack Developer",
         companyDescription:
-          "Ukrpay to wiodąca ukraińska firma fintech specjalizująca się w kompleksowych rozwiązaniach płatniczych dla banków, instytucji finansowych i sprzedawców. Firma buduje solidną infrastrukturę do przetwarzania transakcji, zarządzania terminalami POS i ekosystemami handlowymi — obsługując tysiące codziennych operacji finansowych w całym kraju.",
+          "Ukrpay to wiodąca ukraińska firma fintech specjalizująca się w kompleksowych rozwiązaniach płatniczych dla banków, instytucji finansowych i sprzedawców — obsługując tysiące codziennych transakcji w całym kraju.",
         achievements: [
-          "Architektura platformy zarządzania sprzedawcami obsługującej 500+ sprzedawców i przetwarzającej 10 000+ dziennych transakcji z zerowym przestojem przy 3-krotnym wzroście użytkowników.",
-          "Zaprojektowanie i wdrożenie biblioteki komponentów z 40+ komponentami, skracającej czas rozwoju funkcji o 40%.",
-          "Optymalizacja pakietu aplikacji z podziałem kodu i leniwym ładowaniem, poprawiająca początkowe ładowanie strony o 35%.",
-          "Platforma przeskalowana 3x bez przebudowy architektury.",
+          "Zaprojektowałem od zera platformę zarządzania sprzedawcami: 500+ sprzedawców i 10 000+ transakcji dziennie; wytrzymała 3-krotny wzrost użytkowników bez przebudowy architektury.",
+          "Kierowałem 3-osobowym zespołem frontendowym — wprowadziłem TDD, obowiązkowy code review i style guides, co ograniczyło błędy regresji o 30% i skróciło onboarding o połowę.",
+          "Zbudowałem silnik dynamicznych formularzy no-code oparty na JSON Schema, skracając wprowadzenie nowego produktu z tygodni do godzin.",
+          "Skonfigurowałem pipeline'y GitHub Actions / GitLab CI z parytetem środowisk opartym na Dockerze i wdrożeniami na AWS S3/CloudFront oraz Vercel.",
+          "Utrzymywałem wyniki 95+ w Lighthouse CI (wydajność i SEO) dzięki optymalizacji obrazów i strojeniu SSR.",
         ],
         tags: [
           "No-Code Form Builder",
@@ -2224,12 +2228,13 @@ export const translations: Record<
       ukrpay: {
         position: "Senior Full-Stack Developer",
         companyDescription:
-          "Ukrpay è un'azienda fintech ucraina leader specializzata in soluzioni di pagamento end-to-end per banche, istituzioni finanziarie e commercianti. L'azienda costruisce un'infrastruttura robusta per l'elaborazione delle transazioni, la gestione dei terminali POS e gli ecosistemi dei commercianti — alimentando migliaia di operazioni finanziarie quotidiane in tutto il paese.",
+          "Ukrpay è un'azienda fintech ucraina leader specializzata in soluzioni di pagamento end-to-end per banche, istituzioni finanziarie e commercianti — alimentando migliaia di transazioni quotidiane in tutto il paese.",
         achievements: [
-          "Architettura di piattaforma di gestione commercianti che serve 500+ commercianti ed elabora 10.000+ transazioni giornaliere con zero downtime durante una crescita utenti 3x.",
-          "Progettazione e implementazione di una libreria di componenti con 40+ componenti, riducendo i tempi di sviluppo delle funzionalità del 40%.",
-          "Ottimizzazione del bundle dell'applicazione con code-splitting e lazy loading, migliorando il caricamento iniziale della pagina del 35%.",
-          "Piattaforma scalata 3x senza riscritture architetturali.",
+          "Ho progettato da zero una piattaforma di gestione commercianti: 500+ commercianti e 10.000+ transazioni al giorno; ha retto una crescita utenti 3x senza riscritture architetturali.",
+          "Ho guidato un team frontend di 3 sviluppatori — introducendo TDD, code review obbligatoria e style guide, riducendo i bug di regressione del 30% e dimezzando i tempi di onboarding.",
+          "Ho costruito un motore di form dinamici no-code basato su JSON Schema, riducendo il lancio di un nuovo prodotto da settimane a ore.",
+          "Ho configurato pipeline GitHub Actions / GitLab CI con parità degli ambienti basata su Docker, con deploy su AWS S3/CloudFront e Vercel.",
+          "Ho mantenuto punteggi Lighthouse CI 95+ (performance e SEO) tramite ottimizzazione delle immagini e tuning dell'SSR.",
         ],
         tags: [
           "No-Code Form Builder",
@@ -2626,12 +2631,13 @@ export const translations: Record<
       ukrpay: {
         position: "Développeur Full-Stack Senior",
         companyDescription:
-          "Ukrpay est une entreprise fintech ukrainienne leader spécialisée dans les solutions de paiement de bout en bout pour les banques, les institutions financières et les commerçants. L'entreprise construit une infrastructure robuste pour le traitement des transactions, la gestion des terminaux de point de vente et les écosystèmes marchands — alimentant des milliers d'opérations financières quotidiennes à travers le pays.",
+          "Ukrpay est une entreprise fintech ukrainienne leader spécialisée dans les solutions de paiement de bout en bout pour les banques, les institutions financières et les commerçants — alimentant des milliers de transactions quotidiennes à travers le pays.",
         achievements: [
-          "Architecture d'une plateforme de gestion des commerçants servant 500+ commerçants et traitant 10 000+ transactions quotidiennes avec zéro temps d'arrêt lors d'une croissance 3x des utilisateurs.",
-          "Conception et implémentation d'une bibliothèque de composants avec 40+ composants, réduisant le temps de développement des fonctionnalités de 40%.",
-          "Optimisation du bundle de l'application avec le fractionnement de code et le chargement différé, améliorant le chargement initial de la page de 35%.",
-          "Plateforme mise à l'échelle 3x sans réécriture architecturale.",
+          "J'ai conçu de zéro une plateforme de gestion des commerçants : 500+ commerçants et 10 000+ transactions par jour ; elle a absorbé une croissance 3x des utilisateurs sans réécriture architecturale.",
+          "J'ai dirigé une équipe frontend de 3 développeurs — en instaurant le TDD, la revue de code obligatoire et des guides de style, réduisant les bugs de régression de 30% et divisant par deux le temps d'onboarding.",
+          "J'ai construit un moteur de formulaires dynamiques no-code piloté par JSON Schema, faisant passer le lancement d'un nouveau produit de plusieurs semaines à quelques heures.",
+          "J'ai mis en place des pipelines GitHub Actions / GitLab CI avec une parité des environnements basée sur Docker, avec déploiement sur AWS S3/CloudFront et Vercel.",
+          "J'ai maintenu des scores Lighthouse CI de 95+ (performance et SEO) grâce à l'optimisation des images et au réglage du SSR.",
         ],
         tags: [
           "No-Code Form Builder",
