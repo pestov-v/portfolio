@@ -31,12 +31,13 @@ He has built complete full-stack products end-to-end: Hostel Management System, 
 
 ## Work Experience
 
-### Ukrpay (Jan 2023 – Present) — Senior Front-End Developer
-Leading Ukrainian fintech company (payment solutions for banks, merchants).
-- Architected merchant management platform: 500+ merchants, 10,000+ daily transactions, zero downtime during 3x user growth
-- Built reusable component library (40+ components), cutting feature dev time by 40%
-- Optimized bundle with code-splitting & lazy loading — 35% faster initial page load
-- Platform scaled 3x with zero architecture rewrites
+### Ukrpay (Jan 2023 – Present) — Senior Full-Stack Developer
+Leading Ukrainian fintech company (payment solutions for banks, financial institutions, merchants) — thousands of daily transactions across Ukraine.
+- Architected merchant management platform from scratch: 500+ merchants, 10,000+ daily transactions; sustained 3x user growth with zero architecture rewrites
+- Led a frontend team of 3 — introduced TDD, mandatory code review, and style guides, cutting regression bugs by 30% and halving onboarding time
+- Built a JSON Schema-driven no-code dynamic forms engine — new product launch time from weeks to hours
+- Set up GitHub Actions / GitLab CI pipelines with Docker-based environment parity, shipping to AWS S3/CloudFront and Vercel
+- Maintained 95+ Lighthouse CI scores for performance and SEO via image optimization and SSR tuning
 Tags: No-Code Form Builder, Merchant & Sales Platform, Credit Factory, Tax Report Automation, Fintech
 
 ### Atlana (Mar 2022 – Oct 2022) — Front-End Developer
