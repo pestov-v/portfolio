@@ -1,4 +1,5 @@
 import { FC, useCallback, useEffect, useRef, useState } from "react";
+import { useLanguage } from "../../contexts/LanguageContext";
 import styles from "./Chat.module.scss";
 
 interface ChatProps {
@@ -13,6 +14,7 @@ const availableModels = [
 ];
 
 export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
+  const { t } = useLanguage();
   const [selectedModel, setSelectedModel] = useState("gemini-2.5-flash");
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -166,14 +168,14 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
-        aria-label="AI Assistant chat"
+        aria-label={t.chat.buttonTitle}
         aria-hidden="false"
       >
         <div className={styles.chatHeader}>
           <div className={styles.headerContent}>
-            <h3><span aria-hidden="true">💬</span> AI Assistant</h3>
+            <h3>{t.chat.title}</h3>
             <div className={styles.modelSelector}>
-              <label htmlFor="model-select" className="sr-only">Select AI model</label>
+              <label htmlFor="model-select" className="sr-only">{t.chat.selectModel}</label>
               <select
                 id="model-select"
                 value={selectedModel}
@@ -196,11 +198,8 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
         <div className={styles.messagesContainer} aria-live="polite" aria-label="Chat messages">
           {messages.length === 0 && (
             <div className={styles.emptyState}>
-              <p>👋 Hello! I&apos;m an AI assistant.</p>
-              <p>
-                Ask me anything about Volodymyr&apos;s skills, projects, or
-                experience!
-              </p>
+              <p>{t.chat.greeting}</p>
+              <p>{t.chat.prompt}</p>
             </div>
           )}
 
@@ -216,7 +215,7 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
               <div className={styles.messageContent}>
                 <div className={styles.messageRole}>
                   <span aria-hidden="true">{message.role === "user" ? "👤" : "🤖"}</span>
-                  {message.role === "user" ? " You" : " AI"}
+                  {message.role === "user" ? ` ${t.chat.you}` : ` ${t.chat.ai}`}
                 </div>
                 <div className={styles.messageText}>{message.content}</div>
               </div>
@@ -226,8 +225,8 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
           {isLoading && (
             <div className={`${styles.message} ${styles.assistantMessage}`}>
               <div className={styles.messageContent}>
-                <div className={styles.messageRole}><span aria-hidden="true">🤖</span> AI</div>
-                <div className={styles.typing} aria-label="AI is typing">
+                <div className={styles.messageRole}><span aria-hidden="true">🤖</span> {t.chat.ai}</div>
+                <div className={styles.typing} aria-label={t.chat.typing}>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -239,9 +238,9 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
           {error && (
             <div className={`${styles.message} ${styles.assistantMessage}`}>
               <div className={styles.messageContent}>
-                <div className={styles.messageRole}><span aria-hidden="true">🤖</span> AI</div>
+                <div className={styles.messageRole}><span aria-hidden="true">🤖</span> {t.chat.ai}</div>
                 <div className={styles.messageText} style={{ color: "red" }} role="alert">
-                  Error: {error}
+                  {t.chat.error}{error}
                 </div>
               </div>
             </div>
@@ -251,13 +250,13 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
         </div>
 
         <form onSubmit={handleSubmit} className={styles.inputForm}>
-          <label htmlFor="chat-input" className="sr-only">Type your message</label>
+          <label htmlFor="chat-input" className="sr-only">{t.chat.inputLabel}</label>
           <input
             id="chat-input"
             ref={inputRef}
             value={input}
             onChange={handleInputChange}
-            placeholder="Type your message..."
+            placeholder={t.chat.inputPlaceholder}
             className={styles.input}
             disabled={isLoading}
           />
@@ -265,7 +264,7 @@ export const Chat: FC<ChatProps> = ({ isOpen, onClose }) => {
             type="submit"
             className={styles.sendButton}
             disabled={isLoading || !input.trim()}
-            aria-label={isLoading ? "Sending message…" : "Send message"}
+            aria-label={isLoading ? t.ui.sending : t.sendButton}
           >
             <span aria-hidden="true">{isLoading ? "⏳" : "📤"}</span>
           </button>

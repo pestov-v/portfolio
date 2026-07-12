@@ -45,7 +45,7 @@ export const SendMail = () => {
       formData.text.reset();
     } catch (error: any) {
       console.error("EmailJS Error:", error);
-      alert(error?.text || "Failed to send message. Please try again later.");
+      alert(error?.text || t.ui.sendFailed);
     } finally {
       setIsSending(false);
     }
@@ -57,7 +57,7 @@ export const SendMail = () => {
   return (
     <section className={style.contact} id="mail" aria-labelledby="contact-title">
       <div className={style.inner}>
-        <span className={style.tag}>// 05. CONTACT</span>
+        <span className={style.tag}>{t.ui.tagContact}</span>
         <h2 className={style.title} id="contact-title">
           {t.letsWorkTogether}
         </h2>
@@ -75,7 +75,7 @@ export const SendMail = () => {
           <div className={style.row}>
             <div className={style.field}>
               <label className={style.label} htmlFor="user_name">
-                NAME
+                {t.ui.formName}
               </label>
               <input
                 id="user_name"
@@ -93,7 +93,7 @@ export const SendMail = () => {
             </div>
             <div className={style.field}>
               <label className={style.label} htmlFor="user_email">
-                EMAIL
+                {t.ui.formEmail}
               </label>
               <input
                 id="user_email"
@@ -113,7 +113,7 @@ export const SendMail = () => {
 
           <div className={style.field}>
             <label className={style.label} htmlFor="message">
-              MESSAGE
+              {t.ui.formMessage}
             </label>
             <textarea
               id="message"
@@ -134,9 +134,9 @@ export const SendMail = () => {
             type="submit"
             className={style.submit}
             disabled={!isValidForm || isSending}
-            aria-label={isSending ? "Sending…" : t.sendButton}
+            aria-label={isSending ? t.ui.sending : t.sendButton}
           >
-            {isSending ? "sending…" : "send message →"}
+            {isSending ? t.ui.sending : `${t.sendButton} →`}
           </button>
         </form>
         </div>

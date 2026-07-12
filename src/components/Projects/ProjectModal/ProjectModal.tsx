@@ -75,7 +75,7 @@ export const ProjectModal: FC<ProjectModalProps> = ({ project, isOpen, onClose }
 
             {project.caseStudy!.diagrams && project.caseStudy!.diagrams.length > 0 && (
               <div className={styles.diagramsSection}>
-                <h4 className={styles.subsectionTitle}>📊 Architecture & System Design</h4>
+                <h4 className={styles.subsectionTitle}>📊 {t.ui.architecture}</h4>
                 {project.caseStudy!.diagrams.map((diagram, index) => (
                   <MermaidDiagram
                     key={index}

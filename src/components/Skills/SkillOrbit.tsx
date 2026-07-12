@@ -158,7 +158,7 @@ export const SkillOrbit: FC = () => {
   return (
     <section className={style.skills} id="skills">
       <div className={style.inner}>
-        <span className={style.tag}>// 03. SKILLS</span>
+        <span className={style.tag}>{t.ui.tagSkills}</span>
         <h2 className={style.title}>{t.whatIBuildWith}</h2>
 
         {isDesktop ? (

@@ -81,7 +81,7 @@ export const Projects = () => {
       aria-labelledby="portfolio-title"
     >
       <div className={style.container}>
-        <span className={style.tag}>// 04. PROJECTS</span>
+        <span className={style.tag}>{t.ui.tagProjects}</span>
         <h2 className={style.sectionTitle} id="portfolio-title">
           {t.thingsIveBuilt}
         </h2>
@@ -241,7 +241,7 @@ export const Projects = () => {
                                 <div className={style.diagramsSection}>
                                   <h4 className={style.subsectionTitle}>
                                     <span aria-hidden="true">📊</span>{" "}
-                                    Architecture &amp; System Design
+                                    {t.ui.architecture}
                                   </h4>
                                   {item.caseStudy!.diagrams.map(
                                     (diagram, i) => (

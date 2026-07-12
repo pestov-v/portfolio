@@ -77,7 +77,7 @@ export const About = () => {
       <ShaderBackground className={style.shaderCanvas} />
       <div className={style.inner}>
         <div className={style.left}>
-          <span className={style.tag}>// 01. ABOUT</span>
+          <span className={style.tag}>{t.ui.tagAbout}</span>
           <h2 className={style.title} id="about-title">
             {t.name}
           </h2>
@@ -90,7 +90,7 @@ export const About = () => {
               className={style.socialBtn}
               onClick={() => trackSocialClick("github")}
             >
-              ↗ github
+              {t.ui.githubLink}
             </a>
             <a
               href="https://linkedin.com/in/pestov-volodymyr-405011206/"
@@ -99,7 +99,7 @@ export const About = () => {
               className={style.socialBtn}
               onClick={() => trackSocialClick("linkedin")}
             >
-              ↗ linkedin
+              {t.ui.linkedinLink}
             </a>
           </div>
         </div>
@@ -110,7 +110,7 @@ export const About = () => {
 
           <div className={style.infoCards}>
             <div className={style.infoCard}>
-              <span className={`${style.infoKey} scrambled`}>location</span>
+              <span className={`${style.infoKey} scrambled`}>{t.ui.locationLabel}</span>
               <span className={style.infoValue}>Bulgaria, Nesebar</span>
             </div>
             <div className={style.infoCard}>
@@ -132,17 +132,17 @@ export const About = () => {
               </div>
             </div>
             <div className={style.infoCard}>
-              <span className={`${style.infoKey} scrambled`}>status</span>
+              <span className={`${style.infoKey} scrambled`}>{t.ui.statusLabel}</span>
               <span className={`${style.infoValue} ${style.infoValueAccent}`}>
-                ✓ open to work
+                {t.ui.openToWork}
               </span>
             </div>
             <div className={style.infoCard}>
-              <span className={`${style.infoKey} scrambled`}>email</span>
+              <span className={`${style.infoKey} scrambled`}>{t.ui.emailLabel}</span>
               <span className={style.infoValue}>dev@pestov.pro</span>
             </div>
             <div className={style.infoCard}>
-              <span className={`${style.infoKey} scrambled`}>telegram</span>
+              <span className={`${style.infoKey} scrambled`}>{t.ui.telegramLabel}</span>
               <span className={style.infoValue}>@pestov_v</span>
             </div>
           </div>

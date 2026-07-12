@@ -62,9 +62,9 @@ export const Experience = () => {
       aria-labelledby="exp-title"
     >
       <div className={style.inner}>
-        <span className={style.tag}>// 02. EXPERIENCE</span>
+        <span className={style.tag}>{t.ui.tagExperience}</span>
         <h2 className={style.title} id="exp-title">
-          Where I&apos;ve worked.
+          {t.whereIveWorked}
         </h2>
       </div>
       <Timeline data={timelineData} />

@@ -1,14 +1,14 @@
+import { useLanguage } from "../../contexts/LanguageContext";
 import style from "./Footer.module.scss";
 
 export const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className={style.footer}>
       <a href="#" className={style.logo} aria-label="Back to top">
         VP.
       </a>
-      <p className={style.copy}>
-        © 2025 Volodymyr Pestov — built with passion
-      </p>
+      <p className={style.copy}>{t.ui.copyright}</p>
       <nav className={style.links} aria-label="Social links">
         <a
           href="https://github.com/pestov-v"
@@ -30,7 +30,7 @@ export const Footer = () => {
           href="mailto:pestov.volodymyr@gmail.com"
           className={`${style.link} ${style.linkAccent}`}
         >
-          email
+          {t.ui.emailLabel}
         </a>
       </nav>
     </footer>

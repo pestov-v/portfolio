@@ -98,6 +98,42 @@ export interface Translation {
   // Language switcher
   language: string;
 
+  // UI labels (redesign)
+  ui: {
+    tagAbout: string;
+    tagExperience: string;
+    tagSkills: string;
+    tagProjects: string;
+    tagContact: string;
+    statusLabel: string;
+    openToWork: string;
+    locationLabel: string;
+    emailLabel: string;
+    telegramLabel: string;
+    githubLink: string;
+    linkedinLink: string;
+    formName: string;
+    formEmail: string;
+    formMessage: string;
+    sending: string;
+    sendFailed: string;
+    copyright: string;
+    architecture: string;
+  };
+  chat: {
+    title: string;
+    selectModel: string;
+    greeting: string;
+    prompt: string;
+    you: string;
+    ai: string;
+    typing: string;
+    error: string;
+    inputLabel: string;
+    inputPlaceholder: string;
+    buttonTitle: string;
+  };
+
   // Project modal
   projectModal: {
     caseStudy: string;
@@ -376,6 +412,42 @@ export const translations: Record<
 
     // Language switcher
     language: "Language",
+
+    ui: {
+      tagAbout: "// 01. ABOUT",
+      tagExperience: "// 02. EXPERIENCE",
+      tagSkills: "// 03. SKILLS",
+      tagProjects: "// 04. PROJECTS",
+      tagContact: "// 05. CONTACT",
+      statusLabel: "status",
+      openToWork: "✓ open to work",
+      locationLabel: "location",
+      emailLabel: "email",
+      telegramLabel: "telegram",
+      githubLink: "↗ github",
+      linkedinLink: "↗ linkedin",
+      formName: "NAME",
+      formEmail: "EMAIL",
+      formMessage: "MESSAGE",
+      sending: "sending…",
+      sendFailed: "Failed to send message. Please try again later.",
+      copyright: "© 2025 Volodymyr Pestov — built with passion",
+      architecture: "Architecture & System Design",
+    },
+    chat: {
+      title: "💬 AI Assistant",
+      selectModel: "Select AI model",
+      greeting: "👋 Hello! I'm an AI assistant.",
+      prompt:
+        "Ask me anything about Volodymyr's skills, projects, or experience!",
+      you: "You",
+      ai: "AI",
+      typing: "AI is typing",
+      error: "Error: ",
+      inputLabel: "Type your message",
+      inputPlaceholder: "Type your message...",
+      buttonTitle: "Chat with AI Assistant",
+    },
 
     // Project modal
     projectModal: {
@@ -744,6 +816,41 @@ export const translations: Record<
     // Language switcher
     language: "Мова",
 
+    ui: {
+      tagAbout: "// 01. ПРО МЕНЕ",
+      tagExperience: "// 02. ДОСВІД",
+      tagSkills: "// 03. НАВИЧКИ",
+      tagProjects: "// 04. ПРОЄКТИ",
+      tagContact: "// 05. КОНТАКТИ",
+      statusLabel: "статус",
+      openToWork: "✓ відкритий до роботи",
+      locationLabel: "локація",
+      emailLabel: "email",
+      telegramLabel: "telegram",
+      githubLink: "↗ github",
+      linkedinLink: "↗ linkedin",
+      formName: "ІМʼЯ",
+      formEmail: "EMAIL",
+      formMessage: "ПОВІДОМЛЕННЯ",
+      sending: "надсилання…",
+      sendFailed: "Не вдалося надіслати повідомлення. Спробуйте пізніше.",
+      copyright: "© 2025 Volodymyr Pestov — створено з пристрастю",
+      architecture: "Архітектура та системний дизайн",
+    },
+    chat: {
+      title: "💬 AI-асистент",
+      selectModel: "Вибрати AI-модель",
+      greeting: "👋 Привіт! Я AI-асистент.",
+      prompt: "Запитайте мене про навички, проєкти чи досвід Володимира!",
+      you: "Ви",
+      ai: "AI",
+      typing: "AI друкує",
+      error: "Помилка: ",
+      inputLabel: "Введіть повідомлення",
+      inputPlaceholder: "Введіть повідомлення...",
+      buttonTitle: "Чат з AI-асистентом",
+    },
+
     // Project modal
     projectModal: {
       caseStudy: "Кейс",
@@ -1110,6 +1217,41 @@ export const translations: Record<
     // Language switcher
     language: "Език",
 
+    ui: {
+      tagAbout: "// 01. ЗА МЕН",
+      tagExperience: "// 02. ОПИТ",
+      tagSkills: "// 03. УМЕНИЯ",
+      tagProjects: "// 04. ПРОЕКТИ",
+      tagContact: "// 05. КОНТАКТИ",
+      statusLabel: "статус",
+      openToWork: "✓ отворен за работа",
+      locationLabel: "локация",
+      emailLabel: "имейл",
+      telegramLabel: "телеграм",
+      githubLink: "↗ github",
+      linkedinLink: "↗ linkedin",
+      formName: "ИМЕ",
+      formEmail: "ИМЕЙЛ",
+      formMessage: "СЪОБЩЕНИЕ",
+      sending: "изпращане…",
+      sendFailed: "Неуспешно изпращане на съобщението. Опитайте отново по-късно.",
+      copyright: "© 2025 Volodymyr Pestov — създадено със страст",
+      architecture: "Архитектура и системен дизайн",
+    },
+    chat: {
+      title: "💬 AI асистент",
+      selectModel: "Изберете AI модел",
+      greeting: "👋 Здравейте! Аз съм AI асистент.",
+      prompt: "Попитайте ме за уменията, проектите или опита на Володимир!",
+      you: "Вие",
+      ai: "AI",
+      typing: "AI пише",
+      error: "Грешка: ",
+      inputLabel: "Въведете съобщение",
+      inputPlaceholder: "Въведете съобщение...",
+      buttonTitle: "Чат с AI асистент",
+    },
+
     // Project modal
     projectModal: {
       caseStudy: "Казус",
@@ -1475,6 +1617,41 @@ export const translations: Record<
 
     // Language switcher
     language: "Język",
+
+    ui: {
+      tagAbout: "// 01. O MNIE",
+      tagExperience: "// 02. DOŚWIADCZENIE",
+      tagSkills: "// 03. UMIEJĘTNOŚCI",
+      tagProjects: "// 04. PROJEKTY",
+      tagContact: "// 05. KONTAKT",
+      statusLabel: "status",
+      openToWork: "✓ otwarty na pracę",
+      locationLabel: "lokalizacja",
+      emailLabel: "email",
+      telegramLabel: "telegram",
+      githubLink: "↗ github",
+      linkedinLink: "↗ linkedin",
+      formName: "IMIĘ",
+      formEmail: "EMAIL",
+      formMessage: "WIADOMOŚĆ",
+      sending: "wysyłanie…",
+      sendFailed: "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+      copyright: "© 2025 Volodymyr Pestov — stworzone z pasją",
+      architecture: "Architektura i projektowanie systemu",
+    },
+    chat: {
+      title: "💬 Asystent AI",
+      selectModel: "Wybierz model AI",
+      greeting: "👋 Cześć! Jestem asystentem AI.",
+      prompt: "Zapytaj mnie o umiejętności, projekty lub doświadczenie Wołodymyra!",
+      you: "Ty",
+      ai: "AI",
+      typing: "AI pisze",
+      error: "Błąd: ",
+      inputLabel: "Wpisz wiadomość",
+      inputPlaceholder: "Wpisz wiadomość...",
+      buttonTitle: "Czat z asystentem AI",
+    },
 
     // Project modal
     projectModal: {
@@ -1843,6 +2020,41 @@ export const translations: Record<
     // Language switcher
     language: "Lingua",
 
+    ui: {
+      tagAbout: "// 01. CHI SONO",
+      tagExperience: "// 02. ESPERIENZA",
+      tagSkills: "// 03. COMPETENZE",
+      tagProjects: "// 04. PROGETTI",
+      tagContact: "// 05. CONTATTI",
+      statusLabel: "stato",
+      openToWork: "✓ disponibile a lavorare",
+      locationLabel: "posizione",
+      emailLabel: "email",
+      telegramLabel: "telegram",
+      githubLink: "↗ github",
+      linkedinLink: "↗ linkedin",
+      formName: "NOME",
+      formEmail: "EMAIL",
+      formMessage: "MESSAGGIO",
+      sending: "invio…",
+      sendFailed: "Impossibile inviare il messaggio. Riprova più tardi.",
+      copyright: "© 2025 Volodymyr Pestov — creato con passione",
+      architecture: "Architettura e design del sistema",
+    },
+    chat: {
+      title: "💬 Assistente AI",
+      selectModel: "Seleziona modello AI",
+      greeting: "👋 Ciao! Sono un assistente AI.",
+      prompt: "Chiedimi qualsiasi cosa sulle competenze, i progetti o l'esperienza di Volodymyr!",
+      you: "Tu",
+      ai: "AI",
+      typing: "L'AI sta scrivendo",
+      error: "Errore: ",
+      inputLabel: "Scrivi il tuo messaggio",
+      inputPlaceholder: "Scrivi il tuo messaggio...",
+      buttonTitle: "Chatta con l'assistente AI",
+    },
+
     // Project modal
     projectModal: {
       caseStudy: "Case Study",
@@ -2209,6 +2421,41 @@ export const translations: Record<
 
     // Language switcher
     language: "Langue",
+
+    ui: {
+      tagAbout: "// 01. À PROPOS",
+      tagExperience: "// 02. EXPÉRIENCE",
+      tagSkills: "// 03. COMPÉTENCES",
+      tagProjects: "// 04. PROJETS",
+      tagContact: "// 05. CONTACT",
+      statusLabel: "statut",
+      openToWork: "✓ ouvert au travail",
+      locationLabel: "emplacement",
+      emailLabel: "email",
+      telegramLabel: "telegram",
+      githubLink: "↗ github",
+      linkedinLink: "↗ linkedin",
+      formName: "NOM",
+      formEmail: "EMAIL",
+      formMessage: "MESSAGE",
+      sending: "envoi…",
+      sendFailed: "Échec de l'envoi du message. Veuillez réessayer plus tard.",
+      copyright: "© 2025 Volodymyr Pestov — créé avec passion",
+      architecture: "Architecture et conception système",
+    },
+    chat: {
+      title: "💬 Assistant IA",
+      selectModel: "Sélectionner le modèle IA",
+      greeting: "👋 Bonjour ! Je suis un assistant IA.",
+      prompt: "Posez-moi vos questions sur les compétences, projets ou l'expérience de Volodymyr !",
+      you: "Vous",
+      ai: "IA",
+      typing: "L'IA écrit",
+      error: "Erreur : ",
+      inputLabel: "Saisissez votre message",
+      inputPlaceholder: "Saisissez votre message...",
+      buttonTitle: "Discuter avec l'assistant IA",
+    },
 
     // Project modal
     projectModal: {
