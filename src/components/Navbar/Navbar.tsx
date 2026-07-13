@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
@@ -29,45 +29,19 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Set when the menu is closed by following one of its links, so the unlock
-  // effect scrolls to the anchor instead of restoring the previous offset.
-  const pendingHash = useRef<string | null>(null);
-
-  // iOS Safari ignores `overflow: hidden` on the body when it is the propagating
-  // scroll container, so pin the body instead and restore the offset on close.
+  // Lock on <body> only: its overflow is propagated to the viewport, so this
+  // stops scrolling while keeping the offset intact. Locking <html> instead
+  // would clamp the offset to 0, because html/body are height:100% on mobile
+  // and the overflowing content gets clipped away.
   useEffect(() => {
     if (!isMenuOpen) return;
 
-    const scrollY = window.scrollY;
     const bodyStyle = document.body.style;
-    bodyStyle.position = "fixed";
-    bodyStyle.top = `-${scrollY}px`;
-    bodyStyle.left = "0";
-    bodyStyle.right = "0";
-    bodyStyle.width = "100%";
-
+    bodyStyle.overflow = "hidden";
     return () => {
-      bodyStyle.position = "";
-      bodyStyle.top = "";
-      bodyStyle.left = "";
-      bodyStyle.right = "";
-      bodyStyle.width = "";
-
-      const hash = pendingHash.current;
-      pendingHash.current = null;
-      const target = hash ? document.querySelector(hash) : null;
-      if (target) {
-        target.scrollIntoView();
-      } else {
-        window.scrollTo(0, scrollY);
-      }
+      bodyStyle.overflow = "";
     };
   }, [isMenuOpen]);
-
-  const closeMenuAndGo = (href: string) => {
-    pendingHash.current = href;
-    setIsMenuOpen(false);
-  };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -130,14 +104,14 @@ export const Navbar = () => {
           <ul role="list">
             {links.map(({ id, href, title }) => (
               <li key={id}>
-                <a href={href} className={style.mobileLink} onClick={() => closeMenuAndGo(href)}>
+                <a href={href} className={style.mobileLink} onClick={() => setIsMenuOpen(false)}>
                   {title}
                 </a>
               </li>
             ))}
           </ul>
           <div className={style.mobileCtaWrap}>
-            <a href="#mail" className={style.mobileCta} onClick={() => closeMenuAndGo("#mail")}>
+            <a href="#mail" className={style.mobileCta} onClick={() => setIsMenuOpen(false)}>
               {t.hireMe}
             </a>
           </div>
