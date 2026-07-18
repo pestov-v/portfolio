@@ -30,6 +30,74 @@ export type TProjects = IProject[];
 
 export const _projects: TProjects = [
   {
+    id: 20,
+    translationKey: "resulty",
+    title: "Resulty — Multi-Tenant Insurance CRM",
+    description:
+      "Multi-tenant SaaS CRM for insurance agencies with automated lead ingestion, a real-time sales pipeline, WhatsApp automation, and per-agency isolation on dedicated subdomains.",
+    href: "https://www.resulty.co.il/",
+    image: "resulty",
+    alt: "Resulty Multi-Tenant Insurance CRM",
+    additionalInfo:
+      "Subdomain-per-tenant CRM with webhook lead capture, duplicate-caller detection, manager dashboards, WhatsApp & telephony, and a Hebrew RTL PWA",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Redis",
+    ],
+    caseStudy: {
+      challenge:
+        "Israeli insurance agencies were juggling leads across phone calls, spreadsheets, and disconnected marketing channels. Campaign leads arrived with no automated capture, returning callers created duplicate records, agents worked without a unified pipeline, and managers had no real-time view of conversion rates or agent performance. Each agency also needed its own fully isolated, Hebrew, right-to-left workspace.",
+      solution:
+        "Built a multi-tenant SaaS CRM where each agency operates on its own subdomain with server-enforced data isolation. Per-channel webhooks automatically ingest leads from marketing automations, map arbitrary payload fields, and detect duplicate callers with a real-time “familiar caller” popup instead of creating duplicates. Agents work a filterable lead pipeline with a tabbed lead card, scheduled callbacks, and document uploads; managers get KPI dashboards, an agent leaderboard, and untreated-lead alerts. Layered in WhatsApp automation, telephony, role-based access control, and per-tenant custom fields — on a Turborepo monorepo with a NestJS API (Drizzle ORM, BullMQ/Redis, JWT + 2FA) and a Next.js 16 / React 19 PWA front-end.",
+      result:
+        "Lead capture fully automated — campaign leads land in the right agency's pipeline in real time with zero manual entry. Duplicate-caller detection removes confusion and instantly routes returning clients to the right agent. Managers gained live visibility into conversion, agent performance, and untreated leads, while row-level security and subdomain routing keep every agency's data strictly separate.",
+      technologies: [
+        "Next.js 16",
+        "React 19",
+        "NestJS",
+        "TypeScript",
+        "Drizzle ORM",
+        "PostgreSQL",
+        "Redis / BullMQ",
+        "Turborepo",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[Marketing Channel] -->|Webhook + API key| B(Resulty Ingestion)
+
+    subgraph "Tenant Isolation"
+    B --> C[Subdomain Router]
+    C --> D[Tenant Context / RLS]
+    end
+
+    subgraph "Lead Pipeline"
+    D --> E[Lead Intake & Dedup]
+    E -->|Familiar caller| F[Real-time Agent Popup]
+    E --> G[Lead Card & Callbacks]
+    end
+
+    subgraph "Automation Layer"
+    D --> H[WhatsApp Automations]
+    D --> I[Telephony / Calls]
+    end
+
+    subgraph "Manager Layer"
+    D --> J[KPI Dashboard]
+    J --> K[Agent Leaderboard]
+    J --> L[Untreated-lead Alerts]
+    end`,
+          caption:
+            "Multi-tenant architecture: marketing channels feed leads through authenticated webhooks, subdomain routing plus row-level security isolate each agency's data, the pipeline handles intake and duplicate-caller detection, and managers get real-time KPI dashboards — with WhatsApp and telephony automation layered on top.",
+        },
+      ],
+    },
+  },
+  {
     id: 19,
     translationKey: "collabpulse",
     title: "CollabPulse - Micro-collaboration Platform",

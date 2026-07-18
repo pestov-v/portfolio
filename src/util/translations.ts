@@ -146,6 +146,11 @@ export interface Translation {
 
   // Project case studies
   caseStudies: {
+    resulty: {
+      challenge: string;
+      solution: string;
+      result: string;
+    };
     collabpulse: {
       challenge: string;
       solution: string;
@@ -185,6 +190,11 @@ export interface Translation {
 
   // Projects data
   projectsData: {
+    resulty: {
+      title: string;
+      description: string;
+      additionalInfo: string;
+    };
     aurinia: {
       title: string;
       description: string;
@@ -461,6 +471,14 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      resulty: {
+        challenge:
+          "Israeli insurance agencies were juggling leads across phone calls, spreadsheets, and disconnected marketing channels. Campaign leads arrived with no automated capture, returning callers created duplicate records, agents worked without a unified pipeline, and managers had no real-time view of conversion rates or agent performance. Each agency also needed its own fully isolated, Hebrew, right-to-left workspace.",
+        solution:
+          "Built a multi-tenant SaaS CRM where each agency operates on its own subdomain with server-enforced data isolation. Per-channel webhooks automatically ingest leads from marketing automations, map arbitrary payload fields, and detect duplicate callers with a real-time “familiar caller” popup instead of creating duplicates. Agents work a filterable lead pipeline with a tabbed lead card, scheduled callbacks, and document uploads; managers get KPI dashboards, an agent leaderboard, and untreated-lead alerts. Layered in WhatsApp automation, telephony, role-based access control, and per-tenant custom fields on a Turborepo monorepo with a NestJS API and a Next.js 16 / React 19 PWA front-end.",
+        result:
+          "Lead capture fully automated — campaign leads land in the right agency's pipeline in real time with zero manual entry. Duplicate-caller detection removes confusion and instantly routes returning clients to the right agent. Managers gained live visibility into conversion, agent performance, and untreated leads, while row-level security and subdomain routing keep every agency's data strictly separate.",
+      },
       collabpulse: {
         challenge:
           "Teams working on short-lived projects had no lightweight tool for coordination. Traditional project management software was too heavy — creating a project, assigning tasks, and tracking micro-deliverables required too much setup. Collaboration happened across scattered chats and threads with no unified pulse on team activity or progress.",
@@ -521,6 +539,13 @@ export const translations: Record<
 
     // Projects data
     projectsData: {
+      resulty: {
+        title: "Resulty — Multi-Tenant Insurance CRM",
+        description:
+          "Multi-tenant SaaS CRM for insurance agencies with automated lead ingestion, a real-time sales pipeline, WhatsApp automation, and per-agency isolation on dedicated subdomains.",
+        additionalInfo:
+          "Subdomain-per-tenant CRM with webhook lead capture, duplicate-caller detection, manager dashboards, WhatsApp & telephony, and a Hebrew RTL PWA · NestJS, Next.js 16, React 19, Drizzle, PostgreSQL, Redis",
+      },
       aurinia: {
         title: "Aurinia - E-commerce Platform",
         description:
@@ -864,6 +889,14 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      resulty: {
+        challenge:
+          "Ізраїльські страхові агенції розривалися між телефонними дзвінками, таблицями та розрізненими маркетинговими каналами. Ліди з рекламних кампаній надходили без автоматичного захоплення, повторні дзвінки створювали дублікати записів, агенти працювали без єдиної воронки, а менеджери не бачили в реальному часі показників конверсії та ефективності агентів. Кожній агенції також потрібен був власний повністю ізольований робочий простір івритом із версткою справа наліво.",
+        solution:
+          "Побудовано мультитенантну SaaS CRM, де кожна агенція працює на власному піддомені з ізоляцією даних на рівні сервера. Вебхуки по кожному каналу автоматично приймають ліди з маркетингових автоматизацій, зіставляють довільні поля та виявляють повторних абонентів, показуючи у реальному часі спливне вікно «знайомий абонент» замість створення дубліката. Агенти працюють із фільтрованою воронкою лідів, картка ліда з вкладками, заплановані передзвони та завантаження документів; менеджери отримують KPI-дашборди, рейтинг агентів і сповіщення про необроблені ліди. Додано автоматизацію WhatsApp, телефонію, рольовий доступ і кастомні поля для кожного тенанта на монорепозиторії Turborepo з NestJS API та PWA-фронтендом на Next.js 16 / React 19.",
+        result:
+          "Захоплення лідів повністю автоматизовано — ліди кампаній потрапляють у воронку потрібної агенції в реальному часі без ручного введення. Виявлення повторних абонентів усуває плутанину та миттєво спрямовує клієнтів, що повертаються, до потрібного агента. Менеджери отримали живу видимість конверсії, ефективності агентів і необроблених лідів, а захист на рівні рядків і маршрутизація за піддоменами тримають дані кожної агенції суворо окремо.",
+      },
       collabpulse: {
         challenge:
           "Команди, які працювали над короткостроковими проектами, не мали легкого інструменту для координації. Традиційне ПЗ для управління проектами було надто важким — створення проекту, призначення завдань та відстеження мікро-результатів вимагало занадто багато налаштувань. Співпраця відбувалась в розрізнених чатах та потоках без єдиного погляду на активність та прогрес команди.",
@@ -924,6 +957,13 @@ export const translations: Record<
 
     // Projects data
     projectsData: {
+      resulty: {
+        title: "Resulty — Мультитенантна CRM для страхування",
+        description:
+          "Мультитенантна SaaS CRM для страхових агенцій з автоматичним прийомом лідів, воронкою продажів у реальному часі, автоматизацією WhatsApp та ізоляцією кожної агенції на власних піддоменах.",
+        additionalInfo:
+          "CRM із піддоменом на кожного тенанта, захопленням лідів через вебхуки, виявленням повторних абонентів, дашбордами менеджера, WhatsApp і телефонією та PWA івритом (RTL) · NestJS, Next.js 16, React 19, Drizzle, PostgreSQL, Redis",
+      },
       aurinia: {
         title: "Aurinia - Платформа електронної комерції",
         description:
@@ -1266,6 +1306,14 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      resulty: {
+        challenge:
+          "Израелските застрахователни агенции жонглираха с потенциални клиенти между телефонни обаждания, електронни таблици и несвързани маркетингови канали. Клиентите от кампании пристигаха без автоматично улавяне, повторните обаждащи се създаваха дублирани записи, агентите работеха без единна фуния, а мениджърите нямаха поглед в реално време върху нивата на конверсия или представянето на агентите. Всяка агенция също се нуждаеше от собствено напълно изолирано работно пространство на иврит с оформление отдясно наляво.",
+        solution:
+          "Изградена е мултитенантна SaaS CRM, в която всяка агенция работи на собствен поддомейн със сървърно наложена изолация на данните. Уебхукове по канали автоматично приемат клиенти от маркетингови автоматизации, съпоставят произволни полета и откриват повторни обаждащи се с изскачащ прозорец „познат обаждащ се“ в реално време, вместо да създават дубликат. Агентите работят с филтрируема фуния от клиенти, карта на клиента с раздели, планирани обратни обаждания и качване на документи; мениджърите получават KPI табла, класация на агентите и сигнали за необработени клиенти. Добавени са автоматизация на WhatsApp, телефония, ролев достъп и персонализирани полета за всеки тенант върху Turborepo монорепозиторий с NestJS API и PWA фронтенд на Next.js 16 / React 19.",
+        result:
+          "Улавянето на клиенти е напълно автоматизирано — клиентите от кампании попадат във фунията на правилната агенция в реално време без ръчно въвеждане. Откриването на повторни обаждащи се премахва объркването и веднага насочва завръщащите се клиенти към правилния агент. Мениджърите получиха жива видимост върху конверсията, представянето на агентите и необработените клиенти, докато сигурността на ниво ред и маршрутизацията по поддомейни държат данните на всяка агенция строго разделени.",
+      },
       collabpulse: {
         challenge:
           "Екипи, работещи върху краткосрочни проекти, нямаха лекотежен инструмент за координация. Традиционният софтуер за управление на проекти беше твърде тежък — създаването на проект, приписване на задачи и проследяване на микро-доставки изискваше твърде много настройка. Сътрудничеството се случваше в разпръснати чатове и нишки без единствен поглед на активността на екипа или напредъка.",
@@ -1326,6 +1374,13 @@ export const translations: Record<
 
     // Projects data
     projectsData: {
+      resulty: {
+        title: "Resulty — Мултитенантна CRM за застраховане",
+        description:
+          "Мултитенантна SaaS CRM за застрахователни агенции с автоматично приемане на клиенти, фуния за продажби в реално време, автоматизация на WhatsApp и изолация на всяка агенция на собствени поддомейни.",
+        additionalInfo:
+          "CRM с поддомейн за всеки тенант, улавяне на клиенти чрез уебхукове, откриване на повторни обаждащи се, табла за мениджъри, WhatsApp и телефония и PWA на иврит (RTL) · NestJS, Next.js 16, React 19, Drizzle, PostgreSQL, Redis",
+      },
       aurinia: {
         title: "Aurinia - Платформа за електронна търговия",
         description:
@@ -1668,6 +1723,14 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      resulty: {
+        challenge:
+          "Izraelskie agencje ubezpieczeniowe żonglowały leadami między rozmowami telefonicznymi, arkuszami kalkulacyjnymi i rozproszonymi kanałami marketingowymi. Leady z kampanii przychodziły bez automatycznego przechwytywania, powracający dzwoniący tworzyli zduplikowane rekordy, agenci pracowali bez jednolitego lejka, a menedżerowie nie mieli wglądu w czasie rzeczywistym w współczynniki konwersji ani wydajność agentów. Każda agencja potrzebowała też własnego, w pełni odizolowanego, hebrajskiego środowiska z układem od prawej do lewej.",
+        solution:
+          "Zbudowano wielodostępną (multi-tenant) CRM SaaS, w której każda agencja działa na własnej subdomenie z izolacją danych wymuszaną po stronie serwera. Webhooki dla poszczególnych kanałów automatycznie przyjmują leady z automatyzacji marketingowych, mapują dowolne pola i wykrywają powracających dzwoniących, wyświetlając w czasie rzeczywistym wyskakujące okno „znajomy dzwoniący” zamiast tworzyć duplikat. Agenci pracują z filtrowanym lejkiem leadów, kartą leada z zakładkami, zaplanowanymi oddzwonieniami i przesyłaniem dokumentów; menedżerowie otrzymują pulpity KPI, ranking agentów i alerty o nieobsłużonych leadach. Dodano automatyzację WhatsApp, telefonię, dostęp oparty na rolach i pola niestandardowe dla każdego najemcy w monorepo Turborepo z API NestJS i frontendem PWA w Next.js 16 / React 19.",
+        result:
+          "Przechwytywanie leadów w pełni zautomatyzowane — leady z kampanii trafiają do lejka właściwej agencji w czasie rzeczywistym bez ręcznego wprowadzania. Wykrywanie powracających dzwoniących eliminuje zamieszanie i natychmiast kieruje powracających klientów do właściwego agenta. Menedżerowie zyskali bieżący wgląd w konwersję, wydajność agentów i nieobsłużone leady, a zabezpieczenia na poziomie wierszy i routing po subdomenach utrzymują dane każdej agencji ściśle oddzielone.",
+      },
       collabpulse: {
         challenge:
           "Zespoły pracujące nad krótkotrwałymi projektami nie miały lekkiego narzędzia do koordynacji. Tradycyjne oprogramowanie do zarządzania projektami było zbyt ciężkie — tworzenie projektu, przypisywanie zadań i śledzenie mikro-dostaw wymagało zbyt wiele konfiguracji. Współpraca odbywała się w rozproszonych czatach i wątkach bez jednolitego widoku na aktywność zespołu lub postęp.",
@@ -1728,6 +1791,13 @@ export const translations: Record<
 
     // Projects data
     projectsData: {
+      resulty: {
+        title: "Resulty — Wielodostępny CRM ubezpieczeniowy",
+        description:
+          "Wielodostępny CRM SaaS dla agencji ubezpieczeniowych z automatycznym przyjmowaniem leadów, lejkiem sprzedaży w czasie rzeczywistym, automatyzacją WhatsApp i izolacją każdej agencji na dedykowanych subdomenach.",
+        additionalInfo:
+          "CRM z subdomeną dla każdego najemcy, przechwytywaniem leadów przez webhooki, wykrywaniem powracających dzwoniących, pulpitami menedżera, WhatsApp i telefonią oraz PWA po hebrajsku (RTL) · NestJS, Next.js 16, React 19, Drizzle, PostgreSQL, Redis",
+      },
       aurinia: {
         title: "Aurinia - Platforma e-commerce",
         description:
@@ -2071,6 +2141,14 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      resulty: {
+        challenge:
+          "Le agenzie assicurative israeliane gestivano i lead tra telefonate, fogli di calcolo e canali di marketing scollegati. I lead delle campagne arrivavano senza acquisizione automatica, i chiamanti abituali creavano record duplicati, gli agenti lavoravano senza una pipeline unificata e i manager non avevano una visione in tempo reale dei tassi di conversione o delle prestazioni degli agenti. Ogni agenzia aveva inoltre bisogno del proprio spazio di lavoro completamente isolato, in ebraico e con layout da destra a sinistra.",
+        solution:
+          "Costruita una CRM SaaS multi-tenant in cui ogni agenzia opera sul proprio sottodominio con isolamento dei dati applicato lato server. I webhook per canale acquisiscono automaticamente i lead dalle automazioni di marketing, mappano campi arbitrari e rilevano i chiamanti abituali con un popup in tempo reale «chiamante conosciuto» invece di creare un duplicato. Gli agenti lavorano con una pipeline di lead filtrabile, una scheda lead a schede, richiami pianificati e caricamento documenti; i manager ottengono dashboard KPI, una classifica degli agenti e avvisi sui lead non gestiti. Aggiunte automazione WhatsApp, telefonia, controllo accessi basato sui ruoli e campi personalizzati per tenant su un monorepo Turborepo con API NestJS e frontend PWA in Next.js 16 / React 19.",
+        result:
+          "Acquisizione dei lead completamente automatizzata — i lead delle campagne finiscono nella pipeline dell'agenzia giusta in tempo reale senza inserimento manuale. Il rilevamento dei chiamanti abituali elimina la confusione e instrada immediatamente i clienti di ritorno all'agente giusto. I manager hanno ottenuto visibilità in tempo reale su conversione, prestazioni degli agenti e lead non gestiti, mentre la sicurezza a livello di riga e il routing per sottodominio mantengono i dati di ogni agenzia rigorosamente separati.",
+      },
       collabpulse: {
         challenge:
           "I team che lavorano su progetti a breve termine non avevano uno strumento leggero per il coordinamento. Il software tradizionale di gestione dei progetti era troppo pesante — creare un progetto, assegnare attività e tracciare micro-consegne richiedeva troppe configurazioni. La collaborazione avveniva in chat e thread sparsi senza una visione unificata dell'attività del team o dei progressi.",
@@ -2131,6 +2209,13 @@ export const translations: Record<
 
     // Projects data
     projectsData: {
+      resulty: {
+        title: "Resulty — CRM assicurativo multi-tenant",
+        description:
+          "CRM SaaS multi-tenant per agenzie assicurative con acquisizione automatica dei lead, pipeline di vendita in tempo reale, automazione WhatsApp e isolamento di ogni agenzia su sottodomini dedicati.",
+        additionalInfo:
+          "CRM con sottodominio per tenant, acquisizione lead via webhook, rilevamento dei chiamanti abituali, dashboard per manager, WhatsApp e telefonia e PWA in ebraico (RTL) · NestJS, Next.js 16, React 19, Drizzle, PostgreSQL, Redis",
+      },
       aurinia: {
         title: "Aurinia - Piattaforma e-commerce",
         description:
@@ -2474,6 +2559,14 @@ export const translations: Record<
 
     // Project case studies
     caseStudies: {
+      resulty: {
+        challenge:
+          "Les agences d'assurance israéliennes jonglaient avec les prospects entre appels téléphoniques, feuilles de calcul et canaux marketing déconnectés. Les prospects issus des campagnes arrivaient sans capture automatique, les appelants récurrents créaient des doublons, les agents travaillaient sans pipeline unifié et les managers n'avaient aucune vue en temps réel sur les taux de conversion ou la performance des agents. Chaque agence avait également besoin de son propre espace de travail entièrement isolé, en hébreu et avec une mise en page de droite à gauche.",
+        solution:
+          "Conception d'un CRM SaaS multi-tenant où chaque agence opère sur son propre sous-domaine avec une isolation des données imposée côté serveur. Des webhooks par canal capturent automatiquement les prospects issus des automatisations marketing, mappent des champs arbitraires et détectent les appelants récurrents avec une fenêtre contextuelle « appelant connu » en temps réel au lieu de créer un doublon. Les agents travaillent avec un pipeline de prospects filtrable, une fiche prospect à onglets, des rappels planifiés et le téléversement de documents ; les managers obtiennent des tableaux de bord KPI, un classement des agents et des alertes sur les prospects non traités. Ajout de l'automatisation WhatsApp, de la téléphonie, du contrôle d'accès basé sur les rôles et de champs personnalisés par tenant sur un monorepo Turborepo avec une API NestJS et un frontend PWA en Next.js 16 / React 19.",
+        result:
+          "Capture des prospects entièrement automatisée — les prospects des campagnes arrivent dans le pipeline de la bonne agence en temps réel sans saisie manuelle. La détection des appelants récurrents élimine la confusion et dirige immédiatement les clients de retour vers le bon agent. Les managers ont gagné une visibilité en direct sur la conversion, la performance des agents et les prospects non traités, tandis que la sécurité au niveau des lignes et le routage par sous-domaine maintiennent les données de chaque agence strictement séparées.",
+      },
       collabpulse: {
         challenge:
           "Les équipes travaillant sur des projets de courte durée n'avaient pas d'outil léger pour la coordination. Les logiciels traditionnels de gestion de projet étaient trop lourds — créer un projet, assigner des tâches et suivre les micro-livraisons exigeaient trop de configuration. La collaboration se déroulait dans des chats et des fils éparpillés sans une vision unifiée de l'activité de l'équipe ou des progrès.",
@@ -2534,6 +2627,13 @@ export const translations: Record<
 
     // Projects data
     projectsData: {
+      resulty: {
+        title: "Resulty — CRM d'assurance multi-tenant",
+        description:
+          "CRM SaaS multi-tenant pour les agences d'assurance avec capture automatique des prospects, pipeline de vente en temps réel, automatisation WhatsApp et isolation de chaque agence sur des sous-domaines dédiés.",
+        additionalInfo:
+          "CRM avec un sous-domaine par tenant, capture de prospects via webhooks, détection des appelants récurrents, tableaux de bord manager, WhatsApp et téléphonie et PWA en hébreu (RTL) · NestJS, Next.js 16, React 19, Drizzle, PostgreSQL, Redis",
+      },
       aurinia: {
         title: "Aurinia - Plateforme e-commerce",
         description:
