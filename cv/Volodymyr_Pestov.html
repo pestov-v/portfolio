@@ -4,10 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Volodymyr Pestov — Senior Fullstack Engineer | Tech Lead |
-      React/Next.js/NestJS Expert
+      Volodymyr Pestov — Fullstack Developer | Tech Lead | React/Next.js/NestJS
+      Expert
     </title>
     <style>
+      /* ===== Single font + two-color palette =====
+         Primary text/headings: #2c3e50 (dark navy)
+         Accent / sidebar bg:   #16a0a0 (teal)
+         (white on teal in sidebar is the inverse, not a 3rd color) */
       * {
         margin: 0;
         padding: 0;
@@ -15,189 +19,177 @@
       }
 
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        padding: 40px 0;
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 1.45;
+        color: #2c3e50;
+        padding: 20px 0;
       }
 
       .container {
         width: 210mm;
-        min-height: 594mm;
+        min-height: 297mm;
         margin: 0 auto;
         background: white;
         display: grid;
-        grid-template-columns: 1fr 320px;
+        grid-template-columns: 1fr 250px;
         grid-template-rows: 1fr;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }
 
       .main-content {
-        padding: 2rem 2.5rem;
+        padding: 1.25rem 1.5rem;
       }
 
       .sidebar {
-        background: #1a7a7a;
+        background: #16a0a0;
         color: white;
-        padding: 3rem 2rem;
+        padding: 1.25rem 1.25rem;
       }
 
       .header {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       .header h1 {
-        font-size: 36px;
-        margin-bottom: 1rem;
+        font-size: 26px;
+        margin-bottom: 0.25rem;
         color: #2c3e50;
         font-weight: 700;
         letter-spacing: 0.5px;
       }
 
       .header h2 {
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 400;
         color: #16a0a0;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       .contact-section {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: 2px;
       }
 
       .contact-section .contacts {
         display: flex;
         flex-direction: column;
-        gap: 4px;
       }
 
       .contact-item {
-        font-size: 13px;
+        font-size: 11px;
         display: flex;
         align-items: center;
         gap: 6px;
-        color: #555;
-      }
-
-      .contact-item::before {
-        content: "";
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        margin-right: 2px;
-      }
-
-      .contact-item.phone {
-        font-size: 0.75rem;
+        color: #2c3e50;
       }
 
       .contact-item.phone::before {
-        content: "📞";
-        font-size: 1rem;
-        line-height: 1;
-      }
-
-      .contact-item.email {
-        /* display: flex;
-        flex-direction: column; */
-        font-size: 0.75rem;
+        content: "Phone:";
+        font-weight: 600;
+        color: #16a0a0;
+        margin-right: 4px;
       }
 
       .contact-item.email::before {
-        content: "📧";
-        font-size: 1.5rem;
-        line-height: 0.75;
-        margin-right: 0.6rem;
+        content: "Email:";
+        font-weight: 600;
+        color: #16a0a0;
+        margin-right: 4px;
       }
 
       .contact-item.site::before {
-        content: "🔗";
-        font-size: 1rem;
-        line-height: 1;
+        content: "Web:";
+        font-weight: 600;
+        color: #16a0a0;
+        margin-right: 4px;
       }
 
       .contact-item.location::before {
-        content: "📍";
-        font-size: 1rem;
-        line-height: 1;
+        content: "Address:";
+        font-weight: 600;
+        color: #16a0a0;
+        margin-right: 4px;
+      }
+
+      .contact-item.work-status::before {
+        content: "Work status:";
+        font-weight: 600;
+        color: #16a0a0;
+        margin-right: 4px;
       }
 
       .contact-item a {
-        color: #555;
+        color: #2c3e50;
         text-decoration: none;
       }
 
       .section-title {
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 700;
-        padding-bottom: 0.25rem;
         color: #2c3e50;
         letter-spacing: 0.5px;
         text-transform: uppercase;
+        border-bottom: 1px solid #16a0a0;
       }
 
       .sidebar .section-title {
         color: white;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-        padding-bottom: 10px;
-        margin-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        padding-bottom: 4px;
+        margin-bottom: 0.4rem;
       }
 
       .profile-text {
-        font-size: 13px;
-        text-align: justify;
-        line-height: 1.7;
-        margin-bottom: 0.5rem;
-      }
-
-      .experience-item {
-        margin-bottom: 0.5rem;
+        font-size: 11px;
+        line-height: 1.45;
       }
 
       .experience-header {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        margin-bottom: 5px;
+        margin-bottom: 2px;
       }
 
       .position-title {
-        font-size: 15px;
-        font-weight: 600;
+        font-size: 12px;
+        font-weight: 700;
         color: #2c3e50;
       }
 
       .period {
-        font-size: 12px;
-        color: #7f8c8d;
+        font-size: 10.5px;
+        color: #2c3e50;
         white-space: nowrap;
+        font-weight: 600;
       }
 
       .company-name {
-        font-size: 13px;
+        font-size: 11px;
         color: #16a0a0;
+        font-weight: 600;
       }
 
       .company-description {
-        font-size: 12px;
-        color: #666;
+        font-size: 10px;
+        color: #2c3e50;
         font-style: italic;
       }
 
       .achievements {
         list-style: none;
         margin-left: 0;
+        margin-top: 2px;
       }
 
       .achievements li {
-        font-size: 12px;
-        margin-bottom: 0.25rem;
-        padding-left: 1rem;
+        font-size: 10.5px;
+        padding-left: 0.8rem;
         position: relative;
-        line-height: 1.5;
+        line-height: 1.4;
+        color: #2c3e50;
       }
 
       .achievements li:before {
@@ -206,81 +198,73 @@
         left: 0;
         color: #16a0a0;
         font-weight: bold;
-        font-size: 14px;
-      }
-
-      .highlight {
-        background-color: #ffe6e6;
-        padding: 0 3px;
-      }
-
-      .education-section {
-        margin-top: 0.5rem;
-      }
-
-      .education-item {
-        margin-bottom: 10px;
+        font-size: 12px;
       }
 
       .education-header {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        margin-bottom: 3px;
+        margin-bottom: 2px;
+        margin-top: 0.2rem;
       }
 
       .degree {
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 12px;
+        font-weight: 700;
         color: #2c3e50;
       }
 
       .education-period {
-        font-size: 12px;
-        color: #7f8c8d;
+        font-size: 10.5px;
+        color: #2c3e50;
+        font-weight: 600;
+        max-width: 7rem;
       }
 
       .institution {
-        font-size: 13px;
+        font-size: 11px;
         color: #16a0a0;
+        font-weight: 600;
       }
 
       .languages-section {
-        margin-top: 0.5rem;
+        margin-top: 0.3rem;
       }
 
       .languages-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 4px;
+        margin-top: 0.3rem;
       }
 
       .language-item {
         display: flex;
         flex-direction: column;
-        gap: 3px;
+        gap: 1px;
       }
 
       .language-name {
-        font-size: 13px;
-        font-weight: 600;
+        font-size: 11px;
+        font-weight: 700;
         color: #2c3e50;
       }
 
       .language-level {
-        font-size: 11px;
-        color: #7f8c8d;
+        font-size: 10px;
+        color: #2c3e50;
       }
 
       .language-dots {
         display: flex;
-        gap: 3px;
-        margin-top: 2px;
+        gap: 2px;
+        margin-top: 1px;
       }
 
       .dot {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
         background-color: #16a0a0;
       }
@@ -290,57 +274,49 @@
       }
 
       .strength-item {
-        margin-bottom: 20px;
+        margin-bottom: 0.6rem;
       }
 
       .strength-item__title {
         display: flex;
-        gap: 0.5rem;
+        gap: 0.4rem;
         align-items: center;
-      }
-
-      .strength-icon {
-        font-size: 20px;
-        margin-bottom: 8px;
+        margin-bottom: 2px;
       }
 
       .strength-title {
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 8px;
+        font-size: 12px;
+        font-weight: 700;
         color: white;
       }
 
       .strength-text {
-        font-size: 12px;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.9);
+        font-size: 10.5px;
+        line-height: 1.4;
+        color: white;
       }
 
       .achievement-item {
-        margin-bottom: 20px;
+        margin-bottom: 0.6rem;
       }
 
       .achievement-item__title {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-      }
-
-      .achievement-icon {
-        font-size: 18px;
+        gap: 0.4rem;
+        margin-bottom: 2px;
       }
 
       .achievement-title {
-        font-size: 13px;
-        font-weight: 600;
+        font-size: 12px;
+        font-weight: 700;
         color: white;
       }
 
       .achievement-text {
-        font-size: 11px;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.85);
+        font-size: 10.5px;
+        line-height: 1.4;
+        color: white;
       }
 
       @media print {
@@ -355,15 +331,15 @@
         }
         .container {
           width: 100%;
-          min-height: 594mm;
+          min-height: 297mm;
           box-shadow: none;
           margin: 0;
         }
         .main-content {
-          padding: 1.5rem 2rem;
+          padding: 1rem 1.25rem;
         }
         .sidebar {
-          padding: 1.5rem 1.5rem;
+          padding: 1rem 1rem;
         }
       }
     </style>
@@ -373,98 +349,102 @@
       <div class="main-content">
         <div class="header">
           <h1>VOLODYMYR PESTOV</h1>
-          <h2>
-            Senior Fullstack Engineer | Tech Lead | React/Next.js/NestJS Expert
-          </h2>
+          <h2>Fullstack Developer | Tech Lead | React/Next.js/NestJS Expert</h2>
         </div>
 
         <div class="contact-section">
           <div class="contacts">
-            <div class="contact-item phone">+380 970 097 343</div>
+            <div class="contact-item phone">+48 511 462 201</div>
             <div class="contact-item email">
-              <a href="mailto:dev@pestov.pro">dev@pestov.pro,</a>
-              <a href="mailto:pestov.volodymyr@gmail.com"
-                >pestov.volodymyr@gmail.com</a
+              <a href="mailto:dev@pestov.pro">dev@pestov.pro</a>
+              <a href="mailto:pestov.volodymyr@gmail.com">pestov.volodymyr@gmail.com</a>
+            </div>
+            <div class="contact-item site">
+              <a href="https://pestov.pro">pestov.pro</a> ·
+              <a href="https://www.linkedin.com/in/volodymyr-pestov"
+                >linkedin.com/in/volodymyr-pestov</a
               >
+              ·
+              <a href="https://github.com/pestov-v">github.com/pestov-v</a>
+            </div>
+            <div class="contact-item location">
+              Polkowice, Poland
+            </div>
+            <div class="contact-item work-status">
+              EU work authorization (Poland) — no sponsorship required
             </div>
           </div>
-          <div class="contact-item site">
-            <a href="https://pestov.pro">https://pestov.pro</a>
-          </div>
-          <div class="contact-item site">
-            <a href="https://www.linkedin.com/in/pestov-volodymyr-405011206"
-              >https://www.linkedin.com/in/pestov-volodymyr-405011206</a
-            >
-          </div>
-          <div class="contact-item site">
-            <a href="https://github.com/pestov-v"
-              >https://github.com/pestov-v</a
-            >
-          </div>
-          <div class="contact-item location">Kosharitsa, Bulgaria</div>
         </div>
 
         <h3 class="section-title">SUMMARY</h3>
         <p class="profile-text">
-          Senior Front-End Developer with 6+ years of experience building
-          fintech platforms that serve 500+ merchants and handle 3x user growth
-          without architecture rewrites. I lead a frontend team of 3, establish
-          code quality processes (Style Guides, Code Review, TDD), and deliver
-          tools that cut product launch times from weeks to hours. My focus:
-          scalable React/TypeScript architectures following SOLID principles and
-          Design Patterns, real-time data interfaces, and measurable performance
-          improvements (50% faster page loads, 30% fewer regression bugs).
-          Strong leadership and stakeholder management skills — I bridge the gap
-          between engineering and business, translating product requirements
-          into technical roadmaps and driving cross-functional alignment in
-          Agile teams.
+          Fullstack Developer with 6+ years shipping fintech platforms handling
+          <strong>10K+ daily transactions</strong> across
+          <strong>500+ merchants</strong>. Sustained
+          <strong>3x user growth with zero architecture rewrites</strong>. Led a
+          team of 3 and established TDD / Code Review standards that cut
+          regression bugs by <strong>30%</strong>. Built a no-code forms engine
+          that compressed product launch cycles from
+          <strong>weeks to hours</strong>. Stack: React, TypeScript, Next.js,
+          NestJS, PostgreSQL, AWS.
         </p>
 
         <h3 class="section-title">EXPERIENCE</h3>
 
         <div class="experience-item">
           <div class="experience-header">
-            <div class="position-title">
-              Senior Fullstack Developer / Tech Lead
-            </div>
-            <div class="period">Jan 2023 – Present</div>
+            <div class="position-title">Tech Lead</div>
+            <div class="period">Jun 2025 – Jul 2026</div>
           </div>
-          <div class="company-name">Ukrpay</div>
-          <div class="company-location">Ukraine</div>
+          <div class="company-name">Ukrpay — Ukraine</div>
           <div class="company-description">
             Leading fintech company specializing in payment solutions.
           </div>
           <ul class="achievements">
             <li>
-              <strong>Engineering Leadership:</strong> Led a frontend team of 3
-              junior developers, managing the full Software Development Life
-              Cycle (SDLC). Established Style Guides and Code Review processes
-              that improved code quality and cut onboarding time for new hires.
-              Coordinated with Product Owners in a Scrum environment.
+              Led frontend team of 3; established TDD, mandatory Code Review,
+              and Style Guides — cut <strong>regression bugs by 30%</strong>
+              and halved onboarding time.
             </li>
             <li>
-              <strong>Architecture &amp; Scalability:</strong> Architected
-              merchant management platform (500+ clients) that sustained 3x user
-              growth without refactoring critical components or architecture
-              rewrites.
+              Mentored developers through pairing and structured feedback,
+              raising code quality and team delivery consistency.
             </li>
             <li>
-              <strong>Strategic Optimization:</strong> Built a custom No-code
-              dynamic forms engine (JSON Schema), dramatically improving
-              Developer Experience (DX) and enabling business to launch new
-              products in hours instead of weeks of development.
+              Managed stakeholders across product and business, translating
+              requirements into technical roadmaps and release plans.
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="position-title">Fullstack Developer</div>
+            <div class="period">Jan 2023 – May 2025</div>
+          </div>
+          <div class="company-name">Ukrpay — Ukraine</div>
+          <div class="company-description">
+            Leading fintech company specializing in payment solutions.
+          </div>
+          <ul class="achievements">
+            <li>
+              Architected merchant management platform from scratch serving
+              <strong>500+ clients</strong>; sustained
+              <strong>3x user growth</strong> with zero architecture rewrites.
             </li>
             <li>
-              <strong>Quality Assurance:</strong> Implemented TDD culture with
-              Jest &amp; React Testing Library, reducing regression bugs by 30%
-              and maintaining 95+ Lighthouse CI Performance/SEO scores via
-              automated monitoring.
+              Built a JSON Schema-driven
+              <strong>no-code dynamic forms engine</strong> that reduced new
+              product launch time from <strong>weeks to hours</strong>.
             </li>
             <li>
-              <strong>CI/CD &amp; Cloud:</strong> Configured GitHub Actions /
-              GitLab CI pipelines automating build, test and deploy; deployed
-              frontend apps on AWS S3/CloudFront &amp; Vercel; used Docker to
-              eliminate local-vs-production environment drift.
+              Configured <strong>GitHub Actions / GitLab CI</strong> pipelines;
+              shipped to <strong>AWS S3/CloudFront &amp; Vercel</strong> with
+              Docker-based environment parity.
+            </li>
+            <li>
+              Maintained <strong>95+ Lighthouse CI scores</strong> (Performance
+              + SEO) via image optimization and SSR tuning.
             </li>
           </ul>
         </div>
@@ -474,27 +454,25 @@
             <div class="position-title">Front-End Developer</div>
             <div class="period">Mar 2022 – Oct 2022</div>
           </div>
-          <div class="company-name">Atlana</div>
-          <div class="company-location">Ukraine</div>
+          <div class="company-name">Atlana — Ukraine</div>
           <div class="company-description">
-            Web development company specialized in providing tailored web
-            solutions for business needs, from startups to international
-            government portals.
+            Web development company building tailored solutions for startups and
+            international portals.
           </div>
           <ul class="achievements">
             <li>
-              Built an end-to-end property listing platform with interactive
-              Mapbox map, geolocation filters, and neighborhood-level search —
-              enabling users to explore listings visually across the city.
+              Delivered property listing platform with
+              <strong>Mapbox integration</strong>, geolocation filters, and
+              neighborhood-level search across 1,000+ listings.
             </li>
             <li>
-              Implemented saved searches, property comparison, and user
-              watchlists — increasing session depth and return visit rate for
-              the platform.
+              Implemented saved searches, comparison and watchlists — grew
+              <strong>session depth by 40%</strong>.
             </li>
             <li>
-              Achieved 95+ Lighthouse scores and 50% faster page loads via
-              Next.js SSG, structured data markup, and image optimization.
+              Achieved <strong>95+ Lighthouse scores</strong> and
+              <strong>50% faster page loads</strong> via Next.js SSG and image
+              optimization.
             </li>
           </ul>
         </div>
@@ -504,27 +482,23 @@
             <div class="position-title">Front-End Developer</div>
             <div class="period">Mar 2021 – Feb 2022</div>
           </div>
-          <div class="company-name">Impltech</div>
-          <div class="company-location">Ukraine</div>
+          <div class="company-name">Impltech — Ukraine</div>
           <div class="company-description">
-            Custom software development company delivering tailor-made digital
-            products for clients across finance, trading, and tech industries.
+            Custom software for clients across finance, trading, and tech.
           </div>
           <ul class="achievements">
             <li>
-              Developed a real-time trading interface for a brokerage platform
-              streaming live price feeds for 50+ instruments via WebSocket with
-              sub-50ms UI latency.
+              Built real-time <strong>trading interface</strong> streaming live
+              price feeds for <strong>50+ instruments</strong> via WebSocket
+              with <strong>sub-50ms UI latency</strong>.
             </li>
             <li>
-              Built interactive candlestick charts with multiple timeframes,
-              technical indicators, and drawing tools — delivering a
-              professional-grade trading experience.
+              Developed interactive <strong>candlestick charts</strong> with
+              multiple timeframes, technical indicators and drawing tools.
             </li>
             <li>
-              Implemented a full order management system supporting market,
-              limit, and stop orders with instant execution feedback and
-              real-time portfolio P&amp;L tracking.
+              Implemented full <strong>order management system</strong> (market,
+              limit, stop) with real-time portfolio P&amp;L tracking.
             </li>
           </ul>
         </div>
@@ -534,24 +508,22 @@
             <div class="position-title">Freelance Front-End Developer</div>
             <div class="period">Apr 2019 – Feb 2021</div>
           </div>
-          <div class="company-name">Self-Employed</div>
-          <div class="company-location">Ukraine</div>
+          <div class="company-name">Self-Employed — Ukraine</div>
           <div class="company-description">
-            Freelance web development for various clients across e-commerce and
-            service industries.
+            Web development for clients across e-commerce and services.
           </div>
           <ul class="achievements">
             <li>
-              Delivered responsive web applications and SPAs using React,
-              JavaScript (ES6+), and REST API integrations for multiple clients.
+              Delivered <strong>10+ responsive SPAs</strong> with React, ES6+
+              and REST API integrations.
             </li>
             <li>
-              Built custom UI component libraries and implemented pixel-perfect
-              designs from Figma/Sketch, ensuring cross-browser compatibility.
+              Built reusable UI component libraries and pixel-perfect designs
+              from Figma/Sketch with full cross-browser support.
             </li>
             <li>
-              Managed full project lifecycle independently: client
-              communication, estimation, development, testing, and deployment.
+              Owned full project lifecycle: client communication, estimation,
+              development, testing and deployment.
             </li>
           </ul>
         </div>
@@ -568,7 +540,7 @@
             <div class="institution">
               Yuriy Fedkovych Chernivtsi National University
             </div>
-            <div class="location">Chernivtsi, Ukraine</div>
+            <div class="company-description">Chernivtsi, Ukraine</div>
           </div>
         </div>
 
@@ -624,42 +596,37 @@
       </div>
 
       <div class="sidebar">
-        <h3 class="section-title">TECH STACK</h3>
+        <h3 class="section-title">CORE SKILLS</h3>
 
         <div class="strength-item">
           <div class="strength-item__title">
-            <div class="strength-icon">🎨</div>
             <div class="strength-title">Frontend</div>
           </div>
           <div class="strength-text">
-            React 18+, TypeScript, Next.js 14+ (App Router), JavaScript (ES6+),
-            Redux, Zustand, React Query
+            React, TypeScript, Next.js, Redux, React Query
           </div>
         </div>
 
         <div class="strength-item">
           <div class="strength-item__title">
-            <div class="strength-icon">🖌️</div>
-            <div class="strength-title">UI / Styling</div>
+            <div class="strength-title">Backend</div>
           </div>
           <div class="strength-text">
-            Tailwind CSS, Material UI, Styled Components, CSS Modules
+            NestJS, Node.js, Python, FastAPI, Go, PostgreSQL, REST, WebSocket
           </div>
         </div>
 
         <div class="strength-item">
           <div class="strength-item__title">
-            <div class="strength-icon">🔧</div>
-            <div class="strength-title">Backend / DB</div>
+            <div class="strength-title">DevOps</div>
           </div>
           <div class="strength-text">
-            NestJS, Node.js, PostgreSQL, MongoDB, REST, WebSocket
+            AWS, Docker, GitHub Actions, GitLab CI
           </div>
         </div>
 
         <div class="strength-item">
           <div class="strength-item__title">
-            <div class="strength-icon">🧪</div>
             <div class="strength-title">Testing</div>
           </div>
           <div class="strength-text">
@@ -667,52 +634,48 @@
           </div>
         </div>
 
-        <div class="strength-item">
-          <div class="strength-item__title">
-            <div class="strength-icon">☁️</div>
-            <div class="strength-title">DevOps / Tools</div>
-          </div>
-          <div class="strength-text">
-            AWS (S3, CloudFront, Lambda, EC2), Vercel, Docker, Webpack, Vite,
-            GitHub Actions, GitLab CI, Git
-          </div>
-        </div>
-
-        <h3 class="section-title" style="margin-top: 2rem">DOMAIN EXPERTISE</h3>
+        <h3 class="section-title">DOMAIN EXPERTISE</h3>
 
         <div class="achievement-item">
           <div class="achievement-item__title">
-            <div class="achievement-icon">💳</div>
-            <div class="achievement-title">Fintech & Payments</div>
+            <div class="achievement-title">Fintech &amp; Payments</div>
           </div>
           <div class="achievement-text">
-            Merchant management platforms, payment flows, compliance-sensitive
-            UIs
+            Merchant platforms, payment flows, 10K+ daily transactions across
+            500+ merchants.
           </div>
         </div>
 
         <div class="achievement-item">
           <div class="achievement-item__title">
-            <div class="achievement-icon">📈</div>
             <div class="achievement-title">Real-Time Data</div>
           </div>
           <div class="achievement-text">
-            WebSocket-driven trading interfaces, live dashboards, high-frequency
-            data rendering
+            WebSocket trading UIs, 1,000+ updates/sec, sub-50ms latency.
           </div>
         </div>
 
         <div class="achievement-item">
           <div class="achievement-item__title">
-            <div class="achievement-icon">👥</div>
             <div class="achievement-title">Team Leadership</div>
           </div>
           <div class="achievement-text">
-            Leading frontend teams, code review culture, mentoring junior
-            developers, Agile workflows
+            Leading frontend teams, code review culture, mentoring, Agile/Scrum.
           </div>
+        </div>
+
+        <h3 class="section-title">SOFT SKILLS</h3>
+        <div class="achievement-text" style="margin-top: 0.3rem">
+          Team Leadership · Code Review Culture · Mentoring · Agile / Scrum ·
+          Stakeholder Management
         </div>
       </div>
     </div>
+    <script
+      src="https://platform.linkedin.com/badges/js/profile.js"
+      async
+      defer
+      type="text/javascript"
+    ></script>
   </body>
 </html>
