@@ -224,6 +224,9 @@ export const Header: NextPage = () => {
             >
               {t.downloadCV}
             </a>
+            <a href="#mail" className={style.btnGhost}>
+              {t.getInTouch}
+            </a>
           </div>
         </motion.div>
 

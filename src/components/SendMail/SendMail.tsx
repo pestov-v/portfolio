@@ -27,11 +27,13 @@ export const SendMail = () => {
   };
 
   const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.current || isSending) return;
     setIsSending(true);
+    setStatus("idle");
     try {
       await emailjs.sendForm(
         "service_f6tyqgq",
@@ -39,13 +41,13 @@ export const SendMail = () => {
         form.current,
         "_t-9w7H78xR5SS4K6",
       );
-      alert(t.thankYouMessage);
+      setStatus("success");
       formData.name.reset();
       formData.email.reset();
       formData.text.reset();
     } catch (error: any) {
       console.error("EmailJS Error:", error);
-      alert(error?.text || t.ui.sendFailed);
+      setStatus("error");
     } finally {
       setIsSending(false);
     }
@@ -138,7 +140,45 @@ export const SendMail = () => {
           >
             {isSending ? t.ui.sending : `${t.sendButton} →`}
           </button>
+
+          <div aria-live="polite" className={style.statusWrap}>
+            {status === "success" && (
+              <p className={style.statusSuccess} role="status">
+                <span aria-hidden="true">✓</span> {t.thankYouMessage}
+              </p>
+            )}
+            {status === "error" && (
+              <p className={style.statusError} role="alert">
+                {t.ui.sendFailed}
+              </p>
+            )}
+          </div>
         </form>
+        </div>
+
+        <div className={style.directContacts}>
+          <a
+            href="mailto:pestov.volodymyr@gmail.com"
+            className={style.directLink}
+          >
+            ✉ pestov.volodymyr@gmail.com
+          </a>
+          <a
+            href="https://t.me/pestov_v"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.directLink}
+          >
+            {t.ui.telegramLabel} → @pestov_v
+          </a>
+          <a
+            href="https://linkedin.com/in/pestov-volodymyr-405011206/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.directLink}
+          >
+            {t.ui.linkedinLink}
+          </a>
         </div>
       </div>
     </section>

@@ -28,8 +28,8 @@ const personSchema = {
   telephone: "+380970097343",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Nesebar",
-    addressCountry: "BG",
+    addressLocality: "Wroclaw",
+    addressCountry: "PL",
   },
   alumniOf: {
     "@type": "EducationalOrganization",

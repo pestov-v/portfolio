@@ -66,6 +66,7 @@ export interface Translation {
   headerTitle: string;
   headerDescription: string;
   viewMyWork: string;
+  getInTouch: string;
   yearsExp: string;
   projectsCount: string;
   coffee: string;
@@ -387,8 +388,9 @@ export const translations: Record<
     badgeAvailable: "available for work",
     headerTitle: "Who am I..?",
     headerDescription:
-      "Building high-performance web applications with modern technologies and clean, maintainable architecture.",
+      "I build scalable, high-performance fintech platforms and web applications from scratch — from architecture and system design to production.",
     viewMyWork: "view my work",
+    getInTouch: "get in touch",
     yearsExp: "YEARS EXP.",
     projectsCount: "PROJECTS",
     coffee: "COFFEE",
@@ -641,7 +643,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Full-Stack Developer",
+        position: "Tech Lead / Senior Full-Stack Developer",
         companyDescription:
           "Ukrpay is a leading Ukrainian fintech company specializing in end-to-end payment solutions for banks, financial institutions, and merchants — powering thousands of daily transactions across the country.",
         achievements: [
@@ -806,8 +808,9 @@ export const translations: Record<
     badgeAvailable: "доступний для роботи",
     headerTitle: "Хто я..?",
     headerDescription:
-      "Розробка високопродуктивних веб-додатків із сучасними технологіями та чистою, підтримуваною архітектурою.",
+      "Створюю масштабовані, високопродуктивні фінтех-платформи та веб-додатки з нуля — від архітектури й системного дизайну до продакшену.",
     viewMyWork: "дивитись мої роботи",
+    getInTouch: "зв'язатися зі мною",
     yearsExp: "РОКІВ ДОСВІДУ",
     projectsCount: "ПРОЕКТІВ",
     coffee: "КАВИ",
@@ -1059,7 +1062,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Full-Stack Розробник",
+        position: "Tech Lead / Senior Full-Stack Розробник",
         companyDescription:
           "Ukrpay — провідна українська фінтех-компанія, що спеціалізується на комплексних платіжних рішеннях для банків, фінансових установ та мерчантів — забезпечуючи тисячі щоденних транзакцій по всій країні.",
         achievements: [
@@ -1224,8 +1227,9 @@ export const translations: Record<
     badgeAvailable: "достъпен за работа",
     headerTitle: "Кой съм аз..?",
     headerDescription:
-      "Разработка на високопроизводителни уеб приложения със съвременни технологии и чиста, поддържаема архитектура.",
+      "Изграждам мащабируеми, високопроизводителни финтех платформи и уеб приложения от нулата — от архитектурата и системния дизайн до продакшън.",
     viewMyWork: "виж моята работа",
+    getInTouch: "свържете се с мен",
     yearsExp: "ГОДИНИ ОПИТ",
     projectsCount: "ПРОЕКТИ",
     coffee: "КАФЕ",
@@ -1476,7 +1480,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Full-Stack Разработчик",
+        position: "Tech Lead / Senior Full-Stack Разработчик",
         companyDescription:
           "Ukrpay е водеща украинска финтех компания, специализирана в цялостни платежни решения за банки, финансови институции и търговци — захранвайки хиляди ежедневни транзакции в цялата страна.",
         achievements: [
@@ -1641,8 +1645,9 @@ export const translations: Record<
     badgeAvailable: "dostępny do pracy",
     headerTitle: "Kim jestem..?",
     headerDescription:
-      "Budowanie wysokowydajnych aplikacji internetowych za pomocą nowoczesnych technologii i czystej, łatwej w utrzymaniu architektury.",
+      "Buduję skalowalne, wysokowydajne platformy fintech i aplikacje internetowe od podstaw — od architektury i projektowania systemów po produkcję.",
     viewMyWork: "zobacz moją pracę",
+    getInTouch: "skontaktuj się",
     yearsExp: "LAT DOŚWIADCZENIA",
     projectsCount: "PROJEKTÓW",
     coffee: "KAWY",
@@ -1893,7 +1898,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Full-Stack Developer",
+        position: "Tech Lead / Senior Full-Stack Developer",
         companyDescription:
           "Ukrpay to wiodąca ukraińska firma fintech specjalizująca się w kompleksowych rozwiązaniach płatniczych dla banków, instytucji finansowych i sprzedawców — obsługując tysiące codziennych transakcji w całym kraju.",
         achievements: [
@@ -2058,8 +2063,9 @@ export const translations: Record<
     badgeAvailable: "disponibile per il lavoro",
     headerTitle: "Chi sono..?",
     headerDescription:
-      "Costruire applicazioni web ad alte prestazioni con tecnologie moderne e architettura pulita e mantenibile.",
+      "Costruisco piattaforme fintech e applicazioni web scalabili e ad alte prestazioni da zero — dall'architettura e system design alla produzione.",
     viewMyWork: "vedi il mio lavoro",
+    getInTouch: "contattami",
     yearsExp: "ANNI DI ESPERIENZA",
     projectsCount: "PROGETTI",
     coffee: "CAFFÈ",
@@ -2311,7 +2317,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Senior Full-Stack Developer",
+        position: "Tech Lead / Senior Full-Stack Developer",
         companyDescription:
           "Ukrpay è un'azienda fintech ucraina leader specializzata in soluzioni di pagamento end-to-end per banche, istituzioni finanziarie e commercianti — alimentando migliaia di transazioni quotidiane in tutto il paese.",
         achievements: [
@@ -2476,8 +2482,9 @@ export const translations: Record<
     badgeAvailable: "disponible pour travailler",
     headerTitle: "Qui je suis..?",
     headerDescription:
-      "Construire des applications web performantes avec des technologies modernes et une architecture propre et maintenable.",
+      "Je construis des plateformes fintech et des applications web évolutives et performantes à partir de zéro — de l'architecture et du system design à la production.",
     viewMyWork: "voir mon travail",
+    getInTouch: "me contacter",
     yearsExp: "ANS D'EXPÉRIENCE",
     projectsCount: "PROJETS",
     coffee: "CAFÉ",
@@ -2729,7 +2736,7 @@ export const translations: Record<
     // Experience data
     experienceData: {
       ukrpay: {
-        position: "Développeur Full-Stack Senior",
+        position: "Tech Lead / Développeur Full-Stack Senior",
         companyDescription:
           "Ukrpay est une entreprise fintech ukrainienne leader spécialisée dans les solutions de paiement de bout en bout pour les banques, les institutions financières et les commerçants — alimentant des milliers de transactions quotidiennes à travers le pays.",
         achievements: [

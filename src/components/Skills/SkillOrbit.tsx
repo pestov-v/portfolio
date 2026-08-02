@@ -163,6 +163,7 @@ export const SkillOrbit: FC = () => {
 
         {isDesktop ? (
           // Desktop: Orbit layout
+          <>
           <div className={style.orbitContainer} ref={ref}>
             <div className={`${style.ring} ${style.ring0}`} />
             <div className={`${style.ring} ${style.ring1}`} />
@@ -183,6 +184,21 @@ export const SkillOrbit: FC = () => {
               <SkillNode key={s.title} title={s.title} percent={s.percent} index={i} total={devops.length} ring={2} revealed={revealed} />
             ))}
           </div>
+          <div className={style.orbitLegend}>
+            <span className={style.legendItem}>
+              <i className={`${style.legendDot} ${style.legendDotInner}`} aria-hidden="true" />
+              {t.frontend}
+            </span>
+            <span className={style.legendItem}>
+              <i className={`${style.legendDot} ${style.legendDotMiddle}`} aria-hidden="true" />
+              {t.backend}
+            </span>
+            <span className={style.legendItem}>
+              <i className={`${style.legendDot} ${style.legendDotOuter}`} aria-hidden="true" />
+              {t.devops} / Tools
+            </span>
+          </div>
+          </>
         ) : (
           // Mobile: Grid with circular progress
           <div className={style.grid} ref={ref}>

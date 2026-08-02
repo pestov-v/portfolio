@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useTheme } from "../../contexts/ThemeContext";
 import { trackSocialClick } from "../../lib/analytics";
@@ -15,6 +15,27 @@ export const About = () => {
   const { t } = useLanguage();
   const { resolvedTheme } = useTheme();
   const sectionRef = useRef<HTMLElement>(null);
+  // LinkedIn badge is rendered client-only: its script mutates the DOM
+  // (data-rendered/data-uid), which breaks SSR hydration if pre-rendered
+  const [badgeReady, setBadgeReady] = useState(false);
+
+  useEffect(() => {
+    setBadgeReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!badgeReady) return;
+    const src = "https://platform.linkedin.com/badges/js/profile.js";
+    if (document.querySelector(`script[src="${src}"]`)) {
+      (window as any).LIRenderAll?.();
+      return;
+    }
+    const script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }, [badgeReady]);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -111,25 +132,27 @@ export const About = () => {
           <div className={style.infoCards}>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>{t.ui.locationLabel}</span>
-              <span className={style.infoValue}>Bulgaria, Nesebar</span>
+              <span className={style.infoValue}>Poland, Wroclaw</span>
             </div>
             <div className={style.infoCard}>
-              <div
-                className="badge-base LI-profile-badge"
-                data-locale="en_US"
-                data-size="medium"
-                data-theme={resolvedTheme}
-                data-type="HORIZONTAL"
-                data-vanity="volodymyr-pestov"
-                data-version="v1"
-              >
-                <a
-                  className="badge-base__link LI-simple-link"
-                  href="https://ax.linkedin.com/in/volodymyr-pestov?trk=profile-badge"
+              {badgeReady && (
+                <div
+                  className="badge-base LI-profile-badge"
+                  data-locale="en_US"
+                  data-size="medium"
+                  data-theme={resolvedTheme}
+                  data-type="HORIZONTAL"
+                  data-vanity="volodymyr-pestov"
+                  data-version="v1"
                 >
-                  Pestov Volodymyr
-                </a>
-              </div>
+                  <a
+                    className="badge-base__link LI-simple-link"
+                    href="https://ax.linkedin.com/in/volodymyr-pestov?trk=profile-badge"
+                  >
+                    Pestov Volodymyr
+                  </a>
+                </div>
+              )}
             </div>
             <div className={style.infoCard}>
               <span className={`${style.infoKey} scrambled`}>{t.ui.statusLabel}</span>

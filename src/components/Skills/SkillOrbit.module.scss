@@ -72,6 +72,46 @@
   }
 }
 
+.orbitLegend {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 8px;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--re-font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--re-text-secondary);
+}
+
+.legendDot {
+  border-radius: 50%;
+  border: 1px solid var(--re-accent);
+  background: var(--re-bg-card);
+}
+
+.legendDotInner {
+  width: 8px;
+  height: 8px;
+}
+
+.legendDotMiddle {
+  width: 12px;
+  height: 12px;
+}
+
+.legendDotOuter {
+  width: 16px;
+  height: 16px;
+}
+
 .center {
   position: absolute;
   top: 50%;

@@ -241,6 +241,50 @@ export const _projects: TProjects = [
       "Postgres",
       "TypeORM",
     ],
+    caseStudy: {
+      challenge:
+        "The hostel managed bookings by phone and spreadsheet: no live view of room availability, double-bookings during peak season, and partner agencies had no way to place guests or track their discounts and bonuses.",
+      solution:
+        "Built a full-stack booking system: NestJS REST API with PostgreSQL/TypeORM and a Next.js frontend. Room availability is enforced at the database level with transactional reservation checks, so two guests can never book the same bed. Role-based access control separates admins, staff, and partner accounts; the partner program supports payments through partners with automatic discount management and bonus accrual. The admin dashboard covers guest registration, reservation tracking, and occupancy reporting.",
+      result:
+        "Double-bookings eliminated through transactional availability checks. Partner agencies book directly with discounts and bonuses calculated automatically. Staff manage the entire guest lifecycle — booking, check-in, checkout — from a single dashboard instead of phone and spreadsheets.",
+      technologies: [
+        "Next.js",
+        "NestJS",
+        "TypeScript",
+        "TailwindCSS",
+        "Postgres",
+        "TypeORM",
+      ],
+      diagrams: [
+        {
+          chart: `graph TD
+    A[Guest] -->|Books room| B(Booking Engine)
+    P[Partner Agency] -->|Places guest| B
+
+    subgraph "Availability Layer"
+    B --> C{Transactional slot check}
+    C -->|Free| D[Reservation created]
+    C -->|Taken| E[Alternatives suggested]
+    end
+
+    subgraph "Partner Program"
+    P --> F[Partner Account / RBAC]
+    F --> G[Discount Rules]
+    F --> H[Bonus Accrual]
+    end
+
+    subgraph "Admin Dashboard"
+    I[Staff] --> J[Guest Registration]
+    I --> K[Reservation Tracking]
+    I --> L[Occupancy Reports]
+    D --> K
+    end`,
+          caption:
+            "Booking architecture: transactional availability checks at the database level prevent double-bookings, the partner layer handles agency placements with automatic discount and bonus calculation, and staff operate the full guest lifecycle from the admin dashboard.",
+        },
+      ],
+    },
   },
   {
     id: 17,
@@ -483,7 +527,7 @@ export const _projects: TProjects = [
     },
   },
   {
-    id: 20,
+    id: 23,
     translationKey: "aurabeauty",
     title: "Aura Beauty Salon — AI Booking Platform",
     description:
@@ -647,6 +691,18 @@ export const SKILLS: ISkill[] = [
     color: COLORS.primary,
     category: "frontend",
   },
+  {
+    title: "TailwindCSS",
+    percent: 88,
+    color: COLORS.success,
+    category: "frontend",
+  },
+  {
+    title: "React Native",
+    percent: 75,
+    color: COLORS.secondary,
+    category: "frontend",
+  },
   { title: "Node.js", percent: 75, color: COLORS.success, category: "backend" },
   { title: "NestJS", percent: 78, color: COLORS.info, category: "backend" },
   { title: "Python", percent: 78, color: COLORS.warning, category: "backend" },
@@ -672,6 +728,12 @@ export const SKILLS: ISkill[] = [
   { title: "Redux", percent: 85, color: COLORS.danger, category: "frontend" },
   { title: "Git", percent: 90, color: COLORS.warning, category: "devops" },
   { title: "Docker", percent: 65, color: COLORS.info, category: "devops" },
+  {
+    title: "CI/CD",
+    percent: 80,
+    color: COLORS.secondary,
+    category: "devops",
+  },
 ];
 
 export interface IExperience {

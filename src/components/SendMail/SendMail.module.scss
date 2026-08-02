@@ -163,6 +163,51 @@
   }
 }
 
+.statusWrap {
+  min-height: 20px;
+}
+
+.statusSuccess,
+.statusError {
+  font-family: var(--re-font-mono);
+  font-size: 13px;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.statusSuccess {
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  background: rgba(52, 211, 153, 0.08);
+}
+
+.statusError {
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  background: rgba(248, 113, 113, 0.08);
+}
+
+.directContacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-top: 28px;
+}
+
+.directLink {
+  font-family: var(--re-font-mono);
+  font-size: 13px;
+  color: var(--re-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--re-accent);
+  }
+}
+
 @property --gradient-angle {
   syntax: "<angle>";
   initial-value: 0deg;

@@ -20,7 +20,7 @@
 
       body {
         font-family: Helvetica, Arial, sans-serif;
-        line-height: 1.45;
+        line-height: 1.35;
         color: #2c3e50;
         padding: 20px 0;
       }
@@ -143,7 +143,7 @@
 
       .profile-text {
         font-size: 11px;
-        line-height: 1.45;
+        line-height: 1.35;
       }
 
       .experience-header {
@@ -172,6 +172,25 @@
         font-weight: 600;
       }
 
+      .company-name--main {
+        font-size: 12.5px;
+        font-weight: 700;
+      }
+
+      .role-block {
+        margin-top: 0.2rem;
+      }
+
+      .experience-item {
+        margin-bottom: 0.3rem;
+      }
+
+      .promotion-note {
+        font-size: 10px;
+        color: #2c3e50;
+        font-style: italic;
+      }
+
       .company-description {
         font-size: 10px;
         color: #2c3e50;
@@ -188,7 +207,7 @@
         font-size: 10.5px;
         padding-left: 0.8rem;
         position: relative;
-        line-height: 1.4;
+        line-height: 1.3;
         color: #2c3e50;
       }
 
@@ -319,6 +338,18 @@
         color: white;
       }
 
+      /* Keep logical blocks intact — no mid-line tearing across pages/columns */
+      .experience-item,
+      .role-block,
+      .education-item,
+      .language-item,
+      .strength-item,
+      .achievement-item,
+      .achievements li {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
       @media print {
         @page {
           size: A4;
@@ -336,10 +367,12 @@
           margin: 0;
         }
         .main-content {
-          padding: 1rem 1.25rem;
+          padding: 0.8rem 1.25rem;
         }
         .sidebar {
-          padding: 1rem 1rem;
+          padding: 0.8rem 1rem;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
         }
       }
     </style>
@@ -368,7 +401,7 @@
               <a href="https://github.com/pestov-v">github.com/pestov-v</a>
             </div>
             <div class="contact-item location">
-              Polkowice, Poland
+              Wroclaw, Poland
             </div>
             <div class="contact-item work-status">
               EU work authorization (Poland) — no sponsorship required
@@ -378,13 +411,15 @@
 
         <h3 class="section-title">SUMMARY</h3>
         <p class="profile-text">
-          Fullstack Developer with 6+ years shipping fintech platforms handling
+          Fullstack Developer / Tech Lead with 6+ years building scalable,
+          high-performance fintech platforms from scratch — from architecture
+          and system design to production. Shipped systems handling
           <strong>10K+ daily transactions</strong> across
-          <strong>500+ merchants</strong>. Sustained
-          <strong>3x user growth with zero architecture rewrites</strong>. Led a
-          team of 3 and established TDD / Code Review standards that cut
-          regression bugs by <strong>30%</strong>. Built a no-code forms engine
-          that compressed product launch cycles from
+          <strong>500+ merchants</strong>; sustained
+          <strong>3x user growth with zero architecture rewrites</strong>. Led
+          a team of 3, established TDD / Code Review standards that cut
+          regression bugs by <strong>30%</strong>, and built a no-code forms
+          engine that compressed product launch cycles from
           <strong>weeks to hours</strong>. Stack: React, TypeScript, Next.js,
           NestJS, PostgreSQL, AWS.
         </p>
@@ -393,60 +428,79 @@
 
         <div class="experience-item">
           <div class="experience-header">
-            <div class="position-title">Tech Lead</div>
-            <div class="period">Jun 2025 – Jul 2026</div>
+            <div class="company-name company-name--main">Ukrpay — Ukraine</div>
+            <div class="period">Jan 2023 – Jul 2026</div>
           </div>
-          <div class="company-name">Ukrpay — Ukraine</div>
           <div class="company-description">
             Leading fintech company specializing in payment solutions.
+            <span class="promotion-note"
+              >Promoted from Fullstack Developer to Tech Lead.</span
+            >
           </div>
-          <ul class="achievements">
-            <li>
-              Led frontend team of 3; established TDD, mandatory Code Review,
-              and Style Guides — cut <strong>regression bugs by 30%</strong>
-              and halved onboarding time.
-            </li>
-            <li>
-              Mentored developers through pairing and structured feedback,
-              raising code quality and team delivery consistency.
-            </li>
-            <li>
-              Managed stakeholders across product and business, translating
-              requirements into technical roadmaps and release plans.
-            </li>
-          </ul>
-        </div>
 
-        <div class="experience-item">
-          <div class="experience-header">
-            <div class="position-title">Fullstack Developer</div>
-            <div class="period">Jan 2023 – May 2025</div>
+          <div class="role-block">
+            <div class="experience-header">
+              <div class="position-title">Tech Lead</div>
+              <div class="period">Jun 2025 – Jul 2026</div>
+            </div>
+            <ul class="achievements">
+              <li>
+                Led frontend team of 3; established TDD, mandatory Code Review,
+                and Style Guides — cut <strong>regression bugs by 30%</strong>
+                and halved onboarding time.
+              </li>
+              <li>
+                Owned technical architecture decisions across the platform:
+                API design, service boundaries, and data model reviews for new
+                payment products.
+              </li>
+              <li>
+                Mentored developers through pairing and structured feedback,
+                raising code quality and team delivery consistency.
+              </li>
+              <li>
+                Managed stakeholders across product and business, translating
+                requirements into technical roadmaps and release plans.
+              </li>
+            </ul>
           </div>
-          <div class="company-name">Ukrpay — Ukraine</div>
-          <div class="company-description">
-            Leading fintech company specializing in payment solutions.
+
+          <div class="role-block">
+            <div class="experience-header">
+              <div class="position-title">Fullstack Developer</div>
+              <div class="period">Jan 2023 – May 2025</div>
+            </div>
+            <ul class="achievements">
+              <li>
+                Architected merchant management platform from scratch
+                (Next.js, NestJS, PostgreSQL) serving
+                <strong>500+ clients</strong>; sustained
+                <strong>3x user growth</strong> with zero architecture
+                rewrites.
+              </li>
+              <li>
+                Designed <strong>NestJS REST APIs</strong> and the PostgreSQL
+                data layer processing <strong>10K+ daily transactions</strong>;
+                optimized queries and indexing to keep response times stable
+                under growing load.
+              </li>
+              <li>
+                Built a JSON Schema-driven
+                <strong>no-code dynamic forms engine</strong> that reduced new
+                product launch time from <strong>weeks to hours</strong>.
+              </li>
+              <li>
+                Configured <strong>GitHub Actions / GitLab CI</strong>
+                pipelines; shipped to
+                <strong>AWS S3/CloudFront &amp; Vercel</strong> with
+                Docker-based environment parity.
+              </li>
+              <li>
+                Maintained <strong>95+ Lighthouse CI scores</strong>
+                (Performance + SEO) via image optimization and SSR tuning.
+              </li>
+            </ul>
           </div>
-          <ul class="achievements">
-            <li>
-              Architected merchant management platform from scratch serving
-              <strong>500+ clients</strong>; sustained
-              <strong>3x user growth</strong> with zero architecture rewrites.
-            </li>
-            <li>
-              Built a JSON Schema-driven
-              <strong>no-code dynamic forms engine</strong> that reduced new
-              product launch time from <strong>weeks to hours</strong>.
-            </li>
-            <li>
-              Configured <strong>GitHub Actions / GitLab CI</strong> pipelines;
-              shipped to <strong>AWS S3/CloudFront &amp; Vercel</strong> with
-              Docker-based environment parity.
-            </li>
-            <li>
-              Maintained <strong>95+ Lighthouse CI scores</strong> (Performance
-              + SEO) via image optimization and SSR tuning.
-            </li>
-          </ul>
         </div>
 
         <div class="experience-item">
@@ -509,17 +563,11 @@
             <div class="period">Apr 2019 – Feb 2021</div>
           </div>
           <div class="company-name">Self-Employed — Ukraine</div>
-          <div class="company-description">
-            Web development for clients across e-commerce and services.
-          </div>
           <ul class="achievements">
             <li>
-              Delivered <strong>10+ responsive SPAs</strong> with React, ES6+
-              and REST API integrations.
-            </li>
-            <li>
-              Built reusable UI component libraries and pixel-perfect designs
-              from Figma/Sketch with full cross-browser support.
+              Delivered <strong>10+ responsive SPAs</strong> with React and
+              REST API integrations; built reusable UI component libraries from
+              Figma/Sketch designs.
             </li>
             <li>
               Owned full project lifecycle: client communication, estimation,
@@ -571,23 +619,23 @@
             </div>
             <div class="language-item">
               <div class="language-name">English</div>
-              <div class="language-level">Advanced (B1/B2)</div>
+              <div class="language-level">Advanced (C1)</div>
               <div class="language-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
-                <span class="dot empty"></span>
+                <span class="dot"></span>
                 <span class="dot empty"></span>
               </div>
             </div>
             <div class="language-item">
               <div class="language-name">Polish</div>
-              <div class="language-level">Advanced (B1/B2)</div>
+              <div class="language-level">Advanced (C1)</div>
               <div class="language-dots">
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
-                <span class="dot empty"></span>
+                <span class="dot"></span>
                 <span class="dot empty"></span>
               </div>
             </div>
@@ -603,7 +651,7 @@
             <div class="strength-title">Frontend</div>
           </div>
           <div class="strength-text">
-            React, TypeScript, Next.js, Redux, React Query
+            React, TypeScript, Next.js, React Native, Redux, React Query
           </div>
         </div>
 
@@ -671,11 +719,5 @@
         </div>
       </div>
     </div>
-    <script
-      src="https://platform.linkedin.com/badges/js/profile.js"
-      async
-      defer
-      type="text/javascript"
-    ></script>
   </body>
 </html>
