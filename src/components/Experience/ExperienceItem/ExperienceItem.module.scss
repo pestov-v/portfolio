@@ -36,7 +36,7 @@
 
 .period {
   font-family: var(--re-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--re-text-muted);
   letter-spacing: 0.05em;
 }
@@ -51,13 +51,13 @@
 
 .company {
   font-family: var(--re-font-mono);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--re-text-muted);
 }
 
 .description {
   font-family: var(--re-font-sans);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--re-text-secondary);
   line-height: 1.6;
   max-width: 780px;
@@ -92,6 +92,6 @@
   background: var(--re-accent-muted);
   color: var(--re-accent);
   font-family: var(--re-font-mono);
-  font-size: 11px;
+  font-size: 12px;
   border-radius: 4px;
 }
