@@ -1,0 +1,26 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "dev"
+      ],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "resulty-prototype",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4517",
+        "-d",
+        "/private/tmp/claude-501/-Users-volodymyrpestov-projects-portfolio/576651b2-956f-42fa-9b7b-f64c722978cd/scratchpad"
+      ],
+      "port": 4517
+    }
+  ]
+}
