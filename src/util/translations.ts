@@ -338,7 +338,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Developer",
     description:
-      "Senior Full-Stack Developer with 6+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript frontends and Node.js/NestJS backends with PostgreSQL. Proven track record of leading teams and delivering enterprise solutions end-to-end.",
+      "Senior Full-Stack Developer with 7+ years of experience building high-performance fintech platforms. Expertise in scalable React/TypeScript frontends and Node.js/NestJS backends with PostgreSQL. Proven track record of leading teams and delivering enterprise solutions end-to-end.",
     personalInfo: {
       name: "Name",
       birthday: "Birthday",
@@ -359,7 +359,7 @@ export const translations: Record<
     // Personal values
     available: "Available",
     master: "Master",
-    fiveYearsPlus: "6+ years",
+    fiveYearsPlus: "7+ years",
 
     // Skills section
     mySkills: "My Skills",
@@ -420,7 +420,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "Senior Full-Stack Developer with 6+ years of experience — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio of Volodymyr Pestov",
+      "Senior Full-Stack Developer with 7+ years of experience — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio of Volodymyr Pestov",
 
     // Language switcher
     language: "Language",
@@ -758,7 +758,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Розробник",
     description:
-      "Senior Full-Stack розробник з 6+ роками досвіду створення високопродуктивних фінтех-платформ. Експертиза у масштабованих React/TypeScript фронтендах та Node.js/NestJS бекендах з PostgreSQL. Підтверджений досвід керівництва командами та розробки enterprise-рішень від ідеї до продакшну.",
+      "Senior Full-Stack розробник з 7+ роками досвіду створення високопродуктивних фінтех-платформ. Експертиза у масштабованих React/TypeScript фронтендах та Node.js/NestJS бекендах з PostgreSQL. Підтверджений досвід керівництва командами та розробки enterprise-рішень від ідеї до продакшну.",
     personalInfo: {
       name: "Ім'я",
       birthday: "День народження",
@@ -779,7 +779,7 @@ export const translations: Record<
     // Personal values
     available: "Доступний",
     master: "Магістр",
-    fiveYearsPlus: "6+ років",
+    fiveYearsPlus: "7+ років",
 
     // Skills section
     mySkills: "Мої навички",
@@ -840,7 +840,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Розробник",
     portfolioDescription:
-      "Senior Full-Stack розробник з 6+ роками досвіду — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — портфоліо Володимира Пестова",
+      "Senior Full-Stack розробник з 7+ роками досвіду — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — портфоліо Володимира Пестова",
 
     // Language switcher
     language: "Мова",
@@ -1177,7 +1177,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Разработчик",
     description:
-      "Senior Full-Stack разработчик с 6+ години опит в изграждането на високопроизводителни финтех платформи. Експертиза в мащабируеми React/TypeScript фронтенди и Node.js/NestJS бекенди с PostgreSQL. Доказан опит в ръководство на екипи и доставяне на корпоративни решения от идея до продукция.",
+      "Senior Full-Stack разработчик с 7+ години опит в изграждането на високопроизводителни финтех платформи. Експертиза в мащабируеми React/TypeScript фронтенди и Node.js/NestJS бекенди с PostgreSQL. Доказан опит в ръководство на екипи и доставяне на корпоративни решения от идея до продукция.",
     personalInfo: {
       name: "Име",
       birthday: "Рожден ден",
@@ -1198,7 +1198,7 @@ export const translations: Record<
     // Personal values
     available: "Наличен",
     master: "Магистър",
-    fiveYearsPlus: "6+ години",
+    fiveYearsPlus: "7+ години",
 
     // Skills section
     mySkills: "Моите умения",
@@ -1258,7 +1258,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Володимир Пестов — Senior Full-Stack Разработчик",
     portfolioDescription:
-      "Senior Full-Stack разработчик с 6+ години опит — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — портфолио на Володимир Пестов",
+      "Senior Full-Stack разработчик с 7+ години опит — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — портфолио на Володимир Пестов",
 
     // Language switcher
     language: "Език",
@@ -1595,7 +1595,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Developer",
     description:
-      "Senior Full-Stack Developer z 6+ letnim doświadczeniem w tworzeniu wysokowydajnych platform fintech. Specjalizacja w skalowalnych frontendach React/TypeScript i backendach Node.js/NestJS z PostgreSQL. Udowodnione doświadczenie w kierowaniu zespołami i dostarczaniu rozwiązań enterprise od projektu do produkcji.",
+      "Senior Full-Stack Developer z 7+ letnim doświadczeniem w tworzeniu wysokowydajnych platform fintech. Specjalizacja w skalowalnych frontendach React/TypeScript i backendach Node.js/NestJS z PostgreSQL. Udowodnione doświadczenie w kierowaniu zespołami i dostarczaniu rozwiązań enterprise od projektu do produkcji.",
     personalInfo: {
       name: "Imię",
       birthday: "Data urodzenia",
@@ -1616,7 +1616,7 @@ export const translations: Record<
     // Personal values
     available: "Dostępny",
     master: "Magister",
-    fiveYearsPlus: "6+ lat",
+    fiveYearsPlus: "7+ lat",
 
     // Skills section
     mySkills: "Moje umiejętności",
@@ -1676,7 +1676,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "Senior Full-Stack Developer z 6+ letnim doświadczeniem — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio Volodymyra Pestova",
+      "Senior Full-Stack Developer z 7+ letnim doświadczeniem — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio Volodymyra Pestova",
 
     // Language switcher
     language: "Język",
@@ -2013,7 +2013,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Senior Full-Stack Developer",
     description:
-      "Sviluppatore Senior Full-Stack con 6+ anni di esperienza nella creazione di piattaforme fintech ad alte prestazioni. Competenze in frontend React/TypeScript scalabili e backend Node.js/NestJS con PostgreSQL. Comprovata esperienza nella guida di team e nella realizzazione di soluzioni enterprise dall'idea alla produzione.",
+      "Sviluppatore Senior Full-Stack con 7+ anni di esperienza nella creazione di piattaforme fintech ad alte prestazioni. Competenze in frontend React/TypeScript scalabili e backend Node.js/NestJS con PostgreSQL. Comprovata esperienza nella guida di team e nella realizzazione di soluzioni enterprise dall'idea alla produzione.",
     personalInfo: {
       name: "Nome",
       birthday: "Data di nascita",
@@ -2034,7 +2034,7 @@ export const translations: Record<
     // Personal values
     available: "Disponibile",
     master: "Laurea Magistrale",
-    fiveYearsPlus: "6+ anni",
+    fiveYearsPlus: "7+ anni",
 
     // Skills section
     mySkills: "Le mie competenze",
@@ -2095,7 +2095,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Senior Full-Stack Developer",
     portfolioDescription:
-      "Senior Full-Stack Developer con 6+ anni di esperienza — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio di Volodymyr Pestov",
+      "Senior Full-Stack Developer con 7+ anni di esperienza — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio di Volodymyr Pestov",
 
     // Language switcher
     language: "Lingua",
@@ -2432,7 +2432,7 @@ export const translations: Record<
     aboutBgText: "Aboutme",
     jobTitle: "Développeur Senior Full-Stack",
     description:
-      "Développeur Senior Full-Stack avec 6+ ans d'expérience dans la création de plateformes fintech haute performance. Expertise en frontends React/TypeScript évolutifs et backends Node.js/NestJS avec PostgreSQL. Expérience éprouvée dans la direction d'équipes et la livraison de solutions enterprise de l'idée à la production.",
+      "Développeur Senior Full-Stack avec 7+ ans d'expérience dans la création de plateformes fintech haute performance. Expertise en frontends React/TypeScript évolutifs et backends Node.js/NestJS avec PostgreSQL. Expérience éprouvée dans la direction d'équipes et la livraison de solutions enterprise de l'idée à la production.",
     personalInfo: {
       name: "Nom",
       birthday: "Date de naissance",
@@ -2453,7 +2453,7 @@ export const translations: Record<
     // Personal values
     available: "Disponible",
     master: "Master",
-    fiveYearsPlus: "6+ ans",
+    fiveYearsPlus: "7+ ans",
 
     // Skills section
     mySkills: "Mes compétences",
@@ -2514,7 +2514,7 @@ export const translations: Record<
     // Meta tags
     portfolioTitle: "Volodymyr Pestov — Développeur Senior Full-Stack",
     portfolioDescription:
-      "Développeur Senior Full-Stack avec 6+ ans d'expérience — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio de Volodymyr Pestov",
+      "Développeur Senior Full-Stack avec 7+ ans d'expérience — React, TypeScript, Next.js, Node.js, NestJS, PostgreSQL — portfolio de Volodymyr Pestov",
 
     // Language switcher
     language: "Langue",
